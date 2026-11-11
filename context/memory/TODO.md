@@ -1,6 +1,6 @@
 # To-do corrente — integrazione SuperFlex in Whareformer
 
-**Preparazione della condivisione e controllo riservatezza, 11 novembre:** Marco autorizza il caricamento del nucleo verificato e della memoria scientifica separata in `context/memory`, previo controllo di credenziali e informazioni personali. Copie dei documenti ripulite dai dettagli di accesso; originali conservati localmente. Ramo dedicato `prepare/superflex-core`, basato sul remoto, senza importare la cronologia dell’archivio locale. Corretto il solo metadato autore del commit non pubblicato: `cbd6ca1` sostituisce `eac7002`, contenuto del codice invariato. Push ancora da verificare; nessun nuovo esperimento o controllo HPC.
+**Condivisione conclusa, 11 novembre:** codice verificato e copie ripulite della memoria pubblicati sul ramo `prepare/superflex-core`, rispettivamente in `SuperFlex/` e `context/memory`. Controllo riservatezza superato; dettagli in `STATO_LAVORO.md`. Restano aperti portabilità dei runner neurali e integrazione, non nuovi setup o test già conclusi.
 
 Aggiornato il 9 novembre 2026 dopo il riesame dei due codici e l'approvazione di Marco. Questo file prevale sulle sequenze operative precedenti. Scadenza: 23 novembre 2026; nessuna nuova data intermedia concordata.
 
@@ -29,9 +29,10 @@ Conservare le osservazioni e le maschere VISOR della baseline, i descrittori vis
 **Preparazione della collaborazione, 10 novembre:** prima dello scambio con il collega, repository documentata e codice inventariato; guida `docs/CODICE_PRODOTTO.md`, modalità `docs/CONDIVISIONE.md`, risultati selezionati in `results/`.
 - [x] Distinguere codice nostro, dipendenze degli autori, diagnostici storici e integrazione ancora mancante; predisporre esclusioni e snapshot numerici con hash.
 - [x] Primo commit locale e pacchetto di condivisione creati; cinque archivi con hash, codice documentato, risultati essenziali e geometrie complete separate. Percorso in `STATO_LAVORO.md`.
-- [x] Collegato `origin` alla repository comune e recuperato `main`; accesso in lettura verificato. Nessun merge o push.
+- [x] Collegato `origin` alla repository comune, recuperato `main` e verificata la pubblicazione sul solo ramo dedicato.
 - [x] Revisione prima del caricamento: candidata essenziale di dieci file su `prepare/superflex-core`, separata dall'archivio storico; test, lint e regressione numerica superati. Dettagli `REVISIONE_CODICE_REPOSITORY.md`.
-- [ ] Eventuale pubblicazione del solo ramo candidato nella struttura `SuperFlex/`; non importare in blocco lo storico locale. Inferenza neurale e runner di acquisizione da rendere portabili/verificare separatamente; dati pesanti fuori da Git.
+- [x] Pubblicati codice selezionato in `SuperFlex/` e memoria ripulita in `context/memory`; controllati anche i nuovi commit. Storico locale, credenziali e dati pesanti esclusi.
+- [ ] Rendere portabili e verificare separatamente inferenza neurale e runner di acquisizione prima di includerli nella repository comune.
 - [ ] Acquisire nella struttura comune asset/configurazioni e stato effettivo della baseline del collega, evitando duplicazioni.
 - [ ] Concordare export per osservazione secondo `docs/INPUT_SUPERFLEX_PER_WHAREFORMER.md` e verificare collegamento alle detection reali. La specifica chiarisce il ramo già eseguito; non certifica un'integrazione Whareformer completata.
 

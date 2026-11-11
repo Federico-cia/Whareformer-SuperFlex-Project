@@ -230,7 +230,7 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Esecuzione.** Preparazione di copie ripulite dei documenti, esclusione dei materiali del corso e dei file di accesso. Conservati gli originali e i risultati locali. Rimosso l’indirizzo email personale dai metadati del commit locale non ancora pubblicato, usando il recapito GitHub no-reply dell’account verificato. Il vecchio commit candidato eac7002 è sostituito da cbd6ca1 senza cambiamenti al codice.
 
-**Limite e conseguenza.** Controllare contenuti, nomi e cronologia raggiungibile del solo ramo destinato alla condivisione prima del push. Un controllo automatico non garantisce l’assenza assoluta di segreti. Non pubblicare la cronologia indipendente dell’archivio locale; nessun nuovo esperimento.
+**Esito verificato.** Controllati contenuti, nomi, snapshot Git raggiungibili e metadati dei nuovi commit, senza pattern di credenziali rilevati. Pubblicati codice e memoria sul solo ramo `prepare/superflex-core`, riferimento remoto verificato; `main` invariato. Rapporto locale `shared_exports/publication_security.json`. Un controllo con pattern e revisione mirata non garantisce l’assenza assoluta di segreti. Cronologia indipendente dell’archivio locale esclusa; nessun nuovo esperimento.
 
 ## Vincoli organizzativi che spiegano il perimetro
 

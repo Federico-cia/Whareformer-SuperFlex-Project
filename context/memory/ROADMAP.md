@@ -1,6 +1,6 @@
 # Roadmap operativa — progetto Computer Vision
 
-**Preparazione della condivisione e controllo riservatezza, 11 novembre:** Marco autorizza il caricamento del nucleo verificato e della memoria scientifica separata in `context/memory`, previo controllo di credenziali e informazioni personali. Copie dei documenti ripulite dai dettagli di accesso; originali conservati localmente. Ramo dedicato `prepare/superflex-core`, basato sul remoto, senza importare la cronologia dell’archivio locale. Corretto il solo metadato autore del commit non pubblicato: `cbd6ca1` sostituisce `eac7002`, contenuto del codice invariato. Push ancora da verificare; nessun nuovo esperimento o controllo HPC.
+**Condivisione conclusa, 11 novembre:** codice riusabile e memoria scientifica pubblicati su un ramo dedicato della repository comune; verifica di riservatezza e stato remoto in `STATO_LAVORO.md`. La pubblicazione non aggiunge evidenze scientifiche né modifica i prossimi passi approvati.
 
 **Condivisione verificata, 11 novembre:** remoto comune collegato; prima di pubblicare, preparato un ramo separato con dieci file di utilità geometrica/analisi, testati contro gli output esistenti. Nessun upload, nuovo job o avanzamento del matcher. Dettagli `REVISIONE_CODICE_REPOSITORY.md`; gli esperimenti e i loro limiti restano quelli già registrati.
 
