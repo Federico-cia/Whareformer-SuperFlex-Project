@@ -1,5 +1,7 @@
 # Che cosa abbiamo prodotto in codice
 
+**Stato aggiornato all'11 novembre:** nucleo installabile revisionato pubblicato in `SuperFlex/` sul ramo `prepare/superflex-core`; inferenza neurale e acquisizione restano runner storici da rendere portabili. Revisione in `../REVISIONE_CODICE_REPOSITORY.md`; mandato esecutivo di completamento in `../PIANO_CHIUSURA_RAMO_GEOMETRICO.md`. L'inventario sotto descrive l'archivio locale, non i soli file condivisi.
+
 Inventario del 10 novembre 2026. È il codice di esperimenti e verifiche del ramo geometrico, non ancora un nuovo tracker completo. All'avvio della ricognizione erano presenti 44 script: 25 Python, 17 SLURM e due PowerShell. Il catalogo in `manifests/code_inventory.json` elenca i file correnti con funzione, stato e hash.
 
 ## Il lavoro originale del progetto

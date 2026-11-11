@@ -2,6 +2,7 @@
 
 Leggere [stato](STATO_LAVORO.md), [attività](TODO.md), [decisioni](REGISTRO_DECISIONI.md) e [roadmap](ROADMAP.md). Le revisioni esplicite più recenti prevalgono sulle note storiche.
 
+- Lavoro corrente: [piano di chiusura del ramo geometrico](PIANO_CHIUSURA_RAMO_GEOMETRICO.md), con mandato esecutivo e criteri di consegna.
 - Risultati: [confronto 200 immagini](RISULTATI_CONFRONTO_200.md) e [identità fisiche](RISULTATI_IDENTITA_DA_MOGE.md).
 - Metodo: [protocollo identità](ESPERIMENTO_IDENTITA_DA_MOGE.md) e [input SuperFlex](docs/INPUT_SUPERFLEX_PER_WHAREFORMER.md).
 - Codice: [revisione](REVISIONE_CODICE_REPOSITORY.md) e [nucleo condiviso](../../SuperFlex/README.md).

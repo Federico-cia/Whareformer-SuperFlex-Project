@@ -232,6 +232,18 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Esito verificato.** Controllati contenuti, nomi, snapshot Git raggiungibili e metadati dei nuovi commit, senza pattern di credenziali rilevati. Pubblicati codice e memoria sul solo ramo `prepare/superflex-core`, riferimento remoto verificato; `main` invariato. Rapporto locale `shared_exports/publication_security.json`. Un controllo con pattern e revisione mirata non garantisce l’assenza assoluta di segreti. Cronologia indipendente dell’archivio locale esclusa; nessun nuovo esperimento.
 
+## 25. Completare il ramo autonomo senza micro-proposte — 11 novembre
+
+**Direzione richiesta da Marco.** Finire nel modo più efficace tutto ciò che è possibile senza il contributo del collega, mantenendo l'obiettivo finale di integrazione.
+
+**Raccomandazione, non esecuzione.** Coordinare portabilità della pipeline DA/MoGE→SuperFlex, verifica delle identità e del segnale, export per osservazione e componente indipendente di confronto/memoria. Riutilizzare i run conclusi; nuovi calcoli mirati soltanto dove mancano dati informativi. Non limitare il lavoro alla sola revisione di alcune immagini e non confondere più inferenze con più evidenza.
+
+**Limite e conseguenza.** Conservare entrambi i rami e il controllo sui punti. Dettagli di nuovi campioni, distanza e memoria non fissati da questa indicazione; nessun nuovo job eseguito. Per concludere l'integrazione e misurare il tracking serviranno gli asset effettivi della baseline, non necessariamente tutto il lavoro modificato del collega. Codice pubblicato finora limitato al nucleo geometrico/confronto: runner neurali ancora da rendere portabili.
+
+**Successiva approvazione esecutiva di Marco, 11 novembre.** Procedere nella nuova chat con Astra con tutto il codice necessario e le run HPC per completare il ramo autonomo. Piano consolidato in `PIANO_CHIUSURA_RAMO_GEOMETRICO.md`: pipeline portabile, evidenza sul segnale, export/confronto/memoria e consegna riproducibile. Restano invariati domanda, EPIC, controllo sui punti e sviluppo/test separati; dettagli metodologici non già validati vanno motivati, senza trattare il mandato come approvazione di qualsiasi nuovo protocollo.
+
+**Verifica del passaggio.** SSH non interattivo riuscito con la chiave esistente e coda personale vuota; nessuna nuova chiave necessaria o credenziale salvata in memoria. Nessun nuovo job inviato. Consolidati i documenti di ingresso, con dettagli sperimentali nei resoconti; configurazione di accesso solo locale.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 Due persone, circa due ore al giorno ciascuna, consegna il 23 novembre. Ruoli confermati il 7 novembre: Marco segue geometria/SuperFlex; il collega Whareformer/integrazione/valutazione. Decisioni scientifiche e report condivisi. Modelli eseguiti sull'HPC; accesso autonomo operativo. Training da zero, reasoning semantico aggiuntivo e memoria complessa restano fuori scope iniziale per concentrare il lavoro sulla domanda misurabile.
