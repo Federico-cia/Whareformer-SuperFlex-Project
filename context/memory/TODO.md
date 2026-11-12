@@ -16,7 +16,7 @@ Mandato esecutivo approvato l'11 novembre: sviluppare codice ed eseguire le run 
 
 ## Dipendenze della fase comune
 
-- [x] Preparato e verificato pacchetto RGB/maschere/nuvole/manifest/script per il mapping ai track: `shared_exports/compare200_tracking_inputs_v1.zip`. Invio esterno non eseguito; contenuto e limiti in `STATO_LAVORO.md`.
+- [x] Preparato e verificato pacchetto RGB/maschere/nuvole/manifest/script per il mapping ai track: `shared_exports/compare200_tracking_inputs_v1.zip`. Caricato su `main` in `SuperFlex/data_packages/compare200/`, con README e checksum; contenuto e limiti in `STATO_LAVORO.md`.
 - [ ] Collegare le forme alle detection effettive, feature e XYZ di Whareformer; risolvere il mapping VISOR/RGB con il loader reale.
 - [ ] Integrare il contributo geometrico e verificare equivalenza alla baseline con contributo zero; calibrare sullo sviluppo e valutare tracking su test separato con associazioni predette.
 

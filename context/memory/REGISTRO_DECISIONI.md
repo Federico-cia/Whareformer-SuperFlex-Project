@@ -284,7 +284,7 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Limite e conseguenza.** Nessun invio esterno eseguito, nessuna inferenza ripetuta. Il mapping alle detection/track resta aperto. L'accumulo è un'intenzione riferita del collega, non un metodo già verificato o adottato; occorre registrare nuvole camera-frame e gestire scala e movimento prima della fusione.
 
-**Successiva richiesta di Marco.** Pubblicare il pacchetto su GitHub mantenendo ordine: destinazione `main`, cartella `SuperFlex/data_packages/compare200/`, README e checksum con collegamento nell’indice principale. Archivio invariato, contenuti interni verificati; caricamento da verificare. Eccezione esplicita alla precedente esclusione generale dei dati da Git.
+**Successiva richiesta di Marco.** Pubblicare il pacchetto su GitHub mantenendo ordine: destinazione `main`, cartella `SuperFlex/data_packages/compare200/`, README e checksum con collegamento nell’indice principale. Archivio invariato, contenuti interni verificati. **Esito:** caricamento su `main` riuscito, commit del pacchetto `ee652a2` e riferimento remoto verificato; cartella collegata dal README generale. Eccezione esplicita alla precedente esclusione generale dei dati da Git.
 
 ## Vincoli organizzativi che spiegano il perimetro
 
