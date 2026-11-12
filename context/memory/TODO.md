@@ -12,7 +12,7 @@ Mandato esecutivo approvato l'11 novembre: sviluppare codice ed eseguire le run 
 
 ## Pubblicazione richiesta il 12 novembre
 
-- [ ] Rendere disponibile su `main` la consegna selezionata: codice, esempi, risultati essenziali e memoria ripulita. Verificare riferimento remoto e visibilità; non pubblicare il `main` indipendente dell'archivio locale.
+- [x] Consegna selezionata pubblicata su `main`: codice, esempi, risultati essenziali e memoria ripulita. Riferimento remoto verificato; esclusa la storia indipendente del main locale.
 
 ## Dipendenze della fase comune
 

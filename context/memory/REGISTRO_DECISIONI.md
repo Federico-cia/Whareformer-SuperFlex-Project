@@ -264,7 +264,7 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Motivazione e verifica preparatoria.** Il remoto `main` contiene solo i README iniziali; codice precedente su `prepare/superflex-core`, nuova consegna ancora locale. La storia selezionata discende da `main`, quindi può avanzarlo senza sovrascrivere modifiche del collega e senza importare la storia indipendente dell'archivio locale. Controlli di riservatezza e due grafici revisionati; dati/pesi/accessi personali esclusi.
 
-**Esecuzione.** Preparazione completata; esito della pubblicazione da verificare. Nessun nuovo esperimento o cambiamento scientifico.
+**Esito verificato.** Pubblicazione riuscita: `main` avanzato da `78eefcc` a `7cb56da`, ramo di sviluppo allineato, riferimenti remoti coincidenti con la consegna. Nessuna forzatura o modifica alle cartelle del collega; storia indipendente del main locale esclusa. Controllo di riservatezza su 72 file e nuovi commit superato, due grafici revisionati visivamente; rapporto locale `shared_exports/publication_security_pre_main.json`. Il precedente rifiuto automatico del push è superato da questa pubblicazione. Nessun nuovo esperimento o cambiamento scientifico.
 
 ## Vincoli organizzativi che spiegano il perimetro
 

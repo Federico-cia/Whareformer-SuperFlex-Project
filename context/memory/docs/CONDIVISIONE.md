@@ -1,6 +1,6 @@
 # Condivisione tra Marco, collega e docente
 
-**Direzione corrente, 12 novembre:** pubblicare su `main` la consegna autonoma selezionata, inclusi codice, esempi, risultati essenziali in `SuperFlex/results/geometric_closure_v1/` e memoria in `context/memory/`. Stato effettivo e verifiche in [STATO_LAVORO.md](../STATO_LAVORO.md). Le note precedenti sul solo ramo candidato e sull'assenza dei runner neurali sono storiche; dati e pesi restano esterni.
+**Condivisione verificata, 12 novembre:** la consegna autonoma è su [main](https://github.com/Federico-cia/Whareformer-SuperFlex-Project), visibile senza cambiare ramo. Codice, esempi e risultati essenziali in `SuperFlex/`; memoria in `context/memory/`. Dati grezzi, pesi e accessi personali esclusi. Stato e verifiche in [STATO_LAVORO.md](../STATO_LAVORO.md). Le note precedenti sul ramo candidato e sui pacchetti locali sono storiche.
 
 **Struttura condivisa attuale, 11 novembre:** [ramo pubblicato](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/tree/prepare/superflex-core), codice verificato in `SuperFlex/`, documenti scientifici in `context/memory/`. Controllo riservatezza superato; originali e pacchetti dati restano locali. Nessun merge su `main`. In questo ramo non sono inclusi `results/`, manifest dei run, script storici o runner neurali. Stato e limiti in [STATO_LAVORO.md](../STATO_LAVORO.md). Le modalità e i pacchetti descritti sotto riguardano l'archivio locale precedente, non il contenuto del clone GitHub.
 
