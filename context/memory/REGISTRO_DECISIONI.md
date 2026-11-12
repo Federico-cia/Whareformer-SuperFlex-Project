@@ -256,6 +256,8 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Evidenza e conseguenza.** ID delle 632169 maschere unici nei cinque archivi; metadati temporali locali, nessun ID fisico globale nei campi osservati. Le 37 etichette visive restano invariate. Selezionate dai soli metadati nove coppie nello stesso intervallo/nome prima di leggerne le distanze: diagnostica locale separata, non nuove identità persistenti o negativi. Nessuna nuova inferenza scientifica aggiunta in assenza di etichette globali più forti. Costi e stabilità non sostengono superiorità sistematica SuperFlex. Consegna autonoma completata; DA/MoGE, punti e test separato invariati. Dettagli e limiti in `CONSEGNA_RAMO_GEOMETRICO.md`.
 
+**Pubblicazione, 12 novembre.** Codice/risultati/memoria salvati localmente in `f697be8`. Il controllo automatico ha respinto il push richiedendo autorizzazione più esplicita sul contenuto/destinazione; Marco chiede prima il recap. Nessun push eseguito, nessuna approvazione presunta. Consegna locale disponibile e pubblicazione in attesa della decisione.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 Due persone, circa due ore al giorno ciascuna, consegna il 23 novembre. Ruoli confermati il 7 novembre: Marco segue geometria/SuperFlex; il collega Whareformer/integrazione/valutazione. Decisioni scientifiche e report condivisi. Modelli eseguiti sull'HPC; accesso autonomo operativo. Training da zero, reasoning semantico aggiuntivo e memoria complessa restano fuori scope iniziale per concentrare il lavoro sulla domanda misurabile.

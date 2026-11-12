@@ -26,3 +26,7 @@ Worktree condivisibile `shared_exports/publish_candidate/`, repository `https://
 HPC e quattro ambienti esistenti riusati; accesso con chiave già configurata, riferimento personale `scripts/abilita_accesso_hpc.ps1`, da non rieseguire. Non creare chiavi o chiedere password. Conservare run storici e quelli nuovi.
 
 Prossimo passo dipendente dalla baseline: mapping alle detection reali, feature e XYZ; integrazione nel matcher, controllo a contributo zero, calibrazione sviluppo e test tracking separato. Non attribuire al collega attività non osservate. Obiettivo finale invariato, scadenza 23 novembre.
+
+## Stato della pubblicazione — 12 novembre
+
+Consegna salvata localmente nel commit `f697be8`; archivio `shared_exports/geometric_delivery_v1.zip`. Push non eseguito: il controllo automatico richiede autorizzazione esplicita per questo insieme di codice/risultati/memoria verso il ramo comune. Marco ha chiesto prima un recap; pubblicazione in attesa della sua decisione. Controllo locale di riservatezza in `shared_exports/geometric_closure_security.json`, senza credenziali o percorsi personali nei nuovi artefatti. Remoto osservato ancora `f6f55fe`, main `78eefcc`; nessun aggiornamento remoto effettuato.
