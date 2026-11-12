@@ -1,0 +1,164 @@
+{
+  "status": "contract_and_artifacts_verified",
+  "historical_numerical_equivalence": false,
+  "observations": 3,
+  "records": [
+    {
+      "observation_key": "P01_01/frame_0000002893__a00",
+      "representation": "da_points",
+      "status": "ready",
+      "points": 14512,
+      "max_abs_coordinate_difference": 0.0003160238265991211,
+      "relative_l2_coordinate_difference": 4.569802755704776e-05,
+      "pixel_extraction_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P01_01/frame_0000002893__a00",
+      "representation": "da_superflex",
+      "status": "ready",
+      "max_abs_parameter_differences": {
+        "scale": 0.002565562240863739,
+        "rotation": 0.001599237322807312,
+        "translation": 0.002267308488175454,
+        "exponents": 0.011404275894165039,
+        "exist": 0.0026802420616149902,
+        "tapering": 0.004040926694869995,
+        "bending": 0.045143306255340576
+      },
+      "compact_parameters_verified": true,
+      "historical_to_portable_d2": 0.005128233611602996,
+      "sampling_normalization_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P01_01/frame_0000002893__a00",
+      "representation": "moge_points",
+      "status": "ready",
+      "points": 14512,
+      "max_abs_coordinate_difference": 0.00039464235305786133,
+      "relative_l2_coordinate_difference": 0.00013509091513697058,
+      "pixel_extraction_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P01_01/frame_0000002893__a00",
+      "representation": "moge_superflex",
+      "status": "ready",
+      "max_abs_parameter_differences": {
+        "scale": 0.0016274607947739383,
+        "rotation": 0.004055112600326538,
+        "translation": 0.0014978632491384758,
+        "exponents": 0.041051387786865234,
+        "exist": 0.002490311861038208,
+        "tapering": 0.003765612840652466,
+        "bending": 0.10576799868503572
+      },
+      "compact_parameters_verified": true,
+      "historical_to_portable_d2": 0.0038090977164206476,
+      "sampling_normalization_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P22_01/frame_0000000229__a01",
+      "representation": "da_points",
+      "status": "ready",
+      "points": 12029,
+      "max_abs_coordinate_difference": 0.0,
+      "relative_l2_coordinate_difference": 0.0,
+      "pixel_extraction_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P22_01/frame_0000000229__a01",
+      "representation": "da_superflex",
+      "status": "ready",
+      "max_abs_parameter_differences": {
+        "scale": 6.631124015443746e-07,
+        "rotation": 5.364418029785156e-07,
+        "translation": 4.573188976397802e-07,
+        "exponents": 1.5497207641601562e-06,
+        "exist": 3.8743019104003906e-07,
+        "tapering": 4.470348358154297e-07,
+        "bending": 8.106231689453125e-06
+      },
+      "compact_parameters_verified": true,
+      "historical_to_portable_d2": 2.389983564247101e-07,
+      "sampling_normalization_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P22_01/frame_0000000229__a01",
+      "representation": "moge_points",
+      "status": "ready",
+      "points": 12029,
+      "max_abs_coordinate_difference": 0.0007172822952270508,
+      "relative_l2_coordinate_difference": 0.0001467238471377641,
+      "pixel_extraction_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P22_01/frame_0000000229__a01",
+      "representation": "moge_superflex",
+      "status": "ready",
+      "max_abs_parameter_differences": {
+        "scale": 0.0161819604419442,
+        "rotation": 0.016747094690799713,
+        "translation": 0.017991039188594016,
+        "exponents": 0.16979968547821045,
+        "exist": 0.023354798555374146,
+        "tapering": 0.02343389391899109,
+        "bending": 0.20802903175354004
+      },
+      "compact_parameters_verified": true,
+      "historical_to_portable_d2": 0.003383555845834968,
+      "sampling_normalization_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P08_09/frame_0000010781__a01",
+      "representation": "da_points",
+      "status": "ready",
+      "points": 9432,
+      "max_abs_coordinate_difference": 0.00034034252166748047,
+      "relative_l2_coordinate_difference": 4.752499157361401e-05,
+      "pixel_extraction_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P08_09/frame_0000010781__a01",
+      "representation": "da_superflex",
+      "status": "ready",
+      "max_abs_parameter_differences": {
+        "scale": 0.0004496721259004133,
+        "rotation": 0.0001744776964187622,
+        "translation": 0.0006232047360350546,
+        "exponents": 0.0010613799095153809,
+        "exist": 0.0004697442054748535,
+        "tapering": 0.0003527402877807617,
+        "bending": 0.0010128021240234375
+      },
+      "compact_parameters_verified": true,
+      "historical_to_portable_d2": 0.0022370537062684115,
+      "sampling_normalization_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P08_09/frame_0000010781__a01",
+      "representation": "moge_points",
+      "status": "ready",
+      "points": 9432,
+      "max_abs_coordinate_difference": 0.0009365677833557129,
+      "relative_l2_coordinate_difference": 0.0006212001899257302,
+      "pixel_extraction_verified": true,
+      "artifact_hashes_verified": true
+    },
+    {
+      "observation_key": "P08_09/frame_0000010781__a01",
+      "representation": "moge_superflex",
+      "status": "unavailable",
+      "historical_failure_reproduced": true
+    }
+  ],
+  "limits": "Initial strict allclose to historical clouds failed (rtol 1e-5, atol 1e-6); no tolerance was relaxed to claim equivalence. Report actual differences separately. Extraction, normalization, hashes, validity and failure preservation checked. No baseline mapping, ground truth 3D or tracking claim."
+}

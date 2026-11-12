@@ -1,5 +1,8 @@
 # Chiusura del ramo geometrico autonomo
 
+> Aggiornamento 12 novembre: parte autonoma consegnata; stato e limiti correnti in [CONSEGNA_RAMO_GEOMETRICO.md](CONSEGNA_RAMO_GEOMETRICO.md). Le attività autonome indicate come future nelle sezioni storiche sono superate; restano aperte integrazione e valutazione sulla baseline reale.
+
+
 Mandato approvato da Marco l'11 novembre 2026 per la nuova chat con Astra: completare codice e run HPC necessari, senza micro-proposte o attese del collega. L'obiettivo finale resta l'utilità delle forme SuperFlex nell'associazione Whareformer; questa fase consegna il componente autonomo e le evidenze che possiamo ottenere senza la baseline reale.
 
 ## Risultati da consegnare

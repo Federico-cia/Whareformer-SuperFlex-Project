@@ -1,0 +1,69 @@
+{
+  "rule": "All different-frame pairs sharing video, interpolation and exact entity name; no negative identities assigned.",
+  "observations_sha256": "601eb5b9e6cdca9c9cb71512552932eca07fada258f644110eee4216d899350d",
+  "pairs": [
+    {
+      "left": "P03_04/frame_0000020618__a02",
+      "right": "P03_04/frame_0000020711__a02",
+      "video": "P03_04",
+      "category": "knife",
+      "interpolation": "P03_04_0138"
+    },
+    {
+      "left": "P03_04/frame_0000020618__a03",
+      "right": "P03_04/frame_0000020711__a03",
+      "video": "P03_04",
+      "category": "chopping board",
+      "interpolation": "P03_04_0138"
+    },
+    {
+      "left": "P03_04/frame_0000089072__a04",
+      "right": "P03_04/frame_0000089273__a04",
+      "video": "P03_04",
+      "category": "can",
+      "interpolation": "P03_04_0512"
+    },
+    {
+      "left": "P03_04/frame_0000089072__a05",
+      "right": "P03_04/frame_0000089273__a05",
+      "video": "P03_04",
+      "category": "lid",
+      "interpolation": "P03_04_0512"
+    },
+    {
+      "left": "P08_09/frame_0000013668__a02",
+      "right": "P08_09/frame_0000013725__a02",
+      "video": "P08_09",
+      "category": "chopping board",
+      "interpolation": "P08_09_0100"
+    },
+    {
+      "left": "P08_09/frame_0000013668__a03",
+      "right": "P08_09/frame_0000013725__a03",
+      "video": "P08_09",
+      "category": "plate",
+      "interpolation": "P08_09_0100"
+    },
+    {
+      "left": "P08_09/frame_0000016359__a03",
+      "right": "P08_09/frame_0000016442__a03",
+      "video": "P08_09",
+      "category": "frying pan",
+      "interpolation": "P08_09_0113"
+    },
+    {
+      "left": "P08_09/frame_0000022584__a03",
+      "right": "P08_09/frame_0000022635__a03",
+      "video": "P08_09",
+      "category": "lid",
+      "interpolation": "P08_09_0150"
+    },
+    {
+      "left": "P08_09/frame_0000023267__a03",
+      "right": "P08_09/frame_0000023416__a03",
+      "video": "P08_09",
+      "category": "frying pan",
+      "interpolation": "P08_09_0156"
+    }
+  ]
+}

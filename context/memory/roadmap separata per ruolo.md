@@ -1,5 +1,8 @@
 # Responsabilità e dipendenze
 
+> Aggiornamento 12 novembre: parte autonoma consegnata; stato e limiti correnti in [CONSEGNA_RAMO_GEOMETRICO.md](CONSEGNA_RAMO_GEOMETRICO.md). Le attività autonome indicate come future nelle sezioni storiche sono superate; restano aperte integrazione e valutazione sulla baseline reale.
+
+
 Aggiornata l'11 novembre 2026; scadenza del progetto 23 novembre. Il calendario intermedio iniziale era una bozza e non costituisce nuove scadenze concordate.
 
 | Responsabilità | Consegna |

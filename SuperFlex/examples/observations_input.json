@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "purpose": "Replace these illustrative paths and camera values with your observations",
+  "observations": [
+    {
+      "observation_key": "video/frame_1/mask_0",
+      "video": "video",
+      "frame_index": 1,
+      "rgb": "../data/frame_1.jpg",
+      "mask": "../data/frame_1_mask_0.png",
+      "category": "object",
+      "intrinsics": [400, 400, 228, 128]
+    }
+  ]
+}

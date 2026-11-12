@@ -1,0 +1,135 @@
+{
+  "da_raw_points": {
+    "artifact_bytes": {
+      "count": 299,
+      "median": 114722.0,
+      "minimum": 4498.0,
+      "maximum": 646952.0,
+      "sum": 44067872.0
+    },
+    "xyz_array_bytes": {
+      "count": 299,
+      "median": 120576.0,
+      "minimum": 3984.0,
+      "maximum": 679632.0,
+      "sum": 46487304.0
+    }
+  },
+  "da_raw_superflex": {
+    "artifact_bytes": {
+      "count": 299,
+      "median": 108732.0,
+      "minimum": 35967.0,
+      "maximum": 286171.0,
+      "sum": 38000093.0
+    },
+    "forward_seconds": {
+      "count": 299,
+      "median": 0.00845246808603406,
+      "minimum": 0.007337597198784351,
+      "maximum": 0.7110154698602855,
+      "sum": 5.946492288261652
+    },
+    "active_primitives": {
+      "count": 299,
+      "median": 3.0,
+      "minimum": 1.0,
+      "maximum": 8.0,
+      "sum": 1060.0
+    },
+    "parameter_file_bytes": {
+      "count": 299,
+      "median": 226383.0,
+      "minimum": 37787.0,
+      "maximum": 345945.0,
+      "sum": 63652640.0
+    },
+    "parameter_arrays_bytes": {
+      "count": 299,
+      "median": 362964.0,
+      "minimum": 362964.0,
+      "maximum": 362964.0,
+      "sum": 108526236.0
+    },
+    "shape_only_arrays_bytes": {
+      "count": 299,
+      "median": 2432.0,
+      "minimum": 2432.0,
+      "maximum": 2432.0,
+      "sum": 727168.0
+    }
+  },
+  "moge_points": {
+    "artifact_bytes": {
+      "count": 299,
+      "median": 73575.0,
+      "minimum": 3122.0,
+      "maximum": 407832.0,
+      "sum": 27649852.0
+    },
+    "xyz_array_bytes": {
+      "count": 299,
+      "median": 60288.0,
+      "minimum": 1992.0,
+      "maximum": 339816.0,
+      "sum": 23243652.0
+    }
+  },
+  "moge_superflex": {
+    "artifact_bytes": {
+      "count": 298,
+      "median": 108588.0,
+      "minimum": 35967.0,
+      "maximum": 357767.0,
+      "sum": 37993642.0
+    },
+    "forward_seconds": {
+      "count": 298,
+      "median": 0.008246200624853373,
+      "minimum": 0.007394847925752401,
+      "maximum": 0.7468714769929647,
+      "sum": 5.896660247351974
+    },
+    "active_primitives": {
+      "count": 298,
+      "median": 3.0,
+      "minimum": 1.0,
+      "maximum": 10.0,
+      "sum": 1060.0
+    },
+    "parameter_file_bytes": {
+      "count": 298,
+      "median": 217888.5,
+      "minimum": 37579.0,
+      "maximum": 349436.0,
+      "sum": 62526938.0
+    },
+    "parameter_arrays_bytes": {
+      "count": 298,
+      "median": 362964.0,
+      "minimum": 362964.0,
+      "maximum": 362964.0,
+      "sum": 108163272.0
+    },
+    "shape_only_arrays_bytes": {
+      "count": 298,
+      "median": 2432.0,
+      "minimum": 2432.0,
+      "maximum": 2432.0,
+      "sum": 724736.0
+    }
+  },
+  "historical_stage_seconds": {
+    "da": 318.0,
+    "moge": 217.0,
+    "clouds": 139.0,
+    "sf": 769.0
+  },
+  "limits": [
+    "Stored file sizes depend on compression and serialization; they are not a matched byte-budget comparison.",
+    "Historical prediction archive includes input points and assignment matrices, not only shape parameters. Shape-only arrays retain all 16 primitive slots, including inactive ones.",
+    "Stage timing includes model loading/process overhead. Historical sf timing omits the partial failed attempt; total allocated GPU wall time was 1608 seconds.",
+    "Forward times are synchronized model-only CUDA times, exclude loading/export.",
+    "Descriptor comparison discards metric scale and position; retained points for descriptors use equal sample count."
+  ]
+}

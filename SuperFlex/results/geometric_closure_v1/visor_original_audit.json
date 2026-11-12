@@ -1,0 +1,631 @@
+{
+  "P01_01": {
+    "archive_sha256": "c848514f4586ac451373c0b0ea0af26029b4149a0d3863b27ecd020246ca2d6c",
+    "archive_member": "P01_01_interpolations.json",
+    "frames": 41070,
+    "mask_records": 178746,
+    "unique_mask_ids": 178746,
+    "repeated_mask_ids": 0,
+    "image_fields": {
+      "image_path": 41070,
+      "name": 41070,
+      "interpolation": 41070,
+      "video": 41070,
+      "interpolation_start_frame": 41070,
+      "interpolation_end_frame": 41070
+    },
+    "object_fields": {
+      "id": 178746,
+      "name": 178746,
+      "class_id": 178746,
+      "type": 178746,
+      "segments": 178746
+    },
+    "types": {
+      "1": 3043,
+      "0": 175703
+    },
+    "interpolation_count": 356,
+    "selected_original_entries_verified": 40,
+    "selected_intervals": {
+      "P01_01_0022": 1,
+      "P01_01_0039": 1,
+      "P01_01_0056": 1,
+      "P01_01_0082": 1,
+      "P01_01_0087": 1,
+      "P01_01_0093": 1,
+      "P01_01_0096": 1,
+      "P01_01_0098": 1,
+      "P01_01_0107": 1,
+      "P01_01_0111": 1,
+      "P01_01_0117": 1,
+      "P01_01_0128": 1,
+      "P01_01_0137": 1,
+      "P01_01_0160": 1,
+      "P01_01_0186": 1,
+      "P01_01_0193": 1,
+      "P01_01_0211": 1,
+      "P01_01_0215": 1,
+      "P01_01_0222": 1,
+      "P01_01_0231": 1,
+      "P01_01_0254": 1,
+      "P01_01_0273": 1,
+      "P01_01_0280": 1,
+      "P01_01_0287": 1,
+      "P01_01_0315": 1,
+      "P01_01_0339": 1,
+      "P01_01_0359": 1,
+      "P01_01_0369": 1,
+      "P01_01_0389": 1,
+      "P01_01_0391": 1,
+      "P01_01_0403": 1,
+      "P01_01_0414": 1,
+      "P01_01_0419": 1,
+      "P01_01_0427": 1,
+      "P01_01_0436": 1,
+      "P01_01_0444": 1,
+      "P01_01_0467": 1,
+      "P01_01_0469": 1,
+      "P01_01_0473": 1,
+      "P01_01_0481": 1
+    },
+    "same_name_collisions_in_frames": 0,
+    "alternative_records_for_selected_frame": [],
+    "examples": [
+      {
+        "image": {
+          "image_path": "P01_01/P01_01_frame_0000000937.png",
+          "name": "P01_01_frame_0000000937.png",
+          "interpolation": "P01_01_0005",
+          "video": "P01_01",
+          "interpolation_start_frame": "P01_01_frame_0000000937.png",
+          "interpolation_end_frame": "P01_01_frame_0000000965.png"
+        },
+        "objects": [
+          {
+            "id": "100d8df58ee4a393bdb3637a14198fd8",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 1
+          },
+          {
+            "id": "f71d0d5310da014dc6bcb7d4cfdfaaf2",
+            "name": "fridge",
+            "class_id": 12,
+            "type": 1
+          }
+        ]
+      },
+      {
+        "image": {
+          "image_path": "P01_01/P01_01_frame_0000000938.png",
+          "name": "P01_01_frame_0000000938.png",
+          "interpolation": "P01_01_0005",
+          "video": "P01_01",
+          "interpolation_start_frame": "P01_01_frame_0000000937.png",
+          "interpolation_end_frame": "P01_01_frame_0000000965.png"
+        },
+        "objects": [
+          {
+            "id": "1f33d7ca9d8d07f5071750ba2504ac0e",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 0
+          },
+          {
+            "id": "4140c024d4b494956c12c3c6b7ccb7e8",
+            "name": "fridge",
+            "class_id": 12,
+            "type": 0
+          }
+        ]
+      }
+    ]
+  },
+  "P02_03": {
+    "archive_sha256": "d0f964184c7e6a9103126efcdbd42313351b9d1f26cb942c51920a010faac91e",
+    "archive_member": "P02_03_interpolations.json",
+    "frames": 41671,
+    "mask_records": 147890,
+    "unique_mask_ids": 147890,
+    "repeated_mask_ids": 0,
+    "image_fields": {
+      "image_path": 41671,
+      "name": 41671,
+      "interpolation": 41671,
+      "video": 41671,
+      "interpolation_start_frame": 41671,
+      "interpolation_end_frame": 41671
+    },
+    "object_fields": {
+      "id": 147890,
+      "name": 147890,
+      "class_id": 147890,
+      "type": 147890,
+      "segments": 147890
+    },
+    "types": {
+      "1": 3306,
+      "0": 144584
+    },
+    "interpolation_count": 467,
+    "selected_original_entries_verified": 40,
+    "selected_intervals": {
+      "P02_03_0015": 1,
+      "P02_03_0021": 1,
+      "P02_03_0041": 1,
+      "P02_03_0074": 1,
+      "P02_03_0076": 1,
+      "P02_03_0097": 1,
+      "P02_03_0158": 1,
+      "P02_03_0165": 1,
+      "P02_03_0169": 1,
+      "P02_03_0178": 1,
+      "P02_03_0181": 1,
+      "P02_03_0226": 1,
+      "P02_03_0235": 1,
+      "P02_03_0242": 1,
+      "P02_03_0267": 1,
+      "P02_03_0277": 1,
+      "P02_03_0285": 1,
+      "P02_03_0321": 1,
+      "P02_03_0336": 1,
+      "P02_03_0352": 1,
+      "P02_03_0370": 1,
+      "P02_03_0381": 1,
+      "P02_03_0383": 1,
+      "P02_03_0389": 1,
+      "P02_03_0390": 1,
+      "P02_03_0398": 1,
+      "P02_03_0405": 1,
+      "P02_03_0415": 1,
+      "P02_03_0427": 1,
+      "P02_03_0442": 1,
+      "P02_03_0458": 1,
+      "P02_03_0473": 1,
+      "P02_03_0490": 1,
+      "P02_03_0501": 1,
+      "P02_03_0510": 1,
+      "P02_03_0517": 1,
+      "P02_03_0527": 1,
+      "P02_03_0537": 1,
+      "P02_03_0549": 1,
+      "P02_03_0562": 1
+    },
+    "same_name_collisions_in_frames": 0,
+    "alternative_records_for_selected_frame": [],
+    "examples": [
+      {
+        "image": {
+          "image_path": "P02_03/P02_03_frame_0000000212.png",
+          "name": "P02_03_frame_0000000212.png",
+          "interpolation": "P02_03_0000",
+          "video": "P02_03",
+          "interpolation_start_frame": "P02_03_frame_0000000212.png",
+          "interpolation_end_frame": "P02_03_frame_0000000292.png"
+        },
+        "objects": [
+          {
+            "id": "8591b7c1eda6a19887a0c766c5a0a3e2",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 1
+          },
+          {
+            "id": "38e20d765a9ab0f31eda7547cf754697",
+            "name": "shelf",
+            "class_id": 247,
+            "type": 1
+          }
+        ]
+      },
+      {
+        "image": {
+          "image_path": "P02_03/P02_03_frame_0000000213.png",
+          "name": "P02_03_frame_0000000213.png",
+          "interpolation": "P02_03_0000",
+          "video": "P02_03",
+          "interpolation_start_frame": "P02_03_frame_0000000212.png",
+          "interpolation_end_frame": "P02_03_frame_0000000292.png"
+        },
+        "objects": [
+          {
+            "id": "018d9b4ed73e8a283b3a010ba66a3d0a",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 0
+          },
+          {
+            "id": "fe675b8562f2fa187543c48e08e0fd7f",
+            "name": "shelf",
+            "class_id": 247,
+            "type": 0
+          }
+        ]
+      }
+    ]
+  },
+  "P03_04": {
+    "archive_sha256": "31f7e9742edb285325d03959b588b9375604bb2a3b90cfc7d3563ea516212a1a",
+    "archive_member": "P03_04_interpolations.json",
+    "frames": 35647,
+    "mask_records": 104090,
+    "unique_mask_ids": 104090,
+    "repeated_mask_ids": 0,
+    "image_fields": {
+      "image_path": 35647,
+      "name": 35647,
+      "interpolation": 35647,
+      "video": 35647,
+      "interpolation_start_frame": 35647,
+      "interpolation_end_frame": 35647
+    },
+    "object_fields": {
+      "id": 104090,
+      "name": 104090,
+      "class_id": 104090,
+      "type": 104090,
+      "segments": 104090
+    },
+    "types": {
+      "1": 2015,
+      "0": 102075
+    },
+    "interpolation_count": 369,
+    "selected_original_entries_verified": 40,
+    "selected_intervals": {
+      "P03_04_0015": 1,
+      "P03_04_0062": 1,
+      "P03_04_0063": 1,
+      "P03_04_0075": 1,
+      "P03_04_0103": 1,
+      "P03_04_0116": 1,
+      "P03_04_0125": 1,
+      "P03_04_0127": 1,
+      "P03_04_0130": 1,
+      "P03_04_0135": 1,
+      "P03_04_0138": 2,
+      "P03_04_0140": 1,
+      "P03_04_0145": 1,
+      "P03_04_0148": 1,
+      "P03_04_0156": 1,
+      "P03_04_0174": 1,
+      "P03_04_0175": 1,
+      "P03_04_0183": 1,
+      "P03_04_0194": 1,
+      "P03_04_0200": 1,
+      "P03_04_0207": 1,
+      "P03_04_0209": 1,
+      "P03_04_0264": 1,
+      "P03_04_0269": 1,
+      "P03_04_0274": 1,
+      "P03_04_0285": 1,
+      "P03_04_0315": 1,
+      "P03_04_0332": 1,
+      "P03_04_0336": 1,
+      "P03_04_0379": 1,
+      "P03_04_0452": 1,
+      "P03_04_0461": 1,
+      "P03_04_0478": 1,
+      "P03_04_0479": 1,
+      "P03_04_0488": 1,
+      "P03_04_0498": 1,
+      "P03_04_0512": 2,
+      "P03_04_0537": 1
+    },
+    "same_name_collisions_in_frames": 0,
+    "alternative_records_for_selected_frame": [],
+    "examples": [
+      {
+        "image": {
+          "image_path": "P03_04/P03_04_frame_0000000247.png",
+          "name": "P03_04_frame_0000000247.png",
+          "interpolation": "P03_04_0000",
+          "video": "P03_04",
+          "interpolation_start_frame": "P03_04_frame_0000000247.png",
+          "interpolation_end_frame": "P03_04_frame_0000000391.png"
+        },
+        "objects": [
+          {
+            "id": "c0b2168a59d1fe963191605d8452a2c7",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 1
+          },
+          {
+            "id": "ef4d9ad642710aa3e73978a5f0b55949",
+            "name": "left hand",
+            "class_id": 300,
+            "type": 1
+          }
+        ]
+      },
+      {
+        "image": {
+          "image_path": "P03_04/P03_04_frame_0000000248.png",
+          "name": "P03_04_frame_0000000248.png",
+          "interpolation": "P03_04_0000",
+          "video": "P03_04",
+          "interpolation_start_frame": "P03_04_frame_0000000247.png",
+          "interpolation_end_frame": "P03_04_frame_0000000391.png"
+        },
+        "objects": [
+          {
+            "id": "56541f313c288aabdbfc8e2c97db0c03",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 0
+          },
+          {
+            "id": "99afa230dd874de33c78b5ab5f0dc18c",
+            "name": "left hand",
+            "class_id": 300,
+            "type": 0
+          }
+        ]
+      }
+    ]
+  },
+  "P08_09": {
+    "archive_sha256": "f8efa0e8dacb55db7c74b5fbbebc82e9292d38c0f52c72c3dea326c10860d86a",
+    "archive_member": "P08_09_interpolations.json",
+    "frames": 22727,
+    "mask_records": 70713,
+    "unique_mask_ids": 70713,
+    "repeated_mask_ids": 0,
+    "image_fields": {
+      "image_path": 22727,
+      "name": 22727,
+      "interpolation": 22727,
+      "video": 22727,
+      "interpolation_start_frame": 22727,
+      "interpolation_end_frame": 22727
+    },
+    "object_fields": {
+      "id": 70713,
+      "name": 70713,
+      "class_id": 70713,
+      "type": 70713,
+      "segments": 70713
+    },
+    "types": {
+      "1": 1340,
+      "0": 69373
+    },
+    "interpolation_count": 209,
+    "selected_original_entries_verified": 40,
+    "selected_intervals": {
+      "P08_09_0002": 1,
+      "P08_09_0012": 1,
+      "P08_09_0053": 1,
+      "P08_09_0056": 1,
+      "P08_09_0057": 1,
+      "P08_09_0073": 1,
+      "P08_09_0077": 1,
+      "P08_09_0080": 1,
+      "P08_09_0085": 1,
+      "P08_09_0096": 1,
+      "P08_09_0100": 2,
+      "P08_09_0112": 1,
+      "P08_09_0113": 2,
+      "P08_09_0120": 1,
+      "P08_09_0121": 1,
+      "P08_09_0124": 1,
+      "P08_09_0130": 1,
+      "P08_09_0132": 1,
+      "P08_09_0136": 1,
+      "P08_09_0145": 1,
+      "P08_09_0146": 1,
+      "P08_09_0150": 2,
+      "P08_09_0156": 2,
+      "P08_09_0158": 1,
+      "P08_09_0174": 1,
+      "P08_09_0177": 1,
+      "P08_09_0182": 1,
+      "P08_09_0186": 1,
+      "P08_09_0189": 1,
+      "P08_09_0204": 1,
+      "P08_09_0206": 1,
+      "P08_09_0208": 1,
+      "P08_09_0210": 1,
+      "P08_09_0214": 1,
+      "P08_09_0224": 1,
+      "P08_09_0231": 1
+    },
+    "same_name_collisions_in_frames": 0,
+    "alternative_records_for_selected_frame": [
+      {
+        "name": "P08_09_frame_0000017576.png",
+        "selected_interpolation": "P08_09_0121",
+        "other_interpolation": "P08_09_0122",
+        "same_annotations": false
+      }
+    ],
+    "examples": [
+      {
+        "image": {
+          "image_path": "P08_09/P08_09_frame_0000000099.png",
+          "name": "P08_09_frame_0000000099.png",
+          "interpolation": "P08_09_0000",
+          "video": "P08_09",
+          "interpolation_start_frame": "P08_09_frame_0000000099.png",
+          "interpolation_end_frame": "P08_09_frame_0000000142.png"
+        },
+        "objects": [
+          {
+            "id": "86afbee12c52c78db9f0cfb9eb241500",
+            "name": "mocha pot",
+            "class_id": 50,
+            "type": 1
+          }
+        ]
+      },
+      {
+        "image": {
+          "image_path": "P08_09/P08_09_frame_0000000100.png",
+          "name": "P08_09_frame_0000000100.png",
+          "interpolation": "P08_09_0000",
+          "video": "P08_09",
+          "interpolation_start_frame": "P08_09_frame_0000000099.png",
+          "interpolation_end_frame": "P08_09_frame_0000000142.png"
+        },
+        "objects": [
+          {
+            "id": "aff6157dfb2eb17640f7539aebfca534",
+            "name": "mocha pot",
+            "class_id": 50,
+            "type": 0
+          }
+        ]
+      }
+    ]
+  },
+  "P22_01": {
+    "archive_sha256": "497f99b3db28bc4945a203579519b2684ad632cd5213bc00e89633db2177a608",
+    "archive_member": "P22_01_interpolations.json",
+    "frames": 42197,
+    "mask_records": 130730,
+    "unique_mask_ids": 130730,
+    "repeated_mask_ids": 0,
+    "image_fields": {
+      "image_path": 42197,
+      "name": 42197,
+      "interpolation": 42197,
+      "video": 42197,
+      "interpolation_start_frame": 42197,
+      "interpolation_end_frame": 42197
+    },
+    "object_fields": {
+      "id": 130730,
+      "name": 130730,
+      "class_id": 130730,
+      "type": 130730,
+      "segments": 130730
+    },
+    "types": {
+      "1": 2992,
+      "0": 127738
+    },
+    "interpolation_count": 471,
+    "selected_original_entries_verified": 40,
+    "selected_intervals": {
+      "P22_01_0002": 1,
+      "P22_01_0018": 1,
+      "P22_01_0019": 1,
+      "P22_01_0033": 1,
+      "P22_01_0061": 1,
+      "P22_01_0086": 1,
+      "P22_01_0091": 1,
+      "P22_01_0100": 1,
+      "P22_01_0114": 1,
+      "P22_01_0142": 1,
+      "P22_01_0171": 1,
+      "P22_01_0181": 1,
+      "P22_01_0183": 1,
+      "P22_01_0220": 1,
+      "P22_01_0227": 1,
+      "P22_01_0230": 1,
+      "P22_01_0235": 1,
+      "P22_01_0251": 1,
+      "P22_01_0254": 1,
+      "P22_01_0255": 1,
+      "P22_01_0256": 1,
+      "P22_01_0259": 1,
+      "P22_01_0262": 1,
+      "P22_01_0265": 1,
+      "P22_01_0266": 1,
+      "P22_01_0268": 1,
+      "P22_01_0281": 1,
+      "P22_01_0289": 1,
+      "P22_01_0294": 1,
+      "P22_01_0301": 1,
+      "P22_01_0313": 1,
+      "P22_01_0321": 1,
+      "P22_01_0342": 1,
+      "P22_01_0368": 1,
+      "P22_01_0441": 1,
+      "P22_01_0454": 1,
+      "P22_01_0473": 1,
+      "P22_01_0477": 1,
+      "P22_01_0499": 1,
+      "P22_01_0536": 1
+    },
+    "same_name_collisions_in_frames": 0,
+    "alternative_records_for_selected_frame": [
+      {
+        "name": "P22_01_frame_0000044289.png",
+        "selected_interpolation": "P22_01_0368",
+        "other_interpolation": "P22_01_0369",
+        "same_annotations": false
+      }
+    ],
+    "examples": [
+      {
+        "image": {
+          "image_path": "P22_01/P22_01_frame_0000000105.png",
+          "name": "P22_01_frame_0000000105.png",
+          "interpolation": "P22_01_0000",
+          "video": "P22_01",
+          "interpolation_start_frame": "P22_01_frame_0000000105.png",
+          "interpolation_end_frame": "P22_01_frame_0000000147.png"
+        },
+        "objects": [
+          {
+            "id": "fd76de729b68982738fea123ae3611ff",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 1
+          },
+          {
+            "id": "ecf0d6770532b59debec990e5a2d5287",
+            "name": "plate",
+            "class_id": 2,
+            "type": 1
+          },
+          {
+            "id": "f6637f3330b3f131502c04f2c044b899",
+            "name": "drainer",
+            "class_id": 110,
+            "type": 1
+          }
+        ]
+      },
+      {
+        "image": {
+          "image_path": "P22_01/P22_01_frame_0000000106.png",
+          "name": "P22_01_frame_0000000106.png",
+          "interpolation": "P22_01_0000",
+          "video": "P22_01",
+          "interpolation_start_frame": "P22_01_frame_0000000105.png",
+          "interpolation_end_frame": "P22_01_frame_0000000147.png"
+        },
+        "objects": [
+          {
+            "id": "18f5ca48c318eab2e1dd294d5d763866",
+            "name": "right hand",
+            "class_id": 301,
+            "type": 0
+          },
+          {
+            "id": "358018e3b8370d04d06830c41aec6bbd",
+            "name": "left hand",
+            "class_id": 300,
+            "type": 0
+          },
+          {
+            "id": "1c8b7f1f8f28f7065ef4ea1d56c56353",
+            "name": "plate",
+            "class_id": 2,
+            "type": 0
+          },
+          {
+            "id": "7c94c7f451f6fbd58f26e093c53aa131",
+            "name": "drainer",
+            "class_id": 110,
+            "type": 0
+          }
+        ]
+      }
+    ]
+  }
+}

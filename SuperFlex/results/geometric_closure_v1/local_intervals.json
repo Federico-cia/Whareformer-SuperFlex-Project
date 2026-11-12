@@ -1,0 +1,132 @@
+{
+  "selection": {
+    "rule": "All different-frame pairs sharing video, interpolation and exact entity name; no negative identities assigned.",
+    "observations_sha256": "601eb5b9e6cdca9c9cb71512552932eca07fada258f644110eee4216d899350d",
+    "pairs": [
+      {
+        "left": "P03_04/frame_0000020618__a02",
+        "right": "P03_04/frame_0000020711__a02",
+        "video": "P03_04",
+        "category": "knife",
+        "interpolation": "P03_04_0138"
+      },
+      {
+        "left": "P03_04/frame_0000020618__a03",
+        "right": "P03_04/frame_0000020711__a03",
+        "video": "P03_04",
+        "category": "chopping board",
+        "interpolation": "P03_04_0138"
+      },
+      {
+        "left": "P03_04/frame_0000089072__a04",
+        "right": "P03_04/frame_0000089273__a04",
+        "video": "P03_04",
+        "category": "can",
+        "interpolation": "P03_04_0512"
+      },
+      {
+        "left": "P03_04/frame_0000089072__a05",
+        "right": "P03_04/frame_0000089273__a05",
+        "video": "P03_04",
+        "category": "lid",
+        "interpolation": "P03_04_0512"
+      },
+      {
+        "left": "P08_09/frame_0000013668__a02",
+        "right": "P08_09/frame_0000013725__a02",
+        "video": "P08_09",
+        "category": "chopping board",
+        "interpolation": "P08_09_0100"
+      },
+      {
+        "left": "P08_09/frame_0000013668__a03",
+        "right": "P08_09/frame_0000013725__a03",
+        "video": "P08_09",
+        "category": "plate",
+        "interpolation": "P08_09_0100"
+      },
+      {
+        "left": "P08_09/frame_0000016359__a03",
+        "right": "P08_09/frame_0000016442__a03",
+        "video": "P08_09",
+        "category": "frying pan",
+        "interpolation": "P08_09_0113"
+      },
+      {
+        "left": "P08_09/frame_0000022584__a03",
+        "right": "P08_09/frame_0000022635__a03",
+        "video": "P08_09",
+        "category": "lid",
+        "interpolation": "P08_09_0150"
+      },
+      {
+        "left": "P08_09/frame_0000023267__a03",
+        "right": "P08_09/frame_0000023416__a03",
+        "video": "P08_09",
+        "category": "frying pan",
+        "interpolation": "P08_09_0156"
+      }
+    ]
+  },
+  "distances_sha256": "5b671cdd1781dea271ffe2cb79d4e83edc6119ccecefe1ace46e675af7060e1e",
+  "common_pairs": 9,
+  "results": {
+    "da_raw_points": {
+      "d2_wasserstein": {
+        "n": 9,
+        "median": 0.027684219692891084
+      },
+      "covariance_spectrum_l2": {
+        "n": 9,
+        "median": 0.0405541033675986
+      },
+      "multistart_icp_chamfer": {
+        "n": 9,
+        "median": 0.08180032842636475
+      }
+    },
+    "da_raw_superflex": {
+      "d2_wasserstein": {
+        "n": 9,
+        "median": 0.03054851744995111
+      },
+      "covariance_spectrum_l2": {
+        "n": 9,
+        "median": 0.09880014047848666
+      },
+      "multistart_icp_chamfer": {
+        "n": 9,
+        "median": 0.14033270465983103
+      }
+    },
+    "moge_points": {
+      "d2_wasserstein": {
+        "n": 9,
+        "median": 0.031586976448885404
+      },
+      "covariance_spectrum_l2": {
+        "n": 9,
+        "median": 0.05416460085178021
+      },
+      "multistart_icp_chamfer": {
+        "n": 9,
+        "median": 0.0732712267849785
+      }
+    },
+    "moge_superflex": {
+      "d2_wasserstein": {
+        "n": 9,
+        "median": 0.025725383058051797
+      },
+      "covariance_spectrum_l2": {
+        "n": 9,
+        "median": 0.08079909853030867
+      },
+      "multistart_icp_chamfer": {
+        "n": 9,
+        "median": 0.13670733451018102
+      }
+    }
+  },
+  "limitation": "Short local interpolation consistency, dependent pairs and no within-category negatives. Not global identity discrimination or independent GT; never merge these proxies into reviewed identity labels."
+}

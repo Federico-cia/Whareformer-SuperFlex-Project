@@ -1,5 +1,8 @@
 # Interfaccia geometrica e integrazione Whareformer
 
+> Aggiornamento 12 novembre: parte autonoma consegnata; stato e limiti correnti in [CONSEGNA_RAMO_GEOMETRICO.md](CONSEGNA_RAMO_GEOMETRICO.md). Le attività autonome indicate come future nelle sezioni storiche sono superate; restano aperte integrazione e valutazione sulla baseline reale.
+
+
 Consolidamento dell'11 novembre 2026. Stato operativo e piano esecutivo in `STATO_LAVORO.md` e `PIANO_CHIUSURA_RAMO_GEOMETRICO.md`; decisioni storiche nel registro.
 
 ## Vincoli approvati

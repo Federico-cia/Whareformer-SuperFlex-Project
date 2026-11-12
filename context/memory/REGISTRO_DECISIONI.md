@@ -244,12 +244,24 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Verifica del passaggio.** SSH non interattivo riuscito con la chiave esistente e coda personale vuota; nessuna nuova chiave necessaria o credenziale salvata in memoria. Nessun nuovo job inviato. Consolidati i documenti di ingresso, con dettagli sperimentali nei resoconti; configurazione di accesso solo locale.
 
+## 26. Esecuzione della chiusura autonoma — 11 novembre
+
+**Scelta operativa entro il mandato.** Pipeline a stadi con manifest esplicito, hash di input/configurazione/codice e artefatti; DA e MoGE disponibili singolarmente o con pixel comuni. Memoria candidata FIFO (capacità configurabile, D2/spettro e riduzione minimo/media), interrogata prima e aggiornata dopo associazioni esterne. Nessuna selezione di distanza/capacità sulla base del test finale.
+
+**Verifica prefissata.** Tre osservazioni per regressione del nuovo percorso: prima disponibile in P01_01 e P22_01, più il fallimento MoGE già noto P08_09. Non è ampliamento del campione scientifico; serve a verificare portabilità e conservazione dei fallimenti. GPU 755696, limite 15 minuti. Audit CPU 755697 dei cinque archivi originali per accertare campi e corrispondenze senza consultare distanze. Esiti successivi documentati sotto.
+
+**Limiti.** I candidati implementati non costituiscono metodo tracking validato. La fonte ufficiale VISOR distingue ID di maschera, categoria e contesto temporale: non promuovere automaticamente UUID o nome a identità fisica persistente.
+
+**Esito consolidato il 12 novembre.** Pipeline finale verificata con 755709 COMPLETED/0:0 (5m36s), dopo 755696 (5m37s). Audit 755697 fallito per assunzione di unicità del frame; 755699 concluso (2m14s), 200 record selezionati verificati nei cinque archivi. Nessun job attivo. Sei nuvole e cinque superfici nei tre casi prefissati; fallimento MoGE noto conservato. Undici test, export compatto, ripresa e hash verificati. Equivalenza numerica esatta al run storico non superata: differenze misurate e documentate, senza cambiare i risultati scientifici precedenti.
+
+**Evidenza e conseguenza.** ID delle 632169 maschere unici nei cinque archivi; metadati temporali locali, nessun ID fisico globale nei campi osservati. Le 37 etichette visive restano invariate. Selezionate dai soli metadati nove coppie nello stesso intervallo/nome prima di leggerne le distanze: diagnostica locale separata, non nuove identità persistenti o negativi. Nessuna nuova inferenza scientifica aggiunta in assenza di etichette globali più forti. Costi e stabilità non sostengono superiorità sistematica SuperFlex. Consegna autonoma completata; DA/MoGE, punti e test separato invariati. Dettagli e limiti in `CONSEGNA_RAMO_GEOMETRICO.md`.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 Due persone, circa due ore al giorno ciascuna, consegna il 23 novembre. Ruoli confermati il 7 novembre: Marco segue geometria/SuperFlex; il collega Whareformer/integrazione/valutazione. Decisioni scientifiche e report condivisi. Modelli eseguiti sull'HPC; accesso autonomo operativo. Training da zero, reasoning semantico aggiuntivo e memoria complessa restano fuori scope iniziale per concentrare il lavoro sulla domanda misurabile.
 
 ## Regola di aggiornamento
 
-Routine permanente richiesta da Marco il 9 novembre: aggiornamento autonomo, senza promemoria dell'utente, insieme a stato, to-do e altri file di memoria interessati. Applicarla alle novità rilevanti durante il lavoro e prima di chiudere una fase; istruzioni persistenti in `../../AGENTS.md`.
+Routine permanente richiesta da Marco il 9 novembre: aggiornamento autonomo, senza promemoria dell'utente, insieme a stato, to-do e altri file di memoria interessati. Applicarla alle novità rilevanti durante il lavoro e prima di chiudere una fase; istruzioni persistenti in `../AGENTS.md`.
 
 Aggiungere o aggiornare una voce quando viene presa una decisione rilevante o un risultato ne cambia la motivazione. Riportare solo scelta, ragione, evidenza/limite e conseguenza; collegare i resoconti tecnici senza duplicarne i dettagli. Distinguere sempre proposta, decisione approvata, esecuzione e risultato. Non ricostruire a posteriori una scelta esplorativa come se fosse stata dimostrata o pianificata fin dall'inizio.

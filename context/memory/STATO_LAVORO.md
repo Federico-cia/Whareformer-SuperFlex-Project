@@ -1,33 +1,28 @@
 # Stato del lavoro e ripresa
 
-Aggiornamento: 11 novembre 2026. Questo stato prevale sulle note operative storiche nei resoconti.
+Aggiornamento: 12 novembre 2026. Prevale sulle indicazioni operative storiche.
 
-## Mandato attuale
+## Stato corrente
 
-Marco ha approvato il completamento coordinato di tutto il ramo geometrico eseguibile senza il contributo del collega, compresi codice e run HPC necessari, da proseguire in una nuova chat con Astra. Piano e criteri di chiusura in [PIANO_CHIUSURA_RAMO_GEOMETRICO.md](PIANO_CHIUSURA_RAMO_GEOMETRICO.md); registro voce 25. Non attendere la baseline per completare pipeline, valutazione del segnale, export e componente indipendente di confronto/memoria.
+**Consegna autonoma completata**, entro il mandato dell'11 novembre: pipeline portabile DA/MoGE → punti → SuperFlex, export, confronto e memoria causale configurabile. Rapporto unico: [CONSEGNA_RAMO_GEOMETRICO.md](CONSEGNA_RAMO_GEOMETRICO.md), con risultati, costi, verifiche e limiti. Guida `shared_exports/publish_candidate/SuperFlex/PIPELINE.md`; codice sul ramo `prepare/superflex-core`. Nessun beneficio tracking o metodo definitivo dichiarato.
 
-Obiettivo finale invariato: verificare se forme SuperFlex migliorino l'associazione Whareformer a parità di osservazioni, feature visive e XYZ. DA e MoGE restano in parallelo, con controllo sui punti. Distanza e memoria definitive non sono ancora validate; nessun beneficio tracking dimostrato. Scadenza: 23 novembre 2026.
+Riutilizzate 8797 coppie e 299 osservazioni; nessun rilancio del confronto 200. Audit di cinque archivi VISOR: 183312 record frame, 632169 maschere, 200 annotazioni selezionate verificate. ID di maschera unici, nessun ID globale fisico nei campi verificati; non esclude altre risorse. Conservate 37 osservazioni/sette identità visive e i loro limiti. Nove coppie entro intervallo aggiungono solo una diagnostica locale, separata dalle identità. DA, MoGE e controllo sui punti restano attivi.
 
-## Evidenze disponibili — non ripetere
+## Job ed evidenze verificate
 
-| Attività | Esito verificato e riferimento |
-|---|---|
-| Installazione e primi input | SuperFlex robust, DA, MoGE e geometria EPIC già eseguiti sull'HPC. Diagnostici e limiti nei resoconti `VERIFICA_*.md`; non reinstallare o ripetere gli esempi. |
-| Confronto 200 | 200 immagini, cinque video, 299 osservazioni e 890 mesh nelle tre condizioni storiche. IoU appaiata DA grezzo 0.4697 / MoGE 0.4481: compatibilità 2D, non accuratezza 3D. `RISULTATI_CONFRONTO_200.md`, `outputs/compare200_749968/`. |
-| Identità v1 | Job CPU 750536 COMPLETED/0:0, 47m26s, 8797 coppie e 35188 righe. Preparazione 750421 e pilota 750424 conclusi. Archivio, hash, firme e AUC verificati. `RISULTATI_IDENTITA_DA_MOGE.md`, `outputs/shape_identity_v1/`. |
-| Limite delle identità | 37 osservazioni/sette identità revisionate visivamente; 149 coppie comuni alle quattro rappresentazioni. Negativi entro categoria soltanto due piatti P22_01: AUC D2 punti DA/SuperFlex DA/punti MoGE/SuperFlex MoGE = 0.612/0.627/0.701/0.768. Non è ground truth persistente certificata né un vincitore generale. |
-| Codice condiviso | Nucleo installabile geometria/confronto/analisi, sette test e regressione superati: 8797 coppie, 12 AUC, 597 preprocessing, 299 retroproiezioni e 40 ICP. Inferenza neurale e acquisizione storiche ancora da rendere portabili. `REVISIONE_CODICE_REPOSITORY.md`. |
+- 755696 GPU COMPLETED/0:0, 5m37s: primo percorso portabile.
+- 755697 CPU FAILED/1:0, 1m46s: audit assumeva un solo record per frame; corretta la gestione degli intervalli alternativi.
+- 755699 CPU COMPLETED/0:0, 2m14s: audit completo dei cinque archivi.
+- 755709 GPU COMPLETED/0:0, 5m36s: versione finale, sei nuvole/cinque superfici e fallimento MoGE atteso, export compatto e ripresa. Undici test superati; hash del codice pipeline corrispondenti, controlli locali e statici superati.
 
-## Asset e accesso
+Output `~/cv_project/runs/portable_validation_755709/` e `~/cv_project/runs/visor_original_audit.json`; log `~/cv_project/portable_755696.out/.err`, `portable_755709.out/.err`, `visor_audit_755697.out/.err`, `visor_audit_755699.out/.err`. Copie e verifiche in `outputs/geometric_closure_v1/`; export storico `observations.json` con radice geometrie `outputs/compare200_749968/`. Archivio finale scaricato con hash corrispondente. **Nessun job attivo nell'ultima lettura della coda.**
 
-- Archivio locale: `scripts/` per runner storici, `data/compare200/`, `outputs/`, `manifests/`, copie degli autori in `SuperFlex-repo/`, `Whareformer-repo/` ed `external/`. Inventario: `docs/CODICE_PRODOTTO.md` e `scripts/README.md`.
-- Sviluppo condivisibile: worktree `shared_exports/publish_candidate/`, ramo `prepare/superflex-core`, repository `https://github.com/Federico-cia/Whareformer-SuperFlex-Project`. Il `main` dell'archivio locale ha storia indipendente: non pubblicarlo né fonderlo in blocco.
-- Codice sotto `SuperFlex/`, memoria sotto `context/memory/`; dati/pesi/credenziali esclusi. Pubblicazione iniziale verificata a `65dea7a`, remoto `main` osservato a `78eefcc`. Ricontrollare i riferimenti prima di scrivere sul remoto. Audit di riservatezza locale: `shared_exports/publication_security.json`.
-- **Accesso HPC ricontrollato l'11 novembre:** connessione SSH non interattiva riuscita con la chiave del progetto già presente; coda personale vuota. Nessuna nuova chiave necessaria, nessuna password da passare in chat, nessun job inviato in questa fase. Configurazione personale fuori Git; riferimento locale `scripts/abilita_accesso_hpc.ps1`, da consultare senza rieseguirlo se l'accesso funziona.
-- HPC: `~/cv_project/`; ambienti già usati `cv-superflex`, `cv-epic-depth`, `cv-moge2`, `cv-epic-geometry-cpu`. Modelli tramite SLURM, partizione/QoS `stud`. Le risorse e i percorsi vanno verificati per il nuovo job senza rifare il setup. Run identità `~/cv_project/runs/shape_identity_v1/`, log `~/cv_project/shape_identity_750536.out/.err`.
+Il contratto è verificato; equivalenza numerica esatta alle vecchie inferenze no: errore relativo L2 massimo punti 0.0006212, differenza D2 fra superfici fino a 0.00513. Non cambiate le distanze scientifiche storiche. Memoria FIFO/D2/spettro è un candidato implementato, non una scelta validata.
 
-## Dipendenze residue
+## Asset e prossima fase
 
-Il mapping VISOR→RGB esiste, ma la corrispondenza con `detection_idx`, feature e XYZ reali della baseline non è certificata. Identificativi tutti distinti nei manifest diagnostici non dimostrano che VISOR sia privo di identità persistenti: controllare le annotazioni originali e documentarne la semantica. Il codice del collega non risultava caricato alla verifica del remoto; ciò non descrive il suo lavoro locale.
+Worktree condivisibile `shared_exports/publish_candidate/`, repository `https://github.com/Federico-cia/Whareformer-SuperFlex-Project`, solo ramo `prepare/superflex-core`. Archivio locale con storia indipendente: non pubblicare main né importare lo storico. Dati/pesi/accessi fuori Git. Memoria condivisa in `context/memory/`; risultati essenziali in `SuperFlex/results/geometric_closure_v1/`.
 
-L'integrazione effettiva, il controllo di equivalenza a contributo geometrico zero e le metriche tracking dipendono dalla baseline. Preparare l'interfaccia ora, senza dichiarare questi risultati già ottenuti. Prossima esecuzione: seguire il piano di chiusura e la checklist `TODO.md`, non i vecchi ordini di lancio.
+HPC e quattro ambienti esistenti riusati; accesso con chiave già configurata, riferimento personale `scripts/abilita_accesso_hpc.ps1`, da non rieseguire. Non creare chiavi o chiedere password. Conservare run storici e quelli nuovi.
+
+Prossimo passo dipendente dalla baseline: mapping alle detection reali, feature e XYZ; integrazione nel matcher, controllo a contributo zero, calibrazione sviluppo e test tracking separato. Non attribuire al collega attività non osservate. Obiettivo finale invariato, scadenza 23 novembre.

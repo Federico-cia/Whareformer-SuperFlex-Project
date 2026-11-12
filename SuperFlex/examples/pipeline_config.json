@@ -1,0 +1,21 @@
+{
+  "sources": ["da", "moge"],
+  "clouds": {"pixel_policy": "common", "minimum_points": 32},
+  "da": {
+    "model": "depth-anything/Depth-Anything-V2-Metric-Indoor-Large-hf",
+    "revision": "d2fc6a93601aabb1139a3bf0ebfcb4e89c67817f"
+  },
+  "moge": {
+    "checkpoint": "../weights/moge/model.pt",
+    "checkpoint_sha256": "3eefd4abb2102f38f12b2d1992e5ff15e4923e5431c67dd494afe157e0111cd5",
+    "revision": "39c4d5e957afe587e04eec59dc2bcc3be5ecd968",
+    "settings": {"resolution_level": 9, "use_fp16": true, "force_projection": true, "apply_mask": false, "fov_x": null}
+  },
+  "superflex": {
+    "checkpoint": "../weights/superflex/ckpt.pt",
+    "config": "../weights/superflex/config.yaml",
+    "checkpoint_sha256": "5bd1ba9818dc7322400d4234262d47500b05fb40bad3b0edc1e6b8847833b842",
+    "config_sha256": "ff468f8baaec1622db6cd26edae26ec32c7c8c828b95a0012811078f51b031bf",
+    "seed": 42
+  }
+}

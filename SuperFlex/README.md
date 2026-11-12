@@ -31,3 +31,9 @@ pairs, grouped by video and category. Dependent pairs are not independent sample
 requires perspective Z depth and intrinsics at the same resolution. SuperFlex input
 uses 4096 samples and mean/max-extent normalization, distinct from comparison RMS
 normalization. Neither normalization corrects orientation sensitivity.
+
+## Autonomous geometry delivery
+
+Portable neural stages, observation export and causal memory: [PIPELINE.md](PIPELINE.md).
+Verified results and limitations: [delivery report](results/geometric_closure_v1/REPORT.md).
+Historical manifests use `da_raw_*`; the new unaligned DA pipeline uses `da_*`.

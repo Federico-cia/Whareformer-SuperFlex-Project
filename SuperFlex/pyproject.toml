@@ -9,6 +9,10 @@ description = "Point-cloud preparation and paired shape comparison."
 requires-python = ">=3.11"
 dependencies = ["numpy==1.26.4", "scipy==1.15.3", "trimesh==4.6.8"]
 
+[project.optional-dependencies]
+images = ["Pillow>=10"]
+reports = ["matplotlib>=3.8", "Pillow>=10"]
+
 [project.scripts]
 shape-tools = "shape_tools.__main__:main"
 

@@ -1,0 +1,617 @@
+{
+  "observations": 299,
+  "videos": 5,
+  "reviewed_observations": 37,
+  "reviewed_identities": 7,
+  "observation_coverage": {
+    "da_raw_points": {
+      "ready": 299
+    },
+    "da_raw_superflex": {
+      "ready": 299
+    },
+    "moge_points": {
+      "ready": 299
+    },
+    "moge_superflex": {
+      "ready": 298,
+      "unavailable": 1
+    }
+  },
+  "paired_evaluation": {
+    "review_sha256": "aa148d2ce2f7f3ff4d7696b664040b10d97ac93617327c57072b0c9b5b90a438",
+    "distances_sha256": "5b671cdd1781dea271ffe2cb79d4e83edc6119ccecefe1ace46e675af7060e1e",
+    "labeled_pairs": 158,
+    "common_pairs": 149,
+    "coverage": {
+      "da_raw_points": 158,
+      "da_raw_superflex": 158,
+      "moge_points": 158,
+      "moge_superflex": 149
+    },
+    "by_video": {
+      "P01_01": {
+        "chopping board": {
+          "da_raw_points": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.02161508907135122,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.11337498071595385,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.08840406631260479,
+              "median_different": null
+            }
+          },
+          "da_raw_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.0706531542402334,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.22727272701412005,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.17803642527193525,
+              "median_different": null
+            }
+          },
+          "moge_points": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.02225521996032277,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.11514823142758206,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.09471304735114695,
+              "median_different": null
+            }
+          },
+          "moge_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.04294801437432895,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.2301091950969531,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.17775237419697415,
+              "median_different": null
+            }
+          }
+        }
+      },
+      "P03_04": {
+        "knife": {
+          "da_raw_points": {
+            "d2_wasserstein": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.06276775201645195,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.14428186187651995,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.11390142788746545,
+              "median_different": null
+            }
+          },
+          "da_raw_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.11686730577625183,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.2487024066034954,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.18805354095920007,
+              "median_different": null
+            }
+          },
+          "moge_points": {
+            "d2_wasserstein": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.06155151758860905,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.12162152703750775,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.14044680735931958,
+              "median_different": null
+            }
+          },
+          "moge_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.03247634268866209,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.10366853454922678,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 6,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.14845407036218414,
+              "median_different": null
+            }
+          }
+        },
+        "chopping board": {
+          "da_raw_points": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.04342081641137911,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.10127342263046647,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.09454204736445412,
+              "median_different": null
+            }
+          },
+          "da_raw_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.028699875598543853,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.07527628206486782,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.12475109989182673,
+              "median_different": null
+            }
+          },
+          "moge_points": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.043143545551544996,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.12610940390034311,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.09350165981086087,
+              "median_different": null
+            }
+          },
+          "moge_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.0558233887661683,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.21209204082165986,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.17768918441226217,
+              "median_different": null
+            }
+          }
+        }
+      },
+      "P08_09": {
+        "milk bottle": {
+          "da_raw_points": {
+            "d2_wasserstein": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.2324184519667009,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.30164516179269696,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.20641275572890744,
+              "median_different": null
+            }
+          },
+          "da_raw_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.04065271723356646,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.07214157942024799,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.14028712198849536,
+              "median_different": null
+            }
+          },
+          "moge_points": {
+            "d2_wasserstein": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.1289468219653585,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.13642136859053228,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.1697998485124855,
+              "median_different": null
+            }
+          },
+          "moge_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.06614831240560666,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.19329454992664305,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 3,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.16301433491024425,
+              "median_different": null
+            }
+          }
+        },
+        "chopping board": {
+          "da_raw_points": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.041987257891584535,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.13626825291183453,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.09574426152947782,
+              "median_different": null
+            }
+          },
+          "da_raw_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.04556169247538025,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.22744661905550784,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.17012500906088251,
+              "median_different": null
+            }
+          },
+          "moge_points": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.04892340056854212,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.1616563347516216,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.08755773536088093,
+              "median_different": null
+            }
+          },
+          "moge_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.03463040258285538,
+              "median_different": null
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.19317575887336927,
+              "median_different": null
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 15,
+              "different_pairs": 0,
+              "auc": null,
+              "median_same": 0.16923510268922104,
+              "median_different": null
+            }
+          }
+        }
+      },
+      "P22_01": {
+        "plate": {
+          "da_raw_points": {
+            "d2_wasserstein": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.612,
+              "median_same": 0.0693228934669399,
+              "median_different": 0.0935871751837403
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.744,
+              "median_same": 0.12070462873069952,
+              "median_different": 0.18077982269021642
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.6146666666666667,
+              "median_same": 0.14047639514682472,
+              "median_different": 0.14523116823711704
+            }
+          },
+          "da_raw_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.6266666666666667,
+              "median_same": 0.04001764942482319,
+              "median_different": 0.06067236031137454
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.7293333333333333,
+              "median_same": 0.13573374092177737,
+              "median_different": 0.21799532761180856
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.7173333333333334,
+              "median_same": 0.1440464818151088,
+              "median_different": 0.17267556776922677
+            }
+          },
+          "moge_points": {
+            "d2_wasserstein": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.7013333333333334,
+              "median_same": 0.09890757384395842,
+              "median_different": 0.12257298570252442
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.7626666666666667,
+              "median_same": 0.14634506391960303,
+              "median_different": 0.25308586909066727
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.6813333333333333,
+              "median_same": 0.14523936757104053,
+              "median_different": 0.17984110215181276
+            }
+          },
+          "moge_superflex": {
+            "d2_wasserstein": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.768,
+              "median_same": 0.060159357442313294,
+              "median_different": 0.11169054223178206
+            },
+            "covariance_spectrum_l2": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.752,
+              "median_same": 0.1728475628958097,
+              "median_different": 0.2890526490260644
+            },
+            "multistart_icp_chamfer": {
+              "same_pairs": 25,
+              "different_pairs": 30,
+              "auc": 0.728,
+              "median_same": 0.16035063127201687,
+              "median_different": 0.19073787616260174
+            }
+          }
+        }
+      }
+    },
+    "limitation": "Dependent pairs and visually reviewed labels; not tracking accuracy."
+  },
+  "provenance": {
+    "observations_sha256": "0131fd53208c9ce2b370a3f1211b92502d8fc39f5c66e7bd845f586905e9911f"
+  },
+  "limitations": [
+    "Visual identity labels are not certified persistent ground truth.",
+    "Pairs share observations; no independent-pair confidence intervals.",
+    "Same-identity distances and AUC are descriptive development evidence, not tracking accuracy.",
+    "Common-pair analysis conditions on availability; coverage is reported separately."
+  ]
+}

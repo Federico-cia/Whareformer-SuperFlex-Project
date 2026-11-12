@@ -2,13 +2,13 @@
 
 Mandato esecutivo approvato l'11 novembre: sviluppare codice ed eseguire le run HPC necessarie per concludere la parte autonoma. Piano e criteri: [PIANO_CHIUSURA_RAMO_GEOMETRICO.md](PIANO_CHIUSURA_RAMO_GEOMETRICO.md). Stato verificato e asset: [STATO_LAVORO.md](STATO_LAVORO.md).
 
-## Consegna autonoma
+## Consegna autonoma — completata
 
-- [ ] Rendere riutilizzabile e condivisibile la pipeline RGB/maschere→DA o MoGE→nuvole→SuperFlex, con percorsi espliciti, provenienza, fallimenti e ripresa affidabile. Integrare il nucleo già revisionato; non copiare in blocco i runner storici.
-- [ ] Verificare semantica e disponibilità delle identità persistenti nelle annotazioni originali; consolidare campione e ambiguità senza usare le distanze per decidere le etichette. Ampliare i dati di sviluppo soltanto dove mancano confronti informativi, prima delle nuove predizioni.
-- [ ] Completare il confronto appaiato punti/SuperFlex × DA/MoGE: stabilità, discriminatività entro categoria, copertura, fallimenti e costi. Riutilizzare distanze e inferenze concluse; nuovi job mirati con budget dichiarato.
-- [ ] Preparare export per osservazione e componente di confronto/memoria configurabile indipendente dal tracker; testare causalità, forme mancanti e contratto. Capacità/regole/distanza sono candidati da documentare, non scelte definitive già validate.
-- [ ] Consegnare codice pulito, esempio eseguibile, risultati essenziali, figure e rapporto sintetico con limiti; allineare memoria condivisa e ricontrollare riservatezza prima del push.
+- [x] Pipeline portabile DA/MoGE → punti → SuperFlex, provenienza, fallimenti e ripresa verificati.
+- [x] Audit delle annotazioni originali: documentate semantica, alternative e limiti; nessuna identità globale inventata.
+- [x] Valutazione consolidata su risultati disponibili: stabilità/discriminatività, copertura, fallimenti e costi; diagnostica locale separata.
+- [x] Export di 299 osservazioni e memoria causale configurabile; 11 test ed esempio eseguibile verificati.
+- [x] Codice, figure e istruzioni consegnati; rapporto [CONSEGNA_RAMO_GEOMETRICO.md](CONSEGNA_RAMO_GEOMETRICO.md).
 
 ## Dipendenze della fase comune
 
@@ -17,6 +17,6 @@ Mandato esecutivo approvato l'11 novembre: sviluppare codice ed eseguire le run 
 
 ## Già concluso — riusare
 
-Setup dei modelli, piloti e diagnostici, confronto 200, precalcolo 8797 coppie, prima revisione visiva, validazione numerica del nucleo pubblicato e accesso HPC senza password. Evidenze e limiti in `STATO_LAVORO.md` e resoconti collegati. Nessun job attivo osservato l'11 novembre.
+Setup dei modelli, piloti e diagnostici, confronto 200, precalcolo 8797 coppie, prima revisione visiva, validazione numerica del nucleo pubblicato e accesso HPC senza password. Evidenze e limiti in `STATO_LAVORO.md` e resoconti collegati. Job di chiusura conclusi, nessun job attivo nell’ultima verifica; dettagli nello stato.
 
 SAM3, fusione delle nuvole, training da zero ed estensioni robotiche non sono prerequisiti della consegna attuale. DA e MoGE restano entrambi attivi; il test finale non si usa per scegliere il metodo.

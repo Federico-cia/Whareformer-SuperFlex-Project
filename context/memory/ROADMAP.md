@@ -1,5 +1,8 @@
 # Roadmap operativa — progetto Computer Vision
 
+> Aggiornamento 12 novembre: parte autonoma consegnata; stato e limiti correnti in [CONSEGNA_RAMO_GEOMETRICO.md](CONSEGNA_RAMO_GEOMETRICO.md). Le attività autonome indicate come future nelle sezioni storiche sono superate; restano aperte integrazione e valutazione sulla baseline reale.
+
+
 Aggiornata l'11 novembre 2026. Domanda approvata in `FASE_0.md`: utilità della memoria di forme SuperFlex per l'associazione Whareformer, con osservazioni, feature e XYZ comuni. Scadenza confermata: 23 novembre. Nessuna nuova data intermedia fissata.
 
 | Fase | Contributo e stato |
