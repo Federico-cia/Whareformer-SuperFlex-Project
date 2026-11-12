@@ -266,6 +266,26 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Esito verificato.** Pubblicazione riuscita: `main` avanzato da `78eefcc` a `7cb56da`, ramo di sviluppo allineato, riferimenti remoti coincidenti con la consegna. Nessuna forzatura o modifica alle cartelle del collega; storia indipendente del main locale esclusa. Controllo di riservatezza su 72 file e nuovi commit superato, due grafici revisionati visivamente; rapporto locale `shared_exports/publication_security_pre_main.json`. Il precedente rifiuto automatico del push è superato da questa pubblicazione. Nessun nuovo esperimento o cambiamento scientifico.
 
+## 28. Opzioni per l’adattatore Whareformer — 12 novembre
+
+**Richiesta di Marco.** Concentrarsi sull’adattatore e confrontare modalità di costruzione con pro e contro; nessuna variante ancora scelta o implementata in questa discussione.
+
+**Verifica del codice originale disponibile.** `WhareformerMatcher.match` calcola logits, softmax e assegnazione greedy; `StandardTracker.update` aggiorna le track e ne crea di nuove dopo il matching. La memoria geometrica deve usare track_id effettivi, non posizioni temporanee nella lista, e azzerarsi fra video. Il contenuto del codice originale non certifica la versione effettiva del collega.
+
+**Opzioni proposte.** (A) classi adattatrici separate, riusando input del modello e assegnazione originale, con memoria esterna; (B) punti di estensione espliciti nel matcher/tracker, mantenendo il percorso originale senza adattatore; (C) geometria incorporata in Detection/Track e nel loro ciclo di vita. Raccomandazione iniziale A per limitare interferenze col lavoro del collega; B preferibile se si concorda la modifica condivisa delle interfacce; C più invasiva, non necessaria per il primo confronto. Queste opzioni riguardano architettura software, non differenti metodi geometrici né nuovo training.
+
+**Vincoli comuni.** Lookup esplicito delle osservazioni, controllo dell’ordine detection/track, forme mancanti senza correzione diretta, aggiornamento dopo associazione, gestione nuove track/reset; percorso a peso zero equivalente da verificare. Correzione dei logits prima della softmax ancora candidata; lasciare invariato il logit New Track non ne preserva la probabilità dopo normalizzazione. Prima modalità diagnostica senza influenza sulle associazioni, poi fusione configurabile e valutazione sulla baseline reale. Nessun nuovo job o push.
+
+## 29. Preparare i dati per il collegamento ai track
+
+**Richiesta riferita da Marco.** Il collega chiede RGB, maschere VISOR, nuvole, selezione e script per collegare le osservazioni a Whareformer e sperimentare l'accumulo.
+
+**Esecuzione e motivazione.** Preparato archivio mirato locale di 73.1 MB, senza ridistribuire l'intero run geometrico: input originali, 299 maschere e 598 nuvole DA grezzo/MoGE, indice dei file per osservazione e checksum. Nuvole e maschere provengono dagli output, non dalla sola cartella `data/compare200/`. Verificati CRC, checksum di tutti i file e provenienza di RGB/maschere/nuvole. Percorsi e stato in `STATO_LAVORO.md`.
+
+**Limite e conseguenza.** Nessun invio esterno eseguito, nessuna inferenza ripetuta. Il mapping alle detection/track resta aperto. L'accumulo è un'intenzione riferita del collega, non un metodo già verificato o adottato; occorre registrare nuvole camera-frame e gestire scala e movimento prima della fusione.
+
+**Successiva richiesta di Marco.** Pubblicare il pacchetto su GitHub mantenendo ordine: destinazione `main`, cartella `SuperFlex/data_packages/compare200/`, README e checksum con collegamento nell’indice principale. Archivio invariato, contenuti interni verificati; caricamento da verificare. Eccezione esplicita alla precedente esclusione generale dei dati da Git.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 Due persone, circa due ore al giorno ciascuna, consegna il 23 novembre. Ruoli confermati il 7 novembre: Marco segue geometria/SuperFlex; il collega Whareformer/integrazione/valutazione. Decisioni scientifiche e report condivisi. Modelli eseguiti sull'HPC; accesso autonomo operativo. Training da zero, reasoning semantico aggiuntivo e memoria complessa restano fuori scope iniziale per concentrare il lavoro sulla domanda misurabile.

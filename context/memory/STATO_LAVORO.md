@@ -32,3 +32,13 @@ Prossimo passo dipendente dalla baseline: mapping alle detection reali, feature 
 **Pubblicazione su `main` completata e verificata**, su indicazione di Marco. Codice portabile, esempi, risultati essenziali e memoria ripulita ora visibili all'apertura della [repository comune](https://github.com/Federico-cia/Whareformer-SuperFlex-Project). `SuperFlex/` contiene il componente geometrico, `context/memory/` la memoria; dati grezzi, pesi e configurazioni personali restano esterni. `main` avanzato da `78eefcc` alla consegna `7cb56da`, senza conflitti o forzature; ramo `prepare/superflex-core` allineato. Entrambi i riferimenti remoti verificati. La storia indipendente del main locale non è stata pubblicata.
 
 Controllo di riservatezza su 72 file e snapshot dei nuovi commit, inclusa revisione visiva dei due grafici: nessun segreto rilevato, nei limiti del controllo. Evidenza locale `shared_exports/publication_security_pre_main.json`. Il precedente blocco del push è storico e superato; nessun nuovo esperimento o beneficio tracking aggiunto dalla pubblicazione.
+
+## Discussione successiva — adattatore
+
+Marco chiede opzioni architetturali prima di procedere. Confronto e raccomandazione, non scelta adottata, nel registro voce 28. Nessun adattatore Whareformer implementato o nuovo esperimento in questa discussione.
+
+## Pacchetto per il collegamento ai track
+
+Preparato `shared_exports/compare200_tracking_inputs_v1.zip` (73.1 MB): 200 RGB, 299 maschere, 598 nuvole originali DA grezzo/MoGE, input compare200 con `selection_final.json`, script originale `acquire_compare200.py` e indice `observations_for_tracking.json`. CRC e SHA-256 di tutti i file verificati; RGB, maschere e nuvole concordano con la provenienza originale. Ricevuta tramite Marco richiesta del collega per mapping ai track e sperimentazione dell'accumulo: attività riferita, non verificata o adottata come metodo del progetto. Mapping detection/track non certificato; nuvole camera-frame da registrare prima della fusione, con gestione di scala e movimento dell'oggetto. Nessun nuovo job o invio esterno; archivio pronto localmente, checksum in `shared_exports/compare200_tracking_inputs_v1.json`.
+
+Marco richiede il caricamento del pacchetto su GitHub, ordinato e visibile su `main`. Collocazione selezionata: `SuperFlex/data_packages/compare200/`, archivio originale con README e checksum; eccezione puntuale alle esclusioni Git. Controllo interno su 1118 file completato, nessun pattern di segreto rilevato. Pubblicazione da verificare.

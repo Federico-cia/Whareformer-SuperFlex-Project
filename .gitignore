@@ -25,3 +25,6 @@ checkpoints/
 *.zip
 *.tar
 *.tar.gz
+
+# Approved compare200 data handoff; other archives remain excluded.
+!SuperFlex/data_packages/compare200/compare200_tracking_inputs_v1.zip
