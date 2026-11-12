@@ -1,0 +1,12 @@
+{
+  "video": "P01_01",
+  "annotation_frames": 33310,
+  "prediction_frames": 33310,
+  "total_prediction_rows": 110590,
+  "matches_exact": 110590,
+  "matches_iou": 0,
+  "unmatched_rows": 0,
+  "distinct_tracks_with_matched_observations": 52,
+  "unmatched_examples": [],
+  "note": "Predicted tracks are not ground-truth identities. A track can split or merge physical objects."
+}

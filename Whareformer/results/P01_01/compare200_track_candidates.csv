@@ -1,0 +1,19 @@
+track_id,num_geometry_observations,categories,first_frame,last_frame
+9,18,pan,frame_0000007508,frame_0000097921
+35,13,pan,frame_0000046135,frame_0000091092
+4,9,"chopping board, grater",frame_0000002893,frame_0000035493
+2,6,spatula,frame_0000017739,frame_0000061693
+36,5,"saucepan, sieve",frame_0000061693,frame_0000097921
+6,4,knife,frame_0000005099,frame_0000020707
+47,3,saucepan,frame_0000084160,frame_0000097921
+19,2,lid,frame_0000023269,frame_0000029929
+27,2,plate,frame_0000095846,frame_0000096248
+12,1,pan,frame_0000022014,frame_0000022014
+14,1,tofu container,frame_0000053269,frame_0000053269
+21,1,kettle,frame_0000025902,frame_0000025902
+30,1,chopping board,frame_0000043171,frame_0000043171
+33,1,saucepan,frame_0000040194,frame_0000040194
+34,1,olive oil bottle,frame_0000042473,frame_0000042473
+40,1,tofu box,frame_0000051922,frame_0000051922
+44,1,spatula,frame_0000070766,frame_0000070766
+50,1,container,frame_0000096248,frame_0000096248

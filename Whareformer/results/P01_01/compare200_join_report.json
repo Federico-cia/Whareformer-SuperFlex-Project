@@ -1,0 +1,197 @@
+{
+  "video": "P01_01",
+  "geometry_observations_in_manifest": 73,
+  "join_statuses": {
+    "exact": 71,
+    "annotation_id_not_found_in_frame": 1,
+    "frame_not_in_whareformer_predictions": 1
+  },
+  "matched_track_count": 18,
+  "matched_observation_count": 71,
+  "unmatched_observation_count": 2,
+  "tracks_with_multiple_geometry_observations": 9,
+  "tracks_with_at_least_five_geometry_observations": 5,
+  "top_tracks": [
+    {
+      "track_id": "9",
+      "num_geometry_observations": 18,
+      "categories": [
+        "pan"
+      ],
+      "first_frame": "frame_0000007508",
+      "last_frame": "frame_0000097921"
+    },
+    {
+      "track_id": "35",
+      "num_geometry_observations": 13,
+      "categories": [
+        "pan"
+      ],
+      "first_frame": "frame_0000046135",
+      "last_frame": "frame_0000091092"
+    },
+    {
+      "track_id": "4",
+      "num_geometry_observations": 9,
+      "categories": [
+        "chopping board",
+        "grater"
+      ],
+      "first_frame": "frame_0000002893",
+      "last_frame": "frame_0000035493"
+    },
+    {
+      "track_id": "2",
+      "num_geometry_observations": 6,
+      "categories": [
+        "spatula"
+      ],
+      "first_frame": "frame_0000017739",
+      "last_frame": "frame_0000061693"
+    },
+    {
+      "track_id": "36",
+      "num_geometry_observations": 5,
+      "categories": [
+        "saucepan",
+        "sieve"
+      ],
+      "first_frame": "frame_0000061693",
+      "last_frame": "frame_0000097921"
+    },
+    {
+      "track_id": "6",
+      "num_geometry_observations": 4,
+      "categories": [
+        "knife"
+      ],
+      "first_frame": "frame_0000005099",
+      "last_frame": "frame_0000020707"
+    },
+    {
+      "track_id": "47",
+      "num_geometry_observations": 3,
+      "categories": [
+        "saucepan"
+      ],
+      "first_frame": "frame_0000084160",
+      "last_frame": "frame_0000097921"
+    },
+    {
+      "track_id": "19",
+      "num_geometry_observations": 2,
+      "categories": [
+        "lid"
+      ],
+      "first_frame": "frame_0000023269",
+      "last_frame": "frame_0000029929"
+    },
+    {
+      "track_id": "27",
+      "num_geometry_observations": 2,
+      "categories": [
+        "plate"
+      ],
+      "first_frame": "frame_0000095846",
+      "last_frame": "frame_0000096248"
+    },
+    {
+      "track_id": "12",
+      "num_geometry_observations": 1,
+      "categories": [
+        "pan"
+      ],
+      "first_frame": "frame_0000022014",
+      "last_frame": "frame_0000022014"
+    },
+    {
+      "track_id": "14",
+      "num_geometry_observations": 1,
+      "categories": [
+        "tofu container"
+      ],
+      "first_frame": "frame_0000053269",
+      "last_frame": "frame_0000053269"
+    },
+    {
+      "track_id": "21",
+      "num_geometry_observations": 1,
+      "categories": [
+        "kettle"
+      ],
+      "first_frame": "frame_0000025902",
+      "last_frame": "frame_0000025902"
+    },
+    {
+      "track_id": "30",
+      "num_geometry_observations": 1,
+      "categories": [
+        "chopping board"
+      ],
+      "first_frame": "frame_0000043171",
+      "last_frame": "frame_0000043171"
+    },
+    {
+      "track_id": "33",
+      "num_geometry_observations": 1,
+      "categories": [
+        "saucepan"
+      ],
+      "first_frame": "frame_0000040194",
+      "last_frame": "frame_0000040194"
+    },
+    {
+      "track_id": "34",
+      "num_geometry_observations": 1,
+      "categories": [
+        "olive oil bottle"
+      ],
+      "first_frame": "frame_0000042473",
+      "last_frame": "frame_0000042473"
+    },
+    {
+      "track_id": "40",
+      "num_geometry_observations": 1,
+      "categories": [
+        "tofu box"
+      ],
+      "first_frame": "frame_0000051922",
+      "last_frame": "frame_0000051922"
+    },
+    {
+      "track_id": "44",
+      "num_geometry_observations": 1,
+      "categories": [
+        "spatula"
+      ],
+      "first_frame": "frame_0000070766",
+      "last_frame": "frame_0000070766"
+    },
+    {
+      "track_id": "50",
+      "num_geometry_observations": 1,
+      "categories": [
+        "container"
+      ],
+      "first_frame": "frame_0000096248",
+      "last_frame": "frame_0000096248"
+    }
+  ],
+  "unmatched_examples": [
+    {
+      "observation_key": "P01_01/frame_0000022584__a02",
+      "frame_name": "frame_0000022584",
+      "annotation_id": "2bcf000a4ce89bcd6a44b2d325e398b1",
+      "category": "pan",
+      "reason": "annotation_id_not_found_in_frame"
+    },
+    {
+      "observation_key": "P01_01/frame_0000040874__a01",
+      "frame_name": "frame_0000040874",
+      "annotation_id": "7c5827f0344debd37b7c0940908ebc03",
+      "category": "kettle",
+      "reason": "frame_not_in_whareformer_predictions"
+    }
+  ],
+  "important": "Exact ID matches are not proof that track identities are correct or object shapes are aligned."
+}
