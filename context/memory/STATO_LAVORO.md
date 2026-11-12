@@ -21,7 +21,7 @@ Il contratto è verificato; equivalenza numerica esatta alle vecchie inferenze n
 
 ## Asset e prossima fase
 
-Worktree condivisibile `shared_exports/publish_candidate/`, repository `https://github.com/Federico-cia/Whareformer-SuperFlex-Project`, solo ramo `prepare/superflex-core`. Archivio locale con storia indipendente: non pubblicare main né importare lo storico. Dati/pesi/accessi fuori Git. Memoria condivisa in `context/memory/`; risultati essenziali in `SuperFlex/results/geometric_closure_v1/`.
+Worktree condivisibile `shared_exports/publish_candidate/`, repository `https://github.com/Federico-cia/Whareformer-SuperFlex-Project`, sviluppo sul ramo `prepare/superflex-core`, destinazione condivisa `main` approvata da Marco il 12 novembre. Archivio locale con storia indipendente: non pubblicare main né importare lo storico. Dati/pesi/accessi fuori Git. Memoria condivisa in `context/memory/`; risultati essenziali in `SuperFlex/results/geometric_closure_v1/`.
 
 HPC e quattro ambienti esistenti riusati; accesso con chiave già configurata, riferimento personale `scripts/abilita_accesso_hpc.ps1`, da non rieseguire. Non creare chiavi o chiedere password. Conservare run storici e quelli nuovi.
 
@@ -29,4 +29,4 @@ Prossimo passo dipendente dalla baseline: mapping alle detection reali, feature 
 
 ## Stato della pubblicazione — 12 novembre
 
-Consegna salvata localmente nel commit `f697be8`; archivio `shared_exports/geometric_delivery_v1.zip`. Push non eseguito: il controllo automatico richiede autorizzazione esplicita per questo insieme di codice/risultati/memoria verso il ramo comune. Marco ha chiesto prima un recap; pubblicazione in attesa della sua decisione. Controllo locale di riservatezza in `shared_exports/geometric_closure_security.json`, senza credenziali o percorsi personali nei nuovi artefatti. Remoto osservato ancora `f6f55fe`, main `78eefcc`; nessun aggiornamento remoto effettuato.
+Marco richiede di rendere gli upload visibili su `main`, includendo la consegna autonoma completata. Preparata la pubblicazione della storia selezionata, basata sul remoto; la storia indipendente del `main` locale resta esclusa. Remoto verificato a `78eefcc` (`main`) e `f6f55fe` (`prepare/superflex-core`); avanzamento a `main` possibile senza conflitti. Controllati contenuti e nuovi commit per riservatezza, inclusi i due grafici revisionati visivamente. Nessun dato grezzo, peso o accesso personale selezionato. Pubblicazione finale ancora da verificare; il precedente blocco e la richiesta di recap sono documentati nel registro.

@@ -10,6 +10,10 @@ Mandato esecutivo approvato l'11 novembre: sviluppare codice ed eseguire le run 
 - [x] Export di 299 osservazioni e memoria causale configurabile; 11 test ed esempio eseguibile verificati.
 - [x] Codice, figure e istruzioni consegnati; rapporto [CONSEGNA_RAMO_GEOMETRICO.md](CONSEGNA_RAMO_GEOMETRICO.md).
 
+## Pubblicazione richiesta il 12 novembre
+
+- [ ] Rendere disponibile su `main` la consegna selezionata: codice, esempi, risultati essenziali e memoria ripulita. Verificare riferimento remoto e visibilità; non pubblicare il `main` indipendente dell'archivio locale.
+
 ## Dipendenze della fase comune
 
 - [ ] Collegare le forme alle detection effettive, feature e XYZ di Whareformer; risolvere il mapping VISOR/RGB con il loader reale.

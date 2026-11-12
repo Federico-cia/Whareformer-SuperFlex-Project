@@ -258,6 +258,14 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Pubblicazione, 12 novembre.** Codice/risultati/memoria salvati localmente in `f697be8`. Il controllo automatico ha respinto il push richiedendo autorizzazione più esplicita sul contenuto/destinazione; Marco chiede prima il recap. Nessun push eseguito, nessuna approvazione presunta. Consegna locale disponibile e pubblicazione in attesa della decisione.
 
+## 27. Rendere visibile la consegna su main — 12 novembre
+
+**Direzione di Marco.** Portare gli upload sul ramo principale della repository comune, perché siano immediatamente visibili al collega e alla docente. Include la consegna autonoma locale già documentata, non soltanto il primo nucleo pubblicato.
+
+**Motivazione e verifica preparatoria.** Il remoto `main` contiene solo i README iniziali; codice precedente su `prepare/superflex-core`, nuova consegna ancora locale. La storia selezionata discende da `main`, quindi può avanzarlo senza sovrascrivere modifiche del collega e senza importare la storia indipendente dell'archivio locale. Controlli di riservatezza e due grafici revisionati; dati/pesi/accessi personali esclusi.
+
+**Esecuzione.** Preparazione completata; esito della pubblicazione da verificare. Nessun nuovo esperimento o cambiamento scientifico.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 Due persone, circa due ore al giorno ciascuna, consegna il 23 novembre. Ruoli confermati il 7 novembre: Marco segue geometria/SuperFlex; il collega Whareformer/integrazione/valutazione. Decisioni scientifiche e report condivisi. Modelli eseguiti sull'HPC; accesso autonomo operativo. Training da zero, reasoning semantico aggiuntivo e memoria complessa restano fuori scope iniziale per concentrare il lavoro sulla domanda misurabile.
