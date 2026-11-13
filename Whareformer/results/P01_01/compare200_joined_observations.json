@@ -1,0 +1,2758 @@
+[
+  {
+    "observation_key": "P01_01/frame_0000002893__a00",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000002893.jpg",
+    "visor_frame": "P01_01_frame_0000002893.png",
+    "annotation_index": 0,
+    "annotation_id": "cb63bb600d875b70676dc35c40f548d1",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000002893.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000002893__a00_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000002893__a00_points.npz",
+        "sha256": "a88dd0b50327a51cddc5320b1ed3e55c76e80ba1d4300a0175517be5b312a602"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000002893__a00_points.npz",
+        "sha256": "0d621327a2e7c49418e85067b89e7da2fb70a3a15c9dc8445c896792e6b80ba9"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000002893",
+    "whareformer_observation_id": "cb63bb600d875b70676dc35c40f548d1",
+    "whareformer_bbox": [
+      226,
+      185,
+      524,
+      442
+    ],
+    "whareformer_xyz": [
+      1.4810185432434082,
+      -0.6817101836204529,
+      1.1963332891464233
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000005099__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000005099.jpg",
+    "visor_frame": "P01_01_frame_0000005099.png",
+    "annotation_index": 2,
+    "annotation_id": "83f690c31c6581535444c41a93e3d81c",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000005099.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000005099__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000005099__a02_points.npz",
+        "sha256": "9777c84c6ba088fc3b567a9af26d181858ef72fd975b4fc3e8fcc486291242a9"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000005099__a02_points.npz",
+        "sha256": "4160d56a20425698992279a964751e6a82bd53b6684cd84a8889c3eb6a9bae29"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000005099",
+    "whareformer_observation_id": "83f690c31c6581535444c41a93e3d81c",
+    "whareformer_bbox": [
+      0,
+      249,
+      189,
+      464
+    ],
+    "whareformer_xyz": [
+      1.625799298286438,
+      -0.7387518286705017,
+      1.2054696083068848
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000005099__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000005099.jpg",
+    "visor_frame": "P01_01_frame_0000005099.png",
+    "annotation_index": 3,
+    "annotation_id": "a70d87ee3dbaa5d7fb5b207e0734cbd3",
+    "category": "knife",
+    "rgb": "data/compare200/P01_01/ready/frame_0000005099.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000005099__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000005099__a03_points.npz",
+        "sha256": "8b4cf54ebf5e8ac29ee20c314c1fe1f9002a8956b657033a1104ded582e1d3bd"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000005099__a03_points.npz",
+        "sha256": "66feb0e71258fb5c492326594e80217abce30d5d99da49aef4e8dc00f38a0a37"
+      }
+    },
+    "detection_idx": 1,
+    "track_id": 6,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000005099",
+    "whareformer_observation_id": "a70d87ee3dbaa5d7fb5b207e0734cbd3",
+    "whareformer_bbox": [
+      199,
+      236,
+      248,
+      427
+    ],
+    "whareformer_xyz": [
+      1.9628890752792358,
+      -0.8064538836479187,
+      1.1788824796676636
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000007508__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000007508.jpg",
+    "visor_frame": "P01_01_frame_0000007508.png",
+    "annotation_index": 1,
+    "annotation_id": "99f94e1f6cdae5c63e5f18b4938b2391",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000007508.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000007508__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000007508__a01_points.npz",
+        "sha256": "b3c1ad1ec2ea3dc6b88e6fc00e851e59255cbf1013ca3ea3087ba38db7a3a50e"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000007508__a01_points.npz",
+        "sha256": "ef099842838d6c7175398cafdfb688361892b6a1089dfa7a2e208203560e3632"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000007508",
+    "whareformer_observation_id": "99f94e1f6cdae5c63e5f18b4938b2391",
+    "whareformer_bbox": [
+      279,
+      0,
+      588,
+      165
+    ],
+    "whareformer_xyz": [
+      0.10276417434215546,
+      -0.5119104981422424,
+      1.1493438482284546
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000007508__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000007508.jpg",
+    "visor_frame": "P01_01_frame_0000007508.png",
+    "annotation_index": 3,
+    "annotation_id": "d12e705d39e09a989c89e165fd35bca6",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000007508.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000007508__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000007508__a03_points.npz",
+        "sha256": "57a09630f617f44cdc1526a052ff28ccfd1cfa03cf8fc45ca1509c9eb1e2ceb8"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000007508__a03_points.npz",
+        "sha256": "7b1c2d4d1f9f7de8fa44011ee913dad95cdfc3bfd0fee9b915e5d83b8eab4052"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000007508",
+    "whareformer_observation_id": "d12e705d39e09a989c89e165fd35bca6",
+    "whareformer_bbox": [
+      729,
+      243,
+      854,
+      480
+    ],
+    "whareformer_xyz": [
+      1.2432087659835815,
+      -0.6276787519454956,
+      1.2328740358352661
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000007508__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000007508.jpg",
+    "visor_frame": "P01_01_frame_0000007508.png",
+    "annotation_index": 4,
+    "annotation_id": "26adf8f4cb3f278c57ebc1b34e165e05",
+    "category": "knife",
+    "rgb": "data/compare200/P01_01/ready/frame_0000007508.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000007508__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000007508__a04_points.npz",
+        "sha256": "e0a536cab03aae3cffb372dd23a8a3efc1f525d88d296583356959a9286cf7d9"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000007508__a04_points.npz",
+        "sha256": "683cbd9ba6eb9ffed4449fda11471d5129d65fbbd3f183d2e98a1472cb0ebd77"
+      }
+    },
+    "detection_idx": 3,
+    "track_id": 6,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000007508",
+    "whareformer_observation_id": "26adf8f4cb3f278c57ebc1b34e165e05",
+    "whareformer_bbox": [
+      782,
+      356,
+      826,
+      480
+    ],
+    "whareformer_xyz": [
+      1.2190700769424438,
+      -0.48148491978645325,
+      1.0821105241775513
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000017168__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000017168.jpg",
+    "visor_frame": "P01_01_frame_0000017168.png",
+    "annotation_index": 1,
+    "annotation_id": "2e0a44f7afb207889c708d96e5e533ea",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000017168.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000017168__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000017168__a01_points.npz",
+        "sha256": "bb439290b8274b3ace8f8389e3072dc6508e74753573a31c4c3b4f81a4ba3b4e"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000017168__a01_points.npz",
+        "sha256": "ed3bffa54d31ca25bc4cdce953c0bc1e94522ebac0e7ff8dc5ad9e267fd3e5b5"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000017168",
+    "whareformer_observation_id": "2e0a44f7afb207889c708d96e5e533ea",
+    "whareformer_bbox": [
+      174,
+      228,
+      436,
+      480
+    ],
+    "whareformer_xyz": [
+      0.07355904579162598,
+      -0.6584206223487854,
+      1.2357802391052246
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000017739__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000017739.jpg",
+    "visor_frame": "P01_01_frame_0000017739.png",
+    "annotation_index": 1,
+    "annotation_id": "b94296f004e3a8ba89997be7bf95fdad",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000017739.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000017739__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000017739__a01_points.npz",
+        "sha256": "cd0ed1289e288fdfd00c7f1c8e051f749d0221180e37dfb89fbc6b41b0a80f5d"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000017739__a01_points.npz",
+        "sha256": "19fba37861f38bb682f4791d5e4716857d48b757d084b2d17d2b9dbd3a666ad8"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000017739",
+    "whareformer_observation_id": "b94296f004e3a8ba89997be7bf95fdad",
+    "whareformer_bbox": [
+      0,
+      315,
+      164,
+      480
+    ],
+    "whareformer_xyz": [
+      0.20696291327476501,
+      -0.7919480800628662,
+      1.2232029438018799
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000017739__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000017739.jpg",
+    "visor_frame": "P01_01_frame_0000017739.png",
+    "annotation_index": 3,
+    "annotation_id": "3d45e232f15d4ddca70f4ffdf872c815",
+    "category": "spatula",
+    "rgb": "data/compare200/P01_01/ready/frame_0000017739.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000017739__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000017739__a03_points.npz",
+        "sha256": "9be6a4c1067aaf17c10a8e69f17eddf205cf3dd063281fb17d7ee0ca1610c7fe"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000017739__a03_points.npz",
+        "sha256": "0c8889fd5c2af939956e05b8006685b7e0fe0a9693d4e8b15a695a1c899bce71"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 2,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000017739",
+    "whareformer_observation_id": "3d45e232f15d4ddca70f4ffdf872c815",
+    "whareformer_bbox": [
+      267,
+      372,
+      350,
+      480
+    ],
+    "whareformer_xyz": [
+      0.7582782506942749,
+      -0.6655016541481018,
+      1.23993980884552
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000019441__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000019441.jpg",
+    "visor_frame": "P01_01_frame_0000019441.png",
+    "annotation_index": 2,
+    "annotation_id": "fd991a24914017c211f2800c2eda8760",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000019441.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000019441__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000019441__a02_points.npz",
+        "sha256": "4c72258d1b045aa4f58554c96dc49512de758f029f2cff8e702fd4cc2a9bf997"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000019441__a02_points.npz",
+        "sha256": "129f73bc7b385257fc12f12fd59a6b61665188337efc8d14013e35bf6cd05eee"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000019441",
+    "whareformer_observation_id": "fd991a24914017c211f2800c2eda8760",
+    "whareformer_bbox": [
+      0,
+      0,
+      124,
+      233
+    ],
+    "whareformer_xyz": [
+      0.22450780868530273,
+      -0.7129167914390564,
+      1.3692851066589355
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000019441__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000019441.jpg",
+    "visor_frame": "P01_01_frame_0000019441.png",
+    "annotation_index": 4,
+    "annotation_id": "9246fc3e81c0dabaeb68d90040d78850",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000019441.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000019441__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000019441__a04_points.npz",
+        "sha256": "b4a311da724461a019080aee951b97aa0f8a8292011c223c004d6e3af39303dd"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000019441__a04_points.npz",
+        "sha256": "b6229df32dcaf70658a46519841ee1f5c65f344645732b2048314f787bbb9a2e"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000019441",
+    "whareformer_observation_id": "9246fc3e81c0dabaeb68d90040d78850",
+    "whareformer_bbox": [
+      304,
+      118,
+      588,
+      352
+    ],
+    "whareformer_xyz": [
+      1.28472101688385,
+      -0.6946310997009277,
+      1.2992103099822998
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000019954__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000019954.jpg",
+    "visor_frame": "P01_01_frame_0000019954.png",
+    "annotation_index": 2,
+    "annotation_id": "104ed6672c1aacce532f12ca035b18f4",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000019954.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000019954__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000019954__a02_points.npz",
+        "sha256": "6dbaafabf63cf1f5971200798db6992492a7eb7cc1620ad0e00578de54f6eed0"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000019954__a02_points.npz",
+        "sha256": "205da21c080aafd2491606743e478711515de1bb34d752ea90adeb9db071df7b"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000019954",
+    "whareformer_observation_id": "104ed6672c1aacce532f12ca035b18f4",
+    "whareformer_bbox": [
+      0,
+      0,
+      210,
+      141
+    ],
+    "whareformer_xyz": [
+      0.09272048622369766,
+      -0.5493219494819641,
+      1.3755336999893188
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000019954__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000019954.jpg",
+    "visor_frame": "P01_01_frame_0000019954.png",
+    "annotation_index": 4,
+    "annotation_id": "0d2fc396754cd3040bc5055f0a7dad8f",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000019954.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000019954__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000019954__a04_points.npz",
+        "sha256": "b1b3f6502e11d7e2d6e60437fe51e990338fb658c27df031baa24db3a45b9daa"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000019954__a04_points.npz",
+        "sha256": "e85f6cf967725461ff52283fb97df816e2fcdef74bdf12ec9d47a3604ccf7053"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000019954",
+    "whareformer_observation_id": "0d2fc396754cd3040bc5055f0a7dad8f",
+    "whareformer_bbox": [
+      362,
+      97,
+      665,
+      354
+    ],
+    "whareformer_xyz": [
+      1.2698577642440796,
+      -0.7128024697303772,
+      1.3170795440673828
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000019954__a05",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000019954.jpg",
+    "visor_frame": "P01_01_frame_0000019954.png",
+    "annotation_index": 5,
+    "annotation_id": "2ad1799fb55d74273c1fa8dde80db382",
+    "category": "knife",
+    "rgb": "data/compare200/P01_01/ready/frame_0000019954.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000019954__a05_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000019954__a05_points.npz",
+        "sha256": "9e98c00db9ed329c08bfe062cef787350c900f5ac44ec116c2976320b8c24422"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000019954__a05_points.npz",
+        "sha256": "32a416ed40f35c1c81895643e19445612890e5db117d36b2332ef97100664d02"
+      }
+    },
+    "detection_idx": 3,
+    "track_id": 6,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000019954",
+    "whareformer_observation_id": "2ad1799fb55d74273c1fa8dde80db382",
+    "whareformer_bbox": [
+      449,
+      210,
+      487,
+      309
+    ],
+    "whareformer_xyz": [
+      1.2085052728652954,
+      -0.5740319490432739,
+      1.339288592338562
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000020707__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000020707.jpg",
+    "visor_frame": "P01_01_frame_0000020707.png",
+    "annotation_index": 2,
+    "annotation_id": "2299fd8b4dfced54428ed00bcdecee41",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000020707.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000020707__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000020707__a02_points.npz",
+        "sha256": "07a8132683e693c34747f28224ee0739be8efed81497d89c95e4d68a624f2946"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000020707__a02_points.npz",
+        "sha256": "4193a38da714112886786a74ec136c9fcdd62848ddf0a676495e36aa9dd2f760"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000020707",
+    "whareformer_observation_id": "2299fd8b4dfced54428ed00bcdecee41",
+    "whareformer_bbox": [
+      253,
+      27,
+      631,
+      197
+    ],
+    "whareformer_xyz": [
+      -0.0548676997423172,
+      -0.5806577801704407,
+      1.3726710081100464
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000020707__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000020707.jpg",
+    "visor_frame": "P01_01_frame_0000020707.png",
+    "annotation_index": 4,
+    "annotation_id": "c2d0026a7c6943565f80a1adbaac17bf",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000020707.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000020707__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000020707__a04_points.npz",
+        "sha256": "da61f7ddc5fd028ced3ec2462adb72cd8b21e7b1d028dfd0072adc413d95b3b6"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000020707__a04_points.npz",
+        "sha256": "8b0fefbc70864467e6d6c363826fb83ed1d11a6de83b962953b8b0dc084a97d4"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000020707",
+    "whareformer_observation_id": "c2d0026a7c6943565f80a1adbaac17bf",
+    "whareformer_bbox": [
+      238,
+      64,
+      560,
+      345
+    ],
+    "whareformer_xyz": [
+      0.13688024878501892,
+      -0.2970360219478607,
+      1.270967721939087
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000020707__a05",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000020707.jpg",
+    "visor_frame": "P01_01_frame_0000020707.png",
+    "annotation_index": 5,
+    "annotation_id": "6cfaf5e82bb01361cbe09b55b1a843d0",
+    "category": "knife",
+    "rgb": "data/compare200/P01_01/ready/frame_0000020707.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000020707__a05_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000020707__a05_points.npz",
+        "sha256": "630fd9fc4af76a3f59a9fa07086b74970f2c149b0b1e4b77ed40d1b0d0dd2c23"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000020707__a05_points.npz",
+        "sha256": "c9d6c10527ca10934eb64b689b7942fa1ca7a16fc11b7abb43b89ac1c697a7b7"
+      }
+    },
+    "detection_idx": 3,
+    "track_id": 6,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000020707",
+    "whareformer_observation_id": "6cfaf5e82bb01361cbe09b55b1a843d0",
+    "whareformer_bbox": [
+      413,
+      117,
+      534,
+      239
+    ],
+    "whareformer_xyz": [
+      0.19428278505802155,
+      -0.5170319676399231,
+      1.2831330299377441
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000022014__a00",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000022014.jpg",
+    "visor_frame": "P01_01_frame_0000022014.png",
+    "annotation_index": 0,
+    "annotation_id": "3eb8e004d22434b3c9a899155e30f828",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000022014.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000022014__a00_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000022014__a00_points.npz",
+        "sha256": "e4e48cfaf996fd9bef509c3b9527a5eadf9b5af08b700e1c16e2612c6585354b"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000022014__a00_points.npz",
+        "sha256": "d31a53c8610f6d8a20b2aa43d174331e022d8df1785afed58620dda22a8a920d"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 12,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000022014",
+    "whareformer_observation_id": "3eb8e004d22434b3c9a899155e30f828",
+    "whareformer_bbox": [
+      384,
+      22,
+      523,
+      166
+    ],
+    "whareformer_xyz": [
+      0.07479231804609299,
+      -0.6201165318489075,
+      1.4045675992965698
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000022584__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000022584.jpg",
+    "visor_frame": "P01_01_frame_0000022583.png",
+    "annotation_index": 2,
+    "annotation_id": "2bcf000a4ce89bcd6a44b2d325e398b1",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000022584.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000022584__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000022584__a02_points.npz",
+        "sha256": "197561cce6889328b62d1fff4e2b9b96324f312c049bad59aed27cd83de06ffb"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000022584__a02_points.npz",
+        "sha256": "c7bb9dfe99d8519fee60dc25c2ead3ca74c3aac934e254b51dc8fdb71b9f7495"
+      }
+    },
+    "detection_idx": null,
+    "track_id": null,
+    "mapping_status": "annotation_id_not_found_in_frame",
+    "frame_name": "frame_0000022584",
+    "whareformer_observation_id": null,
+    "whareformer_bbox": null,
+    "whareformer_xyz": null
+  },
+  {
+    "observation_key": "P01_01/frame_0000023269__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000023269.jpg",
+    "visor_frame": "P01_01_frame_0000023269.png",
+    "annotation_index": 2,
+    "annotation_id": "b251d9ba1e1d8093eb2f82bf6dc7e8c6",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000023269.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000023269__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000023269__a02_points.npz",
+        "sha256": "586369fdcb69080b37c7425a5e1fbe137a50eba11a4486696d9cd751aa4b9b9a"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000023269__a02_points.npz",
+        "sha256": "7f7f1455db2147fa05fc1064212321a4b48b5bdd2b4f99ee08efa7ab98177e07"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000023269",
+    "whareformer_observation_id": "b251d9ba1e1d8093eb2f82bf6dc7e8c6",
+    "whareformer_bbox": [
+      0,
+      200,
+      158,
+      441
+    ],
+    "whareformer_xyz": [
+      0.2152727246284485,
+      -0.6444730162620544,
+      1.330580472946167
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000023269__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000023269.jpg",
+    "visor_frame": "P01_01_frame_0000023269.png",
+    "annotation_index": 4,
+    "annotation_id": "613731cd0a3f73d4f9d4ddaa5c1bbe3d",
+    "category": "spatula",
+    "rgb": "data/compare200/P01_01/ready/frame_0000023269.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000023269__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000023269__a04_points.npz",
+        "sha256": "79e458d4e38d2d106b0059ce6822c32ec1ec2f81930266fc6ffe1e256b81e991"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000023269__a04_points.npz",
+        "sha256": "ec3e5d39dbc4b8cb504b33f02e32a1e2499a481bd39f00e7f64e17d21832307a"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 2,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000023269",
+    "whareformer_observation_id": "613731cd0a3f73d4f9d4ddaa5c1bbe3d",
+    "whareformer_bbox": [
+      260,
+      212,
+      398,
+      409
+    ],
+    "whareformer_xyz": [
+      0.8932611346244812,
+      -0.7294191718101501,
+      1.2586158514022827
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000023269__a06",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000023269.jpg",
+    "visor_frame": "P01_01_frame_0000023269.png",
+    "annotation_index": 6,
+    "annotation_id": "967924b665039ec5eb1f126ac03cf8a8",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000023269.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000023269__a06_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000023269__a06_points.npz",
+        "sha256": "40e82496ab9d060567bad73f3808b524035fa214fa1027f733ef892bf2b1eb2a"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000023269__a06_points.npz",
+        "sha256": "f692a04c000e7a275700f0b022cf9eaa40a66f0bfa10164b0accdfb9e9fc560a"
+      }
+    },
+    "detection_idx": 4,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000023269",
+    "whareformer_observation_id": "967924b665039ec5eb1f126ac03cf8a8",
+    "whareformer_bbox": [
+      349,
+      235,
+      612,
+      446
+    ],
+    "whareformer_xyz": [
+      1.3057228326797485,
+      -0.6865811347961426,
+      1.238645315170288
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000023269__a07",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000023269.jpg",
+    "visor_frame": "P01_01_frame_0000023269.png",
+    "annotation_index": 7,
+    "annotation_id": "7c2592ff85f0ec85ea31b93f4dae9ab5",
+    "category": "lid",
+    "rgb": "data/compare200/P01_01/ready/frame_0000023269.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000023269__a07_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000023269__a07_points.npz",
+        "sha256": "e27ac5f8f03d0d34d2d527d3744351dbb7ac8f33a740274ec77e4325fb261981"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000023269__a07_points.npz",
+        "sha256": "03318ac37de6ebb60abf6f540e1d8ff58f4b1e1f5f89e8767587965ba47285e8"
+      }
+    },
+    "detection_idx": 5,
+    "track_id": 19,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000023269",
+    "whareformer_observation_id": "7c2592ff85f0ec85ea31b93f4dae9ab5",
+    "whareformer_bbox": [
+      413,
+      344,
+      529,
+      471
+    ],
+    "whareformer_xyz": [
+      1.2545700073242188,
+      -0.5463637709617615,
+      1.0554462671279907
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000025902__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000025902.jpg",
+    "visor_frame": "P01_01_frame_0000025902.png",
+    "annotation_index": 4,
+    "annotation_id": "25dc7c37d1b27265838cb07bd81e1708",
+    "category": "kettle",
+    "rgb": "data/compare200/P01_01/ready/frame_0000025902.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000025902__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000025902__a04_points.npz",
+        "sha256": "6f8ede27aefb450dd49c37a2b1a320283ca328dbd2f308e19f9c9aef9ba513a6"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000025902__a04_points.npz",
+        "sha256": "75fdc9aa82ad0e101b27f9cfab062b14e589e4be4bb9768ddba2f5537e8ec7ea"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 21,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000025902",
+    "whareformer_observation_id": "25dc7c37d1b27265838cb07bd81e1708",
+    "whareformer_bbox": [
+      414,
+      152,
+      522,
+      320
+    ],
+    "whareformer_xyz": [
+      2.676478385925293,
+      -1.0882583856582642,
+      1.0072836875915527
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000027668__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000027668.jpg",
+    "visor_frame": "P01_01_frame_0000027668.png",
+    "annotation_index": 2,
+    "annotation_id": "f8dbd0fafbefdd0841d581e58fa6c868",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000027668.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000027668__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000027668__a02_points.npz",
+        "sha256": "a4945855d1d20d94a934f408be3cf78938df005c8627d22b92546f83560697ec"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000027668__a02_points.npz",
+        "sha256": "e9e5ae1e5e890c4d480c79f585807f426d27beda83585bab7274656d1295f14b"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000027668",
+    "whareformer_observation_id": "f8dbd0fafbefdd0841d581e58fa6c868",
+    "whareformer_bbox": [
+      308,
+      149,
+      671,
+      389
+    ],
+    "whareformer_xyz": [
+      -0.024050837382674217,
+      -0.607549786567688,
+      1.312909722328186
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000029929__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000029929.jpg",
+    "visor_frame": "P01_01_frame_0000029929.png",
+    "annotation_index": 1,
+    "annotation_id": "fd7fda666664a99d6e18a1656713ac5a",
+    "category": "lid",
+    "rgb": "data/compare200/P01_01/ready/frame_0000029929.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000029929__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000029929__a01_points.npz",
+        "sha256": "5bba0b26d6b9029f743309099bb6a1127caeddeb57d95adf5f4ebe2a5e062c18"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000029929__a01_points.npz",
+        "sha256": "0610208f6820894a8e8d5d0f1fb18d6cbf802171a23eb1fb6cbfb85d2fbde635"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 19,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000029929",
+    "whareformer_observation_id": "fd7fda666664a99d6e18a1656713ac5a",
+    "whareformer_bbox": [
+      465,
+      267,
+      550,
+      403
+    ],
+    "whareformer_xyz": [
+      -1.518522024154663,
+      -0.6040523648262024,
+      1.516624093055725
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000033858__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000033858.jpg",
+    "visor_frame": "P01_01_frame_0000033858.png",
+    "annotation_index": 3,
+    "annotation_id": "aef4c474f99c586f727335ef2da43f6a",
+    "category": "grater",
+    "rgb": "data/compare200/P01_01/ready/frame_0000033858.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000033858__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000033858__a03_points.npz",
+        "sha256": "cc811c299a9589d6bbf0f7008676785a64134acbe9ab194e401c2845f1120092"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000033858__a03_points.npz",
+        "sha256": "aadbe628f3439e95f040011adb302ed84379d86fe38159cf5ca40cba9dfe45be"
+      }
+    },
+    "detection_idx": 1,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000033858",
+    "whareformer_observation_id": "aef4c474f99c586f727335ef2da43f6a",
+    "whareformer_bbox": [
+      179,
+      197,
+      316,
+      300
+    ],
+    "whareformer_xyz": [
+      0.8580484986305237,
+      -0.5911503434181213,
+      1.076052188873291
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000035493__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000035493.jpg",
+    "visor_frame": "P01_01_frame_0000035493.png",
+    "annotation_index": 2,
+    "annotation_id": "7a4d2004ece5c2c78b6f624f3d1069bb",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000035493.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000035493__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000035493__a02_points.npz",
+        "sha256": "afe645df588858be1492b6bc30f5af4d2cd487f6d5b1224682edead14a002f9d"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000035493__a02_points.npz",
+        "sha256": "7ed57fd84a3a995c82b4438c650d405aeb66134c08c53b9960dd6a058e8e443c"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000035493",
+    "whareformer_observation_id": "7a4d2004ece5c2c78b6f624f3d1069bb",
+    "whareformer_bbox": [
+      242,
+      91,
+      605,
+      436
+    ],
+    "whareformer_xyz": [
+      -0.010814902372658253,
+      -0.5802062153816223,
+      1.2905333042144775
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000035493__a05",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000035493.jpg",
+    "visor_frame": "P01_01_frame_0000035493.png",
+    "annotation_index": 5,
+    "annotation_id": "324bfd9c2d97bfaca583c0c6e70bf0ef",
+    "category": "grater",
+    "rgb": "data/compare200/P01_01/ready/frame_0000035493.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000035493__a05_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000035493__a05_points.npz",
+        "sha256": "311c400c140c78e2ef2e4528fa866fe2c28f6b865961a8bd4b3251fe2cc7402b"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000035493__a05_points.npz",
+        "sha256": "50a9531c11af14eecf026d6915477c854b5403065e6d28c0bacd24935c907513"
+      }
+    },
+    "detection_idx": 3,
+    "track_id": 4,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000035493",
+    "whareformer_observation_id": "324bfd9c2d97bfaca583c0c6e70bf0ef",
+    "whareformer_bbox": [
+      344,
+      213,
+      495,
+      332
+    ],
+    "whareformer_xyz": [
+      -0.02074829861521721,
+      -0.5610975623130798,
+      1.3108888864517212
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000040194__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000040194.jpg",
+    "visor_frame": "P01_01_frame_0000040194.png",
+    "annotation_index": 1,
+    "annotation_id": "d42d81216a652420418d92de4cc28c34",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000040194.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000040194__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000040194__a01_points.npz",
+        "sha256": "2684d64beb5bd4bbc9b32fb2e8d6cb0dc4dcc5f4e8b4af12a4446a8808f6401e"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000040194__a01_points.npz",
+        "sha256": "c5ad79977bfa75781d13024a61956e5e29c73beeaf145663dc0a7c515a0369f6"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000040194",
+    "whareformer_observation_id": "d42d81216a652420418d92de4cc28c34",
+    "whareformer_bbox": [
+      527,
+      27,
+      799,
+      261
+    ],
+    "whareformer_xyz": [
+      0.01859651692211628,
+      -0.6349375247955322,
+      1.1701970100402832
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000040194__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000040194.jpg",
+    "visor_frame": "P01_01_frame_0000040194.png",
+    "annotation_index": 4,
+    "annotation_id": "d5ae17980ed1e4d6af84e7ef300f70c0",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000040194.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000040194__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000040194__a04_points.npz",
+        "sha256": "6346b59db10bf76b9d16e9ff8a94a6a1ff660d0868657d8fcd599b0a16ec486e"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000040194__a04_points.npz",
+        "sha256": "85368682595ac36cfe2f42fa149150fb1a3440fc2288bd1562e718d457aa7467"
+      }
+    },
+    "detection_idx": 3,
+    "track_id": 33,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000040194",
+    "whareformer_observation_id": "d5ae17980ed1e4d6af84e7ef300f70c0",
+    "whareformer_bbox": [
+      590,
+      205,
+      854,
+      459
+    ],
+    "whareformer_xyz": [
+      -0.20358115434646606,
+      -0.3056451082229614,
+      0.8868887424468994
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000040874__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000040874.jpg",
+    "visor_frame": "P01_01_frame_0000040873.png",
+    "annotation_index": 1,
+    "annotation_id": "7c5827f0344debd37b7c0940908ebc03",
+    "category": "kettle",
+    "rgb": "data/compare200/P01_01/ready/frame_0000040874.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000040874__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000040874__a01_points.npz",
+        "sha256": "d68d47d4afe1f2789518ef55e913a8049cf8d252fbbdaecca1ce0789d32c6b8b"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000040874__a01_points.npz",
+        "sha256": "7d0cbdf5a3627bd3e63ac424e3800baf71a8962f552bc04f372b0cd693e2ca3a"
+      }
+    },
+    "detection_idx": null,
+    "track_id": null,
+    "mapping_status": "frame_not_in_whareformer_predictions",
+    "frame_name": "frame_0000040874",
+    "whareformer_observation_id": null,
+    "whareformer_bbox": null,
+    "whareformer_xyz": null
+  },
+  {
+    "observation_key": "P01_01/frame_0000042473__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000042473.jpg",
+    "visor_frame": "P01_01_frame_0000042473.png",
+    "annotation_index": 2,
+    "annotation_id": "8cb16b262791e1b4721bb8a677e79a87",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000042473.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000042473__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000042473__a02_points.npz",
+        "sha256": "877f6396eeb9e851a24ab9bdb27be62baca563c697a59de18316de7e389ec584"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000042473__a02_points.npz",
+        "sha256": "a2363f81d1fbdc5dbea65379539400e09590b373e7d0b535335e5436df0ce097"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000042473",
+    "whareformer_observation_id": "8cb16b262791e1b4721bb8a677e79a87",
+    "whareformer_bbox": [
+      336,
+      103,
+      592,
+      340
+    ],
+    "whareformer_xyz": [
+      0.1108015701174736,
+      -0.6575747728347778,
+      1.2983193397521973
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000042473__a06",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000042473.jpg",
+    "visor_frame": "P01_01_frame_0000042473.png",
+    "annotation_index": 6,
+    "annotation_id": "3bd75ea538ffb6c5c52fdc734b8f0e5a",
+    "category": "olive oil bottle",
+    "rgb": "data/compare200/P01_01/ready/frame_0000042473.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000042473__a06_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000042473__a06_points.npz",
+        "sha256": "ecb23f0b65a7425ba35e8871e7378c7c3ed730fd777884835329b5bc13c3c20d"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000042473__a06_points.npz",
+        "sha256": "275ae5bf94a8557fcd6d6c8a38662149d0d68318fa6aa12a8ca17db928dd3fe1"
+      }
+    },
+    "detection_idx": 4,
+    "track_id": 34,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000042473",
+    "whareformer_observation_id": "3bd75ea538ffb6c5c52fdc734b8f0e5a",
+    "whareformer_bbox": [
+      290,
+      197,
+      385,
+      376
+    ],
+    "whareformer_xyz": [
+      -1.0788809061050415,
+      0.24038466811180115,
+      4.472658157348633
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000043171__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000043171.jpg",
+    "visor_frame": "P01_01_frame_0000043171.png",
+    "annotation_index": 2,
+    "annotation_id": "381d22f66d90cf92423f86bc8724be15",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000043171.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000043171__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000043171__a02_points.npz",
+        "sha256": "efb64e483db65fbfa31da23d3f1956ceebdf1ecfe18b31d49a60ce27e8675167"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000043171__a02_points.npz",
+        "sha256": "6f9f784c194576800f328e2cdc5fd0d79e3e22dda703cca91336c8ef2e263ef5"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000043171",
+    "whareformer_observation_id": "381d22f66d90cf92423f86bc8724be15",
+    "whareformer_bbox": [
+      0,
+      113,
+      189,
+      402
+    ],
+    "whareformer_xyz": [
+      0.09609799087047577,
+      -0.6453434228897095,
+      1.3121166229248047
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000043171__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000043171.jpg",
+    "visor_frame": "P01_01_frame_0000043171.png",
+    "annotation_index": 4,
+    "annotation_id": "125b27adf3a1e8f65f5f498998a54ce8",
+    "category": "chopping board",
+    "rgb": "data/compare200/P01_01/ready/frame_0000043171.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000043171__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000043171__a04_points.npz",
+        "sha256": "a744dbb5ad4df4c576f60c0a393e45008e6fcea32aa420dc791c348cf139eea7"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000043171__a04_points.npz",
+        "sha256": "b34808f32666499586d5ca3f485f8a206cf77fff0f5ea890611341031e06122c"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 30,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000043171",
+    "whareformer_observation_id": "125b27adf3a1e8f65f5f498998a54ce8",
+    "whareformer_bbox": [
+      377,
+      172,
+      697,
+      477
+    ],
+    "whareformer_xyz": [
+      1.2898212671279907,
+      -0.5410420298576355,
+      1.21310555934906
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000046135__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000046135.jpg",
+    "visor_frame": "P01_01_frame_0000046135.png",
+    "annotation_index": 1,
+    "annotation_id": "1c4c047b397cb665d65365c02718c75d",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000046135.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000046135__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000046135__a01_points.npz",
+        "sha256": "73a0f56fe31d1998a1e132c133cc01f291ea4e89aedcf960d6430493c7b5fd2e"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000046135__a01_points.npz",
+        "sha256": "75d147590c6deff169a61fc3c3ed5127fd4f589fe8d0f4abc5d00882d22a6df4"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000046135",
+    "whareformer_observation_id": "1c4c047b397cb665d65365c02718c75d",
+    "whareformer_bbox": [
+      138,
+      245,
+      387,
+      480
+    ],
+    "whareformer_xyz": [
+      0.09754593670368195,
+      -0.6714276075363159,
+      1.2463504076004028
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000046135__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000046135.jpg",
+    "visor_frame": "P01_01_frame_0000046135.png",
+    "annotation_index": 3,
+    "annotation_id": "c3dedab66cfda7359032da314448cf94",
+    "category": "spatula",
+    "rgb": "data/compare200/P01_01/ready/frame_0000046135.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000046135__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000046135__a03_points.npz",
+        "sha256": "6795c5aff1300025328dd2db58bf082d6b88c41d7fe437373ccbc194417c55b2"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000046135__a03_points.npz",
+        "sha256": "5ed4fbc579523ed9d49ffc1245f3c451f5359e24eac1e85f4afe4cf81e6493e7"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 2,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000046135",
+    "whareformer_observation_id": "c3dedab66cfda7359032da314448cf94",
+    "whareformer_bbox": [
+      296,
+      357,
+      516,
+      460
+    ],
+    "whareformer_xyz": [
+      0.4835365116596222,
+      -0.6171757578849792,
+      1.1447558403015137
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000050474__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000050474.jpg",
+    "visor_frame": "P01_01_frame_0000050474.png",
+    "annotation_index": 2,
+    "annotation_id": "ecce66364a62cd2717c61f0f83bf0584",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000050474.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000050474__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000050474__a02_points.npz",
+        "sha256": "86f2aa4af9c9d96f10636f539a91a7f6e48c82156fd2eb9fe52c20a45a4eb9f3"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000050474__a02_points.npz",
+        "sha256": "af38ff507913b1aaebc887ac549423b74a33669268bb9b5d3f234d7148f5e6b8"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000050474",
+    "whareformer_observation_id": "ecce66364a62cd2717c61f0f83bf0584",
+    "whareformer_bbox": [
+      357,
+      92,
+      658,
+      402
+    ],
+    "whareformer_xyz": [
+      0.07866968959569931,
+      -0.6086039543151855,
+      1.3143683671951294
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000051922__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000051922.jpg",
+    "visor_frame": "P01_01_frame_0000051922.png",
+    "annotation_index": 1,
+    "annotation_id": "43ed2e7485ab7f75506a20239fb0e33c",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000051922.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000051922__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000051922__a01_points.npz",
+        "sha256": "52fc1101c5c7e30fbe25cd15c5d458ca23dc6ff66c32ff798fb6c3b515c609fa"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000051922__a01_points.npz",
+        "sha256": "75b28a756c8bdc3d7352293df07110b53e40bd9f80600595edc1634eba3a8f9f"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000051922",
+    "whareformer_observation_id": "43ed2e7485ab7f75506a20239fb0e33c",
+    "whareformer_bbox": [
+      98,
+      244,
+      453,
+      480
+    ],
+    "whareformer_xyz": [
+      0.009530368261039257,
+      -0.7758562564849854,
+      1.2051981687545776
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000051922__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000051922.jpg",
+    "visor_frame": "P01_01_frame_0000051922.png",
+    "annotation_index": 3,
+    "annotation_id": "3f8430c7f30bfccfe892a4dd665d92cd",
+    "category": "spatula",
+    "rgb": "data/compare200/P01_01/ready/frame_0000051922.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000051922__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000051922__a03_points.npz",
+        "sha256": "1f78b1ef2eec1020baa3dc2a0a8b5edccf71975e20babab18edcde2220bec4fc"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000051922__a03_points.npz",
+        "sha256": "feace1677ddc9d84c98a76927dc526c3e136716f85a94b16e2930ad22bdbd142"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 2,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000051922",
+    "whareformer_observation_id": "3f8430c7f30bfccfe892a4dd665d92cd",
+    "whareformer_bbox": [
+      407,
+      275,
+      543,
+      349
+    ],
+    "whareformer_xyz": [
+      0.5076149702072144,
+      -0.6783939003944397,
+      1.1632890701293945
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000051922__a05",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000051922.jpg",
+    "visor_frame": "P01_01_frame_0000051922.png",
+    "annotation_index": 5,
+    "annotation_id": "f3a2f69c430daff77238b9e87949c1e0",
+    "category": "tofu box",
+    "rgb": "data/compare200/P01_01/ready/frame_0000051922.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000051922__a05_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000051922__a05_points.npz",
+        "sha256": "b1f88ed0ba60bec8c1360fca2082829774f4d4c3a43929986293bebc957ed9ed"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000051922__a05_points.npz",
+        "sha256": "e145b9136ba603c48a0c050af1cdc368b1047dc8597342558269ae13b0b449fa"
+      }
+    },
+    "detection_idx": 4,
+    "track_id": 40,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000051922",
+    "whareformer_observation_id": "f3a2f69c430daff77238b9e87949c1e0",
+    "whareformer_bbox": [
+      595,
+      0,
+      697,
+      75
+    ],
+    "whareformer_xyz": [
+      1.6065809726715088,
+      -1.3477325439453125,
+      1.2773240804672241
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000053269__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000053269.jpg",
+    "visor_frame": "P01_01_frame_0000053269.png",
+    "annotation_index": 2,
+    "annotation_id": "37a4643ed2f3f7a07a3f090e01ee8c92",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000053269.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000053269__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000053269__a02_points.npz",
+        "sha256": "e54b71da9fbc9f414dc7d26564f4bede4c1ce4fcadf93569c518c544b6dd5c38"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000053269__a02_points.npz",
+        "sha256": "6b335c39b2cfd2ef10df0550f6cfb30941718a59e28278999c17d7b35effb437"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000053269",
+    "whareformer_observation_id": "37a4643ed2f3f7a07a3f090e01ee8c92",
+    "whareformer_bbox": [
+      223,
+      95,
+      602,
+      336
+    ],
+    "whareformer_xyz": [
+      0.03818199411034584,
+      -0.624128520488739,
+      1.2466304302215576
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000053269__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000053269.jpg",
+    "visor_frame": "P01_01_frame_0000053269.png",
+    "annotation_index": 4,
+    "annotation_id": "4cf3cca1aa6ccff3ffbb4845dae3054c",
+    "category": "spatula",
+    "rgb": "data/compare200/P01_01/ready/frame_0000053269.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000053269__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000053269__a04_points.npz",
+        "sha256": "163d7c65b8b96b1bf06c76109c0a2a1ab579e472a4415212c254ec1c3a051f3c"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000053269__a04_points.npz",
+        "sha256": "0146332e1425ecdbaa98fa404b79f541ab8c53716a2802aa4787f1b074ad89af"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 2,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000053269",
+    "whareformer_observation_id": "4cf3cca1aa6ccff3ffbb4845dae3054c",
+    "whareformer_bbox": [
+      393,
+      151,
+      506,
+      211
+    ],
+    "whareformer_xyz": [
+      0.10083413869142532,
+      -0.7369551658630371,
+      1.2564340829849243
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000053269__a06",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000053269.jpg",
+    "visor_frame": "P01_01_frame_0000053269.png",
+    "annotation_index": 6,
+    "annotation_id": "4a71abc5251e7b074d49397f53e04550",
+    "category": "tofu container",
+    "rgb": "data/compare200/P01_01/ready/frame_0000053269.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000053269__a06_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000053269__a06_points.npz",
+        "sha256": "d3c1f9398a3f6ab2486b59cb92f253d565b210a68d8e802eda77f2bdefcb2ced"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000053269__a06_points.npz",
+        "sha256": "07b35853d65d130f62d2891e97eedc5786164e4b2bbc4eaaa378aa9be43263ed"
+      }
+    },
+    "detection_idx": 4,
+    "track_id": 14,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000053269",
+    "whareformer_observation_id": "4a71abc5251e7b074d49397f53e04550",
+    "whareformer_bbox": [
+      344,
+      138,
+      426,
+      283
+    ],
+    "whareformer_xyz": [
+      -2.7080430299974978e-05,
+      -0.6141073107719421,
+      1.146607518196106
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000057932__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000057932.jpg",
+    "visor_frame": "P01_01_frame_0000057932.png",
+    "annotation_index": 2,
+    "annotation_id": "308fd61dbb0b31068d1820cf8a0a0551",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000057932.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000057932__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000057932__a02_points.npz",
+        "sha256": "c1b27b4e1973cd009618c83842515990e89ba14fc9f46d31dbd697b6cb9c61ee"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000057932__a02_points.npz",
+        "sha256": "c7978b841a8ae9b2f58799f16b7b5edfa236b6bb016e416ebe7c4a549c86b023"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000057932",
+    "whareformer_observation_id": "308fd61dbb0b31068d1820cf8a0a0551",
+    "whareformer_bbox": [
+      376,
+      140,
+      651,
+      377
+    ],
+    "whareformer_xyz": [
+      0.08960264176130295,
+      -0.6470233201980591,
+      1.301884412765503
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000061693__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000061693.jpg",
+    "visor_frame": "P01_01_frame_0000061693.png",
+    "annotation_index": 2,
+    "annotation_id": "951167fb34cb17e9bd1227a0b14559cd",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000061693.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000061693__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000061693__a02_points.npz",
+        "sha256": "e73514872d2a517fc43115a63b8d286062e52d4e71ead4a891cc44345c0c8992"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000061693__a02_points.npz",
+        "sha256": "39bfd46f36f1222698f7f7ddac83a152270f85c04aa927267dc499f922ae1bf4"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000061693",
+    "whareformer_observation_id": "951167fb34cb17e9bd1227a0b14559cd",
+    "whareformer_bbox": [
+      447,
+      171,
+      799,
+      401
+    ],
+    "whareformer_xyz": [
+      0.023830197751522064,
+      -0.6105046272277832,
+      1.3272055387496948
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000061693__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000061693.jpg",
+    "visor_frame": "P01_01_frame_0000061693.png",
+    "annotation_index": 4,
+    "annotation_id": "210a981ac8399d403ec96a6fae34690f",
+    "category": "spatula",
+    "rgb": "data/compare200/P01_01/ready/frame_0000061693.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000061693__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000061693__a04_points.npz",
+        "sha256": "d78023040ff8e9b9768298128da9f9878f726ae264287b0c33bd7a59fad8bb6f"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000061693__a04_points.npz",
+        "sha256": "453d6203c81803ce29170277cfecb20500fe7d1415345f1931a79be6ec1f6ee6"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 2,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000061693",
+    "whareformer_observation_id": "210a981ac8399d403ec96a6fae34690f",
+    "whareformer_bbox": [
+      448,
+      232,
+      517,
+      284
+    ],
+    "whareformer_xyz": [
+      -0.37547460198402405,
+      -0.5496271252632141,
+      1.3388797044754028
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000061693__a06",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000061693.jpg",
+    "visor_frame": "P01_01_frame_0000061693.png",
+    "annotation_index": 6,
+    "annotation_id": "e26ac44dcb5964a162ed14ec750bb9a4",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000061693.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000061693__a06_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000061693__a06_points.npz",
+        "sha256": "11840ab40e4b6c0220f7b25d4e4eb0e51782174cf2526dcc911694424d0fdc42"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000061693__a06_points.npz",
+        "sha256": "6a9447874a6ae300a00f2ae3c2c894380bdce39d1d2349a7b81b9b7c3ed7828f"
+      }
+    },
+    "detection_idx": 4,
+    "track_id": 36,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000061693",
+    "whareformer_observation_id": "e26ac44dcb5964a162ed14ec750bb9a4",
+    "whareformer_bbox": [
+      381,
+      187,
+      547,
+      313
+    ],
+    "whareformer_xyz": [
+      -0.42828965187072754,
+      -0.562213122844696,
+      1.3650836944580078
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000065241__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000065241.jpg",
+    "visor_frame": "P01_01_frame_0000065241.png",
+    "annotation_index": 1,
+    "annotation_id": "8b90dcb9722219a31dadadab437ab99d",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000065241.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000065241__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000065241__a01_points.npz",
+        "sha256": "452f00b7c344c8acb4484b5fc3b99d71f8af57ca1e640b0c340854a284dd2d05"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000065241__a01_points.npz",
+        "sha256": "75dcc8d3f5604725b6af80898f457197e6ab44032602e08f5f2ebc193d1899fb"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000065241",
+    "whareformer_observation_id": "8b90dcb9722219a31dadadab437ab99d",
+    "whareformer_bbox": [
+      410,
+      167,
+      754,
+      438
+    ],
+    "whareformer_xyz": [
+      0.04159879311919212,
+      -0.5863382816314697,
+      1.3612688779830933
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000070766__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000070766.jpg",
+    "visor_frame": "P01_01_frame_0000070766.png",
+    "annotation_index": 1,
+    "annotation_id": "bd49ae2d788691b2819a077b181d0909",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000070766.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000070766__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000070766__a01_points.npz",
+        "sha256": "52643aafcfce2ff79661eaab38bafc384305f4309a7174c29f649f64047c7051"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000070766__a01_points.npz",
+        "sha256": "e3a2f0de8b64827ea39592570ec5eed636019b1dff4612de774cedecd196af65"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000070766",
+    "whareformer_observation_id": "bd49ae2d788691b2819a077b181d0909",
+    "whareformer_bbox": [
+      347,
+      140,
+      576,
+      480
+    ],
+    "whareformer_xyz": [
+      0.06225840747356415,
+      -0.5509110689163208,
+      1.327856183052063
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000070766__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000070766.jpg",
+    "visor_frame": "P01_01_frame_0000070766.png",
+    "annotation_index": 3,
+    "annotation_id": "4b000ed2e6de959e4f2a4f6a238ef31d",
+    "category": "spatula",
+    "rgb": "data/compare200/P01_01/ready/frame_0000070766.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000070766__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000070766__a03_points.npz",
+        "sha256": "1d260306b4ad83a3cb19b1517dd006f2d7ec4d82182268b94f1712bdafae4927"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000070766__a03_points.npz",
+        "sha256": "d39ab1e07f12c08d89b72fd55af31cf9c1e2b91096a794f522d2b8fa3a5c74b2"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 44,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000070766",
+    "whareformer_observation_id": "4b000ed2e6de959e4f2a4f6a238ef31d",
+    "whareformer_bbox": [
+      601,
+      146,
+      697,
+      391
+    ],
+    "whareformer_xyz": [
+      0.6932573318481445,
+      -0.4818849563598633,
+      1.3539069890975952
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000070766__a05",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000070766.jpg",
+    "visor_frame": "P01_01_frame_0000070766.png",
+    "annotation_index": 5,
+    "annotation_id": "bc4721ca239b5ddb83d833b413f154ff",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000070766.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000070766__a05_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000070766__a05_points.npz",
+        "sha256": "6362a2a0fe07e8c88cac330a6a589ab209770236989ba62d0ee4602977ac4873"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000070766__a05_points.npz",
+        "sha256": "f9176694647c7dc64afdb443ff62a7a6979d5d58e75758657dd9d8938c865da3"
+      }
+    },
+    "detection_idx": 4,
+    "track_id": 36,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000070766",
+    "whareformer_observation_id": "bc4721ca239b5ddb83d833b413f154ff",
+    "whareformer_bbox": [
+      217,
+      290,
+      363,
+      480
+    ],
+    "whareformer_xyz": [
+      -0.4389936029911041,
+      -0.5165345668792725,
+      1.366812825202942
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000076939__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000076939.jpg",
+    "visor_frame": "P01_01_frame_0000076939.png",
+    "annotation_index": 2,
+    "annotation_id": "470254966b12ce94a0e42325f6f8109d",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000076939.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000076939__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000076939__a02_points.npz",
+        "sha256": "53ba367e0b05c50af5f7b52c6b767ffce536b81f501cfeed51d0753f9c383fd3"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000076939__a02_points.npz",
+        "sha256": "7455d64e49957137fab66661082aad3beec8e1c4c517461e81ebfe6b9c18bf35"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000076939",
+    "whareformer_observation_id": "470254966b12ce94a0e42325f6f8109d",
+    "whareformer_bbox": [
+      367,
+      186,
+      654,
+      404
+    ],
+    "whareformer_xyz": [
+      0.05429970473051071,
+      -0.6418195366859436,
+      1.295815348625183
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000077312__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000077312.jpg",
+    "visor_frame": "P01_01_frame_0000077312.png",
+    "annotation_index": 2,
+    "annotation_id": "ee2d47732f9e06f1713b3ef28a469d1e",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000077312.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000077312__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000077312__a02_points.npz",
+        "sha256": "b2f3ac986ecd19026c5dd8cedfd1b0dd58d885a0c61d72dbdd01d057f0b1d0d7"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000077312__a02_points.npz",
+        "sha256": "ac545f009d3166241c4c3ef3de0a53705851eec3b71d29e706d1a281c946920f"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000077312",
+    "whareformer_observation_id": "ee2d47732f9e06f1713b3ef28a469d1e",
+    "whareformer_bbox": [
+      343,
+      194,
+      602,
+      448
+    ],
+    "whareformer_xyz": [
+      0.10146573185920715,
+      -0.6516699194908142,
+      1.4907857179641724
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000077312__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000077312.jpg",
+    "visor_frame": "P01_01_frame_0000077312.png",
+    "annotation_index": 4,
+    "annotation_id": "acf4e90c4977043a11bdc4cd6cecd6ec",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000077312.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000077312__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000077312__a04_points.npz",
+        "sha256": "840c3dfa6de372901b4ed700c93b6ca28292f36013ccc873cfd1048a3ee054f1"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000077312__a04_points.npz",
+        "sha256": "37ab30a62b293ec254fcb064298e8672e1da9f202a1e6186bf0bf1c8d70f2025"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 36,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000077312",
+    "whareformer_observation_id": "acf4e90c4977043a11bdc4cd6cecd6ec",
+    "whareformer_bbox": [
+      171,
+      276,
+      368,
+      460
+    ],
+    "whareformer_xyz": [
+      -0.5389256477355957,
+      -0.5238545536994934,
+      1.5953595638275146
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000081277__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000081277.jpg",
+    "visor_frame": "P01_01_frame_0000081277.png",
+    "annotation_index": 2,
+    "annotation_id": "9ffe6b29fa29749d0579e094ecec780a",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000081277.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000081277__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000081277__a02_points.npz",
+        "sha256": "d487ff74d308060c6a22c8475c0eb9d1b14a70b81e99985ad15cd54f5a48764c"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000081277__a02_points.npz",
+        "sha256": "450fa7dcea407b147de973136c6c77ab1ca7fb345aec12605659bdac8ddc7235"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000081277",
+    "whareformer_observation_id": "9ffe6b29fa29749d0579e094ecec780a",
+    "whareformer_bbox": [
+      544,
+      179,
+      832,
+      409
+    ],
+    "whareformer_xyz": [
+      0.1161116436123848,
+      -0.6641353368759155,
+      1.344902753829956
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000081277__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000081277.jpg",
+    "visor_frame": "P01_01_frame_0000081277.png",
+    "annotation_index": 4,
+    "annotation_id": "8923badf21802a6368471a8e864b0fbc",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000081277.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000081277__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000081277__a04_points.npz",
+        "sha256": "3f8687743fde96b4d81ce8b56494ba21f9064f36296e4e278bcb8a879706634a"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000081277__a04_points.npz",
+        "sha256": "0580233d235878b72f67f55df970bd36f1a09338ab494ee2db5962c291f051ad"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 36,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000081277",
+    "whareformer_observation_id": "8923badf21802a6368471a8e864b0fbc",
+    "whareformer_bbox": [
+      427,
+      219,
+      577,
+      357
+    ],
+    "whareformer_xyz": [
+      -0.3862021267414093,
+      -0.5656035542488098,
+      1.440643310546875
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000084160__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000084160.jpg",
+    "visor_frame": "P01_01_frame_0000084160.png",
+    "annotation_index": 2,
+    "annotation_id": "43a9498ab4a940c304b3668c616f5403",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000084160.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000084160__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000084160__a02_points.npz",
+        "sha256": "75d58ce28893cf86c4213b9ae36bcdfac653ec3ad9e5a391ac183dcc80a0f02e"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000084160__a02_points.npz",
+        "sha256": "439635790871abecd43d95fff3ece9fa04b6db04bca58598cdca1e70f307a0c5"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 47,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000084160",
+    "whareformer_observation_id": "43a9498ab4a940c304b3668c616f5403",
+    "whareformer_bbox": [
+      275,
+      238,
+      402,
+      466
+    ],
+    "whareformer_xyz": [
+      2.271531820297241,
+      -0.8662165403366089,
+      1.1548097133636475
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000085217__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000085217.jpg",
+    "visor_frame": "P01_01_frame_0000085217.png",
+    "annotation_index": 2,
+    "annotation_id": "ceb26d6184d3ac3d2d241bc45285a35b",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000085217.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000085217__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000085217__a02_points.npz",
+        "sha256": "f46260697f51acf01c0adfda75abf5463a5ff4ae5657b3fdf0071e75fe81a710"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000085217__a02_points.npz",
+        "sha256": "c261e61a8711c60ed238dda2ac1cdb4ddd387c0d68e24933513c95ce328e5463"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000085217",
+    "whareformer_observation_id": "ceb26d6184d3ac3d2d241bc45285a35b",
+    "whareformer_bbox": [
+      246,
+      101,
+      584,
+      305
+    ],
+    "whareformer_xyz": [
+      0.08593644946813583,
+      -0.62420654296875,
+      1.135431170463562
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000085217__a05",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000085217.jpg",
+    "visor_frame": "P01_01_frame_0000085217.png",
+    "annotation_index": 5,
+    "annotation_id": "17276c8b65b412fc97faf50bc1e88d3e",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000085217.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000085217__a05_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000085217__a05_points.npz",
+        "sha256": "f6785fd28980ef504c1fb3f50f31773ec6542dec8c680f7bc4df2c21482a1f13"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000085217__a05_points.npz",
+        "sha256": "16a8627c0aac9a0e450779066a83fffa8d8ba72748c2bcd001f328f0a34b3a56"
+      }
+    },
+    "detection_idx": 3,
+    "track_id": 47,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000085217",
+    "whareformer_observation_id": "17276c8b65b412fc97faf50bc1e88d3e",
+    "whareformer_bbox": [
+      355,
+      94,
+      479,
+      251
+    ],
+    "whareformer_xyz": [
+      0.11151862889528275,
+      -0.677105188369751,
+      1.0146676301956177
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000086078__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000086078.jpg",
+    "visor_frame": "P01_01_frame_0000086078.png",
+    "annotation_index": 2,
+    "annotation_id": "56a58c89e0caaa0acdeddaadae81dad6",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000086078.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000086078__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000086078__a02_points.npz",
+        "sha256": "4901e85dbfb42daaa427dc988aec1e3ce402d41c00c982a57da259939907564a"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000086078__a02_points.npz",
+        "sha256": "e3799f700bc9fbe3d0258b7d612a51bccf697d70b9a95e5f94348fe0406c9f45"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000086078",
+    "whareformer_observation_id": "56a58c89e0caaa0acdeddaadae81dad6",
+    "whareformer_bbox": [
+      361,
+      182,
+      655,
+      405
+    ],
+    "whareformer_xyz": [
+      0.04789276421070099,
+      -0.64569091796875,
+      1.2864149808883667
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000086858__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000086858.jpg",
+    "visor_frame": "P01_01_frame_0000086858.png",
+    "annotation_index": 2,
+    "annotation_id": "74ce22156f4b42fc81ba2689ed7b4e4e",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000086858.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000086858__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000086858__a02_points.npz",
+        "sha256": "d8934d11576a7fb33624da5ac1269ddc7b0699ea94542c141c697c70df227c5e"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000086858__a02_points.npz",
+        "sha256": "29a4b4df21accf0b2eff0120a884e8a5508f01803454405d874cecc5660267f8"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000086858",
+    "whareformer_observation_id": "74ce22156f4b42fc81ba2689ed7b4e4e",
+    "whareformer_bbox": [
+      373,
+      165,
+      647,
+      391
+    ],
+    "whareformer_xyz": [
+      0.0619058683514595,
+      -0.6625548601150513,
+      1.2748249769210815
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000091092__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000091092.jpg",
+    "visor_frame": "P01_01_frame_0000091092.png",
+    "annotation_index": 2,
+    "annotation_id": "aafa0d00f746ecf9862b122624421b2f",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000091092.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000091092__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000091092__a02_points.npz",
+        "sha256": "b857216d490759a480ddc8ce42c803da101f9083f559c19b735ece0684ee5644"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000091092__a02_points.npz",
+        "sha256": "f24e0032a9b8f4e51c59728a8e1a48c8c44cc77a5ac5a2dd103660bd40e899e9"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 35,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000091092",
+    "whareformer_observation_id": "aafa0d00f746ecf9862b122624421b2f",
+    "whareformer_bbox": [
+      373,
+      142,
+      655,
+      379
+    ],
+    "whareformer_xyz": [
+      0.08147531747817993,
+      -0.6626453399658203,
+      1.268877625465393
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000095846__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000095846.jpg",
+    "visor_frame": "P01_01_frame_0000095846.png",
+    "annotation_index": 2,
+    "annotation_id": "b581e921dd4d5c002fd117dc79aac0cd",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000095846.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000095846__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000095846__a02_points.npz",
+        "sha256": "a51bee4524e55313deff75566f30135158938aa87b3231f09e484989bb58b276"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000095846__a02_points.npz",
+        "sha256": "f3e71e4d70986c29b1cdbb5556a0290fedf94d6a4b97e111f3aa21c7506f98a8"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000095846",
+    "whareformer_observation_id": "b581e921dd4d5c002fd117dc79aac0cd",
+    "whareformer_bbox": [
+      328,
+      0,
+      619,
+      362
+    ],
+    "whareformer_xyz": [
+      -1.020870327949524,
+      -0.8058500289916992,
+      1.2339533567428589
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000095846__a04",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000095846.jpg",
+    "visor_frame": "P01_01_frame_0000095846.png",
+    "annotation_index": 4,
+    "annotation_id": "c98bd4c01b9de916d71484a74fa0a38b",
+    "category": "plate",
+    "rgb": "data/compare200/P01_01/ready/frame_0000095846.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000095846__a04_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000095846__a04_points.npz",
+        "sha256": "9a7c1573c1c5f96779689e32753d5408a230f5790f92e332d63b1651f3f0a269"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000095846__a04_points.npz",
+        "sha256": "c296f08cee1a2203121be5f18812341efbdaca30dbe257903a112a643b960dcc"
+      }
+    },
+    "detection_idx": 2,
+    "track_id": 27,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000095846",
+    "whareformer_observation_id": "c98bd4c01b9de916d71484a74fa0a38b",
+    "whareformer_bbox": [
+      434,
+      261,
+      624,
+      420
+    ],
+    "whareformer_xyz": [
+      -0.8077827095985413,
+      -0.4534704387187958,
+      1.543715238571167
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000096248__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000096248.jpg",
+    "visor_frame": "P01_01_frame_0000096248.png",
+    "annotation_index": 2,
+    "annotation_id": "713e4c7423733908b77ec63aee0dd2a4",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000096248.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000096248__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000096248__a02_points.npz",
+        "sha256": "a08b1747eb2a201d5a06d6cad565173b4e7e282e53be98cc51612b50e796a4ab"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000096248__a02_points.npz",
+        "sha256": "e5ceab67fb9232e385a964c987dab945be90e7510e6d1d6c9bb25581f099a5e1"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000096248",
+    "whareformer_observation_id": "713e4c7423733908b77ec63aee0dd2a4",
+    "whareformer_bbox": [
+      292,
+      0,
+      511,
+      336
+    ],
+    "whareformer_xyz": [
+      -1.2128945589065552,
+      -0.7333545684814453,
+      1.0518901348114014
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000096248__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000096248.jpg",
+    "visor_frame": "P01_01_frame_0000096248.png",
+    "annotation_index": 3,
+    "annotation_id": "29dc9f7444d6c6c5e3449205b70a3c58",
+    "category": "container",
+    "rgb": "data/compare200/P01_01/ready/frame_0000096248.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000096248__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000096248__a03_points.npz",
+        "sha256": "e840868858c8266208a4cfa22fc365426526a9ddd854a36b18cc0d72be7d658a"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000096248__a03_points.npz",
+        "sha256": "1afa728f7e300111b8b9fec6b0ca15fdf2f5df23d4b4a2f56d3977977d7d374d"
+      }
+    },
+    "detection_idx": 1,
+    "track_id": 50,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000096248",
+    "whareformer_observation_id": "29dc9f7444d6c6c5e3449205b70a3c58",
+    "whareformer_bbox": [
+      503,
+      96,
+      584,
+      193
+    ],
+    "whareformer_xyz": [
+      -0.9387370347976685,
+      -1.0661585330963135,
+      1.4528471231460571
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000096248__a05",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000096248.jpg",
+    "visor_frame": "P01_01_frame_0000096248.png",
+    "annotation_index": 5,
+    "annotation_id": "2b1816a394fa84d4f8269b9d79a44357",
+    "category": "plate",
+    "rgb": "data/compare200/P01_01/ready/frame_0000096248.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000096248__a05_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000096248__a05_points.npz",
+        "sha256": "b622ec03a7ef87e88c750d2045dc09233f87b92c3e0058d275393192404941de"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000096248__a05_points.npz",
+        "sha256": "ad95cee978dbc672c01e4b91b1f0384565a441fa8ba62a033bda675f443a8e51"
+      }
+    },
+    "detection_idx": 3,
+    "track_id": 27,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000096248",
+    "whareformer_observation_id": "2b1816a394fa84d4f8269b9d79a44357",
+    "whareformer_bbox": [
+      446,
+      252,
+      626,
+      429
+    ],
+    "whareformer_xyz": [
+      -0.8066018223762512,
+      -0.48356011509895325,
+      1.567017912864685
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000097130__a01",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000097130.jpg",
+    "visor_frame": "P01_01_frame_0000097130.png",
+    "annotation_index": 1,
+    "annotation_id": "d5a223a07bcd8e7f8e82a9d15e2bf0e8",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000097130.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000097130__a01_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000097130__a01_points.npz",
+        "sha256": "72212a79541acdf96d9d8238fe1b64d340dc5efe148c8223c71ec6e8f66491e2"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000097130__a01_points.npz",
+        "sha256": "09e5bb8dc6d890461c2e2453d2047269c444cde35b737bc18dafc8bc769b582c"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000097130",
+    "whareformer_observation_id": "d5a223a07bcd8e7f8e82a9d15e2bf0e8",
+    "whareformer_bbox": [
+      131,
+      109,
+      486,
+      480
+    ],
+    "whareformer_xyz": [
+      -0.6167876720428467,
+      -0.9338698983192444,
+      1.5593384504318237
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000097921__a02",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000097921.jpg",
+    "visor_frame": "P01_01_frame_0000097921.png",
+    "annotation_index": 2,
+    "annotation_id": "55040ac2dd1aa9e214cdb1c9ca9dc8b8",
+    "category": "pan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000097921.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000097921__a02_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000097921__a02_points.npz",
+        "sha256": "4a01aae1d56c9f2d789cbca281f9ee65c7199342e34b8d2db727d06f677bb3bd"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000097921__a02_points.npz",
+        "sha256": "b3b80c3709424dbeeda0a67db49c2bd0e75a770b04c88b83c4a7415641620695"
+      }
+    },
+    "detection_idx": 0,
+    "track_id": 9,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000097921",
+    "whareformer_observation_id": "55040ac2dd1aa9e214cdb1c9ca9dc8b8",
+    "whareformer_bbox": [
+      380,
+      126,
+      592,
+      480
+    ],
+    "whareformer_xyz": [
+      2.7286477088928223,
+      -0.9577538371086121,
+      1.1029771566390991
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000097921__a03",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000097921.jpg",
+    "visor_frame": "P01_01_frame_0000097921.png",
+    "annotation_index": 3,
+    "annotation_id": "b88ff4441d4355e426c717b0c1fafe36",
+    "category": "saucepan",
+    "rgb": "data/compare200/P01_01/ready/frame_0000097921.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000097921__a03_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000097921__a03_points.npz",
+        "sha256": "7a08192b0d100fc3b93e9a1da01c6afd2f13d502a4ebf256a6b6932631bb7be7"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000097921__a03_points.npz",
+        "sha256": "deece45c579328c063ba250dd849cb435e4d4734d1ba72e015a9c5209c50963a"
+      }
+    },
+    "detection_idx": 1,
+    "track_id": 47,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000097921",
+    "whareformer_observation_id": "b88ff4441d4355e426c717b0c1fafe36",
+    "whareformer_bbox": [
+      403,
+      167,
+      524,
+      337
+    ],
+    "whareformer_xyz": [
+      2.662475347518921,
+      -1.0720654726028442,
+      0.9176909923553467
+    ]
+  },
+  {
+    "observation_key": "P01_01/frame_0000097921__a06",
+    "video": "P01_01",
+    "rgb_frame": "frame_0000097921.jpg",
+    "visor_frame": "P01_01_frame_0000097921.png",
+    "annotation_index": 6,
+    "annotation_id": "088b7e6424b539e451199346eca4fe96",
+    "category": "sieve",
+    "rgb": "data/compare200/P01_01/ready/frame_0000097921.jpg",
+    "mask": "outputs/compare200_749968/P01_01/frame_0000097921__a06_mask.png",
+    "camera": "data/compare200/P01_01/ready/camera.json",
+    "clouds": {
+      "da": {
+        "path": "outputs/compare200_749968/P01_01/geometry_da_raw/frame_0000097921__a06_points.npz",
+        "sha256": "e899d82866c17f93eff41d7c144ac753528068473eac7cfca7919d9cb8646f11"
+      },
+      "moge": {
+        "path": "outputs/compare200_749968/P01_01/geometry_moge/frame_0000097921__a06_points.npz",
+        "sha256": "8749ecce9cd8fa412839a5f2367908946444c93d7e451dd2bd3955df855af0e1"
+      }
+    },
+    "detection_idx": 4,
+    "track_id": 36,
+    "mapping_status": "exact",
+    "frame_name": "frame_0000097921",
+    "whareformer_observation_id": "088b7e6424b539e451199346eca4fe96",
+    "whareformer_bbox": [
+      561,
+      126,
+      820,
+      463
+    ],
+    "whareformer_xyz": [
+      3.184885025024414,
+      -0.9156479835510254,
+      0.9159513115882874
+    ]
+  }
+]
