@@ -1,0 +1,23 @@
+diff --git a/src/utils/launcher.py b/src/utils/launcher.py
+index 25e0d70..a982e08 100644
+--- a/src/utils/launcher.py
++++ b/src/utils/launcher.py
+@@ -1,6 +1,7 @@
+ import os
+ import sys
+ import multiprocessing
++import psutil
+ 
+ from multiprocessing import Manager
+ from itertools import zip_longest
+@@ -66,8 +67,8 @@ def run_slurm_array_job(cfg, config_file_path, task_fn):
+ def run_multiprocessing(cfg, all_videos, config_file_path, task_fn, cpus_per_task=None):
+     use_gpus = cfg.get('tracking').get('gpu_accelerate', False)
+ 
+-    available_memory_gb = os.sysconf('SC_PAGE_SIZE') * os.sysconf('SC_PHYS_PAGES') / (1024. ** 3)
+-    mem_per_proc = 64  # in GB
++    available_memory_gb = psutil.virtual_memory().total / (1024. ** 3)
++    mem_per_proc = 4  # in GB
+     num_gpus = len(os.environ.get('CUDA_VISIBLE_DEVICES').split(',')) if use_gpus else 0
+ 
+     if use_gpus:
