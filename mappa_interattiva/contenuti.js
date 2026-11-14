@@ -79,11 +79,20 @@ window.MAP_DATA = {
       "x": 310,
       "y": 50,
       "group": "shape",
-      "review": "Scheda da compilare",
-      "summary": "Blocco dell’architettura obiettivo. Dettagli da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Dal frame RGB stimiamo la posizione nello spazio delle superfici visibili. Questa stima ci permette di ricavare una nuvola di punti 3D per ogni oggetto individuato dalla maschera.\nStiamo usando sia MoGE che DA, per valutare qual è migliore.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
-      ]
+      ],
+      "role": "La funzione di questo step è indicare quanto ogni pixel e ogni parte della scena è distante dalla camera, aka la profondità.\n- DA produce una mappa di profondità del frame; le profondità vengono convertite in punti 3D usando i parametri della camera.\n- MoGE produce una mappa di punti 3D e una propria maschera di validità.",
+      "state": "Entrambe le alternative sono state eseguite sulle immagini di testing. I risultati non hanno ancora decretato un vincitore, perciò al momento li stiamo tenendo entrambi.",
+      "evidence": "[spiega quali sono i limiti di MoGE]\n[Spiega quali sono i limiti di DA]\n\nLa posizione dei punti è stimata rispetto alla camera e può contenere errori: da una singola immagine non conosciamo direttamente le superfici nascoste.",
+      "why": "Perchè nel paper Whareformer viene usato [...], mentre nel paper SuperFlex viene usato [...].\nEssendo entrambe soluzioni apparentemente valide, abbiamo deciso che l'AB testing fosse l'alternativa migliore.",
+      "alternatives": "-",
+      "improve": "-",
+      "contract": "-",
+      "failure": "Le porzioni nascoste delle superfici oggetto di analisi non sono osservate direttamente e sono quindi stimate. Le stime però possono variare con la vista o avere errori di scala. Dobbiamo valutare quale sorgente produca geometrie più utili al sistema completo.",
+      "editedAt": "2026-11-14T17:19:27.077Z"
     },
     {
       "id": "B05",
@@ -91,11 +100,20 @@ window.MAP_DATA = {
       "x": 580,
       "y": 50,
       "group": "shape",
-      "review": "Scheda da compilare",
-      "summary": "Blocco dell’architettura obiettivo. Dettagli da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Il blocco riceve la stima geometrica del frame prodotta da DA o MoGE e la maschera VISOR dell’oggetto. Usa la maschera per selezionare i punti 3D validi appartenenti all’oggetto e produce una nuvola di punti, che viene fornita a SuperFlex.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
-      ]
+      ],
+      "role": "DA (o MoGE) elabora il frame RGB e produce una stima di geometria 3D per i pixel. Usiamo la maschera 2D dell’oggetto per conservare solo i punti corrispondenti alla sua superficie visibile.",
+      "state": "Il blocco è implementato e testato: riusciamo a estrarre la nuvola del singolo oggetto sia con DA sia con MoGE e a passarla a SuperFlex. Entrambe le sorgenti restano in valutazione. ",
+      "evidence": "La qualità e la coerenza delle nuvole tra viste diverse sono ancora da verificare in modo sufficiente per la fusione e il tracking.",
+      "why": "Replica del paper [...].",
+      "alternatives": "Replica del paper [...].",
+      "improve": "Replica del paper [...]. Out of target per il progetto corrente.",
+      "contract": "Replica del paper [...].",
+      "failure": "Una maschera imprecisa potrebbe non includere tutti e solo i punti dell’oggetto. Errori di profondità, occlusioni e superfici poco visibili possono produrre nuvole incomplete o deformate. Una singola vista difficilmente mostra tutto l’oggetto.\nInoltre, due nuvole dello stesso oggetto non sono automaticamente allineate tra loro.",
+      "editedAt": "2026-11-14T17:27:42.483Z"
     },
     {
       "id": "B06",
@@ -103,11 +121,20 @@ window.MAP_DATA = {
       "x": 850,
       "y": 50,
       "group": "shape",
-      "review": "Scheda da compilare",
-      "summary": "Blocco dell’architettura obiettivo. Dettagli da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "SuperFlex rappresenta la forma 3D dell’oggetto partendo da una nuvola di punti usando un insieme di primitive geometriche.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
-      ]
+      ],
+      "role": "Riceve una nuvola di punti e stima la forma dell'oggetto 3D tramite superquadriche, che sono forme geometriche flessibili che, combinate, approssimano la superficie dell’oggetto. Per limitare il problema delle viste parziali, naturali visto l'input frame by frame della camera, il modello può anche prevedere parti non visibili dell'oggetto a partire dalla vista parziale.",
+      "state": "Step implementato nella pipeline. Risultati in linea con il paper originale.",
+      "evidence": "La disponibilità di una nuvola non garantisce sempre una forma utilizzabile.",
+      "why": "Usare Superflex crediamo aumenti il potenzila einformativo di una immagine RGB nel contesto di Whareformer.",
+      "alternatives": "Tra le alternative considerate risulta Superdec, versione precedente di questo paper e superata sulle performance da Superflex. Altre alternative, da valutare indipendentemente da risultato del nostro progetto, sono [citare alternative valide per implementare il 3D in Whareformer: fare ricerca approfondita]",
+      "improve": "In caso di viste parziali, e conseguenti nuvole di punti parziali, il completamento della nuvola di punti è una previsione e può essere sbagliata. Dobbiamo verificare quanto la forma sia stabile tra viste e quanto sia effettivanemtne utile al tracking.",
+      "contract": "I punti devono essere preparati e normalizzati secondo il procedimento previsto per il modello; la trasformazione va conservata per interpretare il risultato.",
+      "failure": "Da completare",
+      "editedAt": "2026-11-14T17:35:56.378Z"
     },
     {
       "id": "B07",

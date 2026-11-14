@@ -32,7 +32,9 @@ async function handler(req,res){
  if(req.method!=='GET')return reply(res,405,{error:'Operazione non disponibile'});
  const decoded=decodeURIComponent(url.pathname),relative=decoded==='/'?'mappa_interattiva/index.html':decoded.replace(/^\//,'');
  const filename=path.resolve(PROJECT,relative);const data=await read();
- const allowedSources=new Set([...data.nodes,...data.edges].flatMap(n=>n.sources||[]).map(s=>path.resolve(PROJECT,s)));
+ const registryText=await fs.readFile(path.join(ROOT,'fonti.js'),'utf8');
+ const registry=JSON.parse(registryText.slice(registryText.indexOf('=')+1).trim().replace(/;$/, ''));
+ const allowedSources=new Set([...data.nodes,...data.edges].flatMap(n=>n.sources||[]).map(s=>registry[s]).filter(s=>typeof s==='string'&&!/^https?:\/\//.test(s)).map(s=>path.resolve(PROJECT,s)).filter(s=>s.startsWith(PROJECT+path.sep)));
  const inMap=filename.startsWith(ROOT+path.sep)&&!filename.slice(ROOT.length+1).split(path.sep).includes('backup');
  if(!(inMap&&['.html','.css','.js','.json','.md'].includes(path.extname(filename)))&&!allowedSources.has(filename))return reply(res,404,{error:'File non disponibile'});
  try{const bytes=await fs.readFile(filename);res.writeHead(200,{'Content-Type':(({'.html':'text/html','.css':'text/css','.js':'text/javascript','.json':'application/json'})[path.extname(filename)]||'text/plain')+'; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(bytes)}catch(e){if(e.code==='ENOENT')reply(res,404,{error:'File non trovato'});else throw e}

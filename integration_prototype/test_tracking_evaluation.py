@@ -4,6 +4,7 @@ import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+import os
 
 from tracking_evaluation import EvaluationPolicy, OriginalTrackingEvaluator, results_from_rows, evaluate_report
 from experiment_runner import ExperimentRunner, Variant
@@ -11,7 +12,7 @@ from evaluate_experiments import evaluate_directory
 from test_experiment_runner import factory,frames
 
 
-SOURCE=Path(__file__).resolve().parents[1]/'Whareformer-repo/src'
+SOURCE=Path(os.environ.get('WHAREFORMER_SRC', Path(__file__).resolve().parents[1]/'Whareformer-repo/src'))
 HAS_MOTMETRICS=importlib.util.find_spec('motmetrics') is not None
 
 

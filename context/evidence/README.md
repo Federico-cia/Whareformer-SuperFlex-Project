@@ -1,5 +1,13 @@
-# Evidenze della consegna AI
+# Evidenze verificate
 
-Copie selezionate e inalterate di report numerici/log dei test gia acquisiti. publication_inventory.json elenca origine locale, destinazione, dimensione e SHA-256. I percorsi assoluti nei report descrivono il layout storico; non sono promesse di disponibilita sul clone. Nessun nuovo esperimento durante la pubblicazione.
+Report numerici e log dei controlli acquisiti, suddivisi per fase:
 
-Leggere la guida in ../memory/LEGGIMI_PASSAGGIO_AI.md per scope, limiti e conteggi. Gli hash attestano le copie, non la validita scientifica del metodo. Mancanze dell'esportazione sono dichiarate nell'inventario; non sostituite da risultati ricostruiti.
+- [Riordino corrente](repository_cleanup_20261114/): suite dopo la pulizia e hash dei sorgenti.
+- [Baseline e registrazione](hpc_ripresa_20261114/): replay zero, conteggi e audit dei rifiuti.
+- [Valutatore](tracking_evaluation_20261114/): riproduzione delle metriche originali e suite HPC.
+- [Runner comune](common_runner_20261114/): verifica del comando e delle varianti.
+- [Frontend](frontend_20261114/): cache reale, inventario asset e pipeline 763531 conclusa.
+
+Le copie dei risultati conservano i dati originali; i percorsi assoluti al loro interno descrivono la macchina dell'esecuzione. Non sono percorsi operativi del clone. Per significato scientifico, scope e limiti leggere la [guida](../memory/LEGGIMI_PASSAGGIO_AI.md).
+
+[Inventario SHA-256](publication_inventory.json): snapshot dei file mantenuti nella consegna attuale, con percorsi relativi alla repository. Non include se stesso. La verifica `python tools/check_repository.py` controlla hash, collegamenti locali e sintassi dei sorgenti mantenuti; non sostituisce test funzionali o inferenze.

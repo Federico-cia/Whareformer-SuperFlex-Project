@@ -2,6 +2,7 @@
 import ast
 from pathlib import Path
 import unittest
+import os
 
 import numpy as np
 
@@ -9,7 +10,7 @@ from shape_adapter import ShapeLogitAdapter, FusionConfig
 from shape_tools.memory import MemoryConfig
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / 'Whareformer-repo/src/tracking/tracker/matcher/matcher_types.py'
+SOURCE = Path(os.environ.get('WHAREFORMER_SRC', ROOT / 'Whareformer-repo/src')) / 'tracking/tracker/matcher/matcher_types.py'
 
 
 def original_assignment():

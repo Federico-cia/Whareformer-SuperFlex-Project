@@ -402,7 +402,7 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Richiesta e proposta riferita.** Marco chiede un giudizio su pulizia Open3D, FPFH/RANSAC/ICP, accumulo, SuperFlex pretrained e valutazione Chamfer. Non attribuita al collega alcuna esecuzione.
 
-**Analisi e raccomandazione, non decisione adottata.** Baseline candidata plausibile; distinguere posa/scala, conservare rifiuti e provenienza e correggere la lettura della Chamfer su viste parziali. Raccomandato confronto diagnostico con il candidato attuale alla ripresa sperimentale. Il precedente 0/12 riguarda PCA/multistart + ICP, non FPFH. Evidenze e fonti in [PARERE_PROPOSTA_COLLEGA_20261114.md](PARERE_PROPOSTA_COLLEGA_20261114.md).
+**Analisi e raccomandazione, non decisione adottata.** Baseline candidata plausibile; distinguere posa/scala, conservare rifiuti e provenienza e correggere la lettura della Chamfer su viste parziali. Raccomandato confronto diagnostico con il candidato attuale alla ripresa sperimentale. Il precedente 0/12 riguarda PCA/multistart + ICP, non FPFH. Evidenze e fonti in [PARERE_PROPOSTA_COLLEGA_20261114.md](../archive/PARERE_PROPOSTA_COLLEGA_20261114.md).
 
 **Conseguenza e limite.** Nessuna sostituzione del registratore o adozione di un protocollo finale; priorità senza HPC e domanda primaria tracking invariate. Nessun nuovo esperimento, accesso HPC, inferenza o risultato.
 
@@ -410,7 +410,7 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Richiesta di Marco.** Spiegare ciascun problema del parere precedente e le soluzioni sensate con pro/contro.
 
-**Analisi, non adozione.** Approfonditi pulizia conservativa/componenti, FPFH/RGB/rifiuto, rigidità/similarità/non rigido, ammissione e budget, frequenza SuperFlex, metriche su viste parziali e controlli tracking. Precisati due limiti del controllo: pose equivalenti per simmetrie reali non implicano necessariamente fusione errata; una vista parziale non deve coprire tutta la memoria accumulata. Nessun nuovo gate fissato o spiegazione del precedente 0/12 dimostrata. Ragioni e compromessi in [PARERE_PROPOSTA_COLLEGA_20261114.md](PARERE_PROPOSTA_COLLEGA_20261114.md), approfondimento successivo.
+**Analisi, non adozione.** Approfonditi pulizia conservativa/componenti, FPFH/RGB/rifiuto, rigidità/similarità/non rigido, ammissione e budget, frequenza SuperFlex, metriche su viste parziali e controlli tracking. Precisati due limiti del controllo: pose equivalenti per simmetrie reali non implicano necessariamente fusione errata; una vista parziale non deve coprire tutta la memoria accumulata. Nessun nuovo gate fissato o spiegazione del precedente 0/12 dimostrata. Ragioni e compromessi in [PARERE_PROPOSTA_COLLEGA_20261114.md](../archive/PARERE_PROPOSTA_COLLEGA_20261114.md), approfondimento successivo.
 
 **Conseguenza.** Raccomandato avanzamento diagnostico progressivo senza introdurre tutte le alternative insieme. Nessuna scelta decisiva, implementazione o nuova esecuzione; direzione approvata e priorità senza HPC invariate.
 
@@ -426,7 +426,7 @@ Fonti: `INTEGRAZIONE_DISCUSSIONE.md`; `TODO.md`, punti 4–6; codice locale `Wha
 
 **Decisioni esplicite di Marco.** La contaminazione da associazioni riguarda tutte le componenti della track, non nasce da SuperFlex e non diventa un filone autonomo. Mantenere salvaguardie essenziali; la registrazione di viste dello stesso oggetto resta necessaria per fonderle. Approvata inferenza SuperFlex dopo ogni aggiornamento ammesso, non politica a intervalli; pubblicazione causale e punti osservati distinti dal completamento.
 
-**Richiesta e raccomandazione.** Marco domanda se ML e confronto di tutte le opzioni possano scegliere il compromesso e chiede la strada più promettente. Raccomandata calibrazione automatica di una pipeline classica, confronto finito sullo sviluppo e reti congelate; RGB→3D/RANSAC/ICP prioritario se pixel/texture adeguati, FPFH come confronto, rigido/similarità limitata e pulizia conservativa. Esempio di 24 combinazioni geometriche, non protocollo approvato né costo misurato. Selezione finale su tracking, geometria diagnostica e test separato. Dettagli e limiti in [PARERE_PROPOSTA_COLLEGA_20261114.md](PARERE_PROPOSTA_COLLEGA_20261114.md).
+**Richiesta e raccomandazione.** Marco domanda se ML e confronto di tutte le opzioni possano scegliere il compromesso e chiede la strada più promettente. Raccomandata calibrazione automatica di una pipeline classica, confronto finito sullo sviluppo e reti congelate; RGB→3D/RANSAC/ICP prioritario se pixel/texture adeguati, FPFH come confronto, rigido/similarità limitata e pulizia conservativa. Esempio di 24 combinazioni geometriche, non protocollo approvato né costo misurato. Selezione finale su tracking, geometria diagnostica e test separato. Dettagli e limiti in [PARERE_PROPOSTA_COLLEGA_20261114.md](../archive/PARERE_PROPOSTA_COLLEGA_20261114.md).
 
 **Conseguenza e limite.** Superata la discussione aperta sulla frequenza e ridimensionata la priorità della contaminazione generale. Nessun nuovo modello, variante, tuning o job eseguito; stato della ripresa HPC nella voce 46 non ricontrollato qui. Raccomandazione di probabilità di successo basata su metodo e casi disponibili, non superiorità sperimentale.
 
@@ -549,6 +549,14 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 **Evidenza e limite.** Guida collega codice, risultati acquisiti, dipendenze e prossimi passi. Frontend cache verificato ma rigenerazione ancora pendente; filtri esplicitamente rinviati; nessuna fusione multivista o beneficio tracking dimostrati. Non ripetuti esperimenti. Dati grandi, pesi e accessi esclusi: clone sufficiente per contesto/codice/evidenze leggere, non per inferenza senza asset esterni.
 
 **Conseguenza.** Il prossimo provider legge la guida prima dei resoconti storici; prosegue il frontend già approvato e mantiene i vincoli. Pubblicazione eseguita e riferimento main remoto verificato al commit 6d7a8b7; esito registrato in docs/CONDIVISIONE.md e inventario delle copie con hash. Nessuna nuova scelta scientifica.
+
+## 67. Repository ordinata e ingresso unico — 14 novembre 2026
+
+**Revisione esplicita.** Marco richiede GitHub pulito, senza rami di codice morti o riferimenti locali non validi. Il README diventa l'unico ingresso; rimosso START_HERE e il segnaposto Integration. Nove file pilota sostituiti sono rimossi dalla versione Git attuale e restano recuperabili al commit 519e2b1; gli originali locali sono conservati. Documenti storici distinti in context/archive, stato/attività/roadmap operative riscritti senza stati intermedi contraddittori. Non modificati metodo, filtri o risultati del collega.
+
+**Esecuzione e controlli.** Corretti collegamenti locali dopo il riordino; tavole non distribuite dichiarate come tali, senza collegamenti fittizi. Sorgente esterno dei test configurabile con WHAREFORMER_SRC; requirements dei test e controllo strutturale ripetibile aggiunti. Suite sul codice riordinato: 72 casi, 70 passati e due skip motmetrics, nessuna inferenza nuova. La mappa manuale è preservata per hash, incluse le successive schede B04/B05/B06 salvate localmente. Risoluzione delle fonti separata dai testi manuali; servizio verificato in sola lettura su asset/API/documenti e rifiuto di file non elencati. Controllo strutturale superato: percorsi locali, sintassi e inventario; aree Whareformer e SuperFlex invariate. Esito pubblicazione registrato separatamente.
+
+**Regola permanente.** Tenere documentazione corrente separata dalla storia, percorsi esterni espliciti e codice operativo privo di runner superati; verificare collegamenti e hash prima di pubblicare. Conservare cronologia e provenienza senza trattarle come istruzioni correnti. Frontend ancora parziale e revisione filtri rinviata.
 
 ## Vincoli organizzativi che spiegano il perimetro
 

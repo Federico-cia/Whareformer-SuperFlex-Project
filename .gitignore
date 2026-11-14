@@ -28,3 +28,9 @@ checkpoints/
 
 # Approved compare200 data handoff; other archives remain excluded.
 !SuperFlex/data_packages/compare200/compare200_tracking_inputs_v1.zip
+
+# External authors sources and serialized assets
+/Whareformer-repo/
+/SuperFlex-repo/
+*.pkl
+*.lmdb

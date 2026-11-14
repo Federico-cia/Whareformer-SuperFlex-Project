@@ -1,6 +1,6 @@
 # Mappa interattiva Whareformer–SuperFlex
 
-Cartella dedicata nella repository locale: mappa_interattiva/. Non pubblicata su GitHub.
+Mappa del progetto pubblicata nella cartella mappa_interattiva/. I backup vengono creati localmente ed esclusi da Git.
 
 ## Organizzazione
 
@@ -9,6 +9,7 @@ Cartella dedicata nella repository locale: mappa_interattiva/. Non pubblicata su
 | index.html | Pagina e comandi |
 | stile.css | Aspetto grafico |
 | app.js | Interazioni ed editor |
+| fonti.js | Percorsi delle fonti, separati dai testi manuali: documenti locali o sorgenti autori alla revisione fissata |
 | server.cjs | Servizio locale di salvataggio |
 | Avvia mappa.cmd | Avvio Windows |
 | contenuti.json | **Sorgente principale dei testi** e disposizione iniziale |
@@ -54,3 +55,5 @@ Il servizio è locale (127.0.0.1), non pubblicato. Non è collaborazione simulta
 
 ## Linguaggio delle schede
 Scrivere per persone che non conoscono il progetto: descrivere prima la funzione concreta, spiegare i termini tecnici necessari, distinguere cosa è stato controllato dai limiti ancora aperti. Titoli aggiornati: Possibili miglioramenti, Coerenza dei dati, Possible points of failure. Le modifiche manuali ai contenuti vanno preservate; aggiornare solo i campi richiesti e usare il controllo di revisione.
+
+Le fonti della mappa sono risolte da fonti.js senza cambiare le etichette manuali. I file degli autori rimandano alla revisione GitHub fissata; un riferimento non configurato viene mostrato come testo, senza generare un collegamento inesistente.

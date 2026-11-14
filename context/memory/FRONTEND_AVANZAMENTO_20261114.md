@@ -22,4 +22,4 @@ Rigenerazione non eseguita e backend cold non dichiarato completato. Restano da 
 
 763531 COMPLETED/0:0 in 23m24s: nove configurazioni a peso zero completate e valutate, tutte con zero_baseline_exact true. Valutazione e tabella terminate, copie in outputs/frontend_20261114/pipeline_763531/. Nessun nuovo job per questo frontend; gli esiti non dimostrano beneficio del peso geometrico o fusione multivista. Registro precedente corretto conservando gli stati storici.
 
-Prossimo lavoro: risolvere le dipendenze/provenienza del ramo rigenerato, collegare e verificare gli estrattori originali sul pilota previsto. Piano approvato ancora parzialmente eseguito; filtri rinviati, nessun push o messaggio a terzi.
+Prossimo lavoro: risolvere le dipendenze/provenienza del ramo rigenerato, collegare e verificare gli estrattori originali sul pilota previsto. Piano approvato ancora parzialmente eseguito; filtri rinviati. Nella fase frontend non era stato eseguito alcun push; la successiva pubblicazione e il riordino sono registrati separatamente.

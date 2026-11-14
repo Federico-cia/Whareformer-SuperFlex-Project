@@ -9,7 +9,7 @@ Questa guida è il punto di ingresso aggiornato per continuare con qualsiasi pro
 3. COMPLETAMENTO_PIPELINE_20261114.md, RIPRESA_HPC_20261114.md e i resoconti dei moduli per prove e limiti.
 4. Codice integration_prototype/ e relativa README; mappa_interattiva/README.md per modificare la mappa.
 
-Nella cartella locale questa guida e i documenti sono alla radice di `lavoro di gruppo`. Su GitHub sono in `context/memory/`; il punto di ingresso della repository è START_HERE.md. Codice e mappa sono rispettivamente `integration_prototype/` e `mappa_interattiva/` alla radice GitHub. I richiami storici a `../outputs`, `shared_exports` o percorsi HPC indicano archivi esterni al clone, non file garantiti nel repository. Gli estratti pubblicati sono in `context/evidence/` con inventario SHA-256.
+Nella cartella locale questa guida e i documenti sono alla radice di `lavoro di gruppo`. Su GitHub sono in `context/memory/`; il punto di ingresso della repository è README.md. I resoconti tecnici storici sono in context/archive/. Gli script pilota superati sono recuperabili al commit 519e2b1 e non sono interfacce correnti. Codice e mappa sono rispettivamente `integration_prototype/` e `mappa_interattiva/` alla radice GitHub. I richiami storici a `../outputs`, `shared_exports` o percorsi HPC indicano archivi esterni al clone, non file garantiti nel repository. Gli estratti pubblicati sono in `context/evidence/` con inventario SHA-256.
 
 ## Obiettivo approvato e ciclo causale
 
@@ -67,15 +67,16 @@ Due persone, circa due ore al giorno ciascuna; scadenza 23 novembre. Marco geome
 
 ## File, ambienti e riproduzione
 
-GitHub: https://github.com/Federico-cia/Whareformer-SuperFlex-Project . La consegna aggiorna main a partire dal commit collega fc5aa30, senza riscrivere la storia. START_HERE.md distingue guida, codice, evidenze e materiali esterni.
+GitHub: https://github.com/Federico-cia/Whareformer-SuperFlex-Project . La consegna aggiorna main a partire dal commit collega fc5aa30, senza riscrivere la storia. README.md distingue guida, codice, evidenze e materiali esterni.
 
-Sorgente autori Whareformer: https://github.com/jacobchalk/Whareformer, commit 82dd349957e1f04f92a2979b4c92c2f3fed445c5. I test estraggono metodi originali da `<radice>/Whareformer-repo/src`: occorre predisporre questa copia alla versione indicata (non la cartella Whareformer/ del collega). Inventario con hash in context/manifests/ sul remoto, manifests/ localmente. Il bundle numerico contiene le proprie dipendenze original_src per il runner; non è un insieme di soli dieci oggetti isolati.
+Sorgente autori Whareformer: https://github.com/jacobchalk/Whareformer, commit 82dd349957e1f04f92a2979b4c92c2f3fed445c5. I test estraggono metodi originali dal sorgente esterno indicato da WHAREFORMER_SRC: predisporre la copia alla versione indicata e configurare la sua directory src (non la cartella Whareformer/ del collega). Il vecchio layout locale resta un fallback per compatibilità, non un requisito del clone. Inventario con hash in context/manifests/ sul remoto, manifests/ localmente. Il bundle numerico contiene le proprie dipendenze original_src per il runner; non è un insieme di soli dieci oggetti isolati.
 
 Dipendenze secondo percorso: NumPy/SciPy/trimesh/Pillow per nucleo e test; PyTorch/PyYAML/pandas/motmetrics/xmltodict per tracking/metriche; ambienti originali e checkpoint per inferenze. Ambiente locale esistente shared_exports/code_review_env/Scripts/python.exe: mancano Torch/pandas/motmetrics/PyYAML. Ambiente HPC verificato cv-superflex: Torch 2.6.0+cu124, NumPy 1.26; motmetrics 1.4.0 e xmltodict 0.14.2 forniti separatamente nei job. Non assumere che un clone installi automaticamente tutto.
 
 Da clone GitHub, con dipendenze e sorgenti predisposti:
 
 ```powershell
+$env:WHAREFORMER_SRC = 'C:/percorso/Whareformer/src'
 $env:PYTHONPATH = (Resolve-Path 'SuperFlex/src').Path
 python -m unittest discover -s integration_prototype -p 'test_*.py' -v
 python integration_prototype/run_pipeline.py --root <bundle_verificato> --config integration_prototype/variants_zero.example.json --output <nuovo_output> --cache <cache_dedicata> --policy integration_prototype/evaluation_prefix.example.json

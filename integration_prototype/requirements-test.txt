@@ -1,0 +1,7 @@
+numpy==1.26.4
+scipy==1.15.3
+trimesh==4.6.8
+Pillow>=10
+pandas>=2
+motmetrics==1.4.0
+xmltodict==0.14.2
