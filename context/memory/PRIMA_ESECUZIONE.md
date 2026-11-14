@@ -15,7 +15,7 @@ Esaminato il testo delle pagine pertinenti di Lesson 1 (pp. 5–10), Lesson 2 (p
 Prima connessione dal terminale locale, sostituendo `MATRICOLA`:
 
 ```bash
-Dettagli personali di accesso HPC omessi dalla copia condivisa; configurazione conservata solo localmente.
+ssh MATRICOLA@slogin.hpc.unibocconi.it
 ```
 
 Preparato `scripts/hpc_probe.sbatch`: richiede una GPU, due CPU, 4 GB di RAM e cinque minuti per registrare hardware visibile, ambiente Conda e quota. Dopo averlo trasferito in una cartella di lavoro sul cluster, inviarlo da quella cartella con:

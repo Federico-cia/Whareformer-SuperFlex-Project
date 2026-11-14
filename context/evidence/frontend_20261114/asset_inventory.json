@@ -1,0 +1,33 @@
+{
+  "rgb_camera_annotation_source": "lavoro di gruppo\\data\\compare200\\P01_01\\ready",
+  "pca_local": {
+    "path": "lavoro di gruppo\\Whareformer-repo\\Starting_checkpoint_whareformer\\PCA_model_masked_256d.pkl",
+    "exists": true,
+    "sha256": "a5fd582312a6abd57deaa16e482e42ddc3dd99ccdc57aa514cdb060d4bdea6aa",
+    "baseline_training_provenance": "not established"
+  },
+  "hpc_search": {
+    "roots": [
+      "~/.cache/torch",
+      "~/cv_project/hf_cache",
+      "~/cv_project/external"
+    ],
+    "maximum_depth": 5,
+    "matching_dinov2_pca_metric_scale_files": [],
+    "limits": "No matching files in these roots; not proof of global absence."
+  },
+  "scene_assets": {
+    "fields_json": "~/cv_project/data_compare200/P01_01/fields.json",
+    "mesh": "~/cv_project/data_compare200/P01_01/mesh.ply",
+    "original_metric_scene_scale": "unverified; no implicit MVS or scale computation launched"
+  },
+  "cold_regeneration": {
+    "status": "blocked_on_verified_assets",
+    "executed": false,
+    "required": [
+      "Pin/verify DINOv2 weights/revision compatible with original appearance features",
+      "Establish PCA provenance and original normalization policy",
+      "Verify original scene scaling/assets and suitable extraction environment"
+    ]
+  }
+}

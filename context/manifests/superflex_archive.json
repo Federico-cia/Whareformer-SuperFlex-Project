@@ -1,0 +1,23 @@
+{
+  "reference_commit": "15b63b23375c6a80c3ce0dec4be0c9b11055c722",
+  "reference_inventory": "tmp/pdfs/repos/superflex/tree.json (previously saved GitHub tree)",
+  "inventory_truncated": false,
+  "expected_files": 76,
+  "matched": 76,
+  "missing": [],
+  "changed": [],
+  "assets": {
+    "robust\\ckpt.pt": {
+      "bytes": 24025089,
+      "sha256": "5bd1ba9818dc7322400d4234262d47500b05fb40bad3b0edc1e6b8847833b842"
+    },
+    "robust\\config.yaml": {
+      "bytes": 2145,
+      "sha256": "ff468f8baaec1622db6cd26edae26ec32c7c8c828b95a0012811078f51b031bf"
+    },
+    "examples\\lamp.ply": {
+      "bytes": 65777,
+      "sha256": "82f462963f1cbd18aaaaf98cc60e0403cba0f183ae9dbd38062107dca9b9e51b"
+    }
+  }
+}

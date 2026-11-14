@@ -1,0 +1,29 @@
+{
+  "prepared_on": "2026-11-09",
+  "selection_policy": "Latest repository commit returned by GitHub API before 2026-07-01T00:00:00Z; our reproducibility choice, not author-declared versions",
+  "remote_root": "~/cv_project/external/rgb_sources",
+  "sources": [
+    {
+      "name": "MoGE",
+      "commit": "07444410f1e33f402353b99d6ccd26bd31e469e8",
+      "url": "https://codeload.github.com/microsoft/MoGe/tar.gz/07444410f1e33f402353b99d6ccd26bd31e469e8",
+      "archive": "moge.tar.gz",
+      "sha256": "08e5fcbaa4421a0e3e284ac7e3196965904677bb479c29b19c95ead47407f734",
+      "extracted_directory": "MoGe-07444410f1e33f402353b99d6ccd26bd31e469e8",
+      "status": "downloaded_and_extracted_on_hpc_pyproject_and_v2_infer_inspected"
+    },
+    {
+      "name": "SAM3",
+      "commit": "5dd401d1c5c1d5c3eedff06d41b77af824517619",
+      "url": "https://codeload.github.com/facebookresearch/sam3/tar.gz/5dd401d1c5c1d5c3eedff06d41b77af824517619",
+      "archive": "sam3.tar.gz",
+      "sha256": "b3f260cceef02459a3d6cd889d15b47795037596e3bb7c6eb6539d015199256d",
+      "extracted_directory": "sam3-5dd401d1c5c1d5c3eedff06d41b77af824517619",
+      "status": "downloaded_and_extracted_on_hpc_image_builder_signature_inspected"
+    }
+  ],
+  "new_slurm_jobs": [],
+  "new_environments_installed": false,
+  "rgb_inference_executed": false,
+  "sam3_weights": "not_downloaded_official_anonymous_request_http_401_user_needs_access_grant"
+}

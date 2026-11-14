@@ -1,0 +1,14 @@
+{
+  "local_cases": 69,
+  "local_skipped": 2,
+  "hpc_tests": 69,
+  "hpc_skipped": 0,
+  "evaluator_jobs": [
+    "763498",
+    "763530"
+  ],
+  "pipeline_job": "763531",
+  "reference_idf1_percent": 73.2697350574193,
+  "reference_mpcl_percent": 70.46550449586454,
+  "geometric_filters_unchanged": true
+}

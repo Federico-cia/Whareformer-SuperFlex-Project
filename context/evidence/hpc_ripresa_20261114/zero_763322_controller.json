@@ -1,0 +1,24 @@
+{
+  "mode": "zero",
+  "slurm_job_id": "763322",
+  "rounds": [
+    {
+      "round": 0,
+      "returncode": 0,
+      "log": "replay_00.log"
+    }
+  ],
+  "elapsed_seconds": 590.8824023981579,
+  "update_statuses": {},
+  "initializations": 0,
+  "accepted_fusions": 0,
+  "worker_statuses": {},
+  "real_superflex_ready": 0,
+  "zero_checks_passed": true,
+  "baseline_recorded_mismatch_frames": 0,
+  "limits": [
+    "Prefix only, geometric weight zero; no tracking improvement assessed.",
+    "Initialization is not an accepted multi-view fusion.",
+    "Serial cached replay; no persistent full-tracker checkpoint."
+  ]
+}

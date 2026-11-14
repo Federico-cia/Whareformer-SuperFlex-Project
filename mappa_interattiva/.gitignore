@@ -1,0 +1,4 @@
+# Copie locali e temporanei
+backup/
+*.tmp
+*.log

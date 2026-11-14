@@ -1,0 +1,8 @@
+{
+  "fps": 60,
+  "final_frame": 7508,
+  "scope": "diagnostic_prefix",
+  "dense_eval": true,
+  "min_count": 3,
+  "distance_threshold": 0.3
+}

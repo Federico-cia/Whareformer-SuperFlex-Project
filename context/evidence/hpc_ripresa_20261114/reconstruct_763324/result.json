@@ -1,0 +1,94 @@
+{
+  "video": "P01_01",
+  "frames": 3398,
+  "last_frame": 7508,
+  "observations": 10264,
+  "checks": {
+    "da_raw_points": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    },
+    "da_raw_superflex": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    },
+    "moge_points": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    },
+    "moge_superflex": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    }
+  },
+  "zero_associations_exact": true,
+  "zero_model_logits_exact": true,
+  "accumulation_enabled": true,
+  "reconstruction_enabled": true,
+  "cloud_code_sha256": {
+    "cloud_updater.py": "8bd9dbb963bcb8e5a9364b915b637e861799475c4a61488bf738cccf74595d66",
+    "cloud_memory.py": "38dd6632f3070351e6a2ea96aad5466dc2c484d1e94b16464aafb189dbfb1b8d"
+  },
+  "baseline_recorded_mismatch_frames": 0,
+  "baseline_mismatch_examples": [],
+  "baseline_track_count": 12,
+  "elapsed_seconds": 659.9236404439434,
+  "checkpoint_sha256": "5b2e6692461f837ec662d0ac75a5f8c08e4fa9778e5c1b9833598cf90a58ee1d",
+  "torch": "2.6.0+cu124",
+  "cpu_checkpoint_sha256": "b24bfd24b6251464e097bd99786c6c7c0399eb0f2b8882a7dae3a2cbf3f5885d",
+  "cpu_checkpoint_tensors_exact": true,
+  "source": "original released appearance PCA-256 and aligned XYZ; no synthetic features",
+  "input_manifest_sha256": "7b671aaa89f2a81a274594fa33702fe2464b2ef7c60a2e24572c7c6b0793475a",
+  "runner_sha256": "f2bbd2b7794504da5669eb22b3bf929510e000c1fb91f178bc966ba72f77977c",
+  "geometry_matcher_sha256": "455ea851f3be61a3cf3c618e638afa041eb80a053f0b8c54a90efbecadd0bf7e",
+  "frame_coordinator_sha256": "a1a01a73c08ef672ff626a11abb0839669e21404625f4fc35b0aad3a74c2e376",
+  "geometry_configs": {
+    "da_raw_points": {
+      "mode": "active",
+      "representation": "da_raw_points",
+      "capacity": 2,
+      "metric": "d2",
+      "reduction": "minimum",
+      "weight": 0,
+      "neutral_distance": 0.0
+    },
+    "da_raw_superflex": {
+      "mode": "active",
+      "representation": "da_raw_superflex",
+      "capacity": 2,
+      "metric": "d2",
+      "reduction": "minimum",
+      "weight": 0,
+      "neutral_distance": 0.0
+    },
+    "moge_points": {
+      "mode": "active",
+      "representation": "moge_points",
+      "capacity": 2,
+      "metric": "d2",
+      "reduction": "minimum",
+      "weight": 0,
+      "neutral_distance": 0.0
+    },
+    "moge_superflex": {
+      "mode": "active",
+      "representation": "moge_superflex",
+      "capacity": 2,
+      "metric": "d2",
+      "reduction": "minimum",
+      "weight": 0,
+      "neutral_distance": 0.0
+    }
+  },
+  "package_initialization": "tracking namespace isolated from unused VideoInstance/LMDB entry point",
+  "limits": [
+    "Prefix reproduction only, no full-video metrics or claimed tracking improvement.",
+    "Zero-weight integration; no calibrated nonzero method tested.",
+    "Accumulation alone retains separate forms; --reconstruct enables deferred SuperFlex publication. Input scale is unverified.",
+    "Shape memory updated only at available exact-mapped geometry; two temporal aliases not used."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "video": "P01_01",
+  "frames": 3398,
+  "last_frame": 7508,
+  "observations": 10264,
+  "checks": {
+    "da_raw_points": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    },
+    "da_raw_superflex": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    },
+    "moge_points": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    },
+    "moge_superflex": {
+      "frames": 3398,
+      "model_logit_comparisons": 3397,
+      "valid_shape_distances": 8
+    }
+  },
+  "zero_associations_exact": true,
+  "zero_model_logits_exact": true,
+  "baseline_recorded_mismatch_frames": 0,
+  "baseline_mismatch_examples": [],
+  "baseline_track_count": 12,
+  "elapsed_seconds": 668.2868024669588,
+  "checkpoint_sha256": "5b2e6692461f837ec662d0ac75a5f8c08e4fa9778e5c1b9833598cf90a58ee1d",
+  "torch": "2.6.0+cu124",
+  "cpu_checkpoint_sha256": "b24bfd24b6251464e097bd99786c6c7c0399eb0f2b8882a7dae3a2cbf3f5885d",
+  "cpu_checkpoint_tensors_exact": true,
+  "source": "original released appearance PCA-256 and aligned XYZ; no synthetic features",
+  "input_manifest_sha256": "ce2f8ee0343af2336be053e178e0a1033929ad4460e5ef5d226fe040142f522d",
+  "runner_sha256": "865ad7a479cf76ae08da15453f49396a8f823cbeb902f2e56971cb04154e59f6",
+  "package_initialization": "tracking namespace isolated from unused VideoInstance/LMDB entry point",
+  "limits": [
+    "Prefix reproduction only, no full-video metrics or claimed tracking improvement.",
+    "Zero-weight integration; no calibrated nonzero method tested.",
+    "Shape memory updated only at available exact-mapped geometry; two temporal aliases not used."
+  ]
+}

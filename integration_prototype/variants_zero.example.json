@@ -1,0 +1,82 @@
+{
+  "description": "Integration check only: all geometric weights zero; not calibrated efficacy protocol.",
+  "seed": 0,
+  "variants": [
+    {
+      "name": "W0",
+      "method": "W0"
+    },
+    {
+      "name": "G0_da",
+      "method": "G0",
+      "source": "da",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    },
+    {
+      "name": "S-separata_da",
+      "method": "S-separata",
+      "source": "da",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    },
+    {
+      "name": "S-accumulo_da",
+      "method": "S-accumulo",
+      "source": "da",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    },
+    {
+      "name": "P-accumulo_da",
+      "method": "P-accumulo",
+      "source": "da",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    },
+    {
+      "name": "G0_moge",
+      "method": "G0",
+      "source": "moge",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    },
+    {
+      "name": "S-separata_moge",
+      "method": "S-separata",
+      "source": "moge",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    },
+    {
+      "name": "S-accumulo_moge",
+      "method": "S-accumulo",
+      "source": "moge",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    },
+    {
+      "name": "P-accumulo_moge",
+      "method": "P-accumulo",
+      "source": "moge",
+      "weight": 0.0,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    }
+  ]
+}

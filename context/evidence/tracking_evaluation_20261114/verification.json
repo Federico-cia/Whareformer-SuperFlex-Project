@@ -1,0 +1,24 @@
+{
+  "tests_run": 69,
+  "skipped": [
+    "Real motmetrics evaluated in isolated HPC job",
+    "Real motmetrics evaluated in isolated HPC job"
+  ],
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "code_sha256": {
+    "tracking_evaluation.py": "4d0d26aec6ea0e65f834aa78ae0c0d1591a9d6baf2bba7b66244f3cc530c91e2",
+    "evaluate_experiments.py": "dfd59126febc5b4a8eff38e2e139ab6b311769b04499174fa769df6a5ad42dbb",
+    "run_pipeline.py": "c26b5dee04506c5fb86f2b8b2a2624e9463860391c474931cf4beed84dcc3f67",
+    "run_experiments.py": "72e3667ca8e102f9cf708ffea29738312cd6f505377fe94a06e1e4e4bac5daf4",
+    "experiment_runner.py": "103008e3ae7a51803f92d2dfaf414bf5a2abba2a3beb7ed28b2c381d152e8b1f",
+    "validate_tracking_evaluator_hpc.py": "782bdd757bd6f9cf84bad4eb1592b8d068e77cadcc9dd7da621a971c3190c5b3",
+    "test_tracking_evaluation.py": "f13425d2901cc56eca94eac54281e84f2fc9bc2bfb654f1ea14221dbb5c72b9b",
+    "test_run_pipeline.py": "0caac749ca312ce8d61be390c296728c1c585e236b760fdae69676a62aacc230"
+  },
+  "limits": [
+    "Two actual motmetrics cases require HPC dependencies; locally skipped, not treated as passed.",
+    "No change to geometric acceptance gates; no new inference."
+  ]
+}

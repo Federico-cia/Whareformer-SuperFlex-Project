@@ -1,5 +1,7 @@
 # Whareformer–SuperFlex Project
 
+**Ripresa aggiornata: [START_HERE.md](START_HERE.md)** - guida per qualunque provider AI, codice, risultati, decisioni e lavoro pendente.
+
 Studio dell'utilità delle forme 3D per l'associazione delle identità in Whareformer.
 
 - [SuperFlex](SuperFlex/README.md): pipeline DA/MoGE → punti → SuperFlex, confronto e memoria causale; reti e pesi esterni.
@@ -9,4 +11,4 @@ Studio dell'utilità delle forme 3D per l'associazione delle identità in Wharef
 - `Integration/`: area del collegamento fra componenti.
 - [context/memory](context/memory/README.md): stato, decisioni, roadmap e risultati scientifici.
 
-L'integrazione nel tracker e il relativo beneficio sperimentale restano da verificare.
+Il collegamento nel tracker e il percorso da cache sono implementati e verificati; rigenerazione del frontend, calibrazione e beneficio sperimentale restano aperti.

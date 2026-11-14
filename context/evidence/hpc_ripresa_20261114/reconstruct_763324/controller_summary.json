@@ -1,0 +1,59 @@
+{
+  "mode": "reconstruct",
+  "slurm_job_id": "763324",
+  "rounds": [
+    {
+      "round": 0,
+      "returncode": 1,
+      "log": "replay_00.log"
+    },
+    {
+      "round": 1,
+      "returncode": 1,
+      "log": "replay_01.log"
+    },
+    {
+      "round": 2,
+      "returncode": 1,
+      "log": "replay_02.log"
+    },
+    {
+      "round": 3,
+      "returncode": 1,
+      "log": "replay_03.log"
+    },
+    {
+      "round": 4,
+      "returncode": 1,
+      "log": "replay_04.log"
+    },
+    {
+      "round": 5,
+      "returncode": 1,
+      "log": "replay_05.log"
+    },
+    {
+      "round": 6,
+      "returncode": 0,
+      "log": "replay_06.log"
+    }
+  ],
+  "elapsed_seconds": 2602.043154470157,
+  "update_statuses": {
+    "accepted": 12,
+    "rejected": 12
+  },
+  "initializations": 12,
+  "accepted_fusions": 0,
+  "worker_statuses": {
+    "ready": 6
+  },
+  "real_superflex_ready": 6,
+  "zero_checks_passed": true,
+  "baseline_recorded_mismatch_frames": 0,
+  "limits": [
+    "Prefix only, geometric weight zero; no tracking improvement assessed.",
+    "Initialization is not an accepted multi-view fusion.",
+    "Serial cached replay; no persistent full-tracker checkpoint."
+  ]
+}

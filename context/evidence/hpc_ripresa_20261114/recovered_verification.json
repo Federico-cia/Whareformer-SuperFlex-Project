@@ -1,0 +1,13 @@
+{
+  "real_prefix_frames": 3398,
+  "real_prefix_observations": 10264,
+  "exact_zero": true,
+  "recorded_mismatch_frames": 0,
+  "transactions": 12,
+  "idf1_percent": 73.2697350574193,
+  "hashes": {
+    "geometry_transactions_761899.json": "0b762eeef1389170f0761e72b654a2334e95d8464f8fc492d43d8103f4fb8c44",
+    "real_prefix_761899.json": "ca5bae443517b87ccd9ffc6a809efd1aaf275163b276f942b086858f0037fdaf",
+    "recorded_metrics_761905.json": "8eead7fc6b17a8809ffae6c36c30a17c71b33ddb7beff5238e2e7caf2897582c"
+  }
+}

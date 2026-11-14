@@ -1,0 +1,189 @@
+[
+  {
+    "representation": "da_raw_points",
+    "frame": 5099,
+    "track": "4",
+    "reasons": [
+      "ambiguous_rigid_pose"
+    ],
+    "support": [
+      0.8633333333333333,
+      0.9
+    ],
+    "q90": [
+      0.05293288875133261,
+      0.0345172828122848
+    ],
+    "ambiguous_alternatives": 5,
+    "config": {
+      "fit_points": 700,
+      "refine_points": 3000,
+      "validation_points": 300,
+      "iterations": 30,
+      "trim_fraction": 0.8,
+      "support_distance_rms": 0.08,
+      "minimum_support": 0.65,
+      "maximum_q90_rms": 0.15,
+      "ambiguity_relative": 0.05,
+      "ambiguity_degrees": 15.0,
+      "seed": 1311
+    }
+  },
+  {
+    "representation": "moge_points",
+    "frame": 5099,
+    "track": "4",
+    "reasons": [
+      "ambiguous_rigid_pose"
+    ],
+    "support": [
+      0.9566666666666667,
+      0.8433333333333334
+    ],
+    "q90": [
+      0.04495118536704822,
+      0.03506274480200891
+    ],
+    "ambiguous_alternatives": 2,
+    "config": {
+      "fit_points": 700,
+      "refine_points": 3000,
+      "validation_points": 300,
+      "iterations": 30,
+      "trim_fraction": 0.8,
+      "support_distance_rms": 0.08,
+      "minimum_support": 0.65,
+      "maximum_q90_rms": 0.15,
+      "ambiguity_relative": 0.05,
+      "ambiguity_degrees": 15.0,
+      "seed": 1311
+    }
+  },
+  {
+    "representation": "da_raw_points",
+    "frame": 7508,
+    "track": "4",
+    "reasons": [
+      "insufficient_heldout_support",
+      "excessive_heldout_residual",
+      "ambiguous_rigid_pose"
+    ],
+    "support": [
+      0.87,
+      0.4
+    ],
+    "q90": [
+      0.05314941136798443,
+      0.30291749916132604
+    ],
+    "ambiguous_alternatives": 2,
+    "config": {
+      "fit_points": 700,
+      "refine_points": 3000,
+      "validation_points": 300,
+      "iterations": 30,
+      "trim_fraction": 0.8,
+      "support_distance_rms": 0.08,
+      "minimum_support": 0.65,
+      "maximum_q90_rms": 0.15,
+      "ambiguity_relative": 0.05,
+      "ambiguity_degrees": 15.0,
+      "seed": 1311
+    }
+  },
+  {
+    "representation": "da_raw_points",
+    "frame": 7508,
+    "track": "6",
+    "reasons": [
+      "insufficient_heldout_support",
+      "excessive_heldout_residual",
+      "ambiguous_rigid_pose"
+    ],
+    "support": [
+      0.73,
+      0.43
+    ],
+    "q90": [
+      0.07883433370061232,
+      0.32174030602407466
+    ],
+    "ambiguous_alternatives": 10,
+    "config": {
+      "fit_points": 700,
+      "refine_points": 3000,
+      "validation_points": 300,
+      "iterations": 30,
+      "trim_fraction": 0.8,
+      "support_distance_rms": 0.08,
+      "minimum_support": 0.65,
+      "maximum_q90_rms": 0.15,
+      "ambiguity_relative": 0.05,
+      "ambiguity_degrees": 15.0,
+      "seed": 1311
+    }
+  },
+  {
+    "representation": "moge_points",
+    "frame": 7508,
+    "track": "4",
+    "reasons": [
+      "insufficient_heldout_support",
+      "excessive_heldout_residual",
+      "ambiguous_rigid_pose"
+    ],
+    "support": [
+      0.99,
+      0.42333333333333334
+    ],
+    "q90": [
+      0.045473990888416534,
+      0.27156148875204517
+    ],
+    "ambiguous_alternatives": 3,
+    "config": {
+      "fit_points": 700,
+      "refine_points": 3000,
+      "validation_points": 300,
+      "iterations": 30,
+      "trim_fraction": 0.8,
+      "support_distance_rms": 0.08,
+      "minimum_support": 0.65,
+      "maximum_q90_rms": 0.15,
+      "ambiguity_relative": 0.05,
+      "ambiguity_degrees": 15.0,
+      "seed": 1311
+    }
+  },
+  {
+    "representation": "moge_points",
+    "frame": 7508,
+    "track": "6",
+    "reasons": [
+      "insufficient_heldout_support",
+      "excessive_heldout_residual"
+    ],
+    "support": [
+      0.7,
+      0.5333333333333333
+    ],
+    "q90": [
+      0.08697619211369027,
+      0.1858945376269355
+    ],
+    "ambiguous_alternatives": 0,
+    "config": {
+      "fit_points": 700,
+      "refine_points": 3000,
+      "validation_points": 300,
+      "iterations": 30,
+      "trim_fraction": 0.8,
+      "support_distance_rms": 0.08,
+      "minimum_support": 0.65,
+      "maximum_q90_rms": 0.15,
+      "ambiguity_relative": 0.05,
+      "ambiguity_degrees": 15.0,
+      "seed": 1311
+    }
+  }
+]

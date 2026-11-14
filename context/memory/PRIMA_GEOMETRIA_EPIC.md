@@ -25,8 +25,8 @@ Output in `~/cv_project/runs/epic_geometry_JOB/geometry/`: mappe di scena e alli
 ## Trasferimento — PowerShell locale
 
 ```powershell
-Set-Location '[LOCAL_HOME]\Desktop\2026\3rd semester DSBA\Computer Vision\lavoro di gruppo'
-Dettagli personali di accesso HPC omessi dalla copia condivisa; configurazione conservata solo localmente.
+Set-Location 'C:\Users\marco\Desktop\2026\3rd semester DSBA\Computer Vision\lavoro di gruppo'
+scp -r '.\data\epic_pilot\P01_01\diagnostic_ready' '.\scripts\epic_geometry_probe.py' '.\scripts\setup_epic_geometry.sbatch' 3184584@slogin.hpc.unibocconi.it:/home/3184584/cv_project/
 ```
 
 ## Invio — terminale HPC

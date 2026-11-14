@@ -1,0 +1,20 @@
+{
+  "video": "P01_01",
+  "frames": 33310,
+  "metric_frames": 33310,
+  "idf1_percent": 73.2697350574193,
+  "counts": {
+    "idtp": 81029.0,
+    "idfp": 29561.0,
+    "idfn": 29561.0
+  },
+  "motmetrics": "1.4.0",
+  "seconds": 10.703481414820999,
+  "evaluator_sha256": "6a82e06e6c4bf5e69d707d1215a31352243da7bb044ea2632b69e2382ceb3f1c",
+  "protocol": "Original object-name grouping, deduplication and IoU matching in process_idf1_worker; rows reconstructed in original ascending track-ID order.",
+  "limits": [
+    "Scoring of recorded predictions, no inference rerun.",
+    "Single train video, not held-out accuracy.",
+    "Object-name evaluation convention is not certified persistent physical identity ground truth."
+  ]
+}

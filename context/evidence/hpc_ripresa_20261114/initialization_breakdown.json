@@ -1,0 +1,208 @@
+{
+  "source_sha256": "f40db7095019e03aead0e6d1c96fb0f93e286d7e45ee64fa248b273eb534d7b6",
+  "initializations": [
+    {
+      "representation": "da_raw_points",
+      "frame": 2893,
+      "key": "P01_01/frame_0000002893__d0",
+      "track": "4",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "da_raw_superflex",
+      "frame": 2893,
+      "key": "P01_01/frame_0000002893__d0",
+      "track": "4",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "moge_points",
+      "frame": 2893,
+      "key": "P01_01/frame_0000002893__d0",
+      "track": "4",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "moge_superflex",
+      "frame": 2893,
+      "key": "P01_01/frame_0000002893__d0",
+      "track": "4",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "da_raw_points",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d1",
+      "track": "6",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "da_raw_superflex",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d1",
+      "track": "6",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "moge_points",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d1",
+      "track": "6",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "moge_superflex",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d1",
+      "track": "6",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "da_raw_points",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d0",
+      "track": "9",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "da_raw_superflex",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d0",
+      "track": "9",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "moge_points",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d0",
+      "track": "9",
+      "status": "accepted",
+      "operation": "initialize"
+    },
+    {
+      "representation": "moge_superflex",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d0",
+      "track": "9",
+      "status": "accepted",
+      "operation": "initialize"
+    }
+  ],
+  "attempted_updates": [
+    {
+      "representation": "da_raw_points",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d0",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "da_raw_superflex",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d0",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "moge_points",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d0",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "moge_superflex",
+      "frame": 5099,
+      "key": "P01_01/frame_0000005099__d0",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "da_raw_points",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d2",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "da_raw_points",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d3",
+      "track": "6",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "da_raw_superflex",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d2",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "da_raw_superflex",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d3",
+      "track": "6",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "moge_points",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d2",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "moge_points",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d3",
+      "track": "6",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "moge_superflex",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d2",
+      "track": "4",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    },
+    {
+      "representation": "moge_superflex",
+      "frame": 7508,
+      "key": "P01_01/frame_0000007508__d3",
+      "track": "6",
+      "status": "rejected",
+      "operation": "register_and_accumulate"
+    }
+  ],
+  "unique_initial_observations": 3,
+  "unique_later_observations": 3,
+  "representations": [
+    "da_raw_points",
+    "da_raw_superflex",
+    "moge_points",
+    "moge_superflex"
+  ],
+  "scope": "Three predicted tracks; category names from verified prepared annotations, not a new physical-identity GT."
+}

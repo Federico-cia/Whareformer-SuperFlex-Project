@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-14",
+  "tests_run": 58,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "code_sha256": {
+    "shape_adapter.py": "c0a1f91dfc68857baf75fc0f1b21620d8fc3161ff0b7fff4a94f46ba6b5f787d",
+    "experiment_runner.py": "506f6cbb93d7e303db8e562aac21b152ed6ed8848c1fd2e336b7d584f637f990",
+    "run_experiments.py": "59b057204ad2376af634d70a66a72e1704bc3d7ffe34ff5199f44824740e9bf7",
+    "summarize_experiments.py": "d88141c702cf8e32d35c4b30ba505f0e909a15a2e37a873f9c5148cd68edb94e",
+    "test_experiment_runner.py": "9f9607129ca1fbc4c24b46297e8500e6a06eab095ba46d06762cf9896bf603d1"
+  },
+  "cli_help_verified": true,
+  "limits": [
+    "Controlled model/track/tensor and synthetic geometry tests; common runner not executed on original video or GPU.",
+    "Running HPC jobs retain prior code snapshots; no modification or new submission.",
+    "Example configuration is zero-weight integration, not calibrated efficacy protocol."
+  ],
+  "final_log": "final_tests.txt"
+}

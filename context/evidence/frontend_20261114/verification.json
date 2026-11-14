@@ -1,0 +1,13 @@
+{
+  "tests_run": 72,
+  "skipped": 2,
+  "successful": true,
+  "code_sha256": {
+    "frontend_inputs.py": "22620cb8440791639ca47f98aeca226119d888544c02df2a2dbc4c3a64ee5a80",
+    "test_frontend_inputs.py": "48ef49ad4907d5847678c4c53d3ad28ae3884a03495afc832e011d293c7ae755",
+    "run_pipeline.py": "314ab90a2d9b33b75c1b0b535baaf93d624d437d7badc386af7e8d312351b7cb"
+  },
+  "limits": [
+    "Cache frontend tested on actual 10 detections and 3398-frame history; cold model extraction not executed."
+  ]
+}

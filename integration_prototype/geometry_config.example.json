@@ -1,0 +1,9 @@
+{
+  "mode": "diagnostic",
+  "representation": "da_raw_superflex",
+  "capacity": 2,
+  "metric": "d2",
+  "reduction": "minimum",
+  "weight": 0.0,
+  "neutral_distance": 0.0
+}
