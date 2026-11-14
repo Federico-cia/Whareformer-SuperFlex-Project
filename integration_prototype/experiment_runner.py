@@ -118,11 +118,27 @@ class VariantExecution:
         score=matcher.last_score
         valid=score['valid'] if variant.method!='W0' else np.zeros((len(frame.keys),0),bool)
         geometric_queries=[]
+        geometry_row_rankings=[]
         if variant.method!='W0':
+            for i in np.flatnonzero(valid.any(axis=1)):
+                before=np.asarray(matcher.last_logits[i],dtype=float)
+                after=np.asarray(score['logits'][i],dtype=float)
+                labels=['new_track']+list(score['track_ids'])
+                order_before=np.argsort(before)[::-1];order_after=np.argsort(after)[::-1]
+                def top_probability(values):
+                    p=np.exp(values-values.max());return float(p.max()/p.sum())
+                geometry_row_rankings.append(dict(observation_key=frame.keys[i],
+                    row_argmax_before=labels[order_before[0]],row_argmax_after=labels[order_after[0]],
+                    top_two_margin_before=float(before[order_before[0]]-before[order_before[1]]),
+                    top_two_margin_after=float(after[order_after[0]]-after[order_after[1]]),
+                    new_track_logit_before=float(before[0]),new_track_logit_after=float(after[0]),
+                    top_probability_before=top_probability(before),top_probability_after=top_probability(after),
+                    actual_assigned_track=transaction['assignments'][frame.keys[i]]))
             for i,j in zip(*np.where(valid)):
                 geometric_queries.append(dict(observation_key=frame.keys[i],track_id=score['track_ids'][j],
                     distance=float(score['distances'][i,j]),
                     evidence=list(score['evidence'][frame.keys[i],score['track_ids'][j]]),
+                    logit_before=float(matcher.last_logits[i,j+1]),logit_after=float(score['logits'][i,j+1]),
                     logit_delta=float(score['logits'][i,j+1])-float(matcher.last_logits[i,j+1])))
         point_errors=[]
         point_seconds=0.0
@@ -144,6 +160,7 @@ class VariantExecution:
                  comparison_pairs=int(valid.size),valid_comparison_pairs=int(valid.sum()),
                  detections_with_comparison=int(valid.any(axis=1).sum()),updates=transaction['updates'],
                  geometric_queries=geometric_queries,
+                 geometry_row_rankings=geometry_row_rankings,
                  point_descriptor_errors=point_errors,point_descriptor_seconds=point_seconds,
                  coordinator_seconds=coordinator_seconds,registration_accumulation_seconds=self.geometry_seconds-before_geometry,
                  resolution_seconds=0.0,worker_seconds=0.0,reconstruction_events=[])

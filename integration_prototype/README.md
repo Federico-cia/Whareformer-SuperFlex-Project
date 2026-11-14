@@ -16,6 +16,7 @@ Codice attuale per il ciclo osservazione → confronto causale → associazione 
 | frontend_inputs | Contratto e import della cache verificata, non rigenerazione neurale da RGB |
 | prepare_video_bundle | Intera sequenza di feature ufficiali, join geometrici esatti e hash; nessun limite di prefisso implicito |
 | audit_video_run | Copertura completa, correzioni effettive dei logits, uso causale di SuperFlex e memoria finale |
+| hpc_campaign, prepare_hpc_campaign, submit_hpc_campaign | Campione esteso congelato prima dei modelli, pacchetto e invii HPC con dipendenze/ricevute |
 | validate_tracking_evaluator_hpc | Verifica esplicita del valutatore su riferimenti esterni forniti tramite argomenti |
 
 ## Ambiente e test
@@ -64,6 +65,14 @@ python integration_prototype/audit_video_run.py --bundle <bundle_completo> --inf
 L'audit accetta anche il riferimento `.json.gz`. I JSONL includono distanza, correzione effettiva e provenienza di ciascun confronto valido; `<variante>_memory/` contiene punti osservati, hash e riepilogo della memoria finale. È un export geometrico, non un checkpoint per riprendere il tracker. Le ricostruzioni e i parametri sono nella cache di richieste versionate. Il riuso delle forme per osservazione non è una nuova estrazione dalle immagini; SuperFlex sulla memoria viene eseguito dopo ogni ammissione con il worker reale.
 
 ## Evidenze e limiti
+
+[Campagna estesa in corso](../context/memory/CAMPAGNA_HPC_20261115.md): 29 configurazioni su P01_01 con geometria rigenerata sul campione congelato di 247 frame/446 osservazioni. Il pacchetto della produzione ha superato 76 test HPC senza skip; tre test successivi del gestore invii raggruppati sono verificati localmente. I risultati della campagna restano pendenti.
+
+`prepare_hpc_campaign.py` produce un nuovo pacchetto senza inviare job: richiede `--output`, `--project` (radice HPC assoluta), `--remote-root` (nuova cartella assoluta HPC) e `--category-reference` (selection.json con politica categorie preesistente). Dipende da asset/checkpoint/input ufficiali verificati e dagli ambienti dedicati già installati, descritti nella specifica; non è un installer per un account vuoto.
+
+Dopo trasferimento ed estrazione, inviare soltanto `preflight.sbatch`; dopo il suo successo eseguire `submit_hpc_campaign_grouped.py --task <radice_HPC> --preflight-job <ID>`. Non inviare direttamente gli array cpu.sbatch/gpu.sbatch su questo account: sono template trasformati in gruppi seriali per rispettare quattro job inviati/due attivi. `--resume` è ammesso soltanto dopo lettura della ricevuta parziale, per conservare gli ID già accettati. Il gestore salva ogni invio; il primo gruppo terminato invia il riepilogo una sola volta con dipendenza su entrambi i gruppi. Timeout per trial e limiti complessivi espliciti nella specifica. In caso di predecessore fallito, leggere accounting e log prima di rilanciare.
+
+Le nuove colonne di telemetria distinguono logits, probabilità e margini prima/dopo sullo stato corrente della stessa run. Un argmax di riga non equivale all'assegnazione greedy globale e non è una nuova baseline indipendente se le storie hanno già divergiuto.
 
 Prima run completa attiva: job 764454 concluso 0:0, 72 test HPC eseguiti/passati, 33310 frame/110590 osservazioni, 18 inizializzazioni, sette fusioni e 25 nuove SuperFlex riuscite. Audit 764474 e verifica locale della provenienza: forme da fusioni usate in 76 confronti futuri, memoria dei soli punti osservati verificata. Nessuna assegnazione diversa dalla baseline. [Resoconto e limiti](../context/evidence/full_video_20261114/REPORT.md).
 

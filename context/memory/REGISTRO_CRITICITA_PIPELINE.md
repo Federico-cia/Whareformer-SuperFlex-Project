@@ -6,7 +6,7 @@ Aggiornamento: 14 novembre 2026. Mandato esplicito di Marco: prima un round comp
 
 Per ogni scostamento o problema registrare: metodo del paper/codice originale effettivamente verificato, implementazione corrente, motivo della differenza, conseguenza, evidenza disponibile e verifica pendente. Non attribuire ai paper scelte nostre. Separare errore dimostrato, dubbio da controllare e compromesso provvisorio. Dopo la prima run affrontare i punti registrati, senza rimandare silenziosamente quelli che impediscono la correttezza del risultato.
 
-Riferimenti: [Whareformer](https://arxiv.org/abs/2607.08537), [SuperFlex](https://arxiv.org/abs/2607.01015), [base scientifica](../archive/LETTURA_E_BASE_SCIENTIFICA.md), [ciclo approvato](ROADMAP_CICLO_GEOMETRICO.md). I PDF consultati sono nella cartella locale Fonti, esterna al clone pubblicato. Questa prima lista riprende evidenze già acquisite e letture del codice; non certifica una nuova verifica integrale di tutte le sezioni dei paper.
+Riferimenti locali: [Whareformer](https://arxiv.org/abs/2607.08537), [SuperFlex](https://arxiv.org/abs/2607.01015), [base scientifica](../archive/LETTURA_E_BASE_SCIENTIFICA.md), [ciclo approvato](ROADMAP_CICLO_GEOMETRICO.md). Questa prima lista riprende evidenze già acquisite e letture del codice; non certifica una nuova verifica integrale di tutte le sezioni dei paper.
 
 ## Punti aperti iniziali
 
@@ -47,3 +47,20 @@ Job 764454 avviato; nessuna fusione o metrica nuova ancora dichiarata. Prossima 
 - **C08 esito nullo del tracking:** zero assegnazioni diverse dalla baseline registrata; metriche identiche, non miglioramento. Peso 0.1 provvisorio, non calibrare retrospettivamente la prima run per ottenere un beneficio.
 - **C10 corretto:** la valutazione automatica iniziale usava erroneamente ultimo frame osservato 98099; quella autorevole è final_evaluation con 99135, convenzione originale. Predizioni preservate e non rigenerate.
 - **Verifica numerica locale:** uguaglianza bit a bit della ricostruzione indipendente dei punti falliva per moltiplicazione matriciale Windows/Linux (massimo 2.22e-16). Limite di verifica derivato dall'aritmetica float64, non gate di fusione, ora esplicito; hash degli artefatti e uguaglianza memoria/richiesta restano esatti.
+
+## C11 — segno e disponibilità della correzione geometrica
+
+**Evidenza verificata dopo la run:** shape_adapter.py applica peso × (distanza neutra − distanza), solo alle track con confronto valido; Nuova track invariata. Con 0.1/0, tutte le 695 correzioni sono negative (mediana assoluta 0.00629963, massimo 0.03434743). Le coppie senza geometria restano direttamente invariate. **Conseguenza:** possibile vantaggio relativo per Nuova track o track senza geometria; non è stato osservato alcun cambio di assegnazione in questa run. **Compromesso:** configurazione della prima run conservata, nessun aumento automatico del peso. **Verifica necessaria:** margini originali/corretti, discriminatività delle distanze e comportamento con geometria mancante; non basta aumentare il peso finché cambia la metrica. Analisi e alternative in [VALUTAZIONE_PRIMA_RUN_20261114.md](../archive/VALUTAZIONE_PRIMA_RUN_20261114.md).
+
+**Precisazione dei rifiuti:** 53 tentativi di fusione successivi alle 18 inizializzazioni, sette ammessi e 46 respinti; sette rifiuti per sola ambiguità. Le sette fusioni si concentrano su due track predette. Il denominatore 71 include le inizializzazioni e non va usato come numero dei tentativi di fusione. Revisione dei gate ancora rinviata.
+
+## Campagna estesa del 15 novembre 2026
+
+- **C03:** campione aumentato a 247 frame/446 osservazioni selezionate prima dei modelli. Copertura pronta da misurare; disponibilità/target categorie non rappresentativi dell'intero video. Feature/XYZ riusati, geometria rigenerata solo sul campione.
+- **C11:** griglia finita peso 0.1/1, distanza neutra 0/0.1 e nuova telemetria di logits/margini/probabilità per distinguere scala e disponibilità. Nessuna modifica del termine o calibrazione sul test; ranking sullo stato della run non equivale a baseline indipendente dopo divergenze.
+- **C12 — limite HPC verificato:** array respinto da QoS (quattro job inviati/due attivi). Conseguenza: il primo gestore aveva inviato solo geometria/build. Ricevuta parziale conservata; recupero con gruppi seriali, 764678/764679 accettati, riepilogo inviato al termine di un gruppo. Verifica pendente: completamento catena, ID/stato del riepilogo e successo effettivo di tutti i trial; nessun risultato anticipato.
+- **Vincoli:** C05 resta rinviato, nessuna revisione di filtri o registratore. Campagna di sviluppo su P01_01; niente nuova PCA, training, identità fisica inventata o interpretazione dei completamenti come osservazioni.
+
+Dettaglio operativo in [CAMPAGNA_HPC_20261115.md](CAMPAGNA_HPC_20261115.md).
+
+**Aggiornamento verificato della campagna:** 764674/764675 conclusi 0:0, tutte le 446 geometrie pronte per entrambe le sorgenti e feature baseline byte-identiche; gruppi 764678/764679 RUNNING. Copertura effettiva 0.4033%, ancora sparsa; nessun risultato finale delle varianti anticipato.

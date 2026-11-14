@@ -1,0 +1,10 @@
+{
+  "package_sha256": "6a48ba435c730b2b013a5cc0a15867c362e4d11b73a5c40dfd30b65b844cccd3",
+  "runtime_files_manifest_sha256": "08c3d444670ff931e331511022387f565397aa665ecb95ad803f1188d465e31a",
+  "grouped_submit_sha256": "d663bb550f8ceaca45c693a526886796020c3ed688e1866c79a35fb20bcf3dd5",
+  "cpu_group_sha256": "30c31115ee310b3dbc2c9e8629c47c99004c4e62c40ecfbf53691cd32e6e21ae",
+  "gpu_group_sha256": "b5430b0d064d230b04d4ebbe87f1fd7f17231a6dc78d8ce02da3a671edb0dc73",
+  "results_status": "pending",
+  "gate_revision": "unchanged",
+  "source_data": "existing cached official assets; no new downloads"
+}

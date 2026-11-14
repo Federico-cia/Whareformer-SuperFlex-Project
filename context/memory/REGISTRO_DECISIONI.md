@@ -604,6 +604,25 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Conseguenza.** Primo ciclo operativo chiuso con fusioni e uso futuro verificati; successivi frontend/copertura/qualità/calibrazione-test restano distinti. Filtri invariati e revisione ancora rinviata. Output completi acquisiti localmente, evidenze leggere pubblicate e verificate su main al commit 8694e4b; preservate le revisioni manuali B07 ed E01–E06/E08/E09 rispetto al remoto 0865949. Nessun job di questa run attivo/in attesa. Dettaglio nel resoconto della prima run completa.
 
+## 73. Analisi critica e raccomandazioni dopo la prima run — 14 novembre 2026
+
+**Richiesta e analisi, non approvazione.** Marco chiede se il percorso sia end to end, quali criticità emergano e pro/contro dei prossimi approcci. Confermato il ciclo da input preparati, distinto da frontend RGB e validazione scientifica. Riletti report/audit/codice; nessun nuovo esperimento o cambio dei filtri.
+
+**Nuove evidenze descrittive.** 695 correzioni tutte negative con peso 0.1/distanza neutra 0; mediana assoluta 0.00629963. Il codice lascia direttamente invariati Nuova track e confronti mancanti: rischio di asimmetria da disponibilità, non effetto empirico dimostrato. Sette fusioni su 53 tentativi successivi, concentrate in due track; sette rifiuti per sola ambiguità. Registrato C11.
+
+**Raccomandazione da discutere.** Prima validità geometrica/discriminatività/margini sui dati esistenti, poi maggiore copertura e confronti attivi appaiati; frontend RGB come obiettivo distinto. Alternative, vantaggi e costi qualitativi in VALUTAZIONE_PRIMA_RUN_20261114.md. Revisione dei filtri resta rinviata; nessuna modifica della domanda/dataset/protocollo o nuova direzione principale approvata da questo parere.
+
+
+## 74. Grande campagna HPC autorizzata e avviata — 15 novembre 2026
+
+**Mandato e scelta operativa.** Marco richiede una grande run e conferma avvio dopo i controlli. Congelati 247 frame/446 osservazioni già disponibili con join esatti e politica categorie precedente; nuova geometria DA/MoGE/SuperFlex dalle immagini selezionate, baseline ufficiale riusata. Matrice finita: 29 configurazioni W0/G0, forme separate, punti accumulati e SuperFlex accumulato; pesi 0.1/1 e distanze neutre 0/0.1, più controlli zero. Nessuna scelta automatica del vincitore o test held-out; gate/registratore invariati.
+
+**Verifica ed esecuzione.** 764670 COMPLETED 0:0 (1m35s), 76 test remoti passati, hash e campione verificati. 764674 RUNNING sulla geometria, 764675 PENDING sul bundle, 764678/764679 PENDING sui gruppi. Dopo rifiuto QOSMaxSubmitJobPerUserLimit (quattro inviati/due attivi), sostituiti gli array con due gruppi seriali; ricevuta parziale preservata e nessun job duplicato. Timeout 45 minuti/trial, budget massimo 9.5 ore GPU; riepilogo automatico dopo entrambi i gruppi. Log e ripresa in CAMPAGNA_HPC_20261115.md.
+
+**Aggiornamento verificato.** Geometria 764674 COMPLETED 0:0 (11m38s), bundle 764675 COMPLETED 0:0 (1m41s); 446 nuvole e forme pronte per ciascuna sorgente, zero mismatch di metadati e feature baseline byte-identiche. Gruppi 764678/764679 entrambi RUNNING.
+
+**Limiti e conseguenza.** Le 446 osservazioni sono ora pronte; copertura ancora 0.4033% del totale. Risultati dei 29 confronti ancora da acquisire. Nuova telemetria margini/probabilità; nessuna conclusione sul beneficio. Revisione filtri ancora rinviata; frontend completo DINOv2/PCA/XYZ dalle immagini distinto. Mantenere stato dei job e non rilanciare verifiche concluse per ricostruire il contesto.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 

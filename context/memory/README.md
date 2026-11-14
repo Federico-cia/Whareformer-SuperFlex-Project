@@ -2,6 +2,8 @@
 
 Per riprendere senza la cronologia della chat:
 
+La [campagna HPC attiva](CAMPAGNA_HPC_20261115.md) ha job in corso/in attesa e risultati pendenti; leggere prima quella ricevuta per evitare rilanci.
+
 1. [Guida tecnica e passaggio di consegne](LEGGIMI_PASSAGGIO_AI.md).
 2. [Istruzioni del supervisore](ISTRUZIONI_SUPERVISORE_SCIENTIFICO.md), [stato](STATO_LAVORO.md) e [attività](TODO.md).
 3. [Roadmap](ROADMAP.md), [ciclo geometrico](ROADMAP_CICLO_GEOMETRICO.md) e [decisione d'integrazione](INTEGRAZIONE_DISCUSSIONE.md).

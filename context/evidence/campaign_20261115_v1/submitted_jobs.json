@@ -1,0 +1,39 @@
+{
+  "preflight": {
+    "id": "764670",
+    "state": "COMPLETED",
+    "exit_code": "0:0"
+  },
+  "jobs": {
+    "geometry": {
+      "id": "764674",
+      "dependency": "afterok:764670"
+    },
+    "build": {
+      "id": "764675",
+      "dependency": "afterok:764674"
+    },
+    "cpu": {
+      "id": "764678",
+      "dependency": "afterok:764675"
+    },
+    "gpu": {
+      "id": "764679",
+      "dependency": "afterok:764675"
+    }
+  },
+  "submission_history": [
+    {
+      "stage": "cpu",
+      "error": "Command '['sbatch', '--parsable', '--account=3184584', '--dependency=afterok:764675', '/mnt/beegfsstudents/home/3184584/cv_project/campaign_20261115_v1/cpu.sbatch']' returned non-zero exit status 1."
+    }
+  ],
+  "scheduler_adjustment": {
+    "maximum_submitted_jobs": 4,
+    "maximum_running_jobs": 2,
+    "variant_grouping": "19 CPU trials serially in one job, 10 GPU trials serially in one job",
+    "summary_submission": "Submitted once by the first completed cohort; afterany dependency on both cohorts",
+    "unchanged_trials": true,
+    "maximum_gpu_resource_hours": 9.5
+  }
+}

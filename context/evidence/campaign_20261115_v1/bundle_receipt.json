@@ -1,0 +1,34 @@
+{
+  "coverage": {
+    "expected_feature_frames": 33310,
+    "expected_observations": 110590,
+    "prepared_frames": 33310,
+    "prepared_observations": 110590,
+    "first_frame": 937,
+    "final_frame": 98099,
+    "complete_official_sequence": true,
+    "geometry_frames": 247,
+    "shape_observations": {
+      "da_raw_points": 446,
+      "da_raw_superflex": 446,
+      "moge_points": 446,
+      "moge_superflex": 446
+    },
+    "observed_clouds": {
+      "da": 446,
+      "moge": 446
+    },
+    "attempted_geometry_observations": 446,
+    "metadata_xyz_mismatch_count": 0
+  },
+  "geometry": {
+    "observations": 446,
+    "representations": {
+      "da_points/ready": 446,
+      "da_superflex/ready": 446,
+      "moge_points/ready": 446,
+      "moge_superflex/ready": 446
+    }
+  },
+  "baseline_feature_bytes_identical": true
+}

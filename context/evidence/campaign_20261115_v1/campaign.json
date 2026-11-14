@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "development_only": true,
+  "video": "P01_01",
+  "purpose": "Expanded regenerated sparse geometry and paired full-history development sweep; no winner or held-out result assumed.",
+  "assets": {
+    "project": "/home/3184584/cv_project",
+    "source_data": "/home/3184584/cv_project/data_compare200/P01_01",
+    "mapping": "/home/3184584/cv_project/data_compare200/mappings.json",
+    "geometry_config": "/home/3184584/cv_project/portable_validation_v1/config.json",
+    "baseline_bundle": "/home/3184584/cv_project/full_video_20261114_v1/bundle",
+    "baseline_manifest_sha256": "1c9bdd82a85c4e78d149af89286bab61d9ddc154acaa05af983358e6ac618bee"
+  },
+  "source_hashes": {
+    "fields.json": "4df5b3fe9b1848e7761e214e78f8f654fb90a82f2972bcce6c598d24b6bdcfce",
+    "annotations.zip": "c848514f4586ac451373c0b0ea0af26029b4149a0d3863b27ecd020246ca2d6c",
+    "rgb_prefix.bin": "4e1263004ae0f60e93e0b8573a24c1f57d58786a1d75b6ed5b1ad530fdd691db"
+  },
+  "selection": {
+    "rule": "All exact RGB/VISOR/official observation joins in the existing fixed archive prefix, up to 250 temporal quantiles; category policy inherited, frozen before inference.",
+    "maximum_frames": 250,
+    "minimum_frames": 120,
+    "minimum_observations": 300,
+    "minimum_mask_pixels": 128,
+    "target_nouns": [
+      "bottle",
+      "bowl",
+      "box",
+      "can",
+      "chopping board",
+      "colander",
+      "container",
+      "cup",
+      "cutting board",
+      "fork",
+      "glass",
+      "grater",
+      "jar",
+      "jug",
+      "kettle",
+      "knife",
+      "ladle",
+      "lid",
+      "mug",
+      "package",
+      "pan",
+      "peeler",
+      "plate",
+      "pot",
+      "saucepan",
+      "scissors",
+      "sieve",
+      "spatula",
+      "spoon",
+      "tongs",
+      "tray"
+    ],
+    "alias_policy": "Exclude all differing VISOR/RGB frame indices; verify ID/name/bbox in the same official frame."
+  },
+  "resources": {
+    "maximum_gpu_concurrency": 2,
+    "maximum_cpu_array_concurrency": 3,
+    "geometry_gpu_time_limit": "02:00:00",
+    "gpu_variant_time_limit": "00:45:00",
+    "cpu_variant_time_limit": "00:45:00",
+    "maximum_gpu_resource_hours": 9.5
+  },
+  "variants": {
+    "cpu": [
+      {
+        "name": "W0",
+        "method": "W0"
+      },
+      {
+        "name": "G0_da",
+        "method": "G0",
+        "source": "da"
+      },
+      {
+        "name": "Ssep_da_w01_n00",
+        "method": "S-separata",
+        "source": "da",
+        "weight": 0.1,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Ssep_da_w01_n01",
+        "method": "S-separata",
+        "source": "da",
+        "weight": 0.1,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Ssep_da_w10_n00",
+        "method": "S-separata",
+        "source": "da",
+        "weight": 1.0,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Ssep_da_w10_n01",
+        "method": "S-separata",
+        "source": "da",
+        "weight": 1.0,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_da_w01_n00",
+        "method": "P-accumulo",
+        "source": "da",
+        "weight": 0.1,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_da_w01_n01",
+        "method": "P-accumulo",
+        "source": "da",
+        "weight": 0.1,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_da_w10_n00",
+        "method": "P-accumulo",
+        "source": "da",
+        "weight": 1.0,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_da_w10_n01",
+        "method": "P-accumulo",
+        "source": "da",
+        "weight": 1.0,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "G0_moge",
+        "method": "G0",
+        "source": "moge"
+      },
+      {
+        "name": "Ssep_moge_w01_n00",
+        "method": "S-separata",
+        "source": "moge",
+        "weight": 0.1,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Ssep_moge_w01_n01",
+        "method": "S-separata",
+        "source": "moge",
+        "weight": 0.1,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Ssep_moge_w10_n00",
+        "method": "S-separata",
+        "source": "moge",
+        "weight": 1.0,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Ssep_moge_w10_n01",
+        "method": "S-separata",
+        "source": "moge",
+        "weight": 1.0,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_moge_w01_n00",
+        "method": "P-accumulo",
+        "source": "moge",
+        "weight": 0.1,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_moge_w01_n01",
+        "method": "P-accumulo",
+        "source": "moge",
+        "weight": 0.1,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_moge_w10_n00",
+        "method": "P-accumulo",
+        "source": "moge",
+        "weight": 1.0,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Pacc_moge_w10_n01",
+        "method": "P-accumulo",
+        "source": "moge",
+        "weight": 1.0,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      }
+    ],
+    "gpu": [
+      {
+        "name": "Sacc_da_zero",
+        "method": "S-accumulo",
+        "source": "da",
+        "weight": 0.0
+      },
+      {
+        "name": "Sacc_da_w01_n00",
+        "method": "S-accumulo",
+        "source": "da",
+        "weight": 0.1,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Sacc_da_w01_n01",
+        "method": "S-accumulo",
+        "source": "da",
+        "weight": 0.1,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Sacc_da_w10_n00",
+        "method": "S-accumulo",
+        "source": "da",
+        "weight": 1.0,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Sacc_da_w10_n01",
+        "method": "S-accumulo",
+        "source": "da",
+        "weight": 1.0,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Sacc_moge_zero",
+        "method": "S-accumulo",
+        "source": "moge",
+        "weight": 0.0
+      },
+      {
+        "name": "Sacc_moge_w01_n00",
+        "method": "S-accumulo",
+        "source": "moge",
+        "weight": 0.1,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Sacc_moge_w01_n01",
+        "method": "S-accumulo",
+        "source": "moge",
+        "weight": 0.1,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Sacc_moge_w10_n00",
+        "method": "S-accumulo",
+        "source": "moge",
+        "weight": 1.0,
+        "neutral_distance": 0.0,
+        "metric": "d2",
+        "capacity": 2
+      },
+      {
+        "name": "Sacc_moge_w10_n01",
+        "method": "S-accumulo",
+        "source": "moge",
+        "weight": 1.0,
+        "neutral_distance": 0.1,
+        "metric": "d2",
+        "capacity": 2
+      }
+    ]
+  },
+  "invariants": [
+    "Full official feature history for each independent tracker",
+    "All queries before frame updates",
+    "Observed points only, no completion feedback into clouds",
+    "Frozen models/PCA; unchanged registration and fusion gates",
+    "Same RGB masks/common valid pixels and point budgets for DA/MoGE",
+    "One real SuperFlex after every admitted geometric update including initialization",
+    "No automatic winner selection or held-out claims"
+  ]
+}

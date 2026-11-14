@@ -1,8 +1,8 @@
 {
   "schema": 2,
   "date": "2026-11-14",
-  "base_commit": "0865949eab4d916bad6626fcdfc786a9032b7d7b",
-  "scope": "Current maintained sources, memory and verified lightweight first-full-video evidence; original large assets remain external, historical versions preserved in Git.",
+  "base_commit": "61731ff607a658cc6a7afffc5bca63330c84c6cb",
+  "scope": "Maintained code and memory, historical verified full-video evidence and campaign-launch receipts. Active campaign results are pending; complete inputs/models remain external.",
   "files": [
     {
       "path": ".gitignore",
@@ -16,8 +16,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2379,
-      "sha256": "4cf8fb8e6d19b1159aee05419402bb4db0641b61305b24b22253f53a598ef807"
+      "bytes": 2771,
+      "sha256": "c244fe3135feedc4418a5a156c10f3e6f9806cdfae42c8d50efcaec17932960f"
     },
     {
       "path": "context/archive/ANALISI_AGGIORNAMENTO_GITHUB_20261113.md",
@@ -255,6 +255,11 @@
       "sha256": "73391e7ff28a4229578c11034a14eca55db0cff87f42cb1c18a51dfa7abe74ad"
     },
     {
+      "path": "context/archive/VALUTAZIONE_PRIMA_RUN_20261114.md",
+      "bytes": 5012,
+      "sha256": "92ea98a9255695041c0579211a72bcec024424acbc939128c4a95204abc9f151"
+    },
+    {
       "path": "context/archive/VERIFICA_CONSEGNA_WHAREFORMER_20261113.md",
       "bytes": 7002,
       "sha256": "bb1b6218f90621d348a2eef5f08929a20f783aecd7f6f076b57c7010e04fb61f"
@@ -291,8 +296,48 @@
     },
     {
       "path": "context/evidence/README.md",
-      "bytes": 1318,
-      "sha256": "f3b5be823325439958e677fb3e27ac554a7266b16ae50b6dc4ffd687b34534a3"
+      "bytes": 1500,
+      "sha256": "6481e489db9446c683f01b3abf184434d509e9246bd4388c2d5a3e366812db55"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/accounting_latest.txt",
+      "bytes": 322,
+      "sha256": "84b4d8df0c707cdbde91e05614ca27e0f9e7c2837205913e34ccfb2940c5cbc0"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/accounting_snapshot.txt",
+      "bytes": 212,
+      "sha256": "442852986546141d497af34f45aea8ead29fddf2f8db1689aaa20c6dbf3ec940"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/bundle_receipt.json",
+      "bytes": 830,
+      "sha256": "8aac61f27c5d89da2bff787bf64d539acc184ec1ca69332c0930426cc853ca00"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/campaign.json",
+      "bytes": 8307,
+      "sha256": "b7fce33c267e1dd544e690431dda63f9adffc27d9c818ffe723ec45548c8b848"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/preflight_tests.log",
+      "bytes": 99,
+      "sha256": "a69fdc86a9b7fbc59ff044994d7c6346d25849c8819531ae610e8877f2889afc"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/receipt.json",
+      "bytes": 612,
+      "sha256": "4660f4d157ab646456bf17efff1e962c7ae3b6906d7656a6debdf751c10564ea"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/selection.json",
+      "bytes": 2153,
+      "sha256": "a931985fe7f6f2c36a824d0e5bfc37af4ca0e112b22c7acf9b3a04e34b93c6bb"
+    },
+    {
+      "path": "context/evidence/campaign_20261115_v1/submitted_jobs.json",
+      "bytes": 1086,
+      "sha256": "152f80b4a9187f32845443fff2de5ed6256f7a4e9c7cb561193e1c8633599072"
     },
     {
       "path": "context/evidence/common_runner_20261114/verification.json",
@@ -485,14 +530,19 @@
       "sha256": "1e52aa96b8e7a166abdd41796d37cd9155638db9c5de09dd4a640f48c0594a8d"
     },
     {
+      "path": "context/memory/CAMPAGNA_HPC_20261115.md",
+      "bytes": 8005,
+      "sha256": "d4287bf64a7dbe275dba151523e51976b789acdf6bb03f290d1c4fa126f914de"
+    },
+    {
       "path": "context/memory/FRONTEND_AVANZAMENTO_20261114.md",
       "bytes": 3991,
       "sha256": "060b177207eac172f838ae54622b0526b7b0137938a600c7a7c6f5d28575e6fe"
     },
     {
       "path": "context/memory/INTEGRAZIONE_DISCUSSIONE.md",
-      "bytes": 2013,
-      "sha256": "c4a7565bc76c61a74c54337d1d958e6468a80c7d80e13dfa3c65aec520fb2293"
+      "bytes": 3366,
+      "sha256": "03d297a23f5524a1ec4454e404d2cab1e91b29fd1e7dd9c58702b623199d794b"
     },
     {
       "path": "context/memory/ISTRUZIONI_SUPERVISORE_SCIENTIFICO.md",
@@ -501,8 +551,8 @@
     },
     {
       "path": "context/memory/LEGGIMI_PASSAGGIO_AI.md",
-      "bytes": 15058,
-      "sha256": "5eec4dd0fd53f4ecc2b17262be2fd256991ac3dfbaf0dadfe1059cb59b9904c1"
+      "bytes": 16411,
+      "sha256": "30e4625f3fc1244b701c8a38eb02c3f9b5efef17f17b7d4fbbb1084f4890c503"
     },
     {
       "path": "context/memory/PIANO_FRONTEND_UNIFICATO_20261114.md",
@@ -511,43 +561,43 @@
     },
     {
       "path": "context/memory/README.md",
-      "bytes": 1075,
-      "sha256": "8407c9a784d8c03751cf40b4aa58f724ffa0d21d0fafea9cbe45ff893274e290"
+      "bytes": 1226,
+      "sha256": "dcdfee6c30454b73c7cc40014fcdc438a60d1986868fba0a9d6e9af0a1e8c87c"
     },
     {
       "path": "context/memory/REGISTRO_CRITICITA_PIPELINE.md",
-      "bytes": 9292,
-      "sha256": "253e927f6ad03a31865e819e64df1dbb62d02ac014c2d440d5e312167b52e08b"
+      "bytes": 12095,
+      "sha256": "5e633d10ceb9665da8372dcbfacdc841397610df11d873926e74957d1c6fe1ff"
     },
     {
       "path": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 96464,
-      "sha256": "00596dc8a01aa1b4710f18dfaf23b4a7f19dab05ab7af37f529bbb70c864a71f"
+      "bytes": 99474,
+      "sha256": "d06c6a0ecdbe8287a0dc358af9937e318565e0558c6ce5d052a066006735f9b7"
     },
     {
       "path": "context/memory/ROADMAP.md",
-      "bytes": 2567,
-      "sha256": "3ad987b60d4c9e12ac1c08227fff461de0029cd678993f8971b16120c803f83e"
+      "bytes": 3920,
+      "sha256": "e19883b0418821fe9e86fe6c6099068a467fc31d52c41905219c65a426be286e"
     },
     {
       "path": "context/memory/ROADMAP_CICLO_GEOMETRICO.md",
-      "bytes": 2652,
-      "sha256": "acff1a6defbddae24f311d3c1b030890fae516e17810d0d393c90ab8d5eed138"
+      "bytes": 4005,
+      "sha256": "f0307d4c60c5212e26977d0e95b7b883088069454b814658c716015a58bba32c"
     },
     {
       "path": "context/memory/STATO_LAVORO.md",
-      "bytes": 2746,
-      "sha256": "5feb9d3ae6ba46e2e6a4a8198d91df666c87f0347ace0a457f07a1c8d022ca49"
+      "bytes": 4099,
+      "sha256": "ee56fcc9978b7827e53060c3d13148b9e2acad0e71a51eba9b73197777dccc56"
     },
     {
       "path": "context/memory/TODO.md",
-      "bytes": 3772,
-      "sha256": "89c44866d60762d94e424bb4f9db988e41f6422c76e4ae3c846d1004083cadc8"
+      "bytes": 5125,
+      "sha256": "1f7ad27d11f6e310c4b959257200e904f8f377b25ef0f9500f2c561da8893ce0"
     },
     {
       "path": "context/memory/docs/CODICE_PRODOTTO.md",
-      "bytes": 914,
-      "sha256": "462a21219dda491be1289cc11fc43eb85172fad2dc93583a86448e1f039bdf61"
+      "bytes": 1343,
+      "sha256": "f124710ea1cb9533ec783d813f850220c37e53f8358975889e9d2ca6aadc29f7"
     },
     {
       "path": "context/memory/docs/CONDIVISIONE.md",
@@ -561,8 +611,8 @@
     },
     {
       "path": "integration_prototype/README.md",
-      "bytes": 6662,
-      "sha256": "d8aaea52340e9d2d7b0f8e6d353214fd08670b1ee4f7199b9f72d89f2debd7a0"
+      "bytes": 8592,
+      "sha256": "f5318731c9b7fc5e2d3db2f0b715bbe6f43f06e311b643c20f54fc14808dce19"
     },
     {
       "path": "integration_prototype/audit_video_run.py",
@@ -601,8 +651,8 @@
     },
     {
       "path": "integration_prototype/experiment_runner.py",
-      "bytes": 21775,
-      "sha256": "85eb211123a73e29c4805a89c04345afa9f33727fca8626c4e1ab15e5080b056"
+      "bytes": 23138,
+      "sha256": "a043434f4e632ff30e7c63deaed4363639f64f33975688406ecb87b02d5d522d"
     },
     {
       "path": "integration_prototype/first_full_video.example.json",
@@ -630,6 +680,16 @@
       "sha256": "455ea851f3be61a3cf3c618e638afa041eb80a053f0b8c54a90efbecadd0bf7e"
     },
     {
+      "path": "integration_prototype/hpc_campaign.py",
+      "bytes": 19201,
+      "sha256": "6ca059f9c7bbf502d1048523d4433b8b910b0cfac5187d372172ea9748a6cc4d"
+    },
+    {
+      "path": "integration_prototype/prepare_hpc_campaign.py",
+      "bytes": 7693,
+      "sha256": "0bb93db137143a0fd31e9a14917e31826812366199b8d896425f60739de90b95"
+    },
+    {
       "path": "integration_prototype/prepare_video_bundle.py",
       "bytes": 9354,
       "sha256": "e7e8aaf3396ff15006216fff2beabb6ba1264f5ec193d936f9ffc27be822468e"
@@ -653,6 +713,11 @@
       "path": "integration_prototype/shape_adapter.py",
       "bytes": 5561,
       "sha256": "c0a1f91dfc68857baf75fc0f1b21620d8fc3161ff0b7fff4a94f46ba6b5f787d"
+    },
+    {
+      "path": "integration_prototype/submit_hpc_campaign.py",
+      "bytes": 6075,
+      "sha256": "d663bb550f8ceaca45c693a526886796020c3ed688e1866c79a35fb20bcf3dd5"
     },
     {
       "path": "integration_prototype/summarize_experiments.py",
@@ -695,6 +760,11 @@
       "sha256": "3952a35e5dfd0b7e5edf44f2d4579d232fc690c19dc882e0998eec2ec007835e"
     },
     {
+      "path": "integration_prototype/test_hpc_campaign.py",
+      "bytes": 2610,
+      "sha256": "ae5ab7823e5cf153c39563e0967d361bef496cec6b97e554a2a0f341f05cb0b4"
+    },
+    {
       "path": "integration_prototype/test_run_pipeline.py",
       "bytes": 2652,
       "sha256": "0caac749ca312ce8d61be390c296728c1c585e236b760fdae69676a62aacc230"
@@ -703,6 +773,11 @@
       "path": "integration_prototype/test_shape_adapter.py",
       "bytes": 5016,
       "sha256": "5f7851cbcd1a27f724d131dc61452412e6b189367342b3a918770a9198d306ef"
+    },
+    {
+      "path": "integration_prototype/test_submit_hpc_campaign.py",
+      "bytes": 2966,
+      "sha256": "b6ed3540c498c215a60c451ca7080b043dbce4b3465f07dc633f6a8a04ef9559"
     },
     {
       "path": "integration_prototype/test_tracking_evaluation.py",
