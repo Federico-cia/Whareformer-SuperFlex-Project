@@ -2,7 +2,7 @@
 
 ## Consegna AI del 14 novembre 2026
 
-Autorizzata da Marco la pubblicazione della memoria aggiornata, del codice integration_prototype, della mappa corrente e di evidenze numeriche leggere. Guida locale: [LEGGIMI_PASSAGGIO_AI.md](../LEGGIMI_PASSAGGIO_AI.md); remoto: START_HERE.md. Preparazione su worktree isolato shared_exports/handoff_ai_20261114 dalla main fc5aa30, preservando i contributi esistenti. Esito push ancora da verificare; le precedenti note di nessun push riguardano fasi storiche. Nessuna credenziale, nuovo input grande o peso incluso.
+Autorizzata da Marco la pubblicazione della memoria aggiornata, del codice integration_prototype, della mappa corrente e di evidenze numeriche leggere. Guida locale: [LEGGIMI_PASSAGGIO_AI.md](../LEGGIMI_PASSAGGIO_AI.md); remoto: START_HERE.md. Preparazione su worktree isolato shared_exports/handoff_ai_20261114 dalla main fc5aa30, preservando i contributi esistenti. Pubblicato su main e verificato con lettura del riferimento remoto: commit 6d7a8b7ddabc0c0fc209c81da8fd9b251347a986. Successivo aggiornamento documentale registra questo esito e riallinea gli hash dei file di memoria. Le precedenti note di nessun push riguardano fasi storiche. Nessuna credenziale, nuovo input grande o peso incluso.
 
 **Condivisione verificata, 12 novembre:** la consegna autonoma è su [main](https://github.com/Federico-cia/Whareformer-SuperFlex-Project), visibile senza cambiare ramo. Codice, esempi e risultati essenziali in `SuperFlex/`; memoria in `context/memory/`. Dati grezzi, pesi e accessi personali esclusi. Stato e verifiche in [STATO_LAVORO.md](../STATO_LAVORO.md). Le note precedenti sul ramo candidato e sui pacchetti locali sono storiche.
 

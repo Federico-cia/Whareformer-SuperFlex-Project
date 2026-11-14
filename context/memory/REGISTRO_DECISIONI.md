@@ -548,7 +548,7 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Evidenza e limite.** Guida collega codice, risultati acquisiti, dipendenze e prossimi passi. Frontend cache verificato ma rigenerazione ancora pendente; filtri esplicitamente rinviati; nessuna fusione multivista o beneficio tracking dimostrati. Non ripetuti esperimenti. Dati grandi, pesi e accessi esclusi: clone sufficiente per contesto/codice/evidenze leggere, non per inferenza senza asset esterni.
 
-**Conseguenza.** Il prossimo provider legge la guida prima dei resoconti storici; prosegue il frontend già approvato e mantiene i vincoli. Esito pubblicazione registrato in docs/CONDIVISIONE.md; inventario delle copie pubblicate con hash. Nessuna nuova scelta scientifica.
+**Conseguenza.** Il prossimo provider legge la guida prima dei resoconti storici; prosegue il frontend già approvato e mantiene i vincoli. Pubblicazione eseguita e riferimento main remoto verificato al commit 6d7a8b7; esito registrato in docs/CONDIVISIONE.md e inventario delle copie con hash. Nessuna nuova scelta scientifica.
 
 ## Vincoli organizzativi che spiegano il perimetro
 

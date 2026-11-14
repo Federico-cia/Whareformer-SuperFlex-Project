@@ -203,8 +203,8 @@
     {
       "source": "REGISTRO_DECISIONI.md",
       "published": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 88021,
-      "sha256": "dcdf5a8d68a6030a54195e975cce309dbd613ef4649fdea26e5e8a7a58b4cd15"
+      "bytes": 88076,
+      "sha256": "c2e7586b27500a398bf85fd9241adb8eea563ad251136498769c180e5288d629"
     },
     {
       "source": "REPLICA_RGB_SUPERFLEX.md",
@@ -281,8 +281,8 @@
     {
       "source": "STATO_LAVORO.md",
       "published": "context/memory/STATO_LAVORO.md",
-      "bytes": 32829,
-      "sha256": "81b9b91db8eb816fdc404c282b2813e483e66d69f01dbf8847f2cc7a40072940"
+      "bytes": 32911,
+      "sha256": "89b74b2314ce051da2f22ead7ef768fbbc2d6e3d133a582b34430fac807fb273"
     },
     {
       "source": "STEP1_CONTRATTO_TRACKING.md",
@@ -299,8 +299,8 @@
     {
       "source": "TODO.md",
       "published": "context/memory/TODO.md",
-      "bytes": 23217,
-      "sha256": "60ae9b6079a60600dcb3cdd724922a22e8c1170373523cdfcf580020fc2472c6"
+      "bytes": 23299,
+      "sha256": "f2a314aad9303b417de3fbbf56c46db5b66a76c4d7a658fef3c4f6d4edda474e"
     },
     {
       "source": "VERIFICA_CONSEGNA_WHAREFORMER_20261113.md",
@@ -347,8 +347,8 @@
     {
       "source": "docs/CONDIVISIONE.md",
       "published": "context/memory/docs/CONDIVISIONE.md",
-      "bytes": 6891,
-      "sha256": "39e588979309bd775d709297d6275d6c957ad8cafff40c4af35cd33dd05b4608"
+      "bytes": 7076,
+      "sha256": "9fc44180c941c3fe0be96670c3f740e7abbbf122f275e944fef32685a862f4cf"
     },
     {
       "source": "docs/INPUT_SUPERFLEX_PER_WHAREFORMER.md",
@@ -802,5 +802,10 @@
     "secret_signature_scan": "no matches in selected copies",
     "manual_map_preserved": true,
     "tests": "Not rerun: executable code unchanged; prior test logs included. No clean-machine execution certified."
+  },
+  "publication": {
+    "content_commit": "6d7a8b7ddabc0c0fc209c81da8fd9b251347a986",
+    "remote_main_verified": true,
+    "follow_up": "Documents record successful publication; index refreshed for two historical memory files whose line endings differed from the working copy."
   }
 }
