@@ -370,6 +370,11 @@
       "sha256": "be05c4b1193885d276a4e411bb0b65f54962583e15d6ea053a09c53ff3694e3b"
     },
     {
+      "path": "context/evidence/full_video_20261114/publication.json",
+      "bytes": 371,
+      "sha256": "f74774cb379b6430d236d5d14ee91c9b63b042f123d1ab07597f7db1e4c33e70"
+    },
+    {
       "path": "context/evidence/full_video_20261114/tests_764454.log",
       "bytes": 99,
       "sha256": "f12cdc89e164edff70f722a617afda42df02d4aeb1f75ae3cd302b0c8b80106d"
@@ -496,8 +501,8 @@
     },
     {
       "path": "context/memory/LEGGIMI_PASSAGGIO_AI.md",
-      "bytes": 14984,
-      "sha256": "a67d17efa870bb27d14f5302a70fd5639a358ce3b350b8ca6594edb3ed5a77b6"
+      "bytes": 15058,
+      "sha256": "5eec4dd0fd53f4ecc2b17262be2fd256991ac3dfbaf0dadfe1059cb59b9904c1"
     },
     {
       "path": "context/memory/PIANO_FRONTEND_UNIFICATO_20261114.md",
@@ -516,8 +521,8 @@
     },
     {
       "path": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 96440,
-      "sha256": "4409c92fa1de93149304e6c45db82031084a45a1eb47d283a89b6017116f6a40"
+      "bytes": 96464,
+      "sha256": "00596dc8a01aa1b4710f18dfaf23b4a7f19dab05ab7af37f529bbb70c864a71f"
     },
     {
       "path": "context/memory/ROADMAP.md",
@@ -531,23 +536,23 @@
     },
     {
       "path": "context/memory/STATO_LAVORO.md",
-      "bytes": 2672,
-      "sha256": "d420cd436da367c47c4ed658462840cc24c98e560d23c8d1df70df28754ecb9e"
+      "bytes": 2746,
+      "sha256": "5feb9d3ae6ba46e2e6a4a8198d91df666c87f0347ace0a457f07a1c8d022ca49"
     },
     {
       "path": "context/memory/TODO.md",
-      "bytes": 3698,
-      "sha256": "03d426410974ba6004334b201976f47e7458c4dbc47326b015c5054719ab7edf"
+      "bytes": 3772,
+      "sha256": "89c44866d60762d94e424bb4f9db988e41f6422c76e4ae3c846d1004083cadc8"
     },
     {
       "path": "context/memory/docs/CODICE_PRODOTTO.md",
-      "bytes": 251,
-      "sha256": "3349223634a7b78626fbc4f6c69a624ccdf1856baa92961e2574405e978a9f32"
+      "bytes": 914,
+      "sha256": "462a21219dda491be1289cc11fc43eb85172fad2dc93583a86448e1f039bdf61"
     },
     {
       "path": "context/memory/docs/CONDIVISIONE.md",
-      "bytes": 1091,
-      "sha256": "a374f1775d39082c2742e2b05d23bfa57b1c919307026454995586313030b24a"
+      "bytes": 1758,
+      "sha256": "ff4f95ee463e3bc04933511d0ca747e87c6b61a5dc2a9591542dface25b044c2"
     },
     {
       "path": "context/memory/docs/INPUT_SUPERFLEX_PER_WHAREFORMER.md",

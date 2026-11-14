@@ -10,7 +10,7 @@ S-accumulo DA, peso 0.1 non calibrato, filtri invariati: 18 inizializzazioni, 7 
 
 Percorso HPC `~/cv_project/full_video_20261114_v1/`; log `cv_full_active_764454.out/.err`, `cv_full_audit_764474.out/.err`, `tests_764454.log`; output `run_764454/`, `cache_764454/`, `final_evaluation/`, `final_comparison/`, `audit/`. Tutti gli output scaricati in `outputs/full_video_20261114/results/` nella cartella locale. La valutazione iniziale a 98099 è superata da quella finale con orizzonte originale 99135; nessuna nuova inferenza per correggerla.
 
-Prossimo passo: discutere qualità/validazione indipendente delle fusioni e copertura prima di conclusioni di efficacia; frontend RGB rigenerato e calibrazione/test rimangono aperti. Revisione dei filtri ancora rinviata: non avviarla automaticamente. Prima esecuzione operativa chiusa; non rilanciare job conclusi.
+Prossimo passo: discutere qualità/validazione indipendente delle fusioni e copertura prima di conclusioni di efficacia; frontend RGB rigenerato e calibrazione/test rimangono aperti. Revisione dei filtri ancora rinviata: non avviarla automaticamente. Prima esecuzione operativa chiusa; non rilanciare job conclusi. Pubblicazione verificata su main: 8694e4b (codice ed evidenze della run).
 
 Questa guida è il punto di ingresso aggiornato per continuare con qualsiasi provider AI. Non serve la cronologia della chat. Le ultime decisioni esplicite di Marco prevalgono sulle note storiche; i resoconti conservano anche stati intermedi superati. La pubblicazione non certifica che una nuova macchina abbia dati, pesi e ambienti necessari.
 

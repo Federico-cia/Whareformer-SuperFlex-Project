@@ -602,7 +602,7 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Evidenza e limite.** Feature/XYZ e geometrie per osservazione riusati con hash; copertura geometrica 71/110590, non RGB completo. Accuratezza fisica delle fusioni non certificata. Assegnazioni identiche alla baseline, IDF1 73.269735% e mPCL 70.465504%: nessun beneficio con peso 0.1. Valutazione definitiva con orizzonte originale 99135, correggendo quella intermedia 98099 senza rifare tracking.
 
-**Conseguenza.** Primo ciclo operativo chiuso con fusioni e uso futuro verificati; successivi frontend/copertura/qualità/calibrazione-test restano distinti. Filtri invariati e revisione ancora rinviata. Output completi acquisiti localmente, evidenze leggere predisposte su repository; preservate le revisioni manuali B07 ed E01–E06/E08/E09 rispetto al remoto 0865949. Nessun job di questa run attivo/in attesa. Dettaglio nel resoconto della prima run completa.
+**Conseguenza.** Primo ciclo operativo chiuso con fusioni e uso futuro verificati; successivi frontend/copertura/qualità/calibrazione-test restano distinti. Filtri invariati e revisione ancora rinviata. Output completi acquisiti localmente, evidenze leggere pubblicate e verificate su main al commit 8694e4b; preservate le revisioni manuali B07 ed E01–E06/E08/E09 rispetto al remoto 0865949. Nessun job di questa run attivo/in attesa. Dettaglio nel resoconto della prima run completa.
 
 ## Vincoli organizzativi che spiegano il perimetro
 
