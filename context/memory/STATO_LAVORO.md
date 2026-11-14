@@ -1,22 +1,21 @@
 # Stato corrente — 14 novembre 2026
 
-Il ciclo causale tra forme, matcher e memoria è implementato. Il comando comune esegue varianti, valutazione e confronto da input preparati; il frontend importa cache verificate. La rigenerazione neurale completa da RGB non è ancora implementata/verificata.
+## Prima run completa conclusa — 14 novembre 2026
 
-## Evidenze acquisite
+Job 764454 COMPLETED 0:0 (8m40s), audit/valutazione 764474 COMPLETED 0:0 (53s); nessun job di questa run attivo/in attesa. Tutti i 33310 frame e 110590 osservazioni del protocollo ufficiale P01_01 elaborati (937–98099; metadati video 99135). Non tutti i RGB: feature/PCA/XYZ e 71 geometrie su 38 frame riusati con hash, nuova inferenza Whareformer e 25 nuove SuperFlex sugli stati ammessi. Copertura geometrica 0.0642% delle osservazioni.
 
-- Nove configurazioni zero completate e valutate, tutte esatte rispetto alla baseline (763531, COMPLETED 0:0, 23m24s).
-- Sei ricostruzioni SuperFlex reali ready da inizializzazioni singole (763324, COMPLETED 0:0, 43m30s). Nessuna fusione multivista.
-- Accumulo: 12 inizializzazioni e 12 rifiuti nelle quattro rappresentazioni (763323, COMPLETED, 12m11s). Sono tre osservazioni iniziali e tre successive, ripetute per rappresentazione.
-- Valutatore originale riprodotto su baseline registrata P01_01 train: IDF1 73.269735%, mPCL 70.465504%. Nessun beneficio del nuovo metodo dimostrato.
-- Frontend cache: dieci detection su tre frame, intera storia di 3398 frame e quattro file dati byte-identici al riferimento.
-- Test prima del riordino: 72 casi locali, 70 passati e due skip motmetrics; precedente suite HPC 69/69.
+S-accumulo DA, peso 0.1 non calibrato, filtri invariati: 18 inizializzazioni, 7 fusioni ammesse, 46 rifiuti, nessun errore o richiesta pendente. 695 logits modificati; 76 confronti futuri usano forme da fusioni. Memoria finale: 18 track, 38732 punti osservati, provenienza verificata; accuratezza fisica delle fusioni non certificata. Assegnazioni identiche alla baseline: 52 track, IDF1 73.269735%, mPCL 70.465504%, nessun miglioramento.
 
-Report e log già acquisiti sono in [evidenze](../evidence/README.md). Nessun nuovo controllo della coda HPC o esperimento neurale durante il riordino. Gli stati di attesa nei [resoconti storici](README.md) non descrivono la situazione corrente.
+[Resoconto verificato ed evidenze](../evidence/full_video_20261114/REPORT.md).
 
-## Prossimo passo e vincoli
+Percorso HPC `~/cv_project/full_video_20261114_v1/`; log `cv_full_active_764454.out/.err`, `cv_full_audit_764474.out/.err`, `tests_764454.log`; output `run_764454/`, `cache_764454/`, `final_evaluation/`, `final_comparison/`, `audit/`. Tutti gli output scaricati in `outputs/full_video_20261114/results/` nella cartella locale. La valutazione iniziale a 98099 è superata da quella finale con orizzonte originale 99135; nessuna nuova inferenza per correggerla.
 
-Proseguire il [frontend approvato](PIANO_FRONTEND_UNIFICATO_20261114.md): identificare asset DINOv2, provenienza PCA, scala della scena e ambiente; poi rigenerare e verificare il piccolo pilota. [Avanzamento e dipendenze](FRONTEND_AVANZAMENTO_20261114.md).
+Prossimo passo: discutere qualità/validazione indipendente delle fusioni e copertura prima di conclusioni di efficacia; frontend RGB rigenerato e calibrazione/test rimangono aperti. Revisione dei filtri ancora rinviata: non avviarla automaticamente. Prima esecuzione operativa chiusa; non rilanciare job conclusi.
 
-Marco ha esplicitamente rinviato la revisione dei filtri: non modificare soglie o registratore. Preservare la mappa manuale, i punti osservati separati dalle completazioni e l'ordine query → associazione → aggiornamento. [Guida tecnica](LEGGIMI_PASSAGGIO_AI.md).
+## Vincoli e ripresa
 
-Repository riordinata su richiesta di Marco: README unico ingresso, codice corrente separato dalla storia, vecchi piloti rimossi dalla versione attuale ma recuperabili in Git. La verifica della pubblicazione e dei controlli di questa revisione è registrata in [condivisione](docs/CONDIVISIONE.md).
+Le precedenti prove zero e i risultati dei piloti sono conservati nelle [evidenze](../evidence/README.md) e nell'[archivio](../archive/). Le note storiche di zero fusioni si riferiscono ai piloti precedenti, non alla nuova run completa.
+
+Preservare query prima degli aggiornamenti, punti osservati distinti da completazioni e riferimenti camera/scena/normalizzazione. Reti congelate. Non presentare l'ammissione dei gate come verifica fisica indipendente; mantenere distinta efficacia tracking e funzionamento software. [Registro critico](REGISTRO_CRITICITA_PIPELINE.md).
+
+Codice corrente nel worktree locale shared_exports/handoff_ai_20261114, branch run/full-video-20261114; documentazione corrente distinta dalla storia e README unico ingresso. Dati completi e checkpoint sono esterni al clone.

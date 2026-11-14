@@ -1,5 +1,9 @@
 # Ciclo geometrico approvato
 
+## Priorità corrente — esecuzione completa prima dei confronti
+
+Il mandato più recente richiede una prima run fino alla fine della sequenza ufficiale P01_01 con geometria attiva, cache dichiarate e SuperFlex sugli aggiornamenti ammessi. Run 764454 conclusa e audit 764474 superato: sette fusioni ammesse, 25 nuove ricostruzioni e uso futuro verificato; nessun miglioramento tracking. Dettagli in STATO_LAVORO.md e REGISTRO_CRITICITA_PIPELINE.md. Frontend RGB rigenerato, copertura estesa e confronti/ottimizzazione restano lavori distinti; nessuno sostituisce o blocca la verifica operativa completata. Revisione dei filtri ancora rinviata. Le fasi precedenti non implicano una nuova approvazione per modificare tali filtri.
+
 Le due direzioni SuperFlex → Whareformer e Whareformer → SuperFlex sono parti di un ciclo unitario.
 
 1. Estrarre la geometria dell'oggetto osservato nel frame e la sua rappresentazione di forma.

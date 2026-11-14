@@ -1,0 +1,9 @@
+{
+  "description": "First full-video development run. Cached official frontend and sparse verified DA geometry. Nonzero provisional weight, no efficacy calibration; registration gates unchanged.",
+  "seed": 0,
+  "torch_threads": 1,
+  "tracker_device": "cpu",
+  "variants": [
+    {"name": "S-accumulo_da_active", "method": "S-accumulo", "source": "da", "weight": 0.1, "neutral_distance": 0.0, "metric": "d2", "capacity": 2}
+  ]
+}

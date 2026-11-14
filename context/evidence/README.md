@@ -2,6 +2,7 @@
 
 Report numerici e log dei controlli acquisiti, suddivisi per fase:
 
+- [Prima run completa attiva](full_video_20261114/REPORT.md): intero protocollo P01_01, sette fusioni ammesse, 25 nuove SuperFlex e audit causale; metriche invariate.
 - [Riordino corrente](repository_cleanup_20261114/): suite dopo la pulizia e hash dei sorgenti.
 - [Baseline e registrazione](hpc_ripresa_20261114/): replay zero, conteggi e audit dei rifiuti.
 - [Valutatore](tracking_evaluation_20261114/): riproduzione delle metriche originali e suite HPC.

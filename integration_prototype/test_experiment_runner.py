@@ -98,6 +98,11 @@ class ExperimentTests(unittest.TestCase):
             self.assertGreaterEqual(summary['cumulative_setup_run_seconds'],summary['current_attempt_wall_seconds'])
             second.write(root/'complete',complete)
             self.assertEqual(json.loads((root/'complete/summary.json').read_text())['expected_frames'],1)
+            memory=root/'complete/S_memory'
+            saved=json.loads((memory/'manifest.json').read_text())
+            self.assertEqual(saved['geometry']['40']['version'],1)
+            with np.load(memory/'observed_points.npz',allow_pickle=False) as z:
+                self.assertTrue(np.array_equal(z['40'],second.executions[0].coordinator.snapshot()['geometry']['40']['value'].memory.cloud()))
             with self.assertRaises(FileExistsError):second.write(root/'complete',complete)
 
     def test_factory_model_sharing_and_invalid_configs_rejected(self):

@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "stages": [
+    {
+      "stage": "inference",
+      "returncode": 0,
+      "seconds": 448.07105990406126,
+      "log": "inference.log"
+    },
+    {
+      "stage": "evaluation",
+      "returncode": 0,
+      "seconds": 23.473148876335472,
+      "log": "evaluation.log"
+    },
+    {
+      "stage": "comparison",
+      "returncode": 0,
+      "seconds": 10.972349422052503,
+      "log": "comparison.log"
+    }
+  ],
+  "input_manifest_sha256": "1c9bdd82a85c4e78d149af89286bab61d9ddc154acaa05af983358e6ac618bee",
+  "config_sha256": "a4a3cfb4af571304f24b913fbd2c4d93e98b81b719ad9a0cdd7da9081238253b",
+  "policy_sha256": "3787259f343ffc9327719e0407c1f3a49e276639a1828e9333534e7049a4e329",
+  "input_boundary": "Prepared masks/appearance/XYZ and geometric artifacts; not an autonomous raw-video frontend.",
+  "wall_seconds": 482.57742047682405
+}

@@ -117,6 +117,13 @@ class VariantExecution:
         matcher=self.coordinator.matcher
         score=matcher.last_score
         valid=score['valid'] if variant.method!='W0' else np.zeros((len(frame.keys),0),bool)
+        geometric_queries=[]
+        if variant.method!='W0':
+            for i,j in zip(*np.where(valid)):
+                geometric_queries.append(dict(observation_key=frame.keys[i],track_id=score['track_ids'][j],
+                    distance=float(score['distances'][i,j]),
+                    evidence=list(score['evidence'][frame.keys[i],score['track_ids'][j]]),
+                    logit_delta=float(score['logits'][i,j+1])-float(matcher.last_logits[i,j+1])))
         point_errors=[]
         point_seconds=0.0
         if variant.method=='P-accumulo':
@@ -136,6 +143,7 @@ class VariantExecution:
                  cloud_inputs_available=sum(v is not None for v in clouds.values()),
                  comparison_pairs=int(valid.size),valid_comparison_pairs=int(valid.sum()),
                  detections_with_comparison=int(valid.any(axis=1).sum()),updates=transaction['updates'],
+                 geometric_queries=geometric_queries,
                  point_descriptor_errors=point_errors,point_descriptor_seconds=point_seconds,
                  coordinator_seconds=coordinator_seconds,registration_accumulation_seconds=self.geometry_seconds-before_geometry,
                  resolution_seconds=0.0,worker_seconds=0.0,reconstruction_events=[])
@@ -199,6 +207,7 @@ class VariantExecution:
                     valid_comparison_pairs=sum(r['valid_comparison_pairs'] for r in self.rows),
                     comparison_pairs=sum(r['comparison_pairs'] for r in self.rows),
                     detections_with_comparison=sum(r['detections_with_comparison'] for r in self.rows),
+                    changed_logit_pairs=sum(q['logit_delta']!=0 for r in self.rows for q in r['geometric_queries']),
                     update_statuses=dict(Counter(e['status'] for e in updates)),
                     initializations=sum(e['status']=='accepted' and e.get('diagnostics',{}).get('operation')=='initialize' for e in updates),
                     accepted_fusions=sum(e['status']=='accepted' and e.get('diagnostics',{}).get('operation')=='register_and_accumulate' for e in updates),
@@ -255,7 +264,7 @@ class ExperimentRunner:
         self.superflex_config=superflex_config
         self.allow_test_results=allow_test_results
 
-    def run(self, frames):
+    def run(self, frames, progress=None):
         if self._ran:raise RuntimeError('Create fresh runner/trackers to replay an attempt')
         self._ran=True
         frames=list(frames)
@@ -266,7 +275,10 @@ class ExperimentRunner:
         for execution in self.executions:
             execution.started=time.perf_counter()
             try:
-                for frame in frames:execution.step(frame)
+                for index,frame in enumerate(frames):
+                    row=execution.step(frame)
+                    if progress is not None and (index%1000==0 or index==len(frames)-1 or row['cloud_inputs_available']):
+                        progress(execution,index+1,len(frames),row)
                 execution.status='completed'
             except ResultsPending as error:
                 execution.error=str(error)
@@ -309,6 +321,18 @@ class ExperimentRunner:
         for execution in self.executions:
             with (output/(execution.variant.name+'.jsonl')).open('x',encoding='utf-8') as stream:
                 for row in execution.rows:stream.write(json.dumps(row,allow_nan=False)+'\n')
+            snapshot=execution.coordinator.snapshot()
+            states={tid:entry['value'].summary() for tid,entry in snapshot['geometry'].items()}
+            memory_dir=output/(execution.variant.name+'_memory')
+            memory_dir.mkdir()
+            np.savez_compressed(memory_dir/'observed_points.npz',
+                **{tid:entry['value'].memory.cloud() for tid,entry in snapshot['geometry'].items()})
+            (memory_dir/'manifest.json').write_text(json.dumps(dict(
+                geometry=states,separate_shapes=snapshot['separate_shape_memory'],
+                reconstructions=snapshot['reconstructions'],
+                pending_reconstructions=snapshot['pending_reconstructions'],
+                observed_points_sha256=hashlib.sha256((memory_dir/'observed_points.npz').read_bytes()).hexdigest(),
+                limitation='Final geometric state export, not a resumable tracker checkpoint.'),indent=2,allow_nan=False)+'\n')
         saved_report=dict(report)
         saved_report['prediction_export_sha256']={e.variant.name:hashlib.sha256((output/(e.variant.name+'.jsonl')).read_bytes()).hexdigest() for e in self.executions}
         (output/'summary.json').write_text(json.dumps(saved_report,indent=2,allow_nan=False)+'\n',encoding='utf-8')

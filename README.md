@@ -10,9 +10,11 @@ Studio del contributo della forma 3D all'associazione delle identità in video e
 | [Mappa](mappa_interattiva/README.md) | Rappresentazione modificabile del sistema |
 | [Memoria corrente](context/memory/README.md) | Decisioni, roadmap e ripresa del lavoro con qualsiasi assistente |
 | [Evidenze](context/evidence/README.md) | Risultati acquisiti e inventario con hash |
-| [Archivio scientifico](context/memory/README.md) | Resoconti storici, distinti dalle istruzioni operative |
+| [Archivio scientifico](context/archive/) | Resoconti storici, distinti dalle istruzioni operative |
 
-Il percorso da cache verificata è implementato. La rigenerazione neurale completa da immagini rimane aperta. I controlli a peso zero riproducono la baseline; non è ancora dimostrato un miglioramento del tracking o una fusione multivista reale. La revisione dei filtri di fusione è rinviata per decisione di Marco.
+La [prima run completa su P01_01](context/evidence/full_video_20261114/REPORT.md) è conclusa: 33310 frame/110590 osservazioni del protocollo ufficiale, geometria a peso non nullo, sette fusioni ammesse e 25 nuove ricostruzioni SuperFlex. Le forme da fusioni entrano nei confronti successivi. Le assegnazioni restano identiche alla baseline: nessun miglioramento del tracking con questa configurazione.
+
+Feature visive/XYZ e geometrie delle osservazioni sono riusati da cache verificate, con copertura geometrica di 71 osservazioni in 38 frame. Non è una rigenerazione RGB completa o una verifica indipendente dell'accuratezza fisica delle fusioni. Il frontend da immagini rimane aperto; la revisione dei filtri è ancora rinviata per decisione di Marco.
 
 Per eseguire codice e test seguire le [istruzioni di integrazione](integration_prototype/README.md). Dati completi e checkpoint richiedono acquisizione separata; gli esempi non li scaricano implicitamente. Per riprendere lo sviluppo leggere [stato](context/memory/STATO_LAVORO.md), [attività](context/memory/TODO.md) e [guida tecnica](context/memory/LEGGIMI_PASSAGGIO_AI.md).
 

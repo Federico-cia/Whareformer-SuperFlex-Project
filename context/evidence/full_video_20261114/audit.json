@@ -1,0 +1,132 @@
+{
+  "video": "P01_01",
+  "input_manifest_sha256": "1c9bdd82a85c4e78d149af89286bab61d9ddc154acaa05af983358e6ac618bee",
+  "inference_summary_sha256": "1088983213dedb83783944c043038c50f47a926bdb819c45f5b320f928a75739",
+  "baseline_sha256": "e9048d9f3ab6486db765534e48d9bd73a3a072bd4b6563ec8503e4d8f9259584",
+  "variants": [
+    {
+      "name": "S-accumulo_da_active",
+      "frames": 33310,
+      "observations": 110590,
+      "first_frame": 937,
+      "final_observed_frame": 98099,
+      "tracks": 52,
+      "geometry_frames": 38,
+      "geometric_queries": 695,
+      "changed_logit_pairs": 695,
+      "maximum_absolute_logit_delta": 0.03434742987155914,
+      "reconstruction_comparison_pairs": 695,
+      "reconstruction_query_frames": 37,
+      "fused_reconstruction_comparison_pairs": 76,
+      "fused_reconstruction_query_frames": 28,
+      "updates": {
+        "accepted": 25,
+        "rejected": 46
+      },
+      "initializations": 18,
+      "accepted_fusions": 7,
+      "fusion_events": [
+        {
+          "frame": 23269,
+          "track_id": "4",
+          "observation_key": "P01_01/frame_0000023269__d4",
+          "observation_keys": [
+            "P01_01/frame_0000002893__d0",
+            "P01_01/frame_0000023269__d4"
+          ]
+        },
+        {
+          "frame": 57932,
+          "track_id": "35",
+          "observation_key": "P01_01/frame_0000057932__d0",
+          "observation_keys": [
+            "P01_01/frame_0000046135__d0",
+            "P01_01/frame_0000057932__d0"
+          ]
+        },
+        {
+          "frame": 65241,
+          "track_id": "35",
+          "observation_key": "P01_01/frame_0000065241__d0",
+          "observation_keys": [
+            "P01_01/frame_0000046135__d0",
+            "P01_01/frame_0000057932__d0",
+            "P01_01/frame_0000065241__d0"
+          ]
+        },
+        {
+          "frame": 77312,
+          "track_id": "35",
+          "observation_key": "P01_01/frame_0000077312__d0",
+          "observation_keys": [
+            "P01_01/frame_0000046135__d0",
+            "P01_01/frame_0000057932__d0",
+            "P01_01/frame_0000065241__d0",
+            "P01_01/frame_0000077312__d0"
+          ]
+        },
+        {
+          "frame": 81277,
+          "track_id": "35",
+          "observation_key": "P01_01/frame_0000081277__d0",
+          "observation_keys": [
+            "P01_01/frame_0000046135__d0",
+            "P01_01/frame_0000065241__d0",
+            "P01_01/frame_0000077312__d0",
+            "P01_01/frame_0000081277__d0"
+          ]
+        },
+        {
+          "frame": 86858,
+          "track_id": "35",
+          "observation_key": "P01_01/frame_0000086858__d0",
+          "observation_keys": [
+            "P01_01/frame_0000046135__d0",
+            "P01_01/frame_0000077312__d0",
+            "P01_01/frame_0000081277__d0",
+            "P01_01/frame_0000086858__d0"
+          ]
+        },
+        {
+          "frame": 91092,
+          "track_id": "35",
+          "observation_key": "P01_01/frame_0000091092__d0",
+          "observation_keys": [
+            "P01_01/frame_0000046135__d0",
+            "P01_01/frame_0000081277__d0",
+            "P01_01/frame_0000086858__d0",
+            "P01_01/frame_0000091092__d0"
+          ]
+        }
+      ],
+      "rejection_reasons": {
+        "ambiguous_rigid_pose": 34,
+        "insufficient_heldout_support": 39,
+        "excessive_heldout_residual": 33
+      },
+      "reconstructions": {
+        "ready": 25
+      },
+      "final_memory_tracks": 18,
+      "final_observed_points": 38732,
+      "maximum_observed_memory_rebuild_error": 2.220446049250313e-16,
+      "rebuild_tolerance": "32 * float64 epsilon * max(1, abs cloud maximum); no relative tolerance",
+      "assignment_differences_from_recorded_baseline": 0,
+      "differing_frames": 0,
+      "assertions_passed": [
+        "all official frames/observations in order",
+        "geometry logit correction numerically present",
+        "all query evidence strictly predates frame",
+        "real earlier SuperFlex reconstructions used",
+        "one request per accepted update",
+        "final observed memory equals latest request cloud",
+        "final memory rebuilt from admitted observations/rigid transforms within floating-point roundoff",
+        "point/request/result/export hashes valid"
+      ],
+      "limits": [
+        "Sparse cached frontend, no raw RGB regeneration or physical identity GT.",
+        "Accepted fusion is algorithmic admission, not independently validated physical alignment."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "jobs": {
+    "jobs": [
+      {
+        "id": 764454,
+        "status": "COMPLETED",
+        "exit_code": "0:0",
+        "elapsed": "00:08:40"
+      },
+      {
+        "id": 764474,
+        "status": "COMPLETED",
+        "exit_code": "0:0",
+        "elapsed": "00:00:53"
+      }
+    ],
+    "results_downloaded": true,
+    "active_jobs": []
+  },
+  "immutable_core_sha256": {
+    "cloud_memory.py": "38dd6632f3070351e6a2ea96aad5466dc2c484d1e94b16464aafb189dbfb1b8d",
+    "cloud_updater.py": "8bd9dbb963bcb8e5a9364b915b637e861799475c4a61488bf738cccf74595d66",
+    "frame_coordinator.py": "a1a01a73c08ef672ff626a11abb0839669e21404625f4fc35b0aad3a74c2e376",
+    "geometry_matcher.py": "455ea851f3be61a3cf3c618e638afa041eb80a053f0b8c54a90efbecadd0bf7e",
+    "shape_adapter.py": "c0a1f91dfc68857baf75fc0f1b21620d8fc3161ff0b7fff4a94f46ba6b5f787d",
+    "deferred_superflex.py": "a79ac016fba5792a5b7ed2438c58baa12a915f53e7de1a94b3b10f172373e80d"
+  },
+  "manual_map_sha256": "da19d6f2931a29ccc97e1dc76d1f115fc1be870b7938c00439ac70808f92d064",
+  "publication_boundary": "Code, configuration and lightweight verified evidence. No checkpoint, credentials, full RGB or full feature arrays.",
+  "results_archive_sha256": "8910df16ed9007122a33e324bc7de09f9a13aa8e76198cdacd20d0b909c29610"
+}

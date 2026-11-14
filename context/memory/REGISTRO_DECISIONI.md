@@ -558,6 +558,52 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Regola permanente.** Tenere documentazione corrente separata dalla storia, percorsi esterni espliciti e codice operativo privo di runner superati; verificare collegamenti e hash prima di pubblicare. Conservare cronologia e provenienza senza trattarle come istruzioni correnti. Frontend ancora parziale e revisione filtri rinviata.
 
+
+## 68. Proposta di roadmap per concludere la pipeline — 14 novembre 2026
+
+**Richiesta e analisi.** Marco chiede una proposta dopo lettura di GitHub e stato. Main verificato 0865949; riletti codice dell'ingresso, configurazione zero, asset/inventario e risultati acquisiti. Distinti ciclo software collegato, percorso rigenerato incompleto e beneficio ancora non misurato.
+
+**Proposta, non decisione approvata.** Sequenza e criteri in PROPOSTA_CHIUSURA_PIPELINE_20261114.md: asset/frontend, copertura, verifica multivista subordinata alla riattivazione dei filtri, confronti con peso attivo e verifica finale riproducibile. Finestre fino al 23 novembre indicative e condizionate, non promessa di tempi. Si riusano runner/metriche esistenti; nessun training o segmentatore nuovo.
+
+**Conseguenza e limite.** Frontend già approvato resta primo lavoro. Il rinvio dei filtri rimane valido; nessun esperimento, modifica al codice, push o nuova assegnazione al collega eseguiti per questa proposta. La ridotta copertura e le sole inizializzazioni non certificano fusione multivista; l'eventuale assenza di beneficio va documentata. Memoria locale collegata alla proposta senza sostituire il piano approvato.
+
+
+## 69. Prima una singola esecuzione su video completo — 14 novembre 2026
+
+**Chiarimento e decisione esplicita.** Marco indica come obiettivo prioritario chiudere un ciclo completo della pipeline, dall’inizio alla fine di un video. Scelta delle alternative e ottimizzazione seguono questo traguardo, non lo bloccano. Rivedere la sequenza proposta in questo senso.
+
+**Conseguenza operativa.** Completare il collegamento minimo del frontend con componenti/configurazione provvisori espliciti, preparare l’intera sequenza e riusare runner, memoria, SuperFlex e valutatore già presenti. P01_01 è candidato naturale di sviluppo, non split di test indipendente già scelto. Un pilota corto rimane controllo preventivo, non risultato sostitutivo del video completo. Nessuna nuova inferenza o modifica al codice in questo chiarimento.
+
+**Limite mantenuto.** Filtri ancora rinviati e invariati; il completamento della run non certifica fusione multivista o miglioramento. Per il primo ingresso restano dichiarati maschere, camera/pose e asset scena; nessuna promessa di ingresso RGB-only arbitrario. Aggiornate priorità in stato, attività, roadmap, discussione e proposta locale.
+
+
+## 70. Round completo, fedeltà ai paper e registro critico — 14 novembre 2026
+
+**Mandato esplicito.** Marco conferma priorità alla prima run completa; dubbi e tradeoff devono essere riconosciuti e registrati, poi affrontati sistematicamente. Conservare l’approccio dei paper quando applicabile e funzionante; annotare alternative senza anteporne la selezione al primo ciclo.
+
+**Esecuzione documentale e prima evidenza.** Creato REGISTRO_CRITICITA_PIPELINE.md con nove punti iniziali, distinguendo fonte originale/adattamento, impatto e verifica. Riletto il vecchio preparatore e gli estrattori originali: arresto a 7508 esplicito nel nostro diagnostico, dati ufficiali completi P01_01 già presenti con hash. Non implica frontend rigenerato o copertura geometrica completa. Nessuna nuova inferenza, algoritmo modificato o push in questa fase.
+
+**Conseguenza e limiti.** Prima prova deve dichiarare input rigenerati/riusati, copertura, fusioni/rifiuti/fallback e configurazione. L’integrazione funzionante è obiettivo, non esito garantito; una run completa non prova automaticamente accumulo multivista o beneficio. Filtri ancora rinviati. Aggiornate istruzioni persistenti, stato, attività, roadmap, discussione e guida.
+
+
+
+## 71. Esecuzione completa a geometria attiva — 14 novembre 2026
+
+**Mandato esplicito ed esecuzione.** Marco richiede il lavoro operativo fino alla fine del video e autorizza riuso dichiarato di artefatti verificati. Avviato 764454 su intero ingresso ufficiale P01_01, non soltanto replay del tracking: associazioni neurali attive, aggiornamenti dei punti osservati e worker SuperFlex dopo ogni ammissione. Scelta operativa provvisoria DA, peso 0.1, distanza neutra 0, senza calibrazione né modifica dei gate. Il ramo DA è già presente e usa gli stessi input di osservazione del percorso verificato; la scelta non è una preferenza scientifica dimostrata su MoGE.
+
+**Evidenza e limiti.** Bundle preparato e verificato su 110590 osservazioni/33310 frame ufficiali, 71 geometrie in 38 frame; due alias esclusi. Nessuna nuova estrazione DINOv2/PCA/XYZ o profondità dalle immagini: cache esplicitamente riusata, nuova inferenza SuperFlex richiesta sugli stati ammessi. Video nei metadati 99135 frame, ultima osservazione ufficiale 98099: protocollo originale sparso, non inferenza RGB su ogni frame. Job osservato RUNNING, esiti finali da verificare.
+
+**Conseguenza.** Telemetria con correzioni effettive dei logits e origine dei confronti, memoria osservata esportata. Separare fine della sequenza, fusioni multivista ed efficacia; il confronto delle alternative segue la prima run. Le ultime indicazioni locali prevalgono sulla roadmap remota precedente; preservati storia, contributi del collega e mappa manuale. Filtri ancora rinviati.
+
+
+## 72. Esito completo e fusioni effettive — 14 novembre 2026
+
+**Risultato verificato.** 764454 COMPLETED 0:0 (8m40s) e 764474 COMPLETED 0:0 (53s). Intero protocollo P01_01, 33310 frame/110590 osservazioni; 18 inizializzazioni, sette fusioni ammesse su due track predette, 46 rifiuti e 25 nuove SuperFlex riuscite. 695 correzioni effettive, 76 confronti futuri con forme da fusioni. Memoria finale dei soli punti osservati ricostruita con scarto massimo 2.22e-16; nessun completamento reinserito. 72 test HPC passati, nessuno saltato.
+
+**Evidenza e limite.** Feature/XYZ e geometrie per osservazione riusati con hash; copertura geometrica 71/110590, non RGB completo. Accuratezza fisica delle fusioni non certificata. Assegnazioni identiche alla baseline, IDF1 73.269735% e mPCL 70.465504%: nessun beneficio con peso 0.1. Valutazione definitiva con orizzonte originale 99135, correggendo quella intermedia 98099 senza rifare tracking.
+
+**Conseguenza.** Primo ciclo operativo chiuso con fusioni e uso futuro verificati; successivi frontend/copertura/qualità/calibrazione-test restano distinti. Filtri invariati e revisione ancora rinviata. Output completi acquisiti localmente, evidenze leggere predisposte su repository; preservate le revisioni manuali B07 ed E01–E06/E08/E09 rispetto al remoto 0865949. Nessun job di questa run attivo/in attesa. Dettaglio nel resoconto della prima run completa.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 

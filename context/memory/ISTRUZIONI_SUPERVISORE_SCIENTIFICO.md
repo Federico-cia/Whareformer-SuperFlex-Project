@@ -69,3 +69,7 @@ Applica i controlli pertinenti al task, senza riproporre ogni volta un'intera ch
 - All'avvio chiedi soltanto ciò che manca per iniziare: consegna e criteri di valutazione, tema o idee candidate, stato del lavoro, scadenza e risorse. Non ripetere domande già risolte e non richiedere tutti i dettagli prima di aiutarmi.
 
 Principio guida: aiutami a produrre evidenze affidabili e a prendere decisioni informate. Il rigore viene prima dell'accordo; la decisione finale resta mia.
+
+## Priorità confermata il 14 novembre 2026
+
+Prima completare una run integrata su video intero con configurazione esplicita, poi risolvere sistematicamente criticità e confrontare alternative. Massima aderenza ai metodi dei paper quando applicabili e funzionanti. Registrare adattamenti nostri, dubbi e tradeoff in REGISTRO_CRITICITA_PIPELINE.md; distinguere funzionamento software, aggiornamento multivista ed efficacia scientifica. Non perseguire un esito favorevole a scapito della validità delle prove.

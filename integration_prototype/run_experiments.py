@@ -59,9 +59,11 @@ def main():
     restored=torch.load(cpu,map_location='cpu',weights_only=True)
     if state.keys()!=restored.keys() or not all(torch.equal(state[k],restored[k]) for k in state):
         raise ValueError('CPU checkpoint copy differs')
-    torch.set_num_threads(2)
+    torch.set_num_threads(config.get('torch_threads',2))
     seed=config.get('seed',0)
-    params=copy.deepcopy(cfg['tracking']);params.update(model=cfg['model'],device_id=None,app_dim=256)
+    device=config.get('tracker_device','cpu')
+    if device not in ('cpu','cuda:0'):raise ValueError('Explicit cpu or cuda:0 tracker device required')
+    params=copy.deepcopy(cfg['tracking']);params.update(model=cfg['model'],device_id=None if device=='cpu' else 0,app_dim=256)
     params['matcher_params']['model_path']=str(cpu.resolve())
     def factory():
         torch.manual_seed(seed)
@@ -102,7 +104,12 @@ def main():
                     code_sha256={n:sha(Path(__file__).parent/n) for n in ['experiment_runner.py','run_experiments.py','shape_adapter.py','frame_coordinator.py','cloud_updater.py','deferred_superflex.py','tracking_evaluation.py']})
     runner=ExperimentRunner(factory,plan['video'],variants,args.cache,cloud_config,superflex_config,
                             worker=worker,provenance=provenance)
-    report=runner.run(frames)
+    def progress(execution,index,total,row):
+        print(json.dumps(dict(variant=execution.variant.name,processed_frames=index,total_frames=total,
+            frame_index=row['frame_index'],elapsed_seconds=time.perf_counter()-execution.started,
+            updates=[e for e in row['updates'] if e['status'] not in ('missing','not_requested')],
+            reconstructions=row['reconstruction_events'])),flush=True)
+    report=runner.run(frames,progress=progress)
     report['cli_wall_seconds_before_export']=time.perf_counter()-started
     runner.write(args.output,report)
     print(json.dumps([dict(name=v['config']['name'],status=v['status'],error=v['error']) for v in report['variants']],indent=2))
