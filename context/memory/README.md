@@ -13,3 +13,5 @@ La [campagna HPC](CAMPAGNA_HPC_20261115.md) è conclusa: 29/29 configurazioni va
 [Codice corrente](../../integration_prototype/README.md) · [Evidenze](../evidence/README.md) · [Resoconti storici](../archive/) · [Mappa](../../mappa_interattiva/README.md).
 
 Il README della repository è l'unico ingresso generale. Gli archivi descrivono esperimenti e stati passati e non sono istruzioni operative per il clone.
+
+Revisione editoriale in corso: [checklist della mappa](REVISIONE_MAPPA_20261115.md), con testi riservati a Marco. Architettura del contributo di forma, ammissione dei punti e collocazione della geometria nella scena restano [decisioni da discutere con il compagno](TODO.md).

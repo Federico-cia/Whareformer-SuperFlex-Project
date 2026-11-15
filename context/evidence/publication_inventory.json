@@ -1,8 +1,8 @@
 {
   "schema": 2,
-  "date": "2026-11-14",
-  "base_commit": "27f58d8a2bd238fb02af755498d6d21114adf925",
-  "scope": "Maintained sources and memory with verified final evidence for all 29 campaign variants. Large prediction/geometry outputs remain on HPC, original inputs/models external.",
+  "date": "2026-11-15",
+  "base_commit": "d8fb991caf8868150943ab8367737f3481a338dc",
+  "scope": "Current maintained sources, manual map snapshot, editorial review and shared scientific decisions; existing verified campaign evidence retained. Large inputs/models and personal access excluded.",
   "files": [
     {
       "path": ".gitignore",
@@ -16,8 +16,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2775,
-      "sha256": "98784400cc42a03f432d114757c1337030c41d5198769aac9fc1b4f36ba0d4b1"
+      "bytes": 3196,
+      "sha256": "6b142f5561f9536f36a5b6ccb63405038cfd34cd93c7b10bf6eed5ff74a617a3"
     },
     {
       "path": "context/archive/ANALISI_AGGIORNAMENTO_GITHUB_20261113.md",
@@ -581,8 +581,8 @@
     },
     {
       "path": "context/memory/LEGGIMI_PASSAGGIO_AI.md",
-      "bytes": 17685,
-      "sha256": "f7bb6c2a7f203a9fe8372930fe534a1278aef68d9c09b62a5ba481ce8c62929e"
+      "bytes": 17986,
+      "sha256": "47d5b0b2ccb2c16f419c8283c00f152f7d9d051d1b80efe35e65ad634d3ea857"
     },
     {
       "path": "context/memory/PIANO_FRONTEND_UNIFICATO_20261114.md",
@@ -591,18 +591,23 @@
     },
     {
       "path": "context/memory/README.md",
-      "bytes": 1295,
-      "sha256": "1dcfe540c03c894dfdb5ee394c157588a938874a1610dfc86bff544fd45742df"
+      "bytes": 1556,
+      "sha256": "c77e5f96ce0189f70112b9796d0c479e07a5fa15f7dd2c2f70be8ac932413c7d"
     },
     {
       "path": "context/memory/REGISTRO_CRITICITA_PIPELINE.md",
-      "bytes": 12720,
-      "sha256": "06e36c3b9dbfc011f1749a1d36474b413d8969e1be9d37f0acb6f931c17ff437"
+      "bytes": 14419,
+      "sha256": "fa7edc1010ee895f1318afa2f89dae8f4ca25cf7e2dea721b137dd8e68c873f0"
     },
     {
       "path": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 100727,
-      "sha256": "d5988c2ed1ab8c9cf441a6c97f99a0fc37a1537a858c90819e18c1c0e2cb3646"
+      "bytes": 105341,
+      "sha256": "9dfd7b065f05aeca1fcf19bf2e2128f8489756d7b46520729c7c002897a762e5"
+    },
+    {
+      "path": "context/memory/REVISIONE_MAPPA_20261115.md",
+      "bytes": 22453,
+      "sha256": "247925ce98aa3793f2b774b321f2d3aaa61d762e8c998bac055051717f9205d3"
     },
     {
       "path": "context/memory/ROADMAP.md",
@@ -616,13 +621,13 @@
     },
     {
       "path": "context/memory/STATO_LAVORO.md",
-      "bytes": 5373,
-      "sha256": "45cc37700d17d152c9014a51081d8d7aea8d1ce982d67a7df77caad2e64a9bda"
+      "bytes": 9569,
+      "sha256": "ecb516110c56290b3edb5da34be70e3c2b26f4fd2cb1e9ee96009ce0a39f7e59"
     },
     {
       "path": "context/memory/TODO.md",
-      "bytes": 6399,
-      "sha256": "7f09d209d0c18870dbf3c4d181a60ce5726db6c7b4b71f31b6ec92202414fdac"
+      "bytes": 11391,
+      "sha256": "3e4f321b179e92d1d3aa36b3a7c50324b3c58f16f79beef25c566b30a5706ec5"
     },
     {
       "path": "context/memory/docs/CODICE_PRODOTTO.md",
@@ -846,8 +851,8 @@
     },
     {
       "path": "mappa_interattiva/README.md",
-      "bytes": 5560,
-      "sha256": "33acae620d00cb2fb76252c15166b3309695fb56fc0223f36f9603c2f7d125eb"
+      "bytes": 5831,
+      "sha256": "be35cdfd4295f49a770a36d82a34bf1bfef8b02e4eea9dbf3afdb76e988b9082"
     },
     {
       "path": "mappa_interattiva/app.js",
@@ -856,13 +861,13 @@
     },
     {
       "path": "mappa_interattiva/contenuti.js",
-      "bytes": 42304,
-      "sha256": "e316c7a14f4f654eca77221257e37dcdf091881dcb52abc18e8c058d9992930f"
+      "bytes": 70360,
+      "sha256": "325c92925802f7af7fb703e656586d61760b2c2ac8e5e4bd2a9ec4bf2857e029"
     },
     {
       "path": "mappa_interattiva/contenuti.json",
-      "bytes": 42285,
-      "sha256": "da19d6f2931a29ccc97e1dc76d1f115fc1be870b7938c00439ac70808f92d064"
+      "bytes": 70341,
+      "sha256": "7cc5a3958883e5393e20c29d02c0361b8d205f66c383899e466c79ccd02eeda4"
     },
     {
       "path": "mappa_interattiva/fonti.js",

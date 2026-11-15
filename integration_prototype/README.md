@@ -66,7 +66,7 @@ L'audit accetta anche il riferimento `.json.gz`. I JSONL includono distanza, cor
 
 ## Evidenze e limiti
 
-[Campagna estesa in corso](../context/memory/CAMPAGNA_HPC_20261115.md): 29 configurazioni su P01_01 con geometria rigenerata sul campione congelato di 247 frame/446 osservazioni. Il pacchetto della produzione ha superato 76 test HPC senza skip; tre test successivi del gestore invii raggruppati sono verificati localmente. I risultati della campagna restano pendenti.
+[Campagna estesa conclusa](../context/memory/CAMPAGNA_HPC_20261115.md): 29 configurazioni su P01_01 con geometria rigenerata sul campione congelato di 247 frame/446 osservazioni. Il pacchetto della produzione ha superato 76 test HPC senza skip; tre test successivi del gestore invii raggruppati sono verificati localmente. Tutte le 29 configurazioni sono completate e valutate, con assegnazioni e metriche identiche alla baseline.
 
 `prepare_hpc_campaign.py` produce un nuovo pacchetto senza inviare job: richiede `--output`, `--project` (radice HPC assoluta), `--remote-root` (nuova cartella assoluta HPC) e `--category-reference` (selection.json con politica categorie preesistente). Dipende da asset/checkpoint/input ufficiali verificati e dagli ambienti dedicati già installati, descritti nella specifica; non è un installer per un account vuoto.
 

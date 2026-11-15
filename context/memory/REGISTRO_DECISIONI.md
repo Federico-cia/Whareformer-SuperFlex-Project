@@ -631,7 +631,31 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Conseguenza.** Nessun vincitore di tracking nella griglia; diagnosi di margini/distanze e opportunità di associazione prima di ulteriori cambi. Non dedurre inutilità generale della geometria. Risultati e accounting scaricati; grandi output delle varianti conservati sull'HPC. Filtri invariati e revisione ancora rinviata. Resoconto finale della campagna collegato da stato/TODO.
 
+## 76. Revisione della mappa con scrittura riservata a Marco — 15 novembre 2026
+
+**Mandato esplicito.** Marco chiede di ricostruire il contesto e assisterlo nel rendere comprensibili e aggiornati i commenti di nodi/frecce; i testi della mappa devono essere modificati da lui. Questo vincolo supera per la revisione corrente le precedenti richieste di compilazione automatica e i segnaposto storici.
+
+**Analisi ed evidenza.** Rilette memoria, schede, risultati e codice pertinente; predisposta [checklist di revisione](REVISIONE_MAPPA_20261115.md), non testi sostitutivi. Su 19 nodi/34 frecce, 12/26 sono segnaposto. Segnalati tra gli altri confusione modello/input RGB, attestazione non dimostrata di risultati equivalenti al paper, confronto primitiva-per-primitiva non corrispondente al D2 attuale e stati precedenti alle run concluse. Riepilogo locale conferma zero differenze di assegnazione in tutte le 29 configurazioni; nessuna nuova inferenza o verifica remota.
+
+**Conseguenza e limite.** Mappa preservata; scrittura manuale e verifica progressiva ancora da svolgere. Aggiornata soltanto la memoria della revisione, senza cambiare domanda, metodo, priorità scientifiche o rinvio dei filtri.
+
+## 77. Collocazione della forma nella scena: tema prioritario da discutere
+
+**Richiesta esplicita.** Marco chiede di registrare come tema importante la fattibilità della memoria 3D collocata nella scena e aggiornabile: dimensioni, rotazione, posizione e allineamento dei nuovi punti. La sua principale preoccupazione è la complessità e il rischio di incoerenza, non soltanto la discriminatività della forma.
+
+**Conseguenza.** Attività distinta nei to-do e criticità C13, allineata allo stato. Separare confronto invariante, registrazione/ammissione e ancoraggio alla scena; verificare scala e catena delle trasformazioni senza presumere che XYZ o inversa della normalizzazione risolvano tutti i passaggi. Richiesta di discussione, non approvazione di nuovo modulo, protocollo o cambio della domanda principale; nessuna modifica alla mappa o nuova esecuzione.
+
 ## Vincoli organizzativi che spiegano il perimetro
+
+**Chiarimento durante E22 — ammissione da discutere con il compagno.** Marco richiede di rendere espliciti il funzionamento e la natura provvisoria dei controlli in E22/B16 e di registrare il confronto architetturale ancora necessario con il compagno. Rafforzato il to-do esistente, senza duplicarlo. Alternative richiamate come discusse, non adottate: fondere dopo allineamento senza ulteriori gate, rivedere criteri per simmetrie/parzialità e usare forme separate come confronto. Nessun nuovo accordo sulle soglie, cambio di codice o esperimento.
+
+**Chiarimento esplicito durante B12 — architettura da decidere con il compagno.** Marco richiede un punto importante nei to-do e una nota proposta per la mappa: discutere come il segnale di forma entra nei calcoli e con quale forza. Discusse correzione esterna dei logits e scelta dei suoi parametri, apprendimento supervisionato di pochi parametri mantenendo le reti congelate e adattamento della rete. La raccomandazione dell'assistente sulla fusione appresa non è una decisione: Marco richiede confronto con il compagno prima della scelta. Aggiornati stato/TODO e checklist; nessun nuovo metodo adottato o job avviato, scrittura della mappa resta manuale.
+
+**Chiarimento di Marco durante B07 — duplice uso della ricostruzione.** Marco chiede di discutere i limiti del descrittore D2 e della normalizzazione della scala e manifesta l'intento di usare la forma sia nel matching Whareformer sia come memoria 3D dell'oggetto collocata nella scena, accanto alla posizione puntuale della traccia. Riprende l'interesse storico alla memoria geometrica (voci 15/18), senza approvare implicitamente nuovo protocollo, modulo di posa o cambio della domanda principale. Distinguere descrittore invariante e geometria completa conservata con trasformazioni; perdita di scala nel descrittore non implica cancellazione della scala dagli artefatti. Scala compatibile con scena/XYZ, riferimento e posa per collocazione sono prerequisiti da discutere e verificare. Aggiornati stato/TODO e checklist; nessuna nuova esecuzione.
+
+Promemoria prioritario richiesto da Marco il 15 novembre: discutere e testare approfonditamente l'ammissione geometrica. Riprende la decisione 56 sui filtri provvisori; motivazione emersa nella revisione E29: associazione alla traccia e accettazione dei punti sono decisioni separate. Evidenziato in TODO.md e allineato C05/stato; nessuna modifica o nuova esecuzione, rinvio operativo preservato. Marco ricorda un altro tema da approfondire: il riferimento non è identificato con certezza; il confronto/calibrazione della forma nel matching resta un punto distinto già aperto (C11), non attribuito come sua nuova scelta.
+
+Precisazione editoriale di Marco durante la revisione della mappa del 15 novembre: i nodi descrivono il processo dello step; i collegamenti spiegano perché l'output della sorgente serve come input alla destinazione. Applicare alle proposte in chat, evitando di duplicare nelle frecce il calcolo del nodo di arrivo. E15 è l'esempio di revisione richiesto; nessun testo della mappa modificato dall'assistente. Criterio consolidato in REVISIONE_MAPPA_20261115.md, senza cambiamenti scientifici.
 
 
 Due persone, circa due ore al giorno ciascuna, consegna il 23 novembre. Ruoli confermati il 7 novembre: Marco segue geometria/SuperFlex; il collega Whareformer/integrazione/valutazione. Decisioni scientifiche e report condivisi. Modelli eseguiti sull'HPC; accesso autonomo operativo. Training da zero, reasoning semantico aggiuntivo e memoria complessa restano fuori scope iniziale per concentrare il lavoro sulla domanda misurabile.

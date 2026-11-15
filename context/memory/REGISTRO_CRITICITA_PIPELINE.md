@@ -2,7 +2,15 @@
 
 Aggiornamento: 14 novembre 2026. Mandato esplicito di Marco: prima un round completo, poi risoluzione sistematica di dubbi e tradeoff. Massima aderenza ai due paper: mantenere l’approccio originale quando applicabile e funzionante; annotare alternative senza adottarle come ottimizzazione preventiva. Integrazione riuscita è un obiettivo da verificare, non un risultato presunto.
 
+## C13 — Collocazione e aggiornamento della forma nella scena: discussione richiesta
+
+Marco indica come preoccupazione principale la difficoltà di collocare la ricostruzione con dimensioni, rotazione e posizione corrette nello spazio della scena e mantenerla aggiornabile con nuove nuvole. La memoria dei punti e il confronto D2 non certificano questa capacità. Distinguere coordinate normalizzate SuperFlex, camera dell'osservazione, riferimento della memoria oggetto e scena; conservare e verificare trasformazioni e compatibilità della scala, anche con movimento dell'oggetto. Invertire la normalizzazione ripristina il riferimento dell'input, non garantisce da solo scala fisica o coerenza con gli XYZ ufficiali. Stato: tema prioritario da discutere e sottoporre a verifica di fattibilità, non errore dimostrato di tutti gli output né nuovo modulo approvato. Collegato a C05/C06/C09 e ai to-do importanti; nessun esperimento avviato.
+
 ## Regola di lavoro
+
+Precisazione C05 durante E22: discussione con il compagno esplicitamente richiesta prima della scelta definitiva dell'ammissione. Le descrizioni proposte per E22/B16 devono distinguere assegnazione dell'identità, stima dell'allineamento e gate provvisori; richiamare alternative e decisione pendente senza attribuire alle euristiche attuali una validazione scientifica o un accordo finale del gruppo.
+
+Priorità ribadita da Marco il 15 novembre durante la revisione della mappa: C05, ammissione geometrica, deve essere discusso approfonditamente e testato; attività in evidenza in TODO.md. La richiesta rafforza l'importanza del tema senza avviarne ora l'esecuzione o revocare implicitamente il rinvio dei filtri. Distinguere associazione, registrazione e ammissione e verificare sia false ammissioni sia falsi rifiuti.
 
 Per ogni scostamento o problema registrare: metodo del paper/codice originale effettivamente verificato, implementazione corrente, motivo della differenza, conseguenza, evidenza disponibile e verifica pendente. Non attribuire ai paper scelte nostre. Separare errore dimostrato, dubbio da controllare e compromesso provvisorio. Dopo la prima run affrontare i punti registrati, senza rimandare silenziosamente quelli che impediscono la correttezza del risultato.
 

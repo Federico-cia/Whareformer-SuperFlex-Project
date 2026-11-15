@@ -1,5 +1,9 @@
 # Passaggio di consegne AI — 14 novembre 2026
 
+## Revisione corrente — 15 novembre 2026
+
+La revisione della mappa è guidata dalla [checklist](REVISIONE_MAPPA_20261115.md): Marco modifica e salva i testi, l’assistente analizza e propone in chat. Sono ancora aperte le discussioni con il compagno su architettura del contributo di forma, gate di ammissione e collocazione nella scena; vedere [attività](TODO.md). Nessun nuovo metodo adottato né nuovo esperimento.
+
 ## Campagna estesa conclusa — 15 novembre 2026
 
 [Resoconto e output](../evidence/campaign_20261115_v1/REPORT_FINALE.md). Tutte le 29 configurazioni completate e valutate su 33310 frame/110590 osservazioni; nessuna assegnazione diversa da W0 e metriche identiche (IDF1 73.269735%, mPCL 70.465504%). Quattro controlli zero esatti, nessun timeout/errore di aggiornamento/worker fallito o richiesta pendente.

@@ -16,7 +16,7 @@ La [prima run completa su P01_01](context/evidence/full_video_20261114/REPORT.md
 
 La [campagna estesa del 15 novembre è conclusa](context/evidence/campaign_20261115_v1/REPORT_FINALE.md): 29/29 configurazioni completate e valutate, geometria su 247 frame/446 osservazioni. Tutte le assegnazioni e metriche coincidono con W0: nessun miglioramento nella griglia provata. Nessun job attivo/in attesa; filtri invariati e limiti di sviluppo dichiarati.
 
-Feature visive/XYZ e geometrie delle osservazioni sono riusati da cache verificate, con copertura geometrica di 71 osservazioni in 38 frame. Non è una rigenerazione RGB completa o una verifica indipendente dell'accuratezza fisica delle fusioni. Il frontend da immagini rimane aperto; la revisione dei filtri è ancora rinviata per decisione di Marco.
+Nella prima run, feature visive/XYZ e geometrie delle osservazioni sono riusati da cache verificate, con copertura geometrica di 71 osservazioni in 38 frame. Nella campagna estesa, la geometria DA/MoGE/SuperFlex è rigenerata sulle 446 osservazioni selezionate; feature visive/PCA/XYZ ufficiali restano riusate. Non è una rigenerazione RGB completa o una verifica indipendente dell'accuratezza fisica delle fusioni. Il frontend da immagini rimane aperto; la revisione dei filtri è ancora rinviata per decisione di Marco.
 
 Per eseguire codice e test seguire le [istruzioni di integrazione](integration_prototype/README.md). Dati completi e checkpoint richiedono acquisizione separata; gli esempi non li scaricano implicitamente. Per riprendere lo sviluppo leggere [stato](context/memory/STATO_LAVORO.md), [attività](context/memory/TODO.md) e [guida tecnica](context/memory/LEGGIMI_PASSAGGIO_AI.md).
 
@@ -27,3 +27,5 @@ python tools/check_repository.py
 # Con Node.js, verifica in sola lettura anche il servizio della mappa:
 node tools/check_map.cjs
 ```
+
+La [revisione della mappa](context/memory/REVISIONE_MAPPA_20261115.md) è in corso. Le scelte su integrazione della forma, ammissione dei punti e collocazione nella scena restano da discutere con il compagno; nessun cambio di metodo è implicito negli aggiornamenti editoriali.

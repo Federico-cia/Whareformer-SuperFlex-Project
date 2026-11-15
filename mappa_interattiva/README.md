@@ -49,7 +49,7 @@ Esportazione salva una copia JSON completa per consegna/archivio. Nel servizio l
 Scheda e × aprono/chiudono il pannello sinistro; inizialmente chiuso. Hover aggiorna la scheda, clic la fissa. Zoom con rotella/trackpad e +/−, pan trascinando lo sfondo, Mostra tutta la mappa e 100%. Ripristina disposizione mantiene i testi. Nessuna ulteriore revisione della disposizione avviata in questa fase.
 
 ## Fonti e contenuti
-REGISTRO_DECISIONI.md per decisioni, STATO_LAVORO.md/TODO.md per stato, ROADMAP_CICLO_GEOMETRICO.md per contratto e piano, resoconti tecnici per risultati e codice per dettagli implementativi. Tre riquadri e tre collegamenti hanno proposte iniziali; le altre schede sono esplicitamente da completare. Le modifiche editoriali non certificano nuove evidenze scientifiche.
+REGISTRO_DECISIONI.md per decisioni, STATO_LAVORO.md/TODO.md per stato, ROADMAP_CICLO_GEOMETRICO.md per contratto e piano, resoconti tecnici per risultati e codice per dettagli implementativi. Snapshot del 15 novembre: 10/19 nodi e 21/34 collegamenti commentati; residui e diagnosi nella [checklist corrente](../context/memory/REVISIONE_MAPPA_20261115.md). Il conteggio descrive la compilazione, non certifica la correttezza scientifica dei testi. Durante questa revisione Marco scrive e salva le schede; l’assistente propone chiarimenti in chat e non modifica i testi. Le modifiche editoriali non certificano nuove evidenze scientifiche.
 
 Il servizio è locale (127.0.0.1), non pubblicato. Non è collaborazione simultanea sincronizzata: le altre finestre vedono i nuovi testi dopo ricaricamento, con protezione dai conflitti al salvataggio.
 

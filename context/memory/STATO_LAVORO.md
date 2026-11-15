@@ -1,5 +1,29 @@
 # Stato corrente — 15 novembre 2026
 
+## Conteggio delle schede salvate durante la revisione — 15 novembre 2026
+
+Lettura diretta del JSON della mappa dopo la compilazione manuale di Marco: 10/19 nodi compilati, nove ancora segnaposto (B08/B09/B10/B11/B13/B15/B17/B18/B19); 21/34 frecce commentate, 13 ancora segnaposto (E07/E13/E14/E16/E17/E19/E24/E28/E30/E31/E32/E33/E34). Tra le 21 commentate: E10 conserva «[da espandere]» nelle alternative; E21 ha il solo campo miglioramenti vuoto, che può restare non applicabile. Conteggio di compilazione, non audit scientifico completo; nessuna modifica ai testi della mappa. I conteggi iniziali nella ricognizione descrivono lo snapshot precedente.
+
+## Architettura del contributo di forma — discussione con il compagno pendente
+
+Marco chiarisce che restano da decidere insieme al compagno sia il modo in cui la forma entra nei calcoli sia la sua influenza. Evidenziate nei to-do correzione esterna attuale, calibrazione/possibile apprendimento dei parametri a reti congelate e adattamento della rete. L'apprendimento supervisionato suggerito dall'assistente è una proposta non approvata. Preparata in chat nota per B12; mappa non modificata dall'assistente, nessuna nuova esecuzione o cambio di metodo. Per ora si documenta l'implementazione attuale come provvisoria.
+
+## Duplice uso della forma da discutere — chiarimento durante B07
+
+Precisazione successiva: la preoccupazione principale di Marco è la fattibilità della collocazione e dell'aggiornamento della superficie nella scena con scala, posizione e rotazione corrette. Tema distinto evidenziato nei to-do importanti e in C13: non basta il confronto di forma né il solo XYZ della traccia. Da discutere catena dei riferimenti/trasformazioni, coerenza della scala e movimento dell'oggetto; nessuna capacità di collocazione accurata assunta o nuova esecuzione autorizzata da questo promemoria.
+
+Marco richiede memoria dei limiti di D2 (perdita d'informazione e scala assoluta rimossa) e chiarisce l'interesse a usare la ricostruzione anche come memoria geometrica dell'oggetto collocata nella scena, accanto all'XYZ della traccia. Intento da discutere, non nuova implementazione o validazione: distinguere descrittore per matching e forma conservata con inversa della normalizzazione; scala/riferimento/ancoraggio e orientamento restano da verificare. Tema evidenziato in TODO.md; nessun cambio a codice, mappa, filtri o job.
+
+## Ammissione geometrica da discutere e validare — 15 novembre 2026
+
+Precisazione durante E22: Marco richiede esplicitamente confronto con il compagno prima di considerare definitivi meccanismo e criteri di ammissione. Rafforzato il to-do esistente; preparate in chat descrizioni E22/B16 con funzionamento implementato e alternative discusse. I gate del prototipo non sono una decisione scientifica conclusiva del gruppo; nessuna modifica alla mappa da parte dell'assistente o nuova esecuzione.
+
+Marco ribadisce che la decisione di ammettere punti nella memoria è cruciale e richiede discussione approfondita e test. Attività evidenziata in cima a TODO.md; è il tema dei filtri di fusione già rinviato, non un nuovo problema indipendente. Nessuna riattivazione automatica della revisione, modifica al metodo o nuova run. Altro tema scientifico distinto già aperto: descrittore/contributo della forma al matching e calibrazione (C11); non identificato con certezza come l'altro promemoria a cui Marco allude.
+
+## Revisione guidata della mappa — 15 novembre 2026
+
+Marco richiede analisi del contesto e assistenza alla revisione, riservando a sé la modifica dei testi della mappa. Ricognizione delle 19 schede di nodo e 34 collegamenti completata: 12 nodi e 26 frecce sono segnaposto; individuate anche affermazioni inesatte o superate nelle schede compilate. [Checklist con evidenze e ordine proposto](REVISIONE_MAPPA_20261115.md). Testi e struttura della mappa invariati; nessuna nuova inferenza o verifica HPC. Prossimo passo: scrittura manuale di Marco e verifica progressiva in chat, partendo dagli input e dal confine tra dati riusati e rigenerazione. Le precedenti richieste di compilazione automatica della mappa sono superate per questa revisione; risultati della campagna e rinvio dei filtri restano invariati.
+
 ## Campagna estesa conclusa — 15 novembre 2026
 
 [Resoconto e output](../evidence/campaign_20261115_v1/REPORT_FINALE.md). Tutte le 29 configurazioni completate e valutate su 33310 frame/110590 osservazioni; nessuna assegnazione diversa da W0 e metriche identiche (IDF1 73.269735%, mPCL 70.465504%). Quattro controlli zero esatti, nessun timeout/errore di aggiornamento/worker fallito o richiesta pendente.
@@ -34,4 +58,4 @@ Le precedenti prove zero e i risultati dei piloti sono conservati nelle [evidenz
 
 Preservare query prima degli aggiornamenti, punti osservati distinti da completazioni e riferimenti camera/scena/normalizzazione. Reti congelate. Non presentare l'ammissione dei gate come verifica fisica indipendente; mantenere distinta efficacia tracking e funzionamento software. [Registro critico](REGISTRO_CRITICITA_PIPELINE.md).
 
-Codice corrente nel worktree locale shared_exports/handoff_ai_20261114, branch run/full-video-20261114; documentazione corrente distinta dalla storia e README unico ingresso. Dati completi e checkpoint sono esterni al clone.
+Codice corrente nel worktree locale shared_exports/handoff_ai_20261114, branch run/hpc-campaign-20261115; documentazione corrente distinta dalla storia e README unico ingresso. Dati completi e checkpoint sono esterni al clone.

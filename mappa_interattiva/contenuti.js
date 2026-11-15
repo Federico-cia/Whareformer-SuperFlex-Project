@@ -8,7 +8,7 @@ window.MAP_DATA = {
       "y": 280,
       "group": "input",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "Il frame RGB è l’input visivo comune del processo.",
+      "summary": "Fornisce l’immagine a colori da cui ricavare aspetto, posizione e forma 3D degli oggetti.",
       "sources": [
         "INTEGRAZIONE_BASELINE_REALE_20261113.md",
         "Whareformer-repo/src/feature_extraction/datasets/epic_dataset.py",
@@ -19,11 +19,11 @@ window.MAP_DATA = {
       "contract": "-",
       "role": "è il punto di ingresso dei pixel che trasportano informazione sulla scena. I pixel verranno utilizzati sia come input per ricostruire la posizione 3D sia per descrivere la parvenza 2D sia per ricostruire la forma 3D",
       "state": "Al momento stiamo usando solo input già utilizzati nel paper Whareformer, appartenenti al dataset EPIC-KITCHENS.",
-      "evidence": "Sarebbe ottimo generalizzare con input generici, non solo il dataset già utilizzato nei paper di riferimento. Sarà uno step che verrà fatto a pipeline verificata e funzionante.",
+      "evidence": "Nelle ultime prove abbiamo rigenerato la geometria dalle immagini selezionate, riutilizzando le feature d’aspetto e le posizioni 3D ufficiali di Whareformer. Il percorso completo da immagini \"non pre-processate\" resta un'espazione da esplorare.",
       "why": "Input comuni permettono confronti coerenti fra baseline, punti e SuperFlex.",
-      "alternatives": "DA e MoGE sono alternative geometriche sullo stesso input. Ma si tratta di input più complessi, non il video proveniente da una semplice videocamera. La pipeline che vogliamo creare vuole partire dai video egocentrici il più \"semplici\" possibili, quindi semplici video RGB.",
-      "improve": "Questo punto èl'input, non è immediatamente migliorabile. L'obiettivo è rendere l'input il più semplice e \"democratico\" possibile: il classico video RGB egocentrico.",
-      "editedAt": "2026-11-14T16:27:40.026Z"
+      "alternatives": "Manteniamo le immagini del benchmark per confrontare le varianti sugli stessi dati. L’uso di video esterni al benchmark verrà considerato come espanzione futura.",
+      "improve": "Estendere il sistema a video RGB egocentrici senza annotazioni fornite, affrontando anche la generazione delle maschere e delle informazioni di camera e scena necessarie.",
+      "editedAt": "2026-11-15T11:17:58.313Z"
     },
     {
       "id": "B02",
@@ -39,15 +39,15 @@ window.MAP_DATA = {
         "Whareformer-repo/src/feature_extraction/utils/common.py"
       ],
       "verified": "14 novembre 2026 · verifica documentale, nessuna nuova run",
-      "failure": "Una maschera imprecisa può aggiungere pixel non facenti parte dell'oggetto o eliminare parti che ne fanno parte. Questo ha ripercussioni sia sull'associazione del frame alla traccia che poi sulla memoria della traccia stessa.",
+      "failure": "Una maschera imprecisa può includere sfondo o escludere parti dell’oggetto, alterando aspetto, posizione e forma stimati. Questi errori possono compromettere l’associazione e gli aggiornamenti della memoria.",
       "contract": "La maschera deve riferirsi alla stessa immagine e allo stesso oggetto elaborati dagli altri rami. Se l’immagine viene ridimensionata, anche la maschera deve essere adattata in modo che i pixel restino allineati.",
       "role": "Indica quali pixel dell’immagine appartengono all’oggetto. Usiamo questa selezione per:\n• descrivere l’aspetto dell’oggetto usando i suoi pixel RGB;\n• estrarre dalla ricostruzione 3D i punti dell’oggetto;\n• stimare la sua distanza dalla camera usando la profondità dei pixel selezionati.\nDalla maschera ricaviamo anche un rettangolo che racchiude l’oggetto, utile per ritagliarne l’immagine.",
-      "state": "Le annotazioni VISOR sono fornite come parte del dataset EPIC-KITCHENS, attraverso le annotazioni VISOR usato per lo sviluppo della pipeline. Nessun segmentatore nuovo è stato adottato o eseguito in questa fase, ma ne va considerata l'adozione qualora si volesse gneeralizzare la pipeline.",
-      "evidence": "Le maschere che usiamo sono già fornite dalle annotazioni VISOR, associate ai video EPIC-KITCHENS: in questa fase non le generiamo con un nostro modello. Abbiamo verificato nel codice che siano usate per selezionare la regione dell’oggetto e abbiamo controllato la corrispondenza con le immagini nei casi documentati.\nLimite: questo lavoro non dimostra che un modello saprebbe produrre maschere altrettanto utilizzabili su un nuovo video senza annotazioni. Una maschera può inoltre includere sfondo o escludere parti dell’oggetto.",
+      "state": "Usiamo le maschere VISOR associate ai video EPIC-KITCHENS. Sono annotazioni fornite, non abbiamo integrato un modello per generarle.",
+      "evidence": "Abbiamo verificato l’uso delle maschere nel codice e la corrispondenza con le immagini nei casi documentati.",
       "why": "Per limitare la complessità, riutilizziamo la sorgente di maschere del protocollo corrente.",
-      "alternatives": "Potremmo aggiungere un modulo di segmentazione per ottenere le maschere direttamente dai video RGB, per esempio valutando SAM 2. Questo modello può seguire nel video un oggetto indicato inizialmente tramite punti o un rettangolo: resta quindi da definire come individuare gli oggetti e inizializzarlo. È un esempio da valutare, non un componente già scelto o integrato. L’implementazione verrà valutata dopo aver verificato il funzionamento della pipeline con le maschere VISOR già fornite per EPIC-KITCHENS. Fonte: https://github.com/facebookresearch/sam2",
-      "improve": "Verificare bordi e contaminazioni preservando parti sottili; confrontare la pulizia sullo sviluppo.",
-      "editedAt": "2026-11-14T16:27:40.065Z"
+      "alternatives": "Per video senza annotazioni potremmo integrare un modello di segmentazione, come SAM 2. Resterebbe da definire come individuare gli oggetti da seguire e inizializzare il modello. Nessuna soluzione è stata adottata.",
+      "improve": "Controllare che le maschere escludano lo sfondo e conservino le parti sottili degli oggetti. Valutare eventuali correzioni sui dati di sviluppo.",
+      "editedAt": "2026-11-15T11:31:02.187Z"
     },
     {
       "id": "B03",
@@ -56,7 +56,7 @@ window.MAP_DATA = {
       "y": 280,
       "group": "tracking",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "Un estrattore visivo rappresenta l’aspetto della maschera RGB dell'oggetto in questione.",
+      "summary": "Un estrattore visivo trasforma il ritaglio RGB dell’oggetto in una rappresentazione numerica del suo aspetto.",
       "sources": [
         "INTEGRAZIONE_BASELINE_REALE_20261113.md",
         "Whareformer-repo/src/feature_extraction/datasets/epic_dataset.py",
@@ -64,14 +64,14 @@ window.MAP_DATA = {
       ],
       "verified": "14 novembre 2026 · verifica documentale, nessuna nuova run",
       "failure": "Oggetti diversi possono avere aspetto simile. Occlusioni e cambi di vista alterano il segnale.",
-      "contract": "Replica di Whareformer. Modifiche a questo putno non sono nello scope del nsotro lavoro.",
-      "role": "Produce una degli elementi di input chiave di Whareformer: l'aspetto dell'oggetto nel frame, che viene confrontato con la memoria d’aspetto delle tracce salvate.",
-      "state": "Replica di Whareformer.",
-      "evidence": "Replica di Whareformer. Modifiche a questo putno non sono nello scope del nsotro lavoro.",
-      "why": "Replica di Whareformer. Modifiche a questo putno non sono nello scope del nsotro lavoro.",
-      "alternatives": "Replica di Whareformer. Modifiche a questo putno non sono nello scope del nsotro lavoro.",
-      "improve": "Replica di Whareformer. Modifiche a questo putno non sono nello scope del nsotro lavoro.",
-      "editedAt": "2026-11-14T16:37:55.227Z"
+      "contract": "Ogni descrittore deve corrispondere alla corretta osservazione dell’oggetto. Estrazione e riduzione dimensionale devono essere compatibili con quelle previste dal checkpoint Whareformer.",
+      "role": "DINOv2 estrae le caratteristiche visive dal ritaglio mascherato dell’oggetto. Una trasformazione PCA ne riduce la dimensione, producendo il descrittore usato da Whareformer per confrontare l’osservazione con la memoria d’aspetto delle tracce.",
+      "state": "Nelle prove attuali riutilizziamo le feature ufficiali di Whareformer, mantenendole identiche in tutte le varianti.",
+      "evidence": "-",
+      "why": "Manteniamo invariato il segnale d’aspetto per isolare il contributo della forma 3D nell’associazione tra oggetti osservati e tracce.",
+      "alternatives": "La sostituzione dell’estrattore d’aspetto non è prevista nel progetto corrente.",
+      "improve": "Completare e verificare la rigenerazione delle feature usando i pesi DINOv2 e la trasformazione PCA compatibili con la baseline.",
+      "editedAt": "2026-11-15T12:12:44.981Z"
     },
     {
       "id": "B04",
@@ -80,19 +80,19 @@ window.MAP_DATA = {
       "y": 50,
       "group": "shape",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "Dal frame RGB stimiamo la posizione nello spazio delle superfici visibili. Questa stima ci permette di ricavare una nuvola di punti 3D per ogni oggetto individuato dalla maschera.\nStiamo usando sia MoGE che DA, per valutare qual è migliore.",
+      "summary": "Dal frame RGB stimiamo la geometria delle superfici visibili, confrontando due sorgenti: Depth Anything V2 e MoGE-2.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
       ],
-      "role": "La funzione di questo step è indicare quanto ogni pixel e ogni parte della scena è distante dalla camera, aka la profondità.\n- DA produce una mappa di profondità del frame; le profondità vengono convertite in punti 3D usando i parametri della camera.\n- MoGE produce una mappa di punti 3D e una propria maschera di validità.",
-      "state": "Entrambe le alternative sono state eseguite sulle immagini di testing. I risultati non hanno ancora decretato un vincitore, perciò al momento li stiamo tenendo entrambi.",
-      "evidence": "[spiega quali sono i limiti di MoGE]\n[Spiega quali sono i limiti di DA]\n\nLa posizione dei punti è stimata rispetto alla camera e può contenere errori: da una singola immagine non conosciamo direttamente le superfici nascoste.",
-      "why": "Perchè nel paper Whareformer viene usato [...], mentre nel paper SuperFlex viene usato [...].\nEssendo entrambe soluzioni apparentemente valide, abbiamo deciso che l'AB testing fosse l'alternativa migliore.",
-      "alternatives": "-",
-      "improve": "-",
-      "contract": "-",
-      "failure": "Le porzioni nascoste delle superfici oggetto di analisi non sono osservate direttamente e sono quindi stimate. Le stime però possono variare con la vista o avere errori di scala. Dobbiamo valutare quale sorgente produca geometrie più utili al sistema completo.",
-      "editedAt": "2026-11-14T17:19:27.077Z"
+      "role": "Entrambi i modelli elaborano l’immagine intera:\n- DA produce una mappa di profondità, convertita in punti 3D usando gli intrinseci della camera.\n- MoGE produce direttamente una mappa di punti 3D e indica quali considera validi.\nLa selezione dei punti del singolo oggetto avviene nello step successivo, usando la maschera.",
+      "state": "Entrambe le alternative sono state eseguite sulle immagini di testing. Manteniamo entrambe le sorgenti: nessuna ha prodotto un vantaggio nel tracking nelle configurazioni provate.",
+      "evidence": "- DA richiede intrinseci coerenti con l’immagine per convertire la profondità in punti; errori nella profondità o nella camera deformano la geometria.\n\n- MoGE può stimare anche la camera, riducendo la dipendenza da parametri forniti, ma introduce l’incertezza di tale stima.\n\nEntrambi possono produrre errori di scala e geometrie incoerenti tra viste.",
+      "why": "DA permette di esplorare la sorgente di profondità già usata da Whareformer; MoGE riprende la sorgente geometrica della dimostrazione RGB di SuperFlex. Li manteniamo entrambi perché i confronti precedenti di sagoma e identità non hanno indicato un vincitore univoco.",
+      "alternatives": "Abbiamo confrontato anche profondità DA grezza e allineata alla scena. Il ramo forma corrente usa DA grezzo oppure MoGE; le posizioni 3D della baseline restano invariate.",
+      "improve": "Verificare stabilità tra viste, coerenza della scala e qualità delle fusioni. Analizzare quali differenze tra le sorgenti possano essere utili all’associazione degli oggetti.",
+      "contract": "Le predizioni devono restare allineate ai pixel dell’immagine e alle maschere. Per DA, gli intrinseci devono corrispondere alla risoluzione utilizzata. Sorgente e riferimento delle coordinate devono essere conservati.",
+      "failure": "Errori di profondità, scala o camera possono produrre superfici deformate. Viste diverse dello stesso oggetto possono generare nuvole incompatibili, ostacolando il confronto e la fusione.",
+      "editedAt": "2026-11-15T12:25:50.514Z"
     },
     {
       "id": "B05",
@@ -101,19 +101,19 @@ window.MAP_DATA = {
       "y": 50,
       "group": "shape",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "Il blocco riceve la stima geometrica del frame prodotta da DA o MoGE e la maschera VISOR dell’oggetto. Usa la maschera per selezionare i punti 3D validi appartenenti all’oggetto e produce una nuvola di punti, che viene fornita a SuperFlex.",
+      "summary": "Combina la geometria del frame con la maschera per costruire la nuvola di punti 3D dell’oggetto.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
       ],
-      "role": "DA (o MoGE) elabora il frame RGB e produce una stima di geometria 3D per i pixel. Usiamo la maschera 2D dell’oggetto per conservare solo i punti corrispondenti alla sua superficie visibile.",
+      "role": "Seleziona i punti validi corrispondenti ai pixel della maschera. \n- Nel ramo DA ricava le coordinate 3D dalla profondità usando gli intrinseci della camera; \n- nel ramo MoGE usa i punti già prodotti dal modello. \nIl risultato è una nuvola parziale della superficie visibile dell’oggetto.",
       "state": "Il blocco è implementato e testato: riusciamo a estrarre la nuvola del singolo oggetto sia con DA sia con MoGE e a passarla a SuperFlex. Entrambe le sorgenti restano in valutazione. ",
-      "evidence": "La qualità e la coerenza delle nuvole tra viste diverse sono ancora da verificare in modo sufficiente per la fusione e il tracking.",
-      "why": "Replica del paper [...].",
-      "alternatives": "Replica del paper [...].",
-      "improve": "Replica del paper [...]. Out of target per il progetto corrente.",
-      "contract": "Replica del paper [...].",
+      "evidence": "Nell’ultima run abbiamo ottenuto le nuvole di tutte le osservazioni selezionate, con entrambe le sorgenti. \nLa loro disponibilità non certifica l’accuratezza geometrica né il corretto allineamento tra viste.",
+      "why": "SuperFlex richiede una nuvola di punti del singolo oggetto. Isolarla dalla geometria del frame evita di includere anche le superfici degli altri elementi della scena.",
+      "alternatives": "Confrontiamo nuvole ottenute da DA e MoGE mantenendo comuni immagini e maschere. Non è stata scelta una sorgente definitiva.",
+      "improve": "Valutare una pulizia dei punti che riduca le contaminazioni senza eliminare dettagli utili, come manici o parti sottili. L’eventuale beneficio va verificato sui dati di sviluppo.",
+      "contract": "Maschera e geometria devono avere i pixel allineati. Per ogni nuvola conserviamo sorgente, convenzioni di scala e riferimento rispetto alla camera. Nuvole di viste diverse non vanno considerate automaticamente allineate.",
       "failure": "Una maschera imprecisa potrebbe non includere tutti e solo i punti dell’oggetto. Errori di profondità, occlusioni e superfici poco visibili possono produrre nuvole incomplete o deformate. Una singola vista difficilmente mostra tutto l’oggetto.\nInoltre, due nuvole dello stesso oggetto non sono automaticamente allineate tra loro.",
-      "editedAt": "2026-11-14T17:27:42.483Z"
+      "editedAt": "2026-11-15T14:41:57.046Z"
     },
     {
       "id": "B06",
@@ -126,15 +126,15 @@ window.MAP_DATA = {
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
       ],
-      "role": "Riceve una nuvola di punti e stima la forma dell'oggetto 3D tramite superquadriche, che sono forme geometriche flessibili che, combinate, approssimano la superficie dell’oggetto. Per limitare il problema delle viste parziali, naturali visto l'input frame by frame della camera, il modello può anche prevedere parti non visibili dell'oggetto a partire dalla vista parziale.",
-      "state": "Step implementato nella pipeline. Risultati in linea con il paper originale.",
-      "evidence": "La disponibilità di una nuvola non garantisce sempre una forma utilizzabile.",
-      "why": "Usare Superflex crediamo aumenti il potenzila einformativo di una immagine RGB nel contesto di Whareformer.",
-      "alternatives": "Tra le alternative considerate risulta Superdec, versione precedente di questo paper e superata sulle performance da Superflex. Altre alternative, da valutare indipendentemente da risultato del nostro progetto, sono [citare alternative valide per implementare il 3D in Whareformer: fare ricerca approfondita]",
-      "improve": "In caso di viste parziali, e conseguenti nuvole di punti parziali, il completamento della nuvola di punti è una previsione e può essere sbagliata. Dobbiamo verificare quanto la forma sia stabile tra viste e quanto sia effettivanemtne utile al tracking.",
+      "role": "Riceve una nuvola di punti parziale dell’oggetto, la campiona e la normalizza, poi stima un insieme di superquadriche: primitive geometriche deformabili che, combinate, approssimano la superficie. Il modello può anche prevedere parti non visibili (che restano ipotesi e non osservazioni).",
+      "state": "SuperFlex è integrato usando il checkpoint robust preaddestrato, senza nuovo training. Viene eseguito in due momenti:\n- sulle nuvole delle nuove singole osservazioni;\n- nelle varianti con accumulo, ovvero quando la \"nuovla di memoria\" di una traccia viene aggiornata con nuovi punti inseguito all'acquisizione di un nuovo frame nella traccia.",
+      "evidence": "Nell’ultima run sono state prodotte ricostruzioni per tutte le osservazioni selezionate e per tutti gli aggiornamenti di memoria ammessi. Non abbiamo certificato l’accuratezza delle parti nascoste né dimostrato un miglioramento del tracking rispetto alla baseline.",
+      "why": "Vogliamo verificare se una rappresentazione esplicita della forma aggiunga un segnale utile all’associazione, oltre ad aspetto e posizione. Le superquadriche offrono una descrizione compatta della superficie.",
+      "alternatives": "- Confrontare descrittori ricavati direttamente dalle nuvole, senza SuperFlex: controllo già implementato e incluso negli esperimenti.\n\n- Usare rappresentazioni più semplici, come un parallelepipedo orientato o una singola superquadrica: alternative discusse, non valutate nel tracking.\n\n- Usare SuperDec, un altro metodo di decomposizione in superquadriche: riferimento considerato, non integrato né confrontato nel nostro sistema in quanto superato dallo stesso Superflex nelle prestaizoni.",
+      "improve": "Verificare la stabilità della forma tra viste e la sua capacità di distinguere oggetti diversi. Confrontarla con i punti originali per capire se il completamento aggiunga informazione utile o introduca errori.",
       "contract": "I punti devono essere preparati e normalizzati secondo il procedimento previsto per il modello; la trasformazione va conservata per interpretare il risultato.",
-      "failure": "Da completare",
-      "editedAt": "2026-11-14T17:35:56.378Z"
+      "failure": "Nuvole rumorose, incomplete o contaminate possono produrre forme deformate. Il modello può prevedere parti nascoste errate oppure rappresentare lo stesso oggetto in modo diverso tra viste, rendendo il confronto meno affidabile.",
+      "editedAt": "2026-11-15T15:12:11.448Z"
     },
     {
       "id": "B07",
@@ -143,19 +143,19 @@ window.MAP_DATA = {
       "y": 50,
       "group": "shape",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "Superflex produce un insieme di superquadriche, che viene confrontato con l'insieme di superquadriche associato con ciascuna traccia in memoria di Whareformer.",
+      "summary": "Trasforma la superficie ricostruita da SuperFlex in un descrittore numerico utilizzabile per confrontare le forme degli oggetti.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
       ],
-      "role": "è lo step finale di Superflex: riassumere la superficie 3D di un oggetto con superquadriche. Questo crea una rappresentazione 3D dell'oggetto codificata da molti molti molti meno parametri rispetto ad una nuvola di punti.\nNel contesto del progetto e dell'integrazione con Whareformer, l'output di Superflex viene confrontato con ogni superquardics di ogni traccia, come elemento determinante l'appartenenza o meno del frame generante la superquadrics nuova nella traccia con cui avviene il confronto.",
-      "state": "Abbiamo eseguito un primo confronto diagnostico tra nuvole di punti e forme SuperFlex, usando più modi di misurare la somiglianza. I risultati cambiano a seconda del confronto e il campione verificato è ancora piccolo. Dobbiamo quindi valutare quale metodo sia più utile nel ciclo di tracking; non abbiamo ancora dimostrato un vantaggio sistematico di SuperFlex rispetto alle nuvole originali.",
-      "evidence": "",
-      "why": "",
-      "alternatives": "",
-      "improve": "",
-      "contract": "[Spiegare come rendere le superquadrics comparabili (rotazioni, quali parametri vengono effettivamente comparati ecc.)]",
-      "failure": "Le vste parziali, cambi di orientamento e ricostruzioni errate, tutte tipiche di immagini provenienti da viste egocentriche, possono rendere molto diverse due rappresentazioni dello stesso oggetto. \nResta da verificare (ed è l'oggetto di questo progetto) se l'uso di superquadriche e rappresentazioni 3D dell'oggetto aiutano l'associazione del frame con la traccia corretta.",
-      "editedAt": "2026-11-14T20:42:27.365Z"
+      "role": "Campiona punti sulla superficie complessiva delle superquadriche, li centra e ne normalizza la scala. Calcola poi le distanze tra coppie di punti, ottenendo il descrittore D2: una distribuzione numerica delle distanze interne alla forma.\n\nLa somiglianza viene misurata confrontando questi descrittori, senza abbinare le singole primitive.",
+      "state": "D2 è implementato e utilizzato negli ultimi esperimenti di tracking, sia sulle forme delle singole osservazioni sia sulle ricostruzioni della memoria accumulata. Non è stato dimostrato che sia la scelta migliore per il nostro problema.",
+      "evidence": "I confronti diagnostici hanno mostrato risultati diversi secondo sorgente geometrica, rappresentazione e distanza utilizzata. Nell’ultima campagna nessuna configurazione ha modificato le associazioni rispetto alla baseline.\n\nD2 riassume la distribuzione delle distanze, ma forme diverse possono avere descrittori simili.",
+      "why": "L’ordine e la decomposizione delle primitive possono cambiare tra ricostruzioni. Descrivere la superficie complessiva evita di dover trovare corrispondenze tra superquadriche e permette di applicare lo stesso confronto anche alle nuvole originali.",
+      "alternatives": "Nelle analisi diagnostiche abbiamo esplorato anche un descrittore basato sulla distribuzione spaziale dei punti e il confronto delle superfici dopo allineamento. Gli ultimi esperimenti di tracking hanno utilizzato D2; le alternative non sono state confrontate nella stessa campagna.",
+      "improve": "Verificare se D2 mantiene simili le viste dello stesso oggetto e distingue oggetti diversi, soprattutto quando aspetto e posizione sono ambigui. Valutare separatamente l’effetto della normalizzazione della scala e confrontare altre distanze sullo sviluppo.",
+      "contract": "Tutte le forme devono usare lo stesso campionamento, normalizzazione e metodo di confronto. Le distanze tra punti non dipendono dall’orientamento rigido della superficie; la normalizzazione elimina invece la dimensione assoluta.\n\nIl descrittore non fornisce la posa necessaria ad allineare e fondere le nuvole.",
+      "failure": "Viste parziali o ricostruzioni instabili possono produrre descrittori diversi dello stesso oggetto. Oggetti differenti possono avere distribuzioni di distanze simili. Normalizzare la scala può inoltre rendere indistinguibili forme uguali ma di dimensioni diverse.",
+      "editedAt": "2026-11-15T15:52:22.245Z"
     },
     {
       "id": "B08",
@@ -211,11 +211,20 @@ window.MAP_DATA = {
       "x": 1120,
       "y": 280,
       "group": "tracking",
-      "review": "Scheda da compilare",
-      "summary": "Blocco dell’architettura obiettivo. Dettagli da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Confronta l’osservazione, tramite la tripletta di parametri in input (posizione 3D, aspetto e ricostruzione geometrica) con le tracce in memoria e decide se associarla a una traccia esistente o crearne una nuova.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
-      ]
+      ],
+      "role": "L’associazione avviene in quattro passaggi:\n\n1. Punteggi originali. Whareformer usa aspetto e posizione per assegnare un punteggio a ogni possibile associazione dell’oggetto osservato: una delle tracce esistenti oppure una nuova traccia.\n\n2. Confronto geometrico. Il nostro adattatore confronta il descrittore D2 della forma osservata con quelli ricordati dalle tracce. Per ogni confronto valido ottiene una distanza: valori piccoli indicano forme più simili.\n\n3. Combinazione dei segnali. L’adattatore modifica i punteggi delle tracce secondo la regola:\n\npunteggio corretto = punteggio originale + peso × (distanza neutra − distanza di forma)\n\nIl peso regola l’influenza della geometria. Una distanza inferiore alla distanza neutra aumenta il punteggio; una superiore lo riduce. Quando manca un confronto geometrico valido, il punteggio non viene corretto. Anche il punteggio “nuova traccia” resta direttamente invariato.\n\n4. Decisione finale. I punteggi corretti vengono trasformati in probabilità e utilizzati dalla procedura originale di assegnazione di Whareformer.\n\nLa rete resta congelata: la combinazione con la forma è una nostra regola esterna, applicata prima della decisione di associazione.",
+      "state": "Le reti restano preaddestrate e congelate; il contributo geometrico viene aggiunto on top al modello congelato.",
+      "evidence": "Una forma poco discriminativa o una correzione mal calibrata può favorire associazioni errate. La disponibilità disomogenea della geometria può sbilanciare il confronto tra tracce che ricevono una correzione e tracce che non la ricevono.",
+      "why": "La correzione esterna permette di sperimentare il contributo della forma mantenendo il modello e la procedura di associazione originali, senza nuovo training.",
+      "alternatives": "Dobbiamo ancora decidere come integrare la forma nei calcoli di associazione e quanto debba influenzare la decisione.\n\nAttualmente correggiamo dall’esterno i punteggi di Whareformer usando una distanza di forma, un peso e una distanza neutra. I valori provati sono esplorativi, non una calibrazione definitiva.\n\nAbbiamo discusso tre possibilità:\n\n- mantenere la correzione esterna e scegliere i parametri mediante confronti controllati sui dati di sviluppo;\n\n- apprendere i parametri di combinazione da associazioni corrette, mantenendo le reti congelate;\n\n- adattare o riaddestrare Whareformer affinché impari a utilizzare anche il segnale geometrico.\n\nLa scelta richiede di considerare i dati disponibili, risorse e verifiche necessarie. Nessuna alternativa è stata selezionata come soluzione definitiva.",
+      "improve": "Discutere e verificare la distanza tra forme, il peso della correzione e il trattamento della geometria mancante. Analizzare i margini dei punteggi per capire perché le correzioni non abbiano cambiato le associazioni.\nDefinire insieme l’architettura di integrazione della forma e il metodo per calibrarne l’influenza, quindi confrontare la soluzione scelta con la baseline nel ciclo completo.",
+      "contract": "Tutte le osservazioni del frame devono essere confrontate con la stessa memoria geometrica precedente, usando i corretti ID delle tracce.\n\nLa creazione di una nuova traccia e i confronti senza geometria non ricevono una correzione diretta; le loro probabilità possono comunque cambiare quando vengono modificati gli altri punteggi.",
+      "failure": "Una forma poco discriminativa o una correzione mal calibrata può favorire associazioni errate. La disponibilità disomogenea della geometria può sbilanciare il confronto tra tracce che ricevono una correzione e tracce che non la ricevono.",
+      "editedAt": "2026-11-15T16:58:35.598Z"
     },
     {
       "id": "B13",
@@ -235,11 +244,20 @@ window.MAP_DATA = {
       "x": 1390,
       "y": 280,
       "group": "tracking",
-      "review": "Scheda da compilare",
-      "summary": "Blocco dell’architettura obiettivo. Dettagli da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Nodo di diramazione. Indirizza l’osservazione verso l’aggiornamento di una traccia esistente oppure la creazione di una nuova.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
-      ]
+      ],
+      "role": "Legge l’esito dell’associazione:\n\n- se l’osservazione è assegnata a una traccia esistente, attiva l’aggiornamento di posizione e aspetto e il ramo di aggiornamento geometrico;\n\n- altrimenti, attiva la creazione di una nuova traccia.",
+      "state": "La diramazione è implementata e utilizzata nelle esecuzioni integrate.",
+      "evidence": "Entrambi i percorsi sono stati eseguiti. ",
+      "why": "Una traccia esistente possiede una memoria da aggiornare; una nuova traccia richiede invece un ID e una memoria iniziale.",
+      "alternatives": "Non sono previste modifiche specifiche a questa diramazione.",
+      "improve": "Non sono previste modifiche specifiche a questa diramazione.",
+      "contract": "Ogni osservazione deve seguire un solo percorso. Tutti i suoi aggiornamenti devono riferirsi alla stessa traccia assegnata.",
+      "failure": "Un’associazione errata può aggiornare la traccia di un altro oggetto; la creazione non necessaria di una nuova traccia può frammentare l’identità dello stesso oggetto.",
+      "editedAt": "2026-11-15T17:05:45.673Z"
     },
     {
       "id": "B15",
@@ -259,11 +277,20 @@ window.MAP_DATA = {
       "x": 1660,
       "y": 50,
       "group": "memory",
-      "review": "Scheda da compilare",
-      "summary": "Blocco dell’architettura obiettivo. Dettagli da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Valuta se integrare la nuova nuvola nella memoria della traccia e ricostruisce la forma dopo un aggiornamento ammesso.",
       "sources": [
         "ROADMAP_CICLO_GEOMETRICO.md"
-      ]
+      ],
+      "role": "Riceve la nuvola dell’osservazione associata e i punti già conservati nella traccia.\n\nIl prototipo attuale:\n\n1. cerca una rotazione e una traslazione che allineino la nuova nuvola alla memoria, senza modificarne la scala;\n\n2. controlla che vi siano sufficiente sovrapposizione, distanze residue contenute e assenza di allineamenti alternativi molto diversi ma quasi ugualmente plausibili;\n\n3. se tutti i controlli passano, unisce i punti allineati alla memoria e riesegue SuperFlex;\n\n4. se l’allineamento viene rifiutato, conserva i punti precedenti senza annullare l’associazione alla traccia.\n\nSe manca una precedente nuvola valida, la nuova nuvola inizializza la memoria: non è ancora una fusione tra viste.",
+      "state": "Il processo è implementato e ha prodotto fusioni nei dati reali. Il metodo di allineamento e le soglie di ammissione restano provvisori: devono essere discussi e validati con il compagno di gruppo.",
+      "evidence": "-",
+      "why": "Nuove osservazioni possono mostrare superfici prima nascoste. L’allineamento serve a combinarle nello stesso riferimento; i controlli cercano di impedire che una fusione inaffidabile deteriori la memoria.",
+      "alternatives": "Sono da discutere:\n\n- fusione dopo ogni associazione e allineamento, senza ulteriori controlli di ammissione;\n\n- mantenimento dei controlli, rivedendone criteri e soglie per viste parziali e simmetrie;\n\n- conservazione di forme separate senza fusione, come riferimento di confronto.\n\nNessuna alternativa è stata selezionata come politica definitiva.",
+      "improve": "Concordare il meccanismo con il compagno e testare sia fusioni errate accettate sia fusioni utili respinte. Valutare la qualità della memoria risultante, non soltanto il numero di aggiornamenti ammessi.",
+      "contract": "I nuovi punti devono appartenere all’osservazione associata e venire trasformati nel riferimento della memoria. Si accumulano soltanto punti delle osservazioni, mai superfici completate da SuperFlex.\n\nLa forma aggiornata diventa disponibile per le associazioni successive.",
+      "failure": "Associazioni errate, differenze di scala e allineamenti scorretti possono contaminare la memoria. Controlli troppo severi possono impedirne l’arricchimento. Se la nuova inferenza SuperFlex fallisce, viene conservata l’ultima forma valida.",
+      "editedAt": "2026-11-15T17:22:22.227Z"
     },
     {
       "id": "B17",
@@ -322,11 +349,11 @@ window.MAP_DATA = {
       "contract": "Frame, video, istante e risoluzione della maschera devono corrispondere all’immagine. Gli eventuali ridimensionamenti devono preservare l’allineamento.",
       "role": "Individua le annotazioni corrispondenti al frame, così da rendere disponibili le maschere per le fasi successive.",
       "state": "Il percorso usa annotazioni VISOR fornite e dati della baseline Whareformer. Non è stato integrato un nuovo segmentatore.",
-      "evidence": "Il caricamento è presente nel codice EPIC locale; la corrispondenza è stata controllata nei casi documentati. Restano due alias temporali la cui provenienza JPEG non è certificata.",
+      "evidence": "Il collegamento tra immagini e annotazioni è stato verificato nei casi documentati. Due casi con numerazione del frame non coincidente restano dubbi e sono stati esclusi dalle prove che richiedono una corrispondenza esatta.",
       "why": "Le maschere fornite permettono di sviluppare e valutare la pipeline senza doverle generare in questa fase.",
-      "alternatives": "Per video senza annotazioni sarebbe necessario individuare e segmentare gli oggetti; un possibile modello è SAM 2, da valutare anche per la sua inizializzazione.",
+      "alternatives": "Per video senza annotazioni sarebbe necessario individuare e segmentare gli oggetti; un possibile modello è SAM 2.",
       "improve": "Verificare la corrispondenza tra annotazioni e immagini nei casi dubbi; per video generici definire come individuare gli oggetti e inizializzare la segmentazione.",
-      "editedAt": "2026-11-14T20:40:51.968Z"
+      "editedAt": "2026-11-15T11:19:57.058Z"
     },
     {
       "id": "E02",
@@ -346,12 +373,12 @@ window.MAP_DATA = {
       "failure": "Frame errato, occlusioni o variazioni di illuminazione possono produrre una rappresentazione d’aspetto fuorviante.",
       "contract": "Il frame deve corrispondere alla maschera e alla detection; ridimensionamenti e ritaglio devono restare coerenti.",
       "role": "Trasferisce l’immagine da cui viene preparato il ritaglio dell’oggetto destinato all’estrattore visivo.",
-      "state": "Il percorso è previsto dal codice originale di Whareformer; nelle prove della baseline usiamo feature già calcolate.",
+      "state": "Il percorso è previsto dal codice originale di Whareformer; nelle prove eseguite abbiamo usato feature già calcolate.",
       "evidence": "Nel codice EPIC locale il ritaglio mascherato viene passato all’estrattore 2D. La rigenerazione completa delle feature ufficiali non è ancora verificata.",
       "why": "L’immagine fornisce colore, texture e altre informazioni visive che la sola maschera binaria non contiene.",
       "alternatives": "La sostituzione dell’estrattore d’aspetto non è prevista nello scope corrente.",
       "improve": "Verificare la provenienza dei frame e degli asset necessari alla rigenerazione delle feature originali.",
-      "editedAt": "2026-11-14T20:40:51.989Z"
+      "editedAt": "2026-11-15T11:21:15.754Z"
     },
     {
       "id": "E03",
@@ -361,22 +388,22 @@ window.MAP_DATA = {
       "label": "regione oggetto",
       "type": "data",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "La maschera e il rettangolo che la racchiude indicano quale regione RGB usare per estrarre l’aspetto dell’oggetto.",
+      "summary": "La maschera indica quali pixel RGB usare per descrivere l’aspetto dell’oggetto.",
       "sources": [
         "INTEGRAZIONE_BASELINE_REALE_20261113.md",
         "Whareformer-repo/src/feature_extraction/datasets/epic_dataset.py",
         "Whareformer-repo/src/feature_extraction/utils/common.py"
       ],
       "verified": "14 novembre 2026 · verifica documentale, nessuna nuova run",
-      "failure": "Una maschera o un rettangolo errati possono escludere parti dell’oggetto o includere pixel di altri elementi.",
-      "contract": "Maschera, bounding box e immagine devono riferirsi alla stessa osservazione e usare coordinate compatibili.",
-      "role": "La maschera seleziona i pixel dell’oggetto; la bounding box delimita il ritaglio passato all’estrattore visivo.",
-      "state": "Il percorso è presente nel codice originale EPIC di Whareformer; nella baseline corrente utilizziamo feature precalcolate.",
-      "evidence": "Il codice locale applica la maschera al frame e costruisce il ritaglio. Questo non certifica la rigenerazione delle feature ufficiali.",
-      "why": "Concentrarsi sulla regione individuata dalla maschera riduce il contributo dello sfondo alla descrizione dell’oggetto.",
-      "alternatives": "Nel lavoro corrente manteniamo il preprocessing d’aspetto della baseline; non è prevista una nuova strategia di ritaglio.",
-      "improve": "Verificare corrispondenza tra frame, maschera e detection, e gli adattamenti di risoluzione nei casi dubbi.",
-      "editedAt": "2026-11-14T20:40:52.009Z"
+      "failure": "Una maschera imprecisa può includere elementi estranei o escludere parti distintive dell’oggetto, rendendo meno affidabile la descrizione dell'aspetto.",
+      "contract": "Maschera, rettangolo e immagine devono riferirsi allo stesso oggetto e allo stesso frame, con coordinate coerenti.",
+      "role": "Fornisce la selezione dei pixel dell’oggetto e il rettangolo che delimita il ritaglio destinato all’estrattore d’aspetto.",
+      "state": "Il collegamento è presente nel codice originale di Whareformer. Nelle prove attuali riutilizziamo le feature d’aspetto già calcolate.",
+      "evidence": "Il collegamento è presente nel codice originale di Whareformer. Nelle prove attuali riutilizziamo le feature d’aspetto già calcolate.",
+      "why": "L’immagine contiene anche sfondo e altri oggetti: la maschera permette di concentrare la descrizione sull’oggetto da riconoscere.",
+      "alternatives": "Manteniamo la selezione e il ritaglio previsti dalla baseline.",
+      "improve": "Verificare il collegamento nella rigenerazione delle feature dalle immagini.",
+      "editedAt": "2026-11-15T11:56:42.978Z"
     },
     {
       "id": "E04",
@@ -392,13 +419,13 @@ window.MAP_DATA = {
       ],
       "role": "Trasferisce l’immagine intera al modello geometrico scelto, prima della selezione dei punti dei singoli oggetti.",
       "state": "Entrambi i percorsi DA e MoGE sono implementati ed eseguiti sulle immagini selezionate; restano entrambi in valutazione.",
-      "evidence": "Nel percorso portabile verificato entrambi i modelli ricevono il frame RGB; la maschera dell’oggetto è usata nello stadio successivo.",
+      "evidence": "Nelle run di prova effettuate entrambi i modelli hanno elaborato le stesse immagini. Le maschere sono state usate successivamente per selezionare i punti dei singoli oggetti. Questo verifica il funzionamento del collegamento in entambi i casi, ma non ne certifica l’accuratezza della geometria.",
       "why": "I modelli stimano informazioni geometriche a partire dall’immagine necessarie per costruire le nuvole degli oggetti.",
       "alternatives": "DA e MoGE costituiscono due sorgenti geometriche alternative confrontate nel progetto.",
-      "improve": "Valutare qualità, copertura e utilità delle due sorgenti sugli stessi casi, includendo errori e costi.",
+      "improve": "Verificare immagini, pesi DINOv2 e trasformazione PCA necessari a rigenerare le feature d’aspetto della baseline.",
       "contract": "Immagine, risoluzione e provenienza vanno conservate per associare la predizione alla maschera e agli eventuali parametri camera corretti.",
       "failure": "Frame errato o qualità visiva insufficiente possono propagare errori alla geometria stimata.",
-      "editedAt": "2026-11-14T20:40:52.027Z"
+      "editedAt": "2026-11-15T11:22:43.350Z"
     },
     {
       "id": "E05",
@@ -412,15 +439,15 @@ window.MAP_DATA = {
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
       ],
-      "role": "Con DA la profondità è convertita in punti 3D usando gli intrinseci della camera; con MoGE si usa la mappa di punti prodotta dal modello.",
-      "state": "I due percorsi sono implementati e verificati sui casi documentati; la loro qualità per la fusione e il tracking resta da valutare.",
-      "evidence": "La pipeline portabile retroproietta la profondità DA oppure legge i punti MoGE, quindi seleziona i punti validi nella maschera.",
+      "role": "Fornisce la profondità stimata da DA oppure i punti 3D prodotti da MoGE. Queste informazioni danno una posizione nello spazio ai pixel selezionati dalla maschera, permettendo di costruire la nuvola dell’oggetto.\nLa stima geometrica fornisce la profondità o le coordinate 3D delle superfici visibili; la segmentazione indica quali pixel appartengono all’oggetto. La costruzione della nuvola combina queste informazioni per conservare i punti 3D dell’oggetto.",
+      "state": "Il collegamento è implementato e utilizzato con entrambe le sorgenti.",
+      "evidence": "La costruzione delle nuvole è stata verificata, ma la disponibilità dei punti non ne certifica l’accuratezza fisica.",
       "why": "La nuvola dell’oggetto richiede coordinate 3D per i pixel selezionati, non soltanto un’immagine RGB.",
       "alternatives": "Si confrontano DA e MoGE; la scelta definitiva della sorgente non è stata fissata.",
-      "improve": "Verificare stabilità, scala e coerenza geometrica fra viste, senza assumere equivalenza delle due sorgenti.",
+      "improve": "Verificare quanto gli errori della geometria in ingresso influenzino la qualità delle nuvole e la loro coerenza tra viste.",
       "contract": "La mappa geometrica deve essere allineata alla maschera; per DA gli intrinseci devono corrispondere all’immagine. Conservare sorgente, scala e riferimento.",
       "failure": "Profondità errata, punti invalidi o intrinseci incoerenti possono deformare la nuvola risultante.",
-      "editedAt": "2026-11-14T20:40:52.043Z"
+      "editedAt": "2026-11-15T12:28:54.315Z"
     },
     {
       "id": "E06",
@@ -430,19 +457,19 @@ window.MAP_DATA = {
       "label": "",
       "type": "data",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "La maschera VISOR indica quali punti della geometria del frame appartengono all’oggetto.",
+      "summary": "La maschera indica quali punti della geometria del frame conservare nella nuvola dell’oggetto.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
       ],
-      "role": "Seleziona i pixel dell’oggetto nella mappa geometrica; i punti validi selezionati formano la sua nuvola.",
-      "state": "La selezione è implementata per entrambe le sorgenti geometriche e utilizzata nei casi documentati.",
-      "evidence": "Il codice combina la maschera con i controlli di validità dei punti; per MoGE considera anche la maschera di validità del modello.",
-      "why": "La geometria è stimata sul frame: occorre isolare i punti della singola osservazione da quelli delle altre parti della scena.",
-      "alternatives": "Per video privi di annotazioni VISOR servirebbe una maschera prodotta da un sistema di segmentazione ancora da valutare.",
+      "role": "La maschera indica quali pixel appartengono all’oggetto. La profondità o le coordinate 3D provengono invece dalla precedente stima geometrica con DA o MoGE. La fase di costruzione della nuvola combina questi dati per selezionare i punti 3D dell’oggetto ed escludere quelli del resto della scena.",
+      "state": "Il collegamento è implementato e utilizzato con entrambe le sorgenti geometriche. \n",
+      "evidence": "Un punto è valido se:\n1. appartiene alla ma la maschera dell’oggetto \n2. supera i controlli di validità dei punti. \nLa selezione non garantisce che le coordinate 3D stimate siano accurate.",
+      "why": "DA e MoGE (al momento usati parallelamente) stimano la geometria dell’intera immagine. La maschera permette di concentrarsi sulla superficie (ovviamente solo la parte visibile) dell’oggetto da rappresentare con SuperFlex.",
+      "alternatives": "Coerentemente con i paper, usiamo le maschere VISOR. L’eventuale generazione automatica delle maschere è un’alternativa ancora da valutare.",
       "improve": "Controllare allineamento e qualità dei bordi preservando le parti sottili dell’oggetto.",
-      "contract": "Maschera e mappa geometrica devono riferirsi allo stesso frame e alla stessa griglia di pixel; per confronti appaiati può essere richiesta la stessa selezione valida per entrambe le sorgenti.",
-      "failure": "Una maschera fuori registro o imprecisa può includere sfondo o scartare punti dell’oggetto; punti insufficienti rendono la nuvola inutilizzabile.",
-      "editedAt": "2026-11-14T20:40:52.060Z"
+      "contract": "Maschera e mappa geometrica devono riferirsi alla stessa immagine e avere i pixel allineati.",
+      "failure": "Una maschera imprecisa o non allineata può aggiungere punti dello sfondo o eliminare punti dell’oggetto, compromettendo la nuvola fornita a SuperFlex.",
+      "editedAt": "2026-11-15T12:31:36.976Z"
     },
     {
       "id": "E07",
@@ -469,15 +496,15 @@ window.MAP_DATA = {
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
       ],
-      "role": "Trasferisce i punti validi della singola osservazione al preprocessing e all’inferenza SuperFlex.",
+      "role": "Fornisce a SuperFlex i punti della superficie visibile dell’oggetto, dai quali il modello stima una rappresentazione della sua forma tramite primitive geometriche.",
       "state": "Il percorso nuvola → SuperFlex è implementato ed eseguito su casi reali con DA e MoGE.",
-      "evidence": "Nel pilota portabile documentato sono state ottenute sei nuvole e cinque superfici valide; un caso SuperFlex MoGE è fallito.",
-      "why": "SuperFlex usa una nuvola di punti come evidenza geometrica per stimare le primitive che descrivono l’oggetto.",
-      "alternatives": "La nuvola può anche essere confrontata direttamente come controllo, senza passare da SuperFlex.",
+      "evidence": "Nell’ultimo test tutte le osservazioni hanno prodotto una ricostruzione SuperFlex per ciascuna sorgente geometrica. \nIl successo dell’inferenza non certifica la fedeltà della forma ricostruita.",
+      "why": "SuperFlex richiede una nuvola di punti del singolo oggetto: questi punti forniscono l’evidenza geometrica da cui stimare le primitive che ne descrivono la forma.",
+      "alternatives": "La nuvola può anche essere confrontata direttamente come controllo, senza passare da SuperFlex. Facendo così però il costo computazionale è più alto.",
       "improve": "Valutare l’effetto di qualità, parzialità e campionamento della nuvola sulla stabilità della forma e sul tracking.",
       "contract": "Applicare campionamento e normalizzazione previsti, conservando le trasformazioni e la provenienza della nuvola.",
       "failure": "Punti mancanti, contaminati o degeneri possono causare fallimento o una ricostruzione imprecisa.",
-      "editedAt": "2026-11-14T20:40:52.075Z"
+      "editedAt": "2026-11-15T14:46:31.788Z"
     },
     {
       "id": "E09",
@@ -487,19 +514,19 @@ window.MAP_DATA = {
       "label": "",
       "type": "data",
       "review": "Descrizione modificata · evidenze da verificare",
-      "summary": "SuperFlex fornisce le primitive stimate; da esse si costruisce la rappresentazione di forma usata nei confronti.",
+      "summary": "Le superquadriche prodotte da SuperFlex forniscono la superficie da cui ricavare il descrittore di forma dell’oggetto.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
       ],
-      "role": "Trasferisce i parametri delle superquadriche e le informazioni di trasformazione necessarie a ricostruire e confrontare la forma.",
-      "state": "Le ricostruzioni e i descrittori candidati sono disponibili e sono stati usati in analisi diagnostiche; la scelta definitiva per il tracking resta aperta.",
-      "evidence": "Nel confronto documentato sono state campionate superfici SuperFlex e valutati D2, spettro e registrazione con Chamfer. Nessuno è stato dimostrato superiore in generale.",
-      "why": "Il confronto richiede una rappresentazione utilizzabile della forma, non necessariamente il confronto diretto dei parametri delle singole primitive.",
-      "alternatives": "Tra i candidati già esplorati figurano descrittori di superficie e confronto dopo registrazione; le nuvole originali costituiscono un controllo.",
-      "improve": "Valutare stabilità tra viste e contributo al tracking rispetto ai punti, usando dati e protocollo confrontabili.",
-      "contract": "Conservare parametri, normalizzazione e riferimento; il confronto deve gestire orientamento, simmetrie e ordine non significativo delle primitive.",
-      "failure": "Ricostruzioni errate o variazioni dovute alla vista possono produrre descrittori diversi per lo stesso oggetto; un’uscita mancante non va trattata come forma valida.",
-      "editedAt": "2026-11-14T20:40:52.089Z"
+      "role": "Trasferisce i parametri delle primitive stimate, che insieme descrivono la superficie dell’oggetto. Questa superficie viene usata per costruire una rappresentazione confrontabile con quelle conservate nelle tracce.",
+      "state": "Il collegamento è implementato.",
+      "evidence": "Nelle configurazioni provate, il contributo geometrico non ha modificato le associazioni rispetto alla baseline.",
+      "why": "L’ordine e il numero delle primitive possono cambiare tra ricostruzioni. Usare la superficie complessiva permette di confrontare le forme senza richiedere una corrispondenza tra le singole superquadriche.",
+      "alternatives": "È stato sperimentato anche il confronto di descrittori ricavati dalle nuvole originali, senza ricostruzione SuperFlex.\n\n",
+      "improve": "Verificare quanto gli errori della superficie ricostruita influenzino la stabilità e la capacità discriminativa del descrittore.",
+      "contract": "Le primitive devono appartenere alla corretta osservazione o versione della memoria. Vanno conservate le informazioni di normalizzazione necessarie a interpretare la superficie.",
+      "failure": "Una ricostruzione deformata può generare un descrittore fuorviante. Una ricostruzione fallita non deve essere trattata come una forma valida.",
+      "editedAt": "2026-11-15T15:16:21.993Z"
     },
     {
       "id": "E10",
@@ -508,11 +535,20 @@ window.MAP_DATA = {
       "title": "Forma 3D · superquadriche e descrittore → Osservazione corrente · forma, aspetto, posizione",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Il descrittore di forma aggiunge all’osservazione corrente un segnale geometrico da utilizzare nell’associazione alle tracce.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Prende il descrittore della forma ricostruita e lo affianca all’aspetto e alla posizione dello stesso oggetto. Rende così disponibile il confronto geometrico della ricostruione dell'oggetto nel frame con le forme ricordate dalle tracce.",
+      "state": "Il collegamento è implementato e utilizzato negli esperimenti con contributo geometrico attivo. Se la forma non è disponibile, l'osservazione corrente si compone solo di aspetto e posizione.",
+      "evidence": "Il descrittore è stato utilizzato nei confronti. Nell’ultima run le configurazioni provate non hanno modificato le associazioni rispetto alla baseline.",
+      "why": "La forma potrebbe aiutare a distinguere oggetti difficili da riconoscere usando soltanto aspetto e posizione. Il suo contributo aggiuntivo resta tuttavia da dimostrare.",
+      "alternatives": "L'idea è esplorare altri strumenti o metodi per inserire la componente 3D nel confronto. [da espandere]",
+      "improve": "Verificare se il segnale di forma è disponibile e discriminativo soprattutto proprio nei casi in cui aspetto e posizione rendono incerta l’associazione.",
+      "contract": "Il descrittore deve appartenere alla stessa osservazione di cui vengono forniti aspetto e posizione. La sua eventuale assenza deve essere indicata esplicitamente.",
+      "failure": "Un descrittore errato o associato all’oggetto sbagliato può introdurre un segnale fuorviante. La geometria mancante riduce le occasioni in cui il confronto di forma può contribuire.",
+      "editedAt": "2026-11-15T16:04:39.793Z"
     },
     {
       "id": "E11",
@@ -521,11 +557,20 @@ window.MAP_DATA = {
       "title": "Feature d’aspetto → Osservazione corrente · forma, aspetto, posizione",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Il descrittore d’aspetto fornisce all’osservazione corrente le caratteristiche visive dell’oggetto.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Trasferisce il descrittore dell’oggetto e lo affianca alla posizione e alla forma 3D eventualmente disponibile. Si costituisce così la tripletta del nostro Whareformer (nella versione originale, è una coppia: aspetto e posizione)",
+      "state": "Collegamento implementato e verificato. Nelle prove attuali utilizziamo i descrittori ufficiali di Whareformer.",
+      "evidence": "La corrispondenza tra feature e osservazioni della baseline è stata verificata. \nOvviamente il descrittore non garantisce da solo il riconoscimento dell’identità dell’oggetto.",
+      "why": "L’aspetto fornisce un segnale utile all’associazione: oggetti vicini o di forma simile possono avere caratteristiche visive differenti.",
+      "alternatives": "Non sono previste alternative a questo trasferimento.",
+      "improve": "Non sono previste modifiche specifiche a questo trasferimento.",
+      "contract": "Il descrittore deve appartenere allo stesso oggetto e allo stesso frame degli altri dati dell’osservazione.",
+      "failure": "Un descrittore associato all’osservazione sbagliata combina l’aspetto di un oggetto con la posizione o la forma di un altro, compromettendo il confronto con le tracce.",
+      "editedAt": "2026-11-15T12:19:29.575Z"
     },
     {
       "id": "E12",
@@ -534,11 +579,20 @@ window.MAP_DATA = {
       "title": "RGB · frame t → Profondità baseline allineata alla scena",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Il frame RGB viene fornito al modello di profondità della baseline Whareformer. Obiettivo: stimare la profondità nella scena dell'oggetto in questione.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Trasferisce l’immagine intera a Depth Anything V2 per stimare la profondità delle superfici visibili.",
+      "state": "Il passaggio è lo stesso presente nel codice originale Whareformer. Nessuna modifica applicata.",
+      "evidence": "Il codice Whareformer prevede la stima della profondità e il successivo allineamento alla ricostruzione della scena. L’immagine da sola non fornisce tutti gli ingressi necessari.",
+      "why": "Manteniamo il procedimento della baseline per studiare il contributo della forma, senza toccare il segnale di posizione.",
+      "alternatives": "La sostituzione o modifica del ramo posizione non è prevista.",
+      "improve": "La sostituzione o modifica del ramo posizione non è prevista.",
+      "contract": "L’immagine deve corrispondere ai parametri della camera e agli altri dati usati per l’allineamento alla scena.",
+      "failure": "Errori nella profondità stimata possono propagarsi alle posizioni 3D degli oggetti.",
+      "editedAt": "2026-11-15T11:25:46.498Z"
     },
     {
       "id": "E13",
@@ -573,11 +627,20 @@ window.MAP_DATA = {
       "title": "Maschere 2D · VISOR → Posizione 3D · pipeline Whareformer",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "La maschera e la bounding box dell’oggetto contribuiscono a stimarne la posizione 3D.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Fornisce la regione dell’immagine occupata dall’oggetto e il rettangolo che la racchiude. Questi dati permettono al ramo posizione di individuare l’oggetto nell’immagine e selezionare le profondità pertinenti.",
+      "state": "Il collegamento è previsto dal codice originale di Whareformer. Nelle prove attuali riutilizziamo le posizioni ufficiali già calcolate.",
+      "evidence": "L’uso della maschera e del rettangolo è stato verificato nel codice. La maschera identifica la regione dell’oggetto, ma non ne fornisce direttamente la profondità o la posizione 3D.",
+      "why": "Nello step precedente la profondità è stimata per l’intera immagine, la maschera consente di selezionare solo i valori dell’oggetto.",
+      "alternatives": "Il collegamento è previsto dal codice originale di Whareformer. modifiche di questa sezione non sono lo scope del progetto.",
+      "improve": "Il collegamento è previsto dal codice originale di Whareformer. modifiche di questa sezione non sono lo scope del progetto.",
+      "contract": "Maschera, rettangolo e mappa di profondità devono riferirsi allo stesso frame e avere coordinate coerenti.",
+      "failure": "Se la maschera include sfondo o altri oggetti, il ramo posizione può usare profondità non pertinenti e localizzare erroneamente l’oggetto.",
+      "editedAt": "2026-11-15T11:50:53.823Z"
     },
     {
       "id": "E16",
@@ -612,11 +675,20 @@ window.MAP_DATA = {
       "title": "Osservazione corrente · forma, aspetto, posizione → Whareformer + adattatore · confronto e associazione",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Fornisce la \"tripletta\" di input a Whareformer, quindi i dati dell’oggetto corrente necessari a decidere a quale traccia associarlo.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Fornisce il descrittore d’aspetto, la posizione 3D e il descrittore di forma eventualmente disponibile. Aspetto e posizione alimentano Whareformer.",
+      "state": "Il collegamento è implementato e utilizzato nelle esecuzioni integrate.",
+      "evidence": "Il contributo geometrico ha modificato i punteggi di confronto, ma nell’ultima run non ha cambiato le associazioni rispetto alla baseline.",
+      "why": "Il passaggio fondamentale di Whareformer è proprio confrontare ciò che osserviamo adesso con ciò che le tracce ricordano degli oggetti precedenti.",
+      "alternatives": "La baseline usa aspetto e posizione; le varianti geometriche aggiungono il confronto di forma senza modificare le reti preaddestrate.",
+      "improve": "Verificare quando il contributo della forma aiuta o ostacola la decisione e come calibrarlo rispetto ai segnali originali.",
+      "contract": "Aspetto, posizione e forma devono appartenere alla stessa osservazione. La forma mancante deve essere indicata esplicitamente.",
+      "failure": "Dati non corrispondenti o descrittori poco affidabili possono favorire una traccia errata o la creazione di una nuova traccia.",
+      "editedAt": "2026-11-15T16:12:29.840Z"
     },
     {
       "id": "E19",
@@ -638,11 +710,20 @@ window.MAP_DATA = {
       "title": "Whareformer + adattatore · confronto e associazione → Associata a una traccia esistente?",
       "label": "",
       "type": "control",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Passaggio interno di Whareformer. Trasmette l’esito dell’associazione per fare la scelta tra aggiornare una traccia esistente e crearne una nuova.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Per ogni osservazione comunica la traccia assegnata oppure l’esito “nuova traccia”. Questa informazione indirizza i dati dell’oggetto verso il ramo di memoria corrispondente.",
+      "state": "Il collegamento è implementato e utilizzato nelle esecuzioni integrate.",
+      "evidence": "Il collegamento è implementato e utilizzato nelle esecuzioni integrate.",
+      "why": "Prima di aggiornare la memoria occorre sapere quale traccia deve ricevere l’osservazione, oppure se sia necessario inizializzarne una nuova.\n\n",
+      "alternatives": "Non sono previste alternative specifiche a questo passaggio.",
+      "improve": "Non sono previste modifiche specifiche a questo passaggio.",
+      "contract": "Ogni esito deve riferirsi alla corretta osservazione e identificare senza ambiguità la traccia destinataria.",
+      "failure": "Un’associazione errata può inviare i dati alla memoria di un altro oggetto; l’esito “nuova traccia” può frammentare in più tracce l’identità di un oggetto già osservato.",
+      "editedAt": "2026-11-15T17:02:39.104Z"
     },
     {
       "id": "E21",
@@ -651,11 +732,20 @@ window.MAP_DATA = {
       "title": "Associata a una traccia esistente? → Aggiorna posizione e aspetto",
       "label": "Sì",
       "type": "control",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "L'input viene assocaito ad una traccia esistente. Questo passaggio indica quale traccia esistente deve ricevere l’aggiornamento di posizione e aspetto.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Trasmette l’assegnazione dell’osservazione alla traccia a cui è stata abbinata. Il blocco di aggiornamento usa questa informazione di input per applicare i nuovi dati alla memoria corretta, così da aggiornarla con la nuova osservazione.",
+      "state": "Il collegamento è implementato nel percorso di aggiornamento della baseline.",
+      "evidence": "-",
+      "why": "I dati correnti devono aggiornare la memoria dell’oggetto a cui sono stati attribuiti.",
+      "alternatives": "-",
+      "improve": "",
+      "contract": "L’osservazione e l’ID destinatario devono corrispondere all’assegnazione effettivamente prodotta dal tracker.",
+      "failure": "Un’assegnazione errata può aggiornare posizione e aspetto di una traccia con dati appartenenti a un altro oggetto.",
+      "editedAt": "2026-11-15T17:09:36.657Z"
     },
     {
       "id": "E22",
@@ -664,11 +754,20 @@ window.MAP_DATA = {
       "title": "Associata a una traccia esistente? → Aggiorna geometria e ricostruisci forma",
       "label": "Sì",
       "type": "control",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "L'input è stato associato ad una traccia esistente. Questo passaggio indica a quale traccia punta l’inserimento dei nuovi punti, in particolare per la memoria geometrica.\n",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Comunica al ramo geometrico a quale traccia è stata associata la nuova osservazione. Questo identifica la memoria con cui confrontare e tentare di allineare i nuovi punti.\n\nL’associazione non autorizza automaticamente la fusione: nel prototipo attuale i punti vengono aggiunti solo se l’allineamento supera controlli geometrici separati, descritti nel riquadro di aggiornamento.",
+      "state": "Il collegamento è implementato. La scelta dei controlli che autorizzano la fusione è provvisoria e deve ancora essere discussa e validata.",
+      "evidence": "Nelle prove integrate sono stati eseguiti tentativi di aggiornamento sia ammessi sia rifiutati. L’associazione alla traccia non garantisce un allineamento geometrico affidabile.",
+      "why": "Prima di confrontare e fondere i punti, occorre sapere a quale oggetto ricordato appartiene la nuova osservazione.",
+      "alternatives": "Abbiamo discusso la possibilità di fondere ogni nuvola associata dopo l’allineamento oppure mantenere controlli di ammissione, rivedendoli per gestire viste parziali e simmetrie. Le forme separate senza fusione costituiscono un confronto già disponibile. Nessuna politica è stata scelta come definitiva.",
+      "improve": "Decidere quando l’associazione alla traccia debba essere accompagnata da ulteriori controlli geometrici e verificare quali criteri evitino fusioni errate senza respingere osservazioni utili.",
+      "contract": "Il ramo geometrico deve usare lo stesso ID assegnato dal tracker. Un rifiuto della fusione conserva la memoria geometrica precedente senza annullare l’associazione.",
+      "failure": "Un’associazione errata può proporre la fusione di oggetti diversi. I controlli geometrici possono respingerla, ma non garantiscono di intercettare ogni errore.",
+      "editedAt": "2026-11-15T17:19:24.589Z"
     },
     {
       "id": "E23",
@@ -677,11 +776,20 @@ window.MAP_DATA = {
       "title": "Associata a una traccia esistente? → Crea una nuova traccia",
       "label": "No",
       "type": "control",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "L'input non è stato associato con nessuna traccia essitente, è stato assocaito all'output \"New Track\". \nQuesto step attiva la creazione di una traccia quando il matching produce l’esito “nuova traccia”. ",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Trasmette l’esito “nuova traccia” riferito all’osservazione corrente. Il blocco successivo lo usa per creare un nuovo ID anziché aggiornare una traccia esistente.",
+      "state": "Il collegamento è implementato nel percorso originale di Whareformer.",
+      "evidence": "La creazione di nuove tracce è stata eseguita nelle prove integrate. Questo esito non dimostra che l’oggetto fisico non fosse già stato osservato.",
+      "why": "Quando il sistema non assegna l’osservazione a una traccia esistente, serve una nuova identità con cui iniziare a conservarne la storia.",
+      "alternatives": "-",
+      "improve": "-",
+      "contract": "L’esito deve riferirsi alla corretta osservazione, che non deve contemporaneamente aggiornare una traccia esistente.",
+      "failure": "Un oggetto già conosciuto può ricevere un nuovo ID, frammentando la sua storia in più tracce.",
+      "editedAt": "2026-11-15T17:20:43.246Z"
     },
     {
       "id": "E24",
@@ -703,11 +811,20 @@ window.MAP_DATA = {
       "title": "Osservazione corrente · forma, aspetto, posizione → Inizializza posizione, aspetto e geometria",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Fornisce i dati con cui inizializzare la memoria di una nuova traccia, nel caso in cui un'immagine non venga assocaita con nessuna traccia pre-esistente.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Trasferisce aspetto, posizione e forma eventualmente disponibile dell’osservazione che ha generato la nuova traccia. Questi dati costituiscono la prima descrizione della nuova traccia (e quindi del nuovo oggetto ricordato).",
+      "state": "Il collegamento è implementato e utilizzato quando viene creata una nuova traccia.",
+      "evidence": "L’inizializzazione è stata eseguita nelle run concluse.",
+      "why": "Parte del flusso Whareformer.",
+      "alternatives": "Parte del flusso Whareformer.",
+      "improve": "Parte del flusso Whareformer.",
+      "contract": "Tutti i dati devono appartenere all’osservazione che ha generato il nuovo ID. La geometria può essere assente.\n\n",
+      "failure": "Un’osservazione imprecisa può inizializzare una memoria poco rappresentativa; un’associazione mancata può creare una traccia duplicata dello stesso oggetto.",
+      "editedAt": "2026-11-15T16:18:39.179Z"
     },
     {
       "id": "E26",
@@ -716,11 +833,20 @@ window.MAP_DATA = {
       "title": "Nuvola di punti dell’oggetto → Inizializza posizione, aspetto e geometria",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "La nuvola fornisce i primi punti da conservare nella memoria geometrica della nuova traccia.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Trasferisce i punti della superficie visibile e la loro provenienza. Questi costituiscono il riferimento iniziale a cui potranno essere allineate le osservazioni successive.",
+      "state": "Il collegamento è implementato e utilizzato nelle varianti con accumulo geometrico.",
+      "evidence": "L’inizializzazione è stata verificata.",
+      "why": "Per accumulare nuove osservazioni serve una geometria iniziale della traccia. Il solo ID o descrittore di forma non contribuisce alla ricostruzione 3D.",
+      "alternatives": "La variante senza accumulo conserva rappresentazioni di forma separate, senza costruire una nuvola comune.",
+      "improve": "Verificare quanto la qualità della prima nuvola condizioni gli aggiornamenti successivi.",
+      "contract": "La nuvola deve appartenere all’osservazione che ha generato la traccia. Sorgente, scala e riferimento devono essere conservati.",
+      "failure": "Una prima nuvola contaminata o deformata può diventare un riferimento poco affidabile per le viste successive.",
+      "editedAt": "2026-11-15T15:01:37.704Z"
     },
     {
       "id": "E27",
@@ -729,11 +855,20 @@ window.MAP_DATA = {
       "title": "Osservazione corrente · forma, aspetto, posizione → Aggiorna posizione e aspetto",
       "label": "",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "Fornisce la nuova informazione visiva e spaziale con cui aggiornare la traccia associata. Nel caso in cui un'immagine viene associata ad una traccia esistente.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Trasferisce il descrittore d’aspetto e la posizione 3D dell’osservazione corrente nella memoria della traccia, consentendo di incorporare ciò che è appena stato osservato.",
+      "state": "Il collegamento usa il percorso di aggiornamento della baseline Whareformer.",
+      "evidence": "Parte del flusso originale Whareformer",
+      "why": "Parte del flusso originale Whareformer",
+      "alternatives": "Parte del flusso originale Whareformer",
+      "improve": "Non sono previste modifiche specifiche a questo collegamento nel progetto corrente.\n\n",
+      "contract": "I dati devono appartenere all’osservazione associata alla traccia destinataria. L’aggiornamento segue la decisione di associazione.",
+      "failure": "Un’associazione errata può aggiornare la memoria di una traccia con l’aspetto e la posizione di un altro oggetto.",
+      "editedAt": "2026-11-15T16:20:57.821Z"
     },
     {
       "id": "E28",
@@ -755,11 +890,20 @@ window.MAP_DATA = {
       "title": "Nuvola di punti dell’oggetto → Aggiorna geometria e ricostruisci forma",
       "label": "punti osservati",
       "type": "data",
-      "review": "Scheda da compilare",
-      "summary": "Trasferimento di dati o controllo: dettaglio da revisionare.",
+      "review": "Descrizione modificata · evidenze da verificare",
+      "summary": "La nuvola corrente, generata a partire dal nuovo frame, fornisce nuovi punti con cui aggiornare la memoria geometrica della traccia associata.",
       "sources": [
         "MAPPA_FLUSSO_SISTEMA.md"
-      ]
+      ],
+      "role": "Prende i punti della nuova osservazione, la loro provenienza, la loro collocazione nello spazio 3D, e li unisce ai punti 3D accumulati nella memoria della traccia, provenienti da tutti i frame prevcedentemente associati con questa traccia. Il ramo di aggiornamento li usa come extra input e, se ammessi, vengono uniti ai punti già conservati, arricchendo i dati sulla abse dei quali viene generata la forma 3D della traccia.",
+      "state": "Il collegamento è implementato e utilizzato nelle varianti con accumulo. Sono state eseguite fusioni con entrambe le sorgenti.",
+      "evidence": "L’ammissione non certifica da sola che l’allineamento sia fisicamente corretto.",
+      "why": "Viste successive possono mostrare superfici prima nascoste. I nuovi punti permettono di ampliare la geometria ricordata prima di ricostruire nuovamente la forma.",
+      "alternatives": "Si può optare per una variante senza accumulo, dove vengono mmantenute forme separate. crediamon che questa scelta sia subottimale.",
+      "improve": "Verificare se le nuvole ammesse aggiungano superfici utili senza introdurre deformazioni o duplicazioni.",
+      "contract": "I punti devono appartenere all’osservazione associata alla traccia. Prima della fusione devono essere allineati al riferimento della memoria, mantenendo distinta la sorgente DA o MoGE.",
+      "failure": "Associazione errata, differenze di scala o allineamento scorretto possono contaminare la memoria. Un aggiornamento rifiutato lascia invariati i punti precedentemente conservati.",
+      "editedAt": "2026-11-15T14:54:52.545Z"
     },
     {
       "id": "E30",
