@@ -1,5 +1,9 @@
 # Stato corrente — 15 novembre 2026
 
+## Aggiornamenti GitHub pubblicati — 15 novembre 2026
+
+Aggiornamenti pubblicati su `main`, commit [0fce33b](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/0fce33b6acdea13d6d36bf557fcbf0c311b34ae7), riferimento remoto verificato dopo il push. Inclusi snapshot manuale della mappa, checklist di revisione, decisioni ancora pendenti e memoria corrente; corretto il README sui dati riusati rispetto alla geometria rigenerata. Codice e risultati della campagna erano già su remoto a d8fb991. Preservati contributi del collega e storia Git; nessun nuovo esperimento o cambio dei filtri. Controlli: 467 collegamenti, 41 sorgenti Python e 179 hash senza errori, servizio mappa in sola lettura superato; 13 file controllati senza pattern sensibili rilevati, nei limiti del controllo. Mappa copiata byte per byte dalla versione manuale locale.
+
 ## Conteggio delle schede salvate durante la revisione — 15 novembre 2026
 
 Lettura diretta del JSON della mappa dopo la compilazione manuale di Marco: 10/19 nodi compilati, nove ancora segnaposto (B08/B09/B10/B11/B13/B15/B17/B18/B19); 21/34 frecce commentate, 13 ancora segnaposto (E07/E13/E14/E16/E17/E19/E24/E28/E30/E31/E32/E33/E34). Tra le 21 commentate: E10 conserva «[da espandere]» nelle alternative; E21 ha il solo campo miglioramenti vuoto, che può restare non applicabile. Conteggio di compilazione, non audit scientifico completo; nessuna modifica ai testi della mappa. I conteggi iniziali nella ricognizione descrivono lo snapshot precedente.

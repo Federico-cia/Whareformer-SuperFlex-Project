@@ -601,8 +601,8 @@
     },
     {
       "path": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 105341,
-      "sha256": "9dfd7b065f05aeca1fcf19bf2e2128f8489756d7b46520729c7c002897a762e5"
+      "bytes": 106628,
+      "sha256": "24ae1a8f18fcc834aae013a274041af26c485df8876c98bda3555742cae4bf2f"
     },
     {
       "path": "context/memory/REVISIONE_MAPPA_20261115.md",
@@ -621,13 +621,13 @@
     },
     {
       "path": "context/memory/STATO_LAVORO.md",
-      "bytes": 9569,
-      "sha256": "ecb516110c56290b3edb5da34be70e3c2b26f4fd2cb1e9ee96009ce0a39f7e59"
+      "bytes": 10429,
+      "sha256": "7980274c90430579ecaea07cb4e5b6c53fed1af8c52b57ffed788147200fd640"
     },
     {
       "path": "context/memory/TODO.md",
-      "bytes": 11391,
-      "sha256": "3e4f321b179e92d1d3aa36b3a7c50324b3c58f16f79beef25c566b30a5706ec5"
+      "bytes": 12388,
+      "sha256": "3013b70d2e13899023716186c47df5043c046556050bf494ba5f5d8f9970ea39"
     },
     {
       "path": "context/memory/docs/CODICE_PRODOTTO.md",
@@ -636,8 +636,8 @@
     },
     {
       "path": "context/memory/docs/CONDIVISIONE.md",
-      "bytes": 1758,
-      "sha256": "ff4f95ee463e3bc04933511d0ca747e87c6b61a5dc2a9591542dface25b044c2"
+      "bytes": 2600,
+      "sha256": "f033ae0e32a546094b744a51248c3839d24e6afd92eadf497ade31c442a89769"
     },
     {
       "path": "context/memory/docs/INPUT_SUPERFLEX_PER_WHAREFORMER.md",

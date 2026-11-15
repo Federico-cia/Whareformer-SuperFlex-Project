@@ -1,5 +1,9 @@
 # Pubblicazione e riproduzione
 
+## Aggiornamenti verificati — 15 novembre 2026
+
+Aggiornamenti pubblicati su `main`, commit [0fce33b](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/0fce33b6acdea13d6d36bf557fcbf0c311b34ae7), riferimento remoto verificato dopo il push. Inclusi snapshot manuale della mappa, checklist di revisione, decisioni ancora pendenti e memoria corrente; corretto il README sui dati riusati rispetto alla geometria rigenerata. Codice e risultati della campagna erano già su remoto a d8fb991. Preservati contributi del collega e storia Git; nessun nuovo esperimento o cambio dei filtri. Controlli: 467 collegamenti, 41 sorgenti Python e 179 hash senza errori, servizio mappa in sola lettura superato; 13 file controllati senza pattern sensibili rilevati, nei limiti del controllo. Mappa copiata byte per byte dalla versione manuale locale.
+
 ## Pubblicazione della prima run completa — 14 novembre 2026
 
 Codice, configurazione, audit e report pubblicati su main al commit 8694e4b46be288e7be8ab008a21c765bba01ee15, riferimento remoto verificato dopo il push. Storia precedente preservata da 0865949, nessun force push; contributi del collega e ultime modifiche manuali della mappa preservati. Input completi, pesi e accessi esclusi. Controllo finale: 408 collegamenti, 36 sorgenti Python e 156 hash senza errori; servizio mappa verificato in sola lettura. Locale 72 casi, 70 passati e due skip motmetrics; HPC 72/72 senza skip. I job 764454 e 764474 sono conclusi 0:0, output completi acquisiti.

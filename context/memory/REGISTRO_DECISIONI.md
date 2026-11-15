@@ -645,6 +645,14 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Conseguenza.** Attività distinta nei to-do e criticità C13, allineata allo stato. Separare confronto invariante, registrazione/ammissione e ancoraggio alla scena; verificare scala e catena delle trasformazioni senza presumere che XYZ o inversa della normalizzazione risolvano tutti i passaggi. Richiesta di discussione, non approvazione di nuovo modulo, protocollo o cambio della domanda principale; nessuna modifica alla mappa o nuova esecuzione.
 
+## 78. Pubblicazione degli aggiornamenti su GitHub — 15 novembre 2026
+
+**Mandato ed esito.** Su richiesta esplicita di Marco, aggiornato main della repository comune da d8fb991 a 0fce33b senza forzature; commit e riferimento remoto verificati.
+
+**Perimetro e controlli.** Aggiornamenti pubblicati su `main`, commit [0fce33b](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/0fce33b6acdea13d6d36bf557fcbf0c311b34ae7), riferimento remoto verificato dopo il push. Inclusi snapshot manuale della mappa, checklist di revisione, decisioni ancora pendenti e memoria corrente; corretto il README sui dati riusati rispetto alla geometria rigenerata. Codice e risultati della campagna erano già su remoto a d8fb991. Preservati contributi del collega e storia Git; nessun nuovo esperimento o cambio dei filtri. Controlli: 467 collegamenti, 41 sorgenti Python e 179 hash senza errori, servizio mappa in sola lettura superato; 13 file controllati senza pattern sensibili rilevati, nei limiti del controllo. Mappa copiata byte per byte dalla versione manuale locale.
+
+**Conseguenza.** Consegna disponibile su main. Revisione della mappa ancora manuale; architettura della forma, ammissione e collocazione nella scena restano discussioni aperte, non nuove scelte metodologiche.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 **Chiarimento durante E22 — ammissione da discutere con il compagno.** Marco richiede di rendere espliciti il funzionamento e la natura provvisoria dei controlli in E22/B16 e di registrare il confronto architetturale ancora necessario con il compagno. Rafforzato il to-do esistente, senza duplicarlo. Alternative richiamate come discusse, non adottate: fondere dopo allineamento senza ulteriori gate, rivedere criteri per simmetrie/parzialità e usare forme separate come confronto. Nessun nuovo accordo sulle soglie, cambio di codice o esperimento.

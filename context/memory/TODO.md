@@ -1,5 +1,11 @@
 # Attività correnti
 
+## Aggiornamenti GitHub pubblicati — 15 novembre 2026
+
+Aggiornamenti pubblicati su `main`, commit [0fce33b](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/0fce33b6acdea13d6d36bf557fcbf0c311b34ae7), riferimento remoto verificato dopo il push. Inclusi snapshot manuale della mappa, checklist di revisione, decisioni ancora pendenti e memoria corrente; corretto il README sui dati riusati rispetto alla geometria rigenerata. Codice e risultati della campagna erano già su remoto a d8fb991. Preservati contributi del collega e storia Git; nessun nuovo esperimento o cambio dei filtri. Controlli: 467 collegamenti, 41 sorgenti Python e 179 hash senza errori, servizio mappa in sola lettura superato; 13 file controllati senza pattern sensibili rilevati, nei limiti del controllo. Mappa copiata byte per byte dalla versione manuale locale.
+
+- [x] Caricare gli aggiornamenti verificati su main. Restano aperte le attività scientifiche e la compilazione manuale indicate sotto.
+
 ## Punti importanti da discutere e validare
 
 - [ ] **Architettura dell'integrazione della forma — decisione condivisa con il compagno ancora aperta:** discutere sia come la rappresentazione/distanza di forma entra nei calcoli di associazione sia con quale influenza. Distinguere correzione esterna attuale dei logits con peso/distanza neutra da calibrare sullo sviluppo; apprendimento supervisionato di pochi parametri di fusione con reti congelate; adattamento/riaddestramento della rete per combinare anche la geometria. Chiarire rappresentazione/distanza, punto d'integrazione, mancanti/New Track, dati con associazioni verificate, obiettivo di apprendimento e valutazione nel ciclo causale completo. Peso 0.1/1 esplorato, non ottimale dimostrato. La proposta dell'assistente di fusione appresa non è approvata: Marco vuole prima discuterne con il compagno. Nessuna nuova implementazione, calibrazione o run avviata; predisposta soltanto nota da inserire manualmente in B12.
