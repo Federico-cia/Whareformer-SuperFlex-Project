@@ -14,7 +14,7 @@ Studio del contributo della forma 3D all'associazione delle identità in video e
 
 La [prima run completa su P01_01](context/evidence/full_video_20261114/REPORT.md) è conclusa: 33310 frame/110590 osservazioni del protocollo ufficiale, geometria a peso non nullo, sette fusioni ammesse e 25 nuove ricostruzioni SuperFlex. Le forme da fusioni entrano nei confronti successivi. Le assegnazioni restano identiche alla baseline: nessun miglioramento del tracking con questa configurazione.
 
-È avviata la [campagna estesa del 15 novembre](context/memory/CAMPAGNA_HPC_20261115.md): geometria rigenerata su 247 frame/446 osservazioni selezionate e 29 configurazioni con storia completa. Controlli, geometria e bundle superati; due gruppi di confronti RUNNING, risultati finali pendenti. Filtri invariati, campagna di sviluppo e nessun beneficio presunto.
+La [campagna estesa del 15 novembre è conclusa](context/evidence/campaign_20261115_v1/REPORT_FINALE.md): 29/29 configurazioni completate e valutate, geometria su 247 frame/446 osservazioni. Tutte le assegnazioni e metriche coincidono con W0: nessun miglioramento nella griglia provata. Nessun job attivo/in attesa; filtri invariati e limiti di sviluppo dichiarati.
 
 Feature visive/XYZ e geometrie delle osservazioni sono riusati da cache verificate, con copertura geometrica di 71 osservazioni in 38 frame. Non è una rigenerazione RGB completa o una verifica indipendente dell'accuratezza fisica delle fusioni. Il frontend da immagini rimane aperto; la revisione dei filtri è ancora rinviata per decisione di Marco.
 

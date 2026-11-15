@@ -64,3 +64,7 @@ Job 764454 avviato; nessuna fusione o metrica nuova ancora dichiarata. Prossima 
 Dettaglio operativo in [CAMPAGNA_HPC_20261115.md](CAMPAGNA_HPC_20261115.md).
 
 **Aggiornamento verificato della campagna:** 764674/764675 conclusi 0:0, tutte le 446 geometrie pronte per entrambe le sorgenti e feature baseline byte-identiche; gruppi 764678/764679 RUNNING. Copertura effettiva 0.4033%, ancora sparsa; nessun risultato finale delle varianti anticipato.
+
+## Esito finale campagna — 15 novembre 2026
+
+C12 chiuso per questa esecuzione: tutti i job, incluso riepilogo 765084, conclusi 0:0; 29/29 trial completati. C11 resta aperto: tutte le configurazioni, anche con peso 1 e distanza neutra 0.1, lasciano invariate le assegnazioni; occorre distinguere margini, copertura dei casi difficili e discriminatività, senza assumere una causa. Nessun vincitore o miglioramento rilevato. Fusioni per variante DA 31/MoGE 40, non repliche indipendenti né validazione fisica. C03 copertura 0.4033%, C05 revisione filtri ancora rinviata. Nessun job di questa campagna attivo/in attesa.

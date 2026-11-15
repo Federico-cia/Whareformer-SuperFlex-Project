@@ -4,7 +4,12 @@
   "grouped_submit_sha256": "d663bb550f8ceaca45c693a526886796020c3ed688e1866c79a35fb20bcf3dd5",
   "cpu_group_sha256": "30c31115ee310b3dbc2c9e8629c47c99004c4e62c40ecfbf53691cd32e6e21ae",
   "gpu_group_sha256": "b5430b0d064d230b04d4ebbe87f1fd7f17231a6dc78d8ce02da3a671edb0dc73",
-  "results_status": "pending",
+  "results_status": "completed_29_of_29",
   "gate_revision": "unchanged",
-  "source_data": "existing cached official assets; no new downloads"
+  "source_data": "existing cached official assets; no new downloads",
+  "final_reports_archive_sha256": "6e8807b6dbbaf64a705bdbcc14f515e395beffa083bae8ecc1778dabff56c9a2",
+  "campaign_summary_sha256": "544c2609013e49059de9612d330850cd4fe39a555053745451c1908212ce189b",
+  "zero_controls_exact": true,
+  "all_variants_same_assignments_as_W0": true,
+  "active_jobs": []
 }

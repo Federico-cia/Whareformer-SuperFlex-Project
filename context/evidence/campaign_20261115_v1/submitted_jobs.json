@@ -20,6 +20,10 @@
     "gpu": {
       "id": "764679",
       "dependency": "afterok:764675"
+    },
+    "summarize": {
+      "id": "765084",
+      "dependency": "afterany:764678:764679"
     }
   },
   "submission_history": [

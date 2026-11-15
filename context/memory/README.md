@@ -2,7 +2,7 @@
 
 Per riprendere senza la cronologia della chat:
 
-La [campagna HPC attiva](CAMPAGNA_HPC_20261115.md) ha job in corso/in attesa e risultati pendenti; leggere prima quella ricevuta per evitare rilanci.
+La [campagna HPC](CAMPAGNA_HPC_20261115.md) è conclusa: 29/29 configurazioni valutate, nessun job attivo e nessun miglioramento nella griglia. Leggere il resoconto finale prima di ulteriori esperimenti.
 
 1. [Guida tecnica e passaggio di consegne](LEGGIMI_PASSAGGIO_AI.md).
 2. [Istruzioni del supervisore](ISTRUZIONI_SUPERVISORE_SCIENTIFICO.md), [stato](STATO_LAVORO.md) e [attività](TODO.md).

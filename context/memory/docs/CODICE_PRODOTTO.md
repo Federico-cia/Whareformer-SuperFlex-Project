@@ -1,5 +1,9 @@
 # Codice prodotto
 
+## Esito campagna — 15 novembre 2026
+
+29/29 configurazioni completate e valutate, tutti i job conclusi 0:0, controlli zero esatti e nessuna assegnazione diversa dalla baseline. Report finali acquisiti; dettagli nella memoria corrente, risultati della campagna del 15 novembre. Non introdotte nuove modifiche al codice in fase di acquisizione.
+
 ## Campagna estesa — 15 novembre 2026
 
 Aggiunti selezione/validazione del campione, costruzione del bundle e gestore HPC con ricevute e dipendenze. Rigenerazione DA/MoGE/SuperFlex su 247 frame/446 osservazioni selezionate, 29 configurazioni di sviluppo; risultati ancora pendenti. Solo telemetria estesa nel runner, nessuna modifica a reti o filtri. Dettaglio operativo in CAMPAGNA_HPC_20261115.md nella memoria corrente.

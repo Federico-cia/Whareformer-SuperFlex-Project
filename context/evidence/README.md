@@ -2,7 +2,7 @@
 
 Report numerici e log dei controlli acquisiti, suddivisi per fase:
 
-- [Campagna estesa avviata](../memory/CAMPAGNA_HPC_20261115.md): specifica, selezione, preflight e ricevute di invio in [campagna](campaign_20261115_v1/). Risultati finali pendenti.
+- [Campagna estesa conclusa](../memory/CAMPAGNA_HPC_20261115.md): specifica, selezione, preflight e ricevute di invio in [campagna](campaign_20261115_v1/). Risultati finali acquisiti: 29/29 configurazioni valutate, assegnazioni e metriche identiche a W0.
 - [Prima run completa attiva](full_video_20261114/REPORT.md): intero protocollo P01_01, sette fusioni ammesse, 25 nuove SuperFlex e audit causale; metriche invariate.
 - [Riordino corrente](repository_cleanup_20261114/): suite dopo la pulizia e hash dei sorgenti.
 - [Baseline e registrazione](hpc_ripresa_20261114/): replay zero, conteggi e audit dei rifiuti.

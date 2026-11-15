@@ -623,6 +623,14 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Limiti e conseguenza.** Le 446 osservazioni sono ora pronte; copertura ancora 0.4033% del totale. Risultati dei 29 confronti ancora da acquisire. Nuova telemetria margini/probabilità; nessuna conclusione sul beneficio. Revisione filtri ancora rinviata; frontend completo DINOv2/PCA/XYZ dalle immagini distinto. Mantenere stato dei job e non rilanciare verifiche concluse per ricostruire il contesto.
 
+## 75. Campagna conclusa: esito nullo di tracking nella griglia — 15 novembre 2026
+
+**Risultato verificato.** Su richiesta di stato di Marco acquisiti accounting e report: 29/29 configurazioni complete e valutate, tutti i trial con codice 0. 764678 COMPLETED 0:0 (4h13m00s), 764679 COMPLETED 0:0 (3h54m41s), riepilogo 765084 COMPLETED 0:0 (42s). Nessun job attivo/in attesa, controllo zero esatto; nessun nuovo job lanciato durante l'acquisizione.
+
+**Evidenza e limite.** Tutte le assegnazioni identiche a W0; IDF1 73.269735% e mPCL 70.465504%. Per variante con accumulo DA 23 inizializzazioni/31 fusioni/392 rifiuti, MoGE 23/40/383; per S-accumulo 54/63 SuperFlex pronte, nessun fallimento. Ripetizioni fra varianti non indipendenti e più fusioni non certificano migliore geometria. Campione 446 osservazioni/247 frame, sviluppo/train e copertura 0.4033%.
+
+**Conseguenza.** Nessun vincitore di tracking nella griglia; diagnosi di margini/distanze e opportunità di associazione prima di ulteriori cambi. Non dedurre inutilità generale della geometria. Risultati e accounting scaricati; grandi output delle varianti conservati sull'HPC. Filtri invariati e revisione ancora rinviata. Resoconto finale della campagna collegato da stato/TODO.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 
