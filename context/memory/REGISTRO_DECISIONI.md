@@ -2,7 +2,7 @@
 
 ## Applicazione dei testi revisionati — 21 novembre 2026
 
-Marco conferma e richiede applicazione e pubblicazione dei vecchi commenti revisionati. Applicati 135 campi a sette riquadri e otto collegamenti, con le ultime formulazioni generali senza riferimenti alle singole esecuzioni. Struttura e altre schede conservate; backup locale precedente disponibile. Pubblicazione richiesta, esito remoto da verificare.
+Marco conferma e richiede applicazione e pubblicazione dei vecchi commenti revisionati. Applicati 135 campi a sette riquadri e otto collegamenti, con le ultime formulazioni generali senza riferimenti alle singole esecuzioni. Struttura e altre schede conservate; backup locale precedente disponibile. Pubblicazione completata su main: https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/9fe32e6ed8752fddb2c5850e254682bab8f6e0a6. Verificati servizio, copia offline, collegamenti e integrità dei contenuti.
 
 Aggiornato: 13 novembre 2026. Obiettivo: rendere ricostruibile il percorso scientifico per report e presentazione. Prime voci ricostruite dai documenti di progetto e dalla discussione del 9 novembre, poi aggiornamenti espliciti; non è una trascrizione completa delle conversazioni. Le date indicano le decisioni documentate, senza attribuire date precise dove mancano.
 
