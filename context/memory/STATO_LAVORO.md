@@ -1,8 +1,8 @@
 # Stato corrente — 15 novembre 2026
 
-## Pubblicazione GitHub richiesta — 21 novembre 2026
+## Pubblicazione GitHub conclusa — 21 novembre 2026
 
-Marco richiede l’aggiornamento della repository GitHub dopo aver approvato e consultato la mappa. Preparazione sul checkout di pubblicazione derivato da main ccc1376, senza riscrittura della storia o dei contributi del collega. Perimetro: mappa Rami paralleli e testi confermati, provenienza editoriale e memoria corrente, comprese le indicazioni del 16 novembre. Collegamenti adattati al clone; dati, pesi, sorgenti esterne e backup locali esclusi. Pubblicazione non ancora verificata in questo stato; nessun nuovo esperimento o job HPC.
+**Pubblicazione verificata.** Aggiornamento pubblicato su `main`, commit [c612cad](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/c612cad4c161fd3bfcca11ba31525102cee5ab58); riferimento remoto verificato tramite confronto GitHub, identico al commit pubblicato. Inclusi mappa Rami paralleli con 39 riquadri/49 collegamenti e testi confermati, interfaccia, fonti portabili, provenienza e memoria corrente. 34 file nel commit; contributi del collega e storia preservati. Controlli: 521 collegamenti, 41 sorgenti Python e 192 hash senza errori; servizio mappa, 792 campi, copia offline, estremi dei collegamenti e disegno verificati. JSON e copia offline identici ai file locali approvati; nessun pattern di credenziale rilevato nel controllo dei file modificati, nei limiti della ricerca. Connettore GitHub disponibile in lettura ma scrittura rifiutata (403); pubblicazione eseguita con Git autenticato e certificati di sistema. Nessun nuovo esperimento, training, job HPC o modifica dei filtri. Restano la revisione scientifica dei vecchi commenti e le decisioni metodologiche aperte.
 
 ## Ripresa della mappa e controllo repository — 21 novembre 2026
 

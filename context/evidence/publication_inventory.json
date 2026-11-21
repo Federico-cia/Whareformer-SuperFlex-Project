@@ -666,8 +666,8 @@
     },
     {
       "path": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 120480,
-      "sha256": "20e2686bb88316466e491b358253afa5de199b6c7df5d003875da2ffcb0ef5fe"
+      "bytes": 121585,
+      "sha256": "1b6204b99922bfbf1dc39c40655125929be70b3e316fa3f7f08b3fd9ee6b5f8d"
     },
     {
       "path": "context/memory/REVISIONE_MAPPA_20261115.md",
@@ -686,13 +686,13 @@
     },
     {
       "path": "context/memory/STATO_LAVORO.md",
-      "bytes": 20915,
-      "sha256": "ed4bacbf0f1ee49fdd8de0f8477e090e271844d40b2f579374e91794b8b9f81e"
+      "bytes": 21477,
+      "sha256": "3a26b9fb49574e67ba7a8dd9990fc7d3acdeb9b770824a8a7963f059a97ef2e2"
     },
     {
       "path": "context/memory/TODO.md",
-      "bytes": 16203,
-      "sha256": "be421487cbc3e942f8a7e81694d7374663008286a9fafb463e6e94b11ddc6559"
+      "bytes": 16356,
+      "sha256": "9113fce96e9a266643254769061058d139c380954a46277b36e9bde7acaf7e25"
     },
     {
       "path": "context/memory/docs/CODICE_PRODOTTO.md",

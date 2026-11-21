@@ -2,7 +2,7 @@
 
 ## Pubblicazione della mappa — 21 novembre 2026
 
-- [ ] Pubblicare su main mappa e memoria corrente dopo verifica di collegamenti, testi e servizio; controllare il riferimento remoto e registrare l’esito.
+- [x] Pubblicare su main mappa e memoria corrente: [c612cad](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/c612cad4c161fd3bfcca11ba31525102cee5ab58); riferimento remoto verificato, controlli superati. Restano le attività scientifiche e la revisione dei vecchi commenti riportate sotto.
 
 ## Priorità mappa — mandato del 21 novembre 2026
 
