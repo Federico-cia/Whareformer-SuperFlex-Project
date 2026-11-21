@@ -1,6 +1,6 @@
 # Mappa interattiva Whareformer–SuperFlex
 
-Versione corrente: **Rami paralleli**, struttura e testi confermati da Marco e applicati il 21 novembre 2026. Contiene 39 riquadri e 49 collegamenti, con nove campi descrittivi per scheda. La repository conserva i testi confermati; la revisione scientifica dei vecchi commenti è una fase successiva.
+Versione corrente: **Rami paralleli**, struttura e testi confermati da Marco e applicati il 21 novembre 2026. Contiene 39 riquadri e 49 collegamenti, con nove campi descrittivi per scheda. La repository conserva i testi confermati; i vecchi commenti sono stati revisionati e confermati. R09/R12/R28/R32/R34 annotano anche le decisioni del punto 3: leggere i campi di stato e miglioramento per distinguere implementazione e direzione approvata.
 
 ## Apertura
 

@@ -19,12 +19,14 @@ assert.equal(ids.size, data.nodes.length + (data.groups || []).length, 'Duplicat
 const fields = ['summary', 'role', 'state', 'evidence', 'why', 'alternatives', 'improve', 'contract', 'failure'];
 const approved = JSON.parse(fs.readFileSync(path.join(root, 'context/evidence/map_20261121/COMMENTI_STRUTTURA_APPROVATA.json'), 'utf8'));
 const approvedById = new Map([...approved.nodes, ...approved.edges].map(item => [item.ref, item]));
+const point3 = JSON.parse(fs.readFileSync(path.join(root, 'context/evidence/point3_20261121/approved_map_point3_fields.json'), 'utf8'));
+for (const item of point3.nodes) approvedById.set(item.ref, item);
 for (const item of [...data.nodes, ...data.edges]) {
     for (const field of fields) {
         assert.equal(typeof item[field], 'string', item.id + ':' + field);
         assert(item[field].trim(), item.id + ':' + field + ' is empty');
         // Subsequent manual edits are legitimate; the original confirmed text is checked only while its status is retained.
-        if (item.review === 'Testo confermato da Marco' || item.review === 'Testo manuale conservato') {
+        if (point3.nodes.some(n => n.ref === item.id) || item.review === 'Testo confermato da Marco' || item.review === 'Testo manuale conservato') {
             assert.equal(item[field], approvedById.get(item.id)?.fields[field], item.id + ':' + field + ' differs from the confirmed text');
         }
     }

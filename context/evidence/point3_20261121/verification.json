@@ -1,0 +1,43 @@
+{
+  "scope": "maintained code, structure, provenance, map and changed-file privacy scan; not full scientific or GPU validation",
+  "python": "3.13.13",
+  "tests": {
+    "total": 105,
+    "passed": 103,
+    "skipped": 2,
+    "new_tests_passed": 23,
+    "skip_reason": "motmetrics unavailable locally"
+  },
+  "structural": {
+    "local_links": 636,
+    "python_sources": 53,
+    "hashes": 222,
+    "errors": 0
+  },
+  "map": {
+    "nodes": 39,
+    "edges": 49,
+    "fields": 792,
+    "offline_identical": true,
+    "service_read_only": true
+  },
+  "privacy_scan": {
+    "files": 48,
+    "findings": []
+  },
+  "base_commit": "567321e1d0823e69d0a914c796060fe2007569cc",
+  "excluded": [
+    "full trace archive",
+    "RGB/masks/clouds/meshes",
+    "model weights",
+    "private HPC access scripts",
+    "credentials"
+  ],
+  "limitations": [
+    "No real TorchScript verifier checkpoint tested",
+    "main verifier not trained",
+    "full FPS-to-SuperFlex worker integration pending",
+    "test split pending",
+    "HPC capacity plan deferred by Marco"
+  ]
+}

@@ -1,8 +1,35 @@
-# Passaggio di consegne AI — 14 novembre 2026
+# Passaggio di consegne AI
 
-## Ripresa corrente — 21 novembre 2026
+## Ripresa corrente — 21 novembre 2026, fine sessione
 
-Mappa Rami paralleli e testi approvati applicati: 39 riquadri, 49 collegamenti. [Guida e versione autorevole](../../mappa_interattiva/README.md); non rigenerare dai prototipi storici. L’assistente può inserire testi dopo conferma esplicita. Restano la revisione dei vecchi commenti, la discussione su ammissione/posa e le [due integrazioni richieste senza nuove etichette manuali](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md). Nessun nuovo training o risultato sperimentale.
+Leggere [stato](STATO_LAVORO.md), [TODO](TODO.md), [decisioni](REGISTRO_DECISIONI.md)
+e [sintesi scientifica](SUPERVISIONE_AMMISSIONE_20261121.md). Le note più recenti
+prevalgono sulla cronologia; gli stati HPC sono osservazioni datate, non uno stato live.
+
+- Punto 3 a Marco, punto 2 al compagno; punti 1 e 4 successivi. Direzione approvata:
+  DA allineata alla scena, memoria pesata a stati, forma/collocazione separate,
+  verificatore appreso; fusione dopo spostamento come obiettivo.
+- [Primo nucleo implementato](IMPLEMENTAZIONE_PUNTO3_20261121.md): codice e
+  23 nuovi test, non verificatore principale addestrato o pipeline neurale completa.
+  [Contratti e uso](../../integration_prototype/SCENE_MEMORY.md).
+- [Audit acquisito](RISULTATI_AUDIT_AMMISSIONE_20261121.md): 438 allineamenti
+  numericamente validi su 446; staticità e target reali non ancora certificati.
+- [Pulizia e ripresa](PULIZIA_E_RIPRESA_HPC_20261121.md): quota personale quasi
+  piena; tracciati storici archiviati sul PC con verifica integrale. Ultimo stato
+  documentato 23:51:38: 783790/783791 RUNNING, otto blocchi conclusi, nuvole in
+  avanzamento e circa 5.37 GiB liberi. Non duplicare gli invii.
+- **Problema rinviato da Marco a domani:** capacità degli output. Un blocco
+  misurato è circa 0.64 GiB; la run completa non è garantita nella quota di 50 GB.
+  Guard operativo portabile in `tools/hpc_quota_guard.py`; gli script di accesso
+  personali rimangono fuori dal clone. Archivi e dati completi non sono pubblicati.
+- Test set indipendente ancora da scegliere; P01_01 è sviluppo/train.
+  Nessun nuovo training o beneficio di tracking dimostrato in questa sessione.
+
+Per codice e dipendenze leggere [README integrazione](../../integration_prototype/README.md).
+Per la mappa leggere [la sua guida](../../mappa_interattiva/README.md): cinque
+schede annotano decisioni approvate ma non ancora tutte implementate.
+
+## Resoconti precedenti
 
 ## Campagna estesa conclusa — 15 novembre 2026
 

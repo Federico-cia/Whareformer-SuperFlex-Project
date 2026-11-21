@@ -1,4 +1,6 @@
-# Roadmap corrente
+# Roadmap operativa — ciclo Whareformer–SuperFlex
+
+> **Aggiornamento 21 novembre 2026, sera:** il punto 3 (memoria geometrica e ammissione) ha un piano approvato che supera i gate provvisori descritti qui: profondità DA allineata alla scena, memoria a stati con forma separata dalla collocazione, verificatore appreso, fusione dopo spostamento come obiettivo. Vedere [SUPERVISIONE_AMMISSIONE_20261121.md](SUPERVISIONE_AMMISSIONE_20261121.md).
 
 ## Mappa corrente — 21 novembre 2026
 

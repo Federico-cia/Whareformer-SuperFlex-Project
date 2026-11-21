@@ -1,4 +1,24 @@
-# Integrazione: decisione corrente
+# Interfaccia geometrica e integrazione Whareformer
+
+## Punto 3: prima implementazione autorizzata ed eseguita — 21 novembre 2026
+
+Marco autorizza di procedere secondo il piano approvato iniziando dalle parti indipendenti dall'audit. Implementati allineamento DA→scena con fallimento esplicito, memoria pesata a stati senza vista fissa, separazione forma/collocazione e percorso esplicito dopo spostamento, FPS 4096 con provenienza, contratti del verificatore, baseline regressiva addestrabile e replay/adapter del coordinatore. [Dettagli, verifiche e limiti](IMPLEMENTAZIONE_PUNTO3_20261121.md); [guida software](../../integration_prototype/SCENE_MEMORY.md).
+
+**Verificato localmente:** 105 casi, 103 superati e 2 saltati per motmetrics, inclusi 23 nuovi test tutti passati; nessuna inferenza neurale reale. Il verificatore principale non è addestrato: senza modello non si confermano/fondono ipotesi. Mancano evidenze validate di staticità, calibrazione sullo sviluppo, collegamento FPS al worker SuperFlex e validazione reale dopo spostamento. Il runner storico resta distinto e invariato nei suoi algoritmi; la nuova memoria non è già la pipeline sperimentale completa.
+
+**Audit/HPC:** nessun accesso diretto o job in questa fase; stato live ignoto. Marco deve avviare `strumenti_hpc/esegui_controllo_hpc.bat` e `esegui_scarica_audit.bat`; scarico aggiornato per il job 783586, con accounting, hash e log anche parziali, nuova cartella a ogni tentativo. Poi interpretare gli esiti prima di training/ripresa. Nessun nuovo metodo principale, parametro calibrato, modifica della mappa o pubblicazione. Log e ricevuta in `outputs/point3_implementation_20261121/`.
+
+
+## Passaggio corrente: ammissione geometrica — 21 novembre 2026
+
+Leggere prima [RIPRESA_AMMISSIONE_GEOMETRICA_20261121.md](RIPRESA_AMMISSIONE_GEOMETRICA_20261121.md): discussione completa, decisioni/proposte distinte, regole nel codice, criticità, alternative di supervisione/validazione e prossimo passo. Marco sul punto 3, compagno sul 2; punti 1 e 4 dopo entrambi. Soglie/criterio di accettazione da apprendere; conservare viste parziali valide. Superato il rinvio storico dei gate; nessun nuovo modello, target o protocollo scelto e nessun training/modifica del codice in questa discussione. Memoria preparata per continuare con altro provider; nessun invio esterno o push eseguito.
+
+Attenzione alle attività parallele: 782967 sostituito da 782990; 782968/782969 con dipendenza aggiornata, stato live non ricontrollato qui. Seguire STATO_LAVORO.md e ARRICCHIMENTO_COMPLETO_P01_20261121.md, non duplicare job. Le note di rinvio e attesa dei vecchi commenti sotto sono storiche e superate.
+
+
+## Primo campione supervisionato pronto — 21 novembre 2026
+
+[Esito e limiti](ARRICCHIMENTO_TRAINING_20261121.md): 446 query da 247 frame di P01_01, target/input oracle originali e geometria con archivio strettamente passato; 429 con geometria precedente della candidata corretta. Tutte query di tracce esistenti, nessuna Nuova track. Non è stata adottata una politica di fusione/riduzione, né avviato training. Prima dell'estensione ai 56 video servono gli ingressi originali mancanti; geometrie grandi sull'HPC, copia numerica/metadati locale verificata. 782875 concluso 0:0, nessun job di questo lavoro attivo.
 
 ## Mappa corrente — 21 novembre 2026
 

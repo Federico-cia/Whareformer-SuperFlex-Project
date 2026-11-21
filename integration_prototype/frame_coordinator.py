@@ -50,6 +50,8 @@ class FrameCoordinator:
             raise ValueError('Use a fresh tracker and matcher for a new coordinator')
         if geometry_updater is not None and not callable(geometry_updater):
             raise TypeError('geometry_updater must be callable')
+        if reconstructor is not None and not getattr(geometry_updater, 'supports_deferred_reconstruction', True):
+            raise ValueError('This updater requires FPS scene-shape export, not legacy deferred reconstruction')
         if reconstructor is not None and (matcher.config.mode == 'disabled'
                 or not matcher.config.representation.endswith('_superflex') or geometry_updater is None):
             raise ValueError('Reconstruction requires enabled SuperFlex representation and cloud updater')

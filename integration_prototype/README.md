@@ -1,5 +1,13 @@
 # Integrazione geometrica nel tracking
 
+## Punto 3: prima implementazione
+
+Nucleo a stati e adapter disponibili, non ancora modello addestrato o nuova
+pipeline completa. Leggere [SCENE_MEMORY.md](SCENE_MEMORY.md) e il
+[resoconto](../context/memory/IMPLEMENTAZIONE_PUNTO3_20261121.md).
+I test includono allineamento, causalità, copertura, spostamento sintetico e
+integrazione con il tracker originale mediante tensori controllati.
+
 Codice attuale per il ciclo osservazione → confronto causale → associazione → aggiornamento geometrico → ricostruzione. Le reti restano preaddestrate; i filtri di fusione non sono stati ricalibrati.
 
 ## Componenti
@@ -18,6 +26,9 @@ Codice attuale per il ciclo osservazione → confronto causale → associazione 
 | audit_video_run | Copertura completa, correzioni effettive dei logits, uso causale di SuperFlex e memoria finale |
 | hpc_campaign, prepare_hpc_campaign, submit_hpc_campaign | Campione esteso congelato prima dei modelli, pacchetto e invii HPC con dipendenze/ricevute |
 | validate_tracking_evaluator_hpc | Verifica esplicita del valutatore su riferimenti esterni forniti tramite argomenti |
+| training_enrichment, verify_training_enrichment | Campione oracle con target originali e geometria solo passata; verifica indipendente |
+| full_p01_enrichment | Acquisizione RGB/maschere e arricchimento geometrico di tutto P01_01 a blocchi su HPC; account Slurm da `CV_SLURM_ACCOUNT` |
+| audit_ammissione | Audit di fattibilità del punto 3: scala DA grezza contro allineata, riferimento di posa dalle camere, registratore attuale |
 
 ## Ambiente e test
 

@@ -1,4 +1,18 @@
-# Codice prodotto
+# Che cosa abbiamo prodotto in codice
+
+## Memoria a stati del punto 3 — 21 novembre 2026
+
+Nuovi moduli scene_geometry, scene_memory, registration_verifier e run_scene_memory; adapter del coordinatore e 23 nuovi test. [Resoconto e limiti](../IMPLEMENTAZIONE_PUNTO3_20261121.md), [contratti e uso](../../../integration_prototype/SCENE_MEMORY.md). Nucleo software verificato, non modello addestrato o pipeline GPU completa. Script di scarico audit aggiornato; nessun accesso HPC dell'assistente.
+
+## Codice aggiunto il 21 novembre 2026 (sera)
+
+- `integration_prototype/full_p01_enrichment.py`: acquisizione/verifica di RGB e maschere e arricchimento geometrico di tutte le osservazioni P01_01 a blocchi, con catena di job per ramo e cache della pipeline. Corretto il PATH dell'ambiente per stadio (errore `ninja`).
+- `integration_prototype/audit_ammissione.py`: audit di fattibilità del punto 3 in sola lettura (DA grezza contro allineata con funzioni originali Whareformer, riferimento di posa dalle camere, confronto con il registratore attuale; nessuna soglia decisionale).
+- `strumenti_hpc/`: script locali di controllo, diagnosi, ripresa e invio usati da Marco sull'HPC; contengono l'utente HPC e non sono destinati alla pubblicazione.
+
+## Estrazione supervisionata del training — 21 novembre 2026
+
+`integration_prototype/training_enrichment.py` ricostruisce input/target con oracle e memorie originali e collega geometrie esistenti con provenienza/archivio strettamente passato, senza nuova selezione/fusione. `verify_training_enrichment.py` verifica target, storia completa e artefatti. Tre test locali/remoti passati; 782875 concluso 0:0 e 446 esempi/247 frame validati, copia locale confrontata con 110590 annotazioni ufficiali. [Resoconto](../ARRICCHIMENTO_TRAINING_20261121.md). Campione di sviluppo con zero Nuova track, non training completo; nessuna nuova inferenza o addestramento. Codice originale/mappa/filtri preservati.
 
 ## Esito campagna — 15 novembre 2026
 

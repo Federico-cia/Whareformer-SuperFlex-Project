@@ -1,0 +1,177 @@
+{
+  "date": "2026-11-21",
+  "audit_job": "783586",
+  "state": "COMPLETED 0:0",
+  "elapsed": "00:16:53",
+  "input_hashes_verified": {
+    "out_783586/summary.json": "bc6b3ab2aa4d0dfc511b902e044a8ecf3008523b42dd9608315baa0877c2c79f",
+    "out_783586/pairs.csv": "ebc6496703e930afa8d214ebfd0489cd6f542959501e4bf27c2c3e785f398699",
+    "out_783586/per_observation.jsonl": "d32cba83de933d4575e253d733802dae3eb3e19dc7479916ac251794975585c5",
+    "out_783586/log.txt": "af5032c13e3fe46d6abecd938c718b59aaf35d0c8803824658a505daba858e4b",
+    "out_783586/world_clouds_aligned.npz": "7e76838510a914abbfcb6dec483ec3f3903ef2e6616c4158b599e72a6cdd269a",
+    "audit_783586.out": "440698a5796a1b4a640429fee3e4c4c6d099db5b6cb66842047d2bc76e26fda9",
+    "audit_783586.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "observations": 446,
+  "alignment_valid": 438,
+  "frames": 247,
+  "valid_frames": 242,
+  "invalid_alignment": [
+    {
+      "key": "P01_01/frame_0000040200__d0",
+      "frame": 40200,
+      "alpha": -1.562082715932873,
+      "beta": 5.903391843210424
+    },
+    {
+      "key": "P01_01/frame_0000040200__d3",
+      "frame": 40200,
+      "alpha": -1.562082715932873,
+      "beta": 5.903391843210424
+    },
+    {
+      "key": "P01_01/frame_0000052206__d0",
+      "frame": 52206,
+      "alpha": -0.35718437178597984,
+      "beta": 3.1464879818963456
+    },
+    {
+      "key": "P01_01/frame_0000074000__d2",
+      "frame": 74000,
+      "alpha": -1.09883189021102,
+      "beta": 4.138643336040416
+    },
+    {
+      "key": "P01_01/frame_0000074012__d2",
+      "frame": 74012,
+      "alpha": -1.0289866398557481,
+      "beta": 4.041862453091899
+    },
+    {
+      "key": "P01_01/frame_0000093136__d0",
+      "frame": 93136,
+      "alpha": -1.0849490263657384,
+      "beta": 4.236612316935287
+    },
+    {
+      "key": "P01_01/frame_0000093136__d2",
+      "frame": 93136,
+      "alpha": -1.0849490263657384,
+      "beta": 4.236612316935287
+    },
+    {
+      "key": "P01_01/frame_0000093136__d4",
+      "frame": 93136,
+      "alpha": -1.0849490263657384,
+      "beta": 4.236612316935287
+    }
+  ],
+  "masks": {
+    "catalogue_only": 24,
+    "all_objects": 422
+  },
+  "pairs": 429,
+  "paired_overlap": {
+    "raw": {
+      "n": 415,
+      "median": 0.03271484375,
+      "q10": 0.0,
+      "q90": 0.786628871681416
+    },
+    "aligned": {
+      "n": 415,
+      "median": 0.22802734375,
+      "q10": 0.0,
+      "q90": 0.85908203125
+    },
+    "increased": 254,
+    "unchanged": 71,
+    "decreased": 90
+  },
+  "lowest_displacement_tertile": {
+    "cut_descriptive": 0.10377298473380374,
+    "raw": {
+      "n": 139,
+      "median": 0.28076171875,
+      "q10": 0.015853587962962965,
+      "q90": 0.9618024553571429
+    },
+    "aligned": {
+      "n": 139,
+      "median": 0.681640625,
+      "q10": 0.12900390625000002,
+      "q90": 0.9775390625
+    },
+    "increased": 101,
+    "unchanged": 1,
+    "decreased": 37
+  },
+  "full_mask_pair_sensitivity": {
+    "raw": {
+      "n": 384,
+      "median": 0.044545159565199104,
+      "q10": 0.0,
+      "q90": 0.8198730468749998
+    },
+    "aligned": {
+      "n": 384,
+      "median": 0.248779296875,
+      "q10": 0.0,
+      "q90": 0.8750684263775728
+    },
+    "increased": 241,
+    "unchanged": 54,
+    "decreased": 89
+  },
+  "aligned_registration_accepts": 178,
+  "aligned_registration_outcomes": {
+    "ambiguous_rigid_pose": 43,
+    "insufficient_heldout_support|ambiguous_rigid_pose": 32,
+    "accepted": 178,
+    "insufficient_heldout_support|excessive_heldout_residual|ambiguous_rigid_pose": 77,
+    "insufficient_heldout_support": 44,
+    "insufficient_heldout_support|excessive_heldout_residual": 41
+  },
+  "pair_identity_counts": {
+    "chopping board": 58,
+    "knife": 22,
+    "pan": 183,
+    "spatula": 38,
+    "container": 5,
+    "lid": 14,
+    "kettle": 4,
+    "grater": 13,
+    "bin/garbage can/recycling bin": 1,
+    "saucepan": 38,
+    "olive oil bottle": 8,
+    "tofu box": 4,
+    "tofu container": 5,
+    "spoon": 3,
+    "sieve": 3,
+    "curry powder package": 1,
+    "plate": 15
+  },
+  "world_clouds": {
+    "clouds": 438,
+    "points": 790502,
+    "finite": true
+  },
+  "limitations": [
+    "staticity_not_certified",
+    "overlap_tolerance_0.1R_descriptive_not_acceptance",
+    "surface_error_in_original_audit_is_point_displacement",
+    "shared_depth_pose_errors",
+    "no_training_labels_approved"
+  ],
+  "enrichment": {
+    "observed_at": "2026-11-21T23:01:50+01:00",
+    "completed_batches": 8,
+    "total_batches": 216,
+    "failed_resume_jobs": [
+      "783490",
+      "783491"
+    ],
+    "queue_empty": true,
+    "final_status_present": false
+  }
+}

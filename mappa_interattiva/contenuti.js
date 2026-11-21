@@ -324,7 +324,7 @@ window.MAP_DATA = {
       "evidence": "-",
       "why": "-",
       "alternatives": "-",
-      "improve": "-",
+      "improve": "Direzione approvata, non ancora implementata: usare la stessa procedura anche per la profondità della memoria geometrica, non solo per la posizione. Se l'allineamento non riesce, la vista non viene fusa nella forma.",
       "contract": "Vista della scena, posa, maschere e profondità devono riferirsi allo stesso frame.",
       "failure": "Una scena incompleta, una posa errata o pochi punti validi possono rendere inaffidabile l’allineamento."
     },
@@ -423,10 +423,10 @@ window.MAP_DATA = {
       "state": "Percorso implementato e verificato con entrambi i modelli.",
       "evidence": "Verificata la produzione della geometria con entrambe le sorgenti; la disponibilità dei punti non ne certifica l’accuratezza fisica.",
       "why": "Il confronto tra sorgenti serve a valutare la dipendenza dei risultati dalla geometria stimata.",
-      "alternatives": "Profondità allineata alla scena: esplorata nei diagnostici, non usata nel ramo forma corrente.",
+      "alternatives": "Profondità DA allineata alla scena, procedura originale di Whareformer: scelta come direzione per la memoria geometrica, non ancora implementata. MoGE resta come sorgente di confronto, non come sorgente della memoria.",
       "improve": "Verificare coerenza di scala e geometria fra viste e conseguenze sulle fusioni.",
       "contract": "Predizioni e pixel devono corrispondere; per ricavare punti dalla profondità servono intrinseci alla giusta risoluzione.",
-      "failure": "Errori di profondità, scala o camera possono produrre nuvole incompatibili fra viste."
+      "failure": "Errori di profondità, scala o camera possono produrre nuvole incompatibili fra viste. Pose e ricostruzione della scena servono sia all'ingresso sia alla costruzione delle verifiche: un loro errore può non emergere nella valutazione."
     },
     {
       "id": "R13",
@@ -970,7 +970,7 @@ window.MAP_DATA = {
       "evidence": "-",
       "why": "-",
       "alternatives": "-",
-      "improve": "-",
+      "improve": "Direzione approvata, non ancora implementata: se l'allineamento alla scena della vista non riesce, la nuvola non viene fusa nella forma; resta utilizzabile per il confronto delle forme.",
       "contract": "Nuvola, sorgente e osservazione devono corrispondere; i punti devono provenire dalle superfici visibili stimate.",
       "failure": "Validità dei dati e correttezza geometrica sono diverse: punti formalmente validi possono essere inaccurati."
     },
@@ -1111,8 +1111,8 @@ window.MAP_DATA = {
       "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
       "evidence": "Nelle prove sono avvenute fusioni ammesse e rifiuti; l’accuratezza fisica delle fusioni non è certificata.",
       "why": "-",
-      "alternatives": "Rivedere criteri e soglie oppure conservare forme separate sono alternative discusse, non una politica definitiva già scelta.",
-      "improve": "Concordare i criteri con il compagno e verificare sia fusioni errate ammesse sia fusioni utili respinte.",
+      "alternatives": "Al posto delle soglie fisse sono stati considerati tre criteri appresi: un classificatore leggero sulle diagnostiche già calcolate (supporto, residui, ambiguità, rapporto delle dimensioni), da usare come confronto di base; un verificatore appreso che giudica direttamente la coppia di nuvole allineate, sul modello di FACT, Decision PCR e Deep-PE, direzione preferita; una stima appresa della sovrapposizione punto per punto, sul modello di PREDATOR, più costosa e non scelta. Discusse anche un'ammissione per ipotesi ispirata a DenStream e la conservazione di forme separate.",
+      "improve": "Direzione approvata, non ancora implementata: prima versione con fusione solo mentre l'oggetto è fermo nel riferimento della scena; verificatore appreso addestrato su viste parziali simulate con errori realistici e valutato su coppie reali di oggetti fermi; un verificatore preaddestrato esistente come confronto rapido. Da testare quando saranno disponibili più dati: etichette reali su più livelli affiancate a quelle sintetiche e valutazione sull'intero ciclo nel tempo. Verificare sia fusioni errate ammesse sia fusioni utili respinte.",
       "contract": "La decisione riguarda la fusione geometrica; non annulla l’associazione alla traccia.",
       "failure": "Controlli permissivi possono contaminare la memoria; controlli severi possono respingere viste utili."
     },
@@ -1183,7 +1183,7 @@ window.MAP_DATA = {
       "evidence": "-",
       "why": "Conservare viste complementari può aumentare la copertura delle superfici dell’oggetto.",
       "alternatives": "-",
-      "improve": "-",
+      "improve": "Obiettivo approvato, non ancora implementato: fondere nella forma anche le viste raccolte dopo uno spostamento, allineando lo stato confermato alla forma accumulata e ammettendolo tramite il verificatore appreso. La memoria nasce già con forma e collocazione separate per consentirlo; finché il verificatore non è validato per questo caso, gli stati successivi a uno spostamento restano separati.",
       "contract": "Si aggiungono soltanto punti osservati stimati, mai le superfici completate da SuperFlex.",
       "failure": "Una trasformazione scorretta può deformare la memoria anche quando supera i controlli."
     },

@@ -1,8 +1,161 @@
-# Attività correnti
+# To-do corrente — collegamento alla baseline reale
+
+## Spazio recuperato e nuova ripresa — 21 novembre 2026
+
+**Verifica successiva delle 23:51:38:** 783790/783791 entrambi RUNNING a 3m56s su gnode03; superato l'arresto precedente nelle nuvole, ora blocco 8 con 309/312 report DA/MoGE e blocco 9 con 286/288. Quota 41.19/46.56 GiB (circa 5.37 GiB liberi), otto blocchi ancora conclusi; SuperFlex dei nuovi blocchi non ancora verificata.
+
+Marco autorizza pulizia e, esplicitamente, copia/archiviazione dei tracciati conclusi sul PC. Verificati due volte 377 file (5.47 GiB) e conservati in archivio locale di 636594519 byte con ledger/hash, prima di rimuovere le sole copie remote. Runtime, geometrie e input attuali preservati. Quota scesa da 46.35 a 40.88 GiB su 46.56; archivio da NON eliminare. [Operazioni, percorsi e ripristino](PULIZIA_E_RIPRESA_HPC_20261121.md).
+
+**Job correnti:** 783790/783791, rami 0/1 dai blocchi 8/9, RUNNING su gnode03 al controllo 23:49:54 (2m11s). Preflight quota positivo anche sul nodo di calcolo. Otto blocchi conclusi a quel controllo. I tentativi 783750/751 sono falliti dopo MoGE anche su nodo diverso; 783782/783783 fermati prima delle inferenze per helper quota assente, poi corretto. Nessun precedente tentativo va considerato attivo.
+
+Guard di quota a ogni blocco: riserva operativa 2 GiB/12000 file, stop esplicito codice 75 quando insufficiente; fallback nativo BeeGFS verificato. Tolta l'esclusione del nodo che non risolveva. Nessuna modifica scientifica. **Capacità ancora aperta:** costo misurato 0.64 GiB/blocco, estrapolazione circa 138 GiB/216 blocchi; la pulizia non basta a garantire completamento nella quota di 50 GB. Occorre compattare la conservazione senza perdere informazione necessaria o reperire capacità. Nessuna riduzione di copertura o sorgenti approvata in questa fase. Non promettere funzionamento ininterrotto notturno.
+
+
+## Ripresa interrotta; quota personale quasi piena — 21 novembre 2026
+
+Aggiornamento successivo: 783750/783751 hanno superato MoGE ma sono poi entrambi FAILED 1:0 alle 23:23:53 anche su gnode03, durante le nuvole. La precedente nota RUNNING è storica: il solo cambio di nodo non risolve. Diagnosi con `myquota`: 46.35 GiB usati su 46.56 GiB, circa 0.21 GiB disponibili; il precedente df del filesystem totale non misurava questo limite personale. Quota quasi esaurita è un problema verificato e spiegazione plausibile degli errori di scrittura/silenzi; risoluzione dello spazio e successiva ripresa ancora in corso. Nessun altro job inviato dopo questo arresto. I parziali sono preservati. Non dichiarare la run attualmente in avanzamento senza nuova verifica.
+
+
+## HPC riavviato su richiesta di Marco — 21 novembre 2026, 23:23
+
+Marco richiede «Fallo ripartire». Diagnosi e ripresa eseguite con accesso esistente autorizzato per l'azione: **783750 e 783751 RUNNING su gnode03**, rami 0/1 dai blocchi 8/9. **MoGE superato: 512/512 ready in entrambi**, DA già pronta, nuvole in costruzione. Ultimo controllo 23:23:51, rispettivamente 3m14s/3m08s; 8/216 blocchi ancora conclusi a quel momento. Catena automatica preesistente preservata, nessun duplicato o reset delle cache.
+
+Escluso gnode02 dai job e successori come intervento controllato dopo quattro arresti osservati durante MoGE, senza pretendere diagnosi hardware conclusiva. Batch remoto salvato in backup e arricchito di log; dati/modelli/codice scientifico invariati. [Intervento, hash, log e ricevute](RIPARTENZA_HPC_20261121.md). Non reinviare mentre i rami sono in coda. SuperFlex dei nuovi blocchi e completamento integrale ancora da verificare; nessuna sorveglianza permanente avviata. Questo stato supera le precedenti note di coda vuota/run ferma. Audit e sviluppo punto 3 restano nello stato documentato.
+
+
+## Chiusura sessione e ripresa successiva — 21 novembre 2026
+
+Marco chiede di chiudere la sessione e proseguire domani con il prossimo problema del TODO. Nessuna nuova scelta metodologica o attestazione di chiusura del punto 3: piano approvato, primo nucleo implementato e testato (103 test superati, due saltati), audit 783586 acquisito e interpretato. Riferimenti: [implementazione](IMPLEMENTAZIONE_PUNTO3_20261121.md), [audit](RISULTATI_AUDIT_AMMISSIONE_20261121.md).
+
+**Situazione da non perdere:** arricchimento fermo a 8/216 blocchi, riprese 783490/783491 FAILED 1:0 e nessun job in coda nell'ultimo controllo delle 23:01. Non avanza automaticamente durante la notte. Diagnosi aggiornata predisposta ma non ancora eseguita: esito_diagnosi.txt è ancora quello delle 20:39 sui vecchi job. Marco può eseguire `strumenti_hpc/esegui_diagnosi_hpc.bat` alla ripresa; assistente senza accesso HPC diretto, nessun rilancio prima della lettura dell'esito.
+
+**Punto 3 ancora aperto:** staticità/target reali da validare, dati e training del verificatore principale, parametri selezionati sullo sviluppo, worker SuperFlex con FPS e validazione del caso dopo spostamento. Le 438 nuvole allineate sono locali e consentono lavoro indipendente dalla run. Test set indipendente ancora prioritario; punto 2 al compagno. Le modifiche di questa sessione sono locali, non pubblicate. Non riaprire decisioni approvate né rilanciare audit concluso. Nessuna ulteriore azione indispensabile per chiudere la chat; riprendere da questi pendenti quando Marco torna.
+
+
+## Audit acquisito; arricchimento fermo — 21 novembre 2026, esiti 23:01–23:06
+
+Marco esegue gli script: **783586 COMPLETED 0:0, 16m53s**, sette hash verificati; 446 osservazioni, 438 allineamenti validi e nuvole locali finite, otto fit con alpha negativo. Confronto appaiato su 415 coppie: sovrapposizione mediana 3.27% grezza → 22.80% allineata (28.08% → 68.16% nel terzile di minore spostamento, non staticità certificata). 24 osservazioni con sole maschere del catalogo. Nessuna etichetta di fusione corretta ancora certificata: mantenere limiti di staticità, simmetrie ed errori condivisi. [Risultati, provenienza e interpretazione](RISULTATI_AUDIT_AMMISSIONE_20261121.md).
+
+**Arricchimento:** coda vuota, 8/216 blocchi, nessun riepilogo finale; riprese 783490 e 783491 entrambe FAILED 1:0. Causa non identificata dai log disponibili. Aggiornata la diagnosi di sola lettura per questi job e per gli stadi parziali; prossimo intervento di Marco: `strumenti_hpc/esegui_diagnosi_hpc.bat`, poi leggere `esito_diagnosi.txt` prima di riprendere. Nessun accesso diretto HPC, invio o training dell'assistente. Le nuvole locali consentono di proseguire la preparazione dei dati da trasformazioni note senza attendere la run completa. Decisioni metodologiche approvate invariate.
+
+
+## Punto 3: prima implementazione autorizzata ed eseguita — 21 novembre 2026
+
+Marco autorizza di procedere secondo il piano approvato iniziando dalle parti indipendenti dall'audit. Implementati allineamento DA→scena con fallimento esplicito, memoria pesata a stati senza vista fissa, separazione forma/collocazione e percorso esplicito dopo spostamento, FPS 4096 con provenienza, contratti del verificatore, baseline regressiva addestrabile e replay/adapter del coordinatore. [Dettagli, verifiche e limiti](IMPLEMENTAZIONE_PUNTO3_20261121.md); [guida software](../../integration_prototype/SCENE_MEMORY.md).
+
+**Verificato localmente:** 105 casi, 103 superati e 2 saltati per motmetrics, inclusi 23 nuovi test tutti passati; nessuna inferenza neurale reale. Il verificatore principale non è addestrato: senza modello non si confermano/fondono ipotesi. Mancano evidenze validate di staticità, calibrazione sullo sviluppo, collegamento FPS al worker SuperFlex e validazione reale dopo spostamento. Il runner storico resta distinto e invariato nei suoi algoritmi; la nuova memoria non è già la pipeline sperimentale completa.
+
+**Audit/HPC:** nessun accesso diretto o job in questa fase; stato live ignoto. Marco deve avviare `strumenti_hpc/esegui_controllo_hpc.bat` e `esegui_scarica_audit.bat`; scarico aggiornato per il job 783586, con accounting, hash e log anche parziali, nuova cartella a ogni tentativo. Poi interpretare gli esiti prima di training/ripresa. Nessun nuovo metodo principale, parametro calibrato, modifica della mappa o pubblicazione. Log e ricevuta in `outputs/point3_implementation_20261121/`.
+
+
+## Ricognizione di ripresa — 21 novembre 2026
+
+Confrontati riassunto dell'altra chat, documenti correnti, codice, ricevute locali e schede della mappa. [Stato consolidato, differenze e limiti dell'audit](RICOGNIZIONE_RIPRESA_PUNTO3_20261121.md). Nessuna nuova scelta o esecuzione: piano approvato del verificatore/memoria ancora da implementare nei moduli correnti, che conservano gate fissi e prima vista. Scala 9–23% = variabilità del rapporto allineata/grezza, non errore vero certificato. Audit: staticità non certificata; errore denominato di superficie è spostamento punto a punto, non invariante alle simmetrie; non esporta tutte le pose candidate. Tenerne conto prima di costruire target.
+
+Stato HPC corrente NON verificato: ultima verifica documentata squeue vuota, senza accounting/esiti successori; RUNNING storici non attuali. Prossimo passo: controllo e scarico audit avviati da Marco con gli script predisposti; assistente senza accesso diretto HPC. Preservate tutte le decisioni approvate e la storia; nessun training, job o pubblicazione in questa ricognizione.
+
+
+## Passaggio corrente — 21 novembre 2026, sera
+
+**Verifica operativa da chiudere:** acquisizione verificata (110580 abbinate, dieci mancanti), ma la ripresa/audit sotto sono stati storici. Ultima interrogazione squeue senza job; servono accounting e conteggio aggiornati tramite `strumenti_hpc/esegui_controllo_hpc.bat` eseguito da Marco. [Evidenze](VERIFICA_ARRICCHIMENTO_CORRENTE_20261121.md). Nessun nuovo invio o ripresa in questa verifica.
+
+**Questo blocco prevale sulle sezioni sottostanti, che sono cronologia.** Punto 3 (ammissione e aggiornamento della memoria geometrica) seguito da Marco; punto 2 dal compagno; punti 1 e 4 dopo. Decisioni e piano in [SUPERVISIONE_AMMISSIONE_20261121.md](SUPERVISIONE_AMMISSIONE_20261121.md), sezione «Sintesi corrente»; registro in [REGISTRO_DECISIONI.md](REGISTRO_DECISIONI.md).
+
+- **Decisioni del punto 3:** profondità DA allineata alla mesh della scena e riferimento scena tramite pose EPIC-Fields (procedura Whareformer); MoGE solo confronto; vista non fusa se l'allineamento fallisce. Memoria senza vista fissa; forma separata dalla collocazione; stati confermati nel tempo (DenStream adattato); accumulo con fusione dei duplicati e 4096 punti FPS per SuperFlex. Verificatore appreso sulla coppia allineata, classificatore sulle diagnostiche come base, verificatore preaddestrato come confronto. Prima versione con fusione solo da fermo; **obiettivo non negoziabile: fusione anche dopo uno spostamento**. Parametri scelti solo su sviluppo. Posizione per il tracking: quella di Whareformer.
+- **Valutazione:** P01_01 è video di training, quindi sviluppo; il test set è priorità da discutere (TODO).
+- **Operativo:** run di arricchimento P01_01 (110590 osservazioni, 216 blocchi) in corso con catena GPU; ripresa 783490/783491 dai blocchi 8/9. Audit del punto 3 783586 inviato. L'assistente non accede direttamente all'HPC: script in `strumenti_hpc/` avviati da Marco con doppio clic (controllo, diagnosi, ripresa, audit, scarico risultati). Nessun training avviato.
+- **Mappa HTML:** schede R09, R12, R28, R32, R34 aggiornate con le decisioni (testi confermati da Marco); non ancora pubblicata.
+
+## Discussioni aperte e importanti — riepilogo 21 novembre 2026
+
+- [x] Diagnosi 783207/783208: nessun errore di codice o memoria visibile, probabile evento del nodo gnode02.
+- [x] Ripresa eseguita: 783490/783491 RUNNING sui blocchi 8/9. Valutare riprova automatica se i fallimenti si ripetono.
+- [x] Script dell'audit scritto e testato localmente nella parte matematica.
+- [x] Audit inviato: 783586 RUNNING.
+- [x] Scaricare e interpretare i risultati dell'audit 783586: concluso 0:0; evidenze e limiti nel resoconto corrente.
+- [ ] Ricerca Consensus (link condiviso non leggibile dagli strumenti web): recuperare il testo dei risultati, verificare i paper e collegarli alle scelte.
+- [ ] Punto 3: confermare pose/mesh come ingresso (conseguenza della scala allineata); definire cosa conta come fusione corretta e quale errore pesa di più; scegliere il modello del verificatore e il legame con l'ammissione per ipotesi; audit su CPU (approvazione pendente).
+- [ ] **Importante:** discutere le due memorie (matching tramite descrittori di forma, ricostruzione tramite punti) e concordare con il compagno la parte del matching (punto 2).
+- [ ] **Importante:** orientamento e collocazione della forma nella scena (R, t, s con XYZ Whareformer come ancora e scarto stimato) — punto 4.
+- [ ] **Importante:** decidere se e quando estendere l'arricchimento agli altri 55 video di training, dopo la stima dei tempi.
+- [ ] Secondario, da valutare: contatto mano-oggetto VISOR sull'HPC come indizio di oggetto fermo.
+- [x] ZIP e messaggio sulla LMDB inviati al compagno da Marco.
+
+## PRIORITÀ DA DISCUTERE — test set per dimostrare l'efficacia (Marco, 21 novembre 2026)
+
+- [ ] **Decidere quale test set usare per mostrare l'efficacia della nostra architettura.** Vincolo: video mai usati né per addestrare Whareformer né per addestrare, calibrare o selezionare la componente 3D; P01_01 (training split) resta sviluppo. Opzioni aperte: sottoinsieme dello split di test EPIC (54 video, feature pubblicate dagli autori), tutto lo split se il costo lo consente, IT3DEgo/HD-EPIC come generalizzazione. Da fissare: quanti e quali video (scelti prima, con seme o stratificazione), sorgente geometrica e pipeline congelate, metriche e incertezza per video, baseline anche sui 54 completi per la rappresentatività. Decisione da prendere presto, prima che le scelte dei punti 2 e 3 vengano fatte guardando P01_01. Contesto in STATO_LAVORO.md, sezione «Test indipendente».
+
+## Test indipendente — 21 novembre 2026
+
+- [ ] Protocollo di test: vedere la voce prioritaria sopra.
+- [ ] Verificare accesso e dimensioni dell'archivio pubblico (feature di test, training LMDB) dall'HPC prima di scaricare.
+- [x] Compagno informato della training LMDB pubblicata (Marco).
+
+## Rilancio GPU P01_01 — 21 novembre 2026, 17:19
+
+- [x] Rilancio eseguito: 783119/783120 RUNNING. Non reinviare.
+- [ ] Verificare superamento SuperFlex e durata del primo blocco; poi stimare la durata complessiva e preparare lo script di ripresa dei rami fermati.
+
+## Esito job P01_01 — 21 novembre 2026, 16:58
+
+- [x] 782990 COMPLETED 0:0: 110580 osservazioni con input, 10 mancanti espliciti, 216 blocchi.
+- [x] Correzione del PATH in `lane()` applicata localmente e script di rilancio preparato (`strumenti_hpc/esegui_rilancio_hpc.bat`); output parziali dei blocchi 0/1 riusabili tramite cache firmata.
+- [ ] Eseguire il rilancio (Marco, doppio clic), poi verificare `esito_rilancio.txt`, avvio GPU e primi blocchi completati.
+- [ ] Durata da misurare sul primo blocco (stima grezza 12–20 min/blocco, 108 blocchi per ramo). Rischio: un job interrotto (limite 2 h, nodo, errore non gestito) ferma la catena del suo ramo senza perdere le osservazioni già salvate; serve controllo periodico e ripresa dal primo blocco non completato.
+- [x] ZIP richiesto dal compagno creato e verificato in `strumenti_hpc/`; invio a cura di Marco.
+
+## Supervisione dell'ammissione — 21 novembre 2026
+
+- [x] Verificare dati e riferimenti disponibili per target indipendenti: pose EPIC-Fields complete sui frame osservati P01_01, mesh di scena, ledger oracle denso; analisi in [SUPERVISIONE_AMMISSIONE_20261121.md](SUPERVISIONE_AMMISSIONE_20261121.md).
+- [ ] Decisione di Marco: pose/mesh solo come riferimento di supervisione/validazione o anche come ingresso della registrazione; costo relativo falsa ammissione/falso rifiuto; definizione del target di posa/utilità.
+- [ ] Proposta, non approvata: audit CPU sulle 429 coppie consecutive (posa relativa da camere, indicatori di staticità, errore delle 24 soluzioni candidate, effetto di `da_aligned`), senza usare i gate come etichette.
+- [ ] Verificare presenza del contatto mano-oggetto nell'archivio VISOR completo sull'HPC.
+- [ ] Ricontrollare stato live di 782990/782968/782969 da un ambiente con accesso HPC prima di qualsiasi invio.
+
+## Acquisizione completa e SuperFlex P01_01 avviate — 21 novembre 2026
+
+Ultima verifica: 782990 RUNNING a 9m19s, 20805 maschere, nessun errore osservato; 782968/782969 PENDING per dipendenza. Download RGB completo, copertura finale e avvio effettivo GPU ancora pendenti. La pipeline è inviata e prosegue automaticamente dopo la verifica; non duplicare job o richieste.
+
+Stato corrente: download RGB completo; acquisizione/verifica ora **782990**, che sostituisce 782967 cancellato per ottimizzare l'estrazione con riuso dei file. GPU sempre **782968/782969**, dipendenze aggiornate afterok su 782990. Log corrente `acquire_782990.out/.err`; nessun nuovo invio GPU.
+
+- [x] Verificare archivio RGB ufficiale (1.72 GB) e spazio; predisporre verifica maschere/ID e pipeline a blocchi con riuso delle 446 geometrie.
+- [x] Inviare 782967 acquisizione e 782968/782969 GPU afterok; [log, stato e ripresa](ARRICCHIMENTO_COMPLETO_P01_20261121.md). Non reinviarli.
+- [ ] Acquisire esito della verifica di tutti gli input (`coverage.json`), distinguendo mancanti, conflitti e alias.
+- [ ] Seguire avvio e avanzamento dei due rami, ricevere stati successivi in `submissions/`, verificare risultati per tutte le 110590 osservazioni senza confondere esportazione e riuscita.
 
 ## Applicazione dei testi revisionati — 21 novembre 2026
 
 Marco conferma e richiede applicazione e pubblicazione dei vecchi commenti revisionati. Applicati 135 campi a sette riquadri e otto collegamenti, con le ultime formulazioni generali senza riferimenti alle singole esecuzioni. Struttura e altre schede conservate; backup locale precedente disponibile. Pubblicazione completata su main: https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/9fe32e6ed8752fddb2c5850e254682bab8f6e0a6. Verificati servizio, copia offline, collegamenti e integrità dei contenuti.
+
+## Estensione P01_01 richiesta — 21 novembre 2026
+
+- [x] Elencare tutte le 110590 osservazioni: `outputs/p01_full_enrichment_20261121_v1/target_observations.json`, 446 geometrie esistenti e 110144 pendenti.
+- [ ] Acquisire/verificare RGB e maschere completi, preparare budget/configurazione e arricchire tutto P01_01 come richiesto da Marco. Nessuna nuova inferenza avviata; input attualmente parziali. Registrare mancanti/fallimenti senza eliminare osservazioni.
+
+## Criteri di ammissione appresi — indicazione di Marco, 21 novembre 2026
+
+Marco richiede che le soglie di accettazione siano apprese dai dati anziché imposte manualmente; obiettivo esplicito conservare viste parziali valide. Richiede spiegazione di parzialità, ambiguità, regole correnti e alternative di validazione con pro/contro. Direzione approvata: apprendimento del criterio; modello, target, loss e protocollo non ancora scelti. Nessun training, codice, soglia o job modificati.
+
+Verificato cloud_memory.py/cloud_updater.py: trasformazione rigida senza stima scala; supporto in entrambe le direzioni almeno 0.65 entro 0.08R; q90 dell'80% più vicino non oltre 0.15R; alternative entro 5% dello score più epsilon rifiutate se differiscono oltre 15 gradi o spostano il centroide oltre 0.08R. Basta un gate fallito. R è il raggio RMS del riferimento fit; rapporto dei raggi registrato, non gate autonomo. Query separate dal fit, non viste indipendenti. Inizializzazione senza confronto con memoria precedente, con soli controlli di validità dell'input.
+
+Proposte da discutere: classificatore leggero sulle diagnostiche, criterio condizionato alla sovrapposizione/affidabilità dei punti, oppure apprendimento dell'utilità della fusione. Evitare target ricavati dai gate stessi: replicherebbero le euristiche. Identità oracle non certifica posa o scala. Possibile supervisione automatica con trasformazioni note su dati sintetici/crop, verifiche RGB multivista e viste reali escluse; limiti rispettivi: domain gap, dipendenza da pose/visibilità/movimento, validazione geometrica reale non ancora disponibile. Vincolo precedente di nessuna nuova annotazione manuale preservato. Separare dati per oggetto/sequenza e valutare errori di ammissione/rifiuto e qualità della memoria; nessuna opzione già adottata. Fonti primarie consultate per fattibilità concettuale, non compatibilità EPIC verificata: PREDATOR (CVPR 2021, overlap appreso) e Deep Global Registration (CVPR 2020, affidabilità delle corrispondenze appresa).
+
+
+## Priorità e divisione del lavoro aggiornate — 21 novembre 2026
+
+Marco comunica che il compagno segue il punto 2 (integrazione della forma nel matcher), mentre Marco prende in carico il punto 3 (ammissione dei punti nella memoria geometrica). Punti 1 (confronto delle forme) e 4 (collocazione/aggiornamento nella scena) dopo la risoluzione di entrambi. Richiede di procedere sul punto 3 iniziando dal recap di stato e criticità: superato il precedente rinvio della revisione dei gate, conservato sotto come storia. Nessuna nuova soglia, alternativa o protocollo già adottati; nessuna modifica del codice o nuovo job in questo passaggio. Nessun metodo o risultato del compagno comunicato.
+
+Ricognizione conclusa sui resoconti esistenti: 31 fusioni DA/40 MoGE per variante nella campagna, senza validazione fisica indipendente; audit del prefisso con rifiuti per sola ambiguità e sovrapposizione asimmetrica compatibile con parzialità. Prossimo passo proposto, da definire: validazione indipendente di ammissioni e rifiuti, distinguendo simmetrie, parzialità, scala e identità. I controlli di scala necessari alla registrazione restano nel punto 3. Evidenze e limiti in [campagna](../evidence/campaign_20261115_v1/REPORT_FINALE.md) e [audit](../archive/RIPRESA_HPC_20261114.md). Nessun nuovo esito sperimentale; stato del job di arricchimento non ricontrollato.
+
+
+## Campione supervisionato del training — 21 novembre 2026
+
+- [x] Verificare struttura dei prodotti esistenti: geometrie e provenienza disponibili, campione oracle supervisionato ancora assente.
+- [x] Implementare estrazione con oracle originale, archivio delle viste solo passate e verifica indipendente; tre test locali passati.
+- [x] **782875 COMPLETED 0:0, 3m15s**: campione 446/247 validato, tre test locali/remoti, audit indipendente e confronto con 110590 annotazioni ufficiali passati; copia numerica/metadati acquisita. [Dettagli e percorsi](ARRICCHIMENTO_TRAINING_20261121.md). Nessun training/inferenza neurale nuovi, job concluso da non rilanciare.
+- [x] Inventario iniziale completato: split originale 56 video; feature/XYZ/annotazioni complete verificate per P01_01, dati grezzi parziali su cinque, nessuna training LMDB trovata nella scansione delimitata. Sintesi e limiti (`outputs/training_enrichment_20261121_v1/availability_summary.json`, risorsa locale non pubblicata).
+- [ ] Acquisire/localizzare input originali mancanti degli altri video e RGB mancanti di P01_01; estendere con la stessa pipeline, senza considerare già disponibili tutti i 56 video.
+- [ ] Ampliare il campione includendo Nuova track e casi senza geometria: i 446 attuali hanno soltanto associazioni esistenti, 429 con geometria precedente della candidata corretta. Non usarli da soli per calibrare/valutare l'intera politica.
 
 ## Pubblicazione della mappa — 21 novembre 2026
 
@@ -21,7 +174,10 @@ Marco conferma e richiede applicazione e pubblicazione dei vecchi commenti revis
 - [x] Conferma esplicita ricevuta: «Ok, aggiungi il testo. Poi aprimi qui l'html»; R/C ora identificano gli elementi effettivi della mappa.
 - [x] Applicare struttura «Rami paralleli» e testi confermati: 39 riquadri, 49 frecce, 792 campi; copia precedente conservata, nessuna modifica del metodo.
 - [x] Verificare JSON/copia offline e consultazione, salvataggio invariato e spostamento con ripristino; aprire l'HTML nel browser della chat e conservarlo come risultato.
-- [ ] Revisione scientifica dei vecchi commenti in una fase successiva; le schede manuali equivalenti sono state conservate.
+- [x] Preparare la revisione dei vecchi commenti: sette riquadri e otto collegamenti, 135 campi; [proposte non applicate](../evidence/map_20261121/TESTI_PROPOSTI.md), mappa invariata per hash.
+- [ ] Raccogliere revisioni e conferma esplicita di Marco sui vecchi commenti proposti in chat.
+- [x] Riformulare le proposte senza riferimenti a singole campagne/run, date o conteggi sperimentali, come richiesto da Marco; conservare indicazioni generali su verifiche e limiti. Regola da mantenere nelle revisioni successive.
+- [ ] Applicare soltanto i testi confermati e verificare la conservazione degli altri contenuti; nessuna autorizzazione all’inserimento ricevuta in questa fase.
 
 ## Aggiornamenti GitHub pubblicati — 15 novembre 2026
 
@@ -30,6 +186,8 @@ Aggiornamenti pubblicati su `main`, commit [0fce33b](https://github.com/Federico
 - [x] Caricare gli aggiornamenti verificati su main. Restano aperte le attività scientifiche e la compilazione manuale indicate sotto.
 
 ## Punti importanti da discutere e validare
+
+**Prioritario (21 novembre):** scelta del test set per dimostrare l'efficacia; dettaglio nella voce in cima al file.
 
 Valutazione critica successiva, registro voce 82: verificare complementarità della distanza rispetto ad aspetto/posizione, non sola separazione delle categorie; preservare controlli senza geometria con pari nuovo training e proporre geometria semplice dagli stessi punti per attribuire l'effetto specifico SuperFlex. Nessuna nuova analisi quantitativa o modifica del protocollo già eseguita. Dettaglio nel [resoconto delle due integrazioni](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md).
 
