@@ -1,5 +1,9 @@
 # Stato corrente — 15 novembre 2026
 
+## Applicazione dei testi revisionati — 21 novembre 2026
+
+Marco conferma e richiede applicazione e pubblicazione dei vecchi commenti revisionati. Applicati 135 campi a sette riquadri e otto collegamenti, con le ultime formulazioni generali senza riferimenti alle singole esecuzioni. Struttura e altre schede conservate; backup locale precedente disponibile. Pubblicazione richiesta, esito remoto da verificare.
+
 ## Pubblicazione GitHub conclusa — 21 novembre 2026
 
 **Pubblicazione verificata.** Aggiornamento pubblicato su `main`, commit [c612cad](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/c612cad4c161fd3bfcca11ba31525102cee5ab58); riferimento remoto verificato tramite confronto GitHub, identico al commit pubblicato. Inclusi mappa Rami paralleli con 39 riquadri/49 collegamenti e testi confermati, interfaccia, fonti portabili, provenienza e memoria corrente. 34 file nel commit; contributi del collega e storia preservati. Controlli: 521 collegamenti, 41 sorgenti Python e 192 hash senza errori; servizio mappa, 792 campi, copia offline, estremi dei collegamenti e disegno verificati. JSON e copia offline identici ai file locali approvati; nessun pattern di credenziale rilevato nel controllo dei file modificati, nei limiti della ricerca. Connettore GitHub disponibile in lettura ma scrittura rifiutata (403); pubblicazione eseguita con Git autenticato e certificati di sistema. Nessun nuovo esperimento, training, job HPC o modifica dei filtri. Restano la revisione scientifica dei vecchi commenti e le decisioni metodologiche aperte.

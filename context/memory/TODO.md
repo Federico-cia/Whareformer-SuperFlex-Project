@@ -1,5 +1,9 @@
 # Attività correnti
 
+## Applicazione dei testi revisionati — 21 novembre 2026
+
+Marco conferma e richiede applicazione e pubblicazione dei vecchi commenti revisionati. Applicati 135 campi a sette riquadri e otto collegamenti, con le ultime formulazioni generali senza riferimenti alle singole esecuzioni. Struttura e altre schede conservate; backup locale precedente disponibile. Pubblicazione richiesta, esito remoto da verificare.
+
 ## Pubblicazione della mappa — 21 novembre 2026
 
 - [x] Pubblicare su main mappa e memoria corrente: [c612cad](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/c612cad4c161fd3bfcca11ba31525102cee5ab58); riferimento remoto verificato, controlli superati. Restano le attività scientifiche e la revisione dei vecchi commenti riportate sotto.

@@ -545,6 +545,11 @@
       "sha256": "b1531c11fd992ccd95f91509436081bed410b8e9ffbf1c2eff1c371c8a5a8f3c"
     },
     {
+      "path": "context/evidence/map_20261121/REVISIONE_VECCHI_COMMENTI.json",
+      "bytes": 43237,
+      "sha256": "52add4c34175aff240d2b25cadd5d8bb427a13f3a04b58a63bbf0ee4e5a46884"
+    },
+    {
       "path": "context/evidence/map_20261121/TESTI_PROPOSTI.md",
       "bytes": 26390,
       "sha256": "84c65fe09a4683a0804721d6bcee100cad30362db3192c95acbc4f4cda3eac28"
@@ -666,8 +671,8 @@
     },
     {
       "path": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 121585,
-      "sha256": "1b6204b99922bfbf1dc39c40655125929be70b3e316fa3f7f08b3fd9ee6b5f8d"
+      "bytes": 121999,
+      "sha256": "c102c103463b441f1ee8e78d1c335a0306196a101d3ec703f0e34e46708f3ccb"
     },
     {
       "path": "context/memory/REVISIONE_MAPPA_20261115.md",
@@ -686,13 +691,13 @@
     },
     {
       "path": "context/memory/STATO_LAVORO.md",
-      "bytes": 21477,
-      "sha256": "3a26b9fb49574e67ba7a8dd9990fc7d3acdeb9b770824a8a7963f059a97ef2e2"
+      "bytes": 21891,
+      "sha256": "f66563f7a51067cf7feae680b4b4a35f3fecf116a3a49f279594ced7aef53d3b"
     },
     {
       "path": "context/memory/TODO.md",
-      "bytes": 16356,
-      "sha256": "9113fce96e9a266643254769061058d139c380954a46277b36e9bde7acaf7e25"
+      "bytes": 16770,
+      "sha256": "09a8f41d8d51af9cecd0e562ea5aa25c48dccb725dd5325e6cd86b7e99a7bf43"
     },
     {
       "path": "context/memory/docs/CODICE_PRODOTTO.md",
@@ -926,13 +931,13 @@
     },
     {
       "path": "mappa_interattiva/contenuti.js",
-      "bytes": 179254,
-      "sha256": "671f10eec13091500ec6cc76eb0316b6fd5c7fa14a76b0323b5ecadec0fcd79b"
+      "bytes": 168008,
+      "sha256": "914fd9f2b01ece35d7c105ea905fc9ca5ffd35716cb95527b5bf0f9b439608d7"
     },
     {
       "path": "mappa_interattiva/contenuti.json",
-      "bytes": 179235,
-      "sha256": "fc89c501c6261ccfdd5fa01ed411d577478ae28042886503b6be7ea0a3a9eb88"
+      "bytes": 167989,
+      "sha256": "e4c780a57b5781df02472682933a63a46ea5e6edf018ade054b8378ea9042903"
     },
     {
       "path": "mappa_interattiva/fonti.js",

@@ -1,5 +1,9 @@
 # Registro delle decisioni e delle motivazioni
 
+## Applicazione dei testi revisionati — 21 novembre 2026
+
+Marco conferma e richiede applicazione e pubblicazione dei vecchi commenti revisionati. Applicati 135 campi a sette riquadri e otto collegamenti, con le ultime formulazioni generali senza riferimenti alle singole esecuzioni. Struttura e altre schede conservate; backup locale precedente disponibile. Pubblicazione richiesta, esito remoto da verificare.
+
 Aggiornato: 13 novembre 2026. Obiettivo: rendere ricostruibile il percorso scientifico per report e presentazione. Prime voci ricostruite dai documenti di progetto e dalla discussione del 9 novembre, poi aggiornamenti espliciti; non è una trascrizione completa delle conversazioni. Le date indicano le decisioni documentate, senza attribuire date precise dove mancano.
 
 Ogni voce distingue scelta, ragione ed evidenza disponibile. Le revisioni successive non cancellano le scelte precedenti: ne spiegano il cambiamento. Stato operativo e attività in `STATO_LAVORO.md` e `TODO.md`.
