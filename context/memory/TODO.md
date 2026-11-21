@@ -1,5 +1,27 @@
 # To-do corrente — collegamento alla baseline reale
 
+## Pubblicazione verificata a chiusura della sessione
+
+Su richiesta di Marco, controllo complessivo e push eseguiti. Commit
+[5827c32](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/5827c323854d8a4f776d2417dd43e7c1ea4c328d)
+pubblicato su **main**, riferimento remoto verificato identico tramite Git.
+48 file: primo nucleo del punto 3, dati oracle/audit in codice portabile,
+evidenze numeriche selezionate, schede confermate della mappa e memoria corrente.
+Contributi del collega e storia preservati; nessun force-push.
+
+Verifiche della copia pubblicabile: **105 casi, 103 superati e due saltati**
+(motmetrics assente); 636 collegamenti, 53 sorgenti Python e 222 hash senza
+errori; mappa 39 riquadri/49 collegamenti/792 campi e copia offline coerenti.
+Scansione finale dei 48 file senza riscontri per pattern sensibili, dati pesanti
+o accessi personali, nei limiti del controllo. Archivi completi, immagini,
+nuvole, pesi e strumenti di accesso privati restano fuori da Git.
+
+Il problema di capacità degli output è rinviato da Marco alla prossima sessione.
+Il punto 3 resta incompleto sul piano di training e validazione; il push non
+certifica efficacia scientifica. Gli stati HPC restano quelli datati negli
+ultimi resoconti, senza nuova interrogazione durante la pubblicazione.
+Le note precedenti di pubblicazione preparata/non eseguita sono cronologia.
+
 ## Spazio recuperato e nuova ripresa — 21 novembre 2026
 
 **Verifica successiva delle 23:51:38:** 783790/783791 entrambi RUNNING a 3m56s su gnode03; superato l'arresto precedente nelle nuvole, ora blocco 8 con 309/312 report DA/MoGE e blocco 9 con 286/288. Quota 41.19/46.56 GiB (circa 5.37 GiB liberi), otto blocchi ancora conclusi; SuperFlex dei nuovi blocchi non ancora verificata.

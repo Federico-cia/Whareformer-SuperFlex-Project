@@ -661,8 +661,8 @@
     },
     {
       "path": "context/memory/CONTROLLO_REPO_FINE_SESSIONE.md",
-      "bytes": 1762,
-      "sha256": "60b2229d355ca3d40fa0e2836c2fa8ce5d680a84858cde0d4d6eb5adbdc043d4"
+      "bytes": 3104,
+      "sha256": "4ef5fbfd92c2931a65d4d253173b450ec6d9ebd7e54eda3c6f3aab198f596b27"
     },
     {
       "path": "context/memory/DISCUSSIONE_INTEGRAZIONE_FORMA_20261116.md",
@@ -696,8 +696,8 @@
     },
     {
       "path": "context/memory/LEGGIMI_PASSAGGIO_AI.md",
-      "bytes": 19527,
-      "sha256": "9f1c162a6bba097f4c9294fab0dfd7283f4519f484106d392026450427d8ef66"
+      "bytes": 20905,
+      "sha256": "cff348c1b0071955e9a2d2a724fd0a376f4b75c1be2961bcc2c0f0e9f885ff75"
     },
     {
       "path": "context/memory/PIANO_FRONTEND_UNIFICATO_20261114.md",
@@ -721,8 +721,8 @@
     },
     {
       "path": "context/memory/REGISTRO_DECISIONI.md",
-      "bytes": 148982,
-      "sha256": "aaaf542936a50472a11785422bda20cdf35cd3579862f6bca80f6cfe6ca6f271"
+      "bytes": 150360,
+      "sha256": "fc1e696b99b008fe3f364e6fa02a90561bdc6d3ddbe38b2255ded97b242580cf"
     },
     {
       "path": "context/memory/REVISIONE_MAPPA_20261115.md",
@@ -761,8 +761,8 @@
     },
     {
       "path": "context/memory/STATO_LAVORO.md",
-      "bytes": 56513,
-      "sha256": "ddd301f13bd562e76b60353b58a53515257f48b7639370f3be0ea10c5cdc2cbc"
+      "bytes": 57891,
+      "sha256": "230378bc6c526b2be34d68c304fbfd3f27f34122b58b3713b5a96171b6494b2c"
     },
     {
       "path": "context/memory/SUPERVISIONE_AMMISSIONE_20261121.md",
@@ -771,8 +771,8 @@
     },
     {
       "path": "context/memory/TODO.md",
-      "bytes": 40470,
-      "sha256": "9d695fb9316484f89bab4f570cf393aaa34b7409c694160be86754ebdb5d1fd2"
+      "bytes": 41848,
+      "sha256": "ba76597faf8d05c9c95a72d7f4ffd21f589767bc52926dd9139b7d1e4e9c9621"
     },
     {
       "path": "context/memory/VERIFICA_ARRICCHIMENTO_CORRENTE_20261121.md",
@@ -786,8 +786,8 @@
     },
     {
       "path": "context/memory/docs/CONDIVISIONE.md",
-      "bytes": 2600,
-      "sha256": "f033ae0e32a546094b744a51248c3839d24e6afd92eadf497ade31c442a89769"
+      "bytes": 3978,
+      "sha256": "3384791fa7193567f99500ce90d2b7d6a469f9a9619af13cb86c8d6db87da5ed"
     },
     {
       "path": "context/memory/docs/INPUT_SUPERFLEX_PER_WHAREFORMER.md",
