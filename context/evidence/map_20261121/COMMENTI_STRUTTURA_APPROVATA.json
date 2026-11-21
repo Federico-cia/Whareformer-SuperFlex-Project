@@ -1,0 +1,1866 @@
+{
+  "status": "proposta_non_applicata",
+  "date": "2026-11-21",
+  "fields": {
+    "summary": "In una frase",
+    "role": "Funzione e dati scambiati",
+    "state": "Stato attuale",
+    "evidence": "Evidenze e limiti",
+    "why": "Perché questa scelta",
+    "alternatives": "Alternative e loro stato",
+    "improve": "Possibili miglioramenti",
+    "contract": "Coerenza dei dati",
+    "failure": "Possibili errori"
+  },
+  "nodes": [
+    {
+      "ref": "R01",
+      "id": "rgb",
+      "title": "Frame RGB",
+      "legacy": [
+        "B01"
+      ],
+      "strategy": "preserva_manuale",
+      "fields": {
+        "summary": "Fornisce l’immagine a colori da cui ricavare aspetto, posizione e forma 3D degli oggetti.",
+        "role": "è il punto di ingresso dei pixel che trasportano informazione sulla scena. I pixel verranno utilizzati sia come input per ricostruire la posizione 3D sia per descrivere la parvenza 2D sia per ricostruire la forma 3D",
+        "state": "Al momento stiamo usando solo input già utilizzati nel paper Whareformer, appartenenti al dataset EPIC-KITCHENS.",
+        "evidence": "Nelle ultime prove abbiamo rigenerato la geometria dalle immagini selezionate, riutilizzando le feature d’aspetto e le posizioni 3D ufficiali di Whareformer. Il percorso completo da immagini \"non pre-processate\" resta un'espazione da esplorare.",
+        "why": "Input comuni permettono confronti coerenti fra baseline, punti e SuperFlex.",
+        "alternatives": "Manteniamo le immagini del benchmark per confrontare le varianti sugli stessi dati. L’uso di video esterni al benchmark verrà considerato come espanzione futura.",
+        "improve": "Estendere il sistema a video RGB egocentrici senza annotazioni fornite, affrontando anche la generazione delle maschere e delle informazioni di camera e scena necessarie.",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "R02",
+      "id": "mask",
+      "title": "Maschere VISOR",
+      "legacy": [
+        "B02"
+      ],
+      "strategy": "preserva_manuale",
+      "fields": {
+        "summary": "La maschera indica, nel frame di input, i pixel appartenenti all'oggetto sotto osservazione.",
+        "role": "Indica quali pixel dell’immagine appartengono all’oggetto. Usiamo questa selezione per:\n• descrivere l’aspetto dell’oggetto usando i suoi pixel RGB;\n• estrarre dalla ricostruzione 3D i punti dell’oggetto;\n• stimare la sua distanza dalla camera usando la profondità dei pixel selezionati.\nDalla maschera ricaviamo anche un rettangolo che racchiude l’oggetto, utile per ritagliarne l’immagine.",
+        "state": "Usiamo le maschere VISOR associate ai video EPIC-KITCHENS. Sono annotazioni fornite, non abbiamo integrato un modello per generarle.",
+        "evidence": "Abbiamo verificato l’uso delle maschere nel codice e la corrispondenza con le immagini nei casi documentati.",
+        "why": "Per limitare la complessità, riutilizziamo la sorgente di maschere del protocollo corrente.",
+        "alternatives": "Per video senza annotazioni potremmo integrare un modello di segmentazione, come SAM 2. Resterebbe da definire come individuare gli oggetti da seguire e inizializzare il modello. Nessuna soluzione è stata adottata.",
+        "improve": "Controllare che le maschere escludano lo sfondo e conservino le parti sottili degli oggetti. Valutare eventuali correzioni sui dati di sviluppo.",
+        "contract": "La maschera deve riferirsi alla stessa immagine e allo stesso oggetto elaborati dagli altri rami. Se l’immagine viene ridimensionata, anche la maschera deve essere adattata in modo che i pixel restino allineati.",
+        "failure": "Una maschera imprecisa può includere sfondo o escludere parti dell’oggetto, alterando aspetto, posizione e forma stimati. Questi errori possono compromettere l’associazione e gli aggiornamenti della memoria."
+      }
+    },
+    {
+      "ref": "R03",
+      "id": "camera",
+      "title": "Camera e scena 3D",
+      "legacy": [
+        "B09"
+      ],
+      "strategy": "bozza_gia_presentata",
+      "fields": {
+        "summary": "Fornisce i parametri della camera e il riferimento 3D necessari a interpretare immagini e profondità.",
+        "role": "Gli intrinseci descrivono la proiezione tra punti 3D e pixel. La posa colloca la camera nella scena; la ricostruzione permette di calcolare la profondità della scena dalla vista corrente. Ogni ramo usa soltanto le informazioni necessarie.",
+        "state": "Sono risorse esterne richieste dal percorso originale. Nel ramo forma, Depth Anything usa gli intrinseci per ottenere i punti; MoGE produce direttamente una geometria stimata.",
+        "evidence": "Ruoli verificati nel codice. La disponibilità di questi dati non certifica la scala fisica né la corretta collocazione delle forme nella scena.",
+        "why": "Permettono di collegare le coordinate dell'immagine alle coordinate 3D e di confrontare posizioni espresse nello stesso riferimento.",
+        "alternatives": "-",
+        "improve": "Verificare la catena di trasformazioni e la compatibilità di scala tra geometria dell'oggetto e scena.",
+        "contract": "Convenzioni di proiezione, risoluzione, verso delle trasformazioni e scala devono essere espliciti e compatibili.",
+        "failure": "Parametri o riferimenti incoerenti producono punti e posizioni errati anche con immagini e maschere corrette."
+      }
+    },
+    {
+      "ref": "R04",
+      "id": "crop",
+      "title": "Ritaglio dell’oggetto",
+      "legacy": [
+        "B03"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "appearance",
+      "fields": {
+        "summary": "Prepara l’immagine dell’oggetto per l’estrazione visiva.",
+        "role": "Usa rettangolo e maschera per ritagliare l’oggetto dal frame e preparare l’ingresso dell’estrattore.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Frame, maschera e rettangolo devono descrivere la stessa osservazione.",
+        "failure": "Un ritaglio errato può escludere parti dell’oggetto o includere elementi estranei."
+      }
+    },
+    {
+      "ref": "R05",
+      "id": "dino",
+      "title": "Estrazione visiva",
+      "legacy": [
+        "B03"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "appearance",
+      "fields": {
+        "summary": "Trasforma il ritaglio dell’oggetto in caratteristiche numeriche.",
+        "role": "DINOv2 preaddestrato produce un vettore che descrive l’aspetto visivo dell’oggetto.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Pesi e preparazione dell’immagine devono essere compatibili con la baseline.",
+        "failure": "Occlusioni e cambi di vista possono alterare la rappresentazione; oggetti diversi possono apparire simili."
+      }
+    },
+    {
+      "ref": "R06",
+      "id": "pca",
+      "title": "Riduzione dimensionale",
+      "legacy": [
+        "B03"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "appearance",
+      "fields": {
+        "summary": "Riduce la dimensione del vettore visivo.",
+        "role": "Normalizza il vettore, applica la riduzione lineare PCA già prevista e normalizza il risultato. La trasformazione non viene stimata sul frame corrente.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "Il codice originale applica una PCA stimata sui dati di training; la provenienza dell’asset ufficiale da riusare resta da verificare.",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Trasformazione e dimensione finale devono corrispondere a quelle attese da Whareformer.",
+        "failure": "Una trasformazione diversa da quella della baseline rende incompatibili i descrittori."
+      }
+    },
+    {
+      "ref": "R07",
+      "id": "appearance",
+      "title": "Descrittore d’aspetto",
+      "legacy": [
+        "B03"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "appearance",
+      "fields": {
+        "summary": "Rende disponibile il descrittore d’aspetto dell’osservazione.",
+        "role": "Collega il vettore finale al corretto oggetto e frame, così da poterlo confrontare con la memoria visiva delle tracce.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Identificativo e ordine del vettore devono coincidere con quelli dell’osservazione.",
+        "failure": "Un vettore attribuito all’oggetto sbagliato altera il confronto visivo."
+      }
+    },
+    {
+      "ref": "R08",
+      "id": "depth",
+      "title": "Stima della profondità",
+      "legacy": [
+        "B08"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "position",
+      "fields": {
+        "summary": "Stima la profondità dei pixel a partire dall’immagine.",
+        "role": "Il modello di profondità della baseline riceve il frame RGB e produce una mappa di profondità, prima dell’allineamento alla scena.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Mappa e immagine devono avere coordinate compatibili.",
+        "failure": "Errori di profondità si propagano alla successiva stima della posizione."
+      }
+    },
+    {
+      "ref": "R09",
+      "id": "alignscene",
+      "title": "Allineamento alla scena",
+      "legacy": [
+        "B08"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "position",
+      "fields": {
+        "summary": "Rende la profondità predetta coerente con la ricostruzione della scena.",
+        "role": "Adatta scala e scostamento della profondità alla vista della scena ricostruita, usando regioni valide esterne agli oggetti mascherati.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Vista della scena, posa, maschere e profondità devono riferirsi allo stesso frame.",
+        "failure": "Una scena incompleta, una posa errata o pochi punti validi possono rendere inaffidabile l’allineamento."
+      }
+    },
+    {
+      "ref": "R10",
+      "id": "xyzcalc",
+      "title": "Calcolo della posizione",
+      "legacy": [
+        "B10"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "position",
+      "fields": {
+        "summary": "Calcola un punto rappresentativo della posizione dell’oggetto nella scena.",
+        "role": "Combina centro del rettangolo e profondità mediana nella maschera; usa gli intrinseci per passare al riferimento camera e la posa per passare alla scena.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Rettangolo, maschera, profondità e camera devono essere coerenti per osservazione e risoluzione.",
+        "failure": "Profondità o posa errate spostano la posizione stimata."
+      }
+    },
+    {
+      "ref": "R11",
+      "id": "xyz",
+      "title": "Posizione 3D nella scena",
+      "legacy": [
+        "B10"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "position",
+      "fields": {
+        "summary": "Rende disponibili le tre coordinate spaziali dell’oggetto.",
+        "role": "Collega la posizione stimata alla corretta osservazione, nello stesso riferimento usato dalle tracce.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Le posizioni confrontate devono condividere riferimento e scala.",
+        "failure": "Il punto stimato non fornisce orientamento, dimensioni o centro geometrico certificato dell’oggetto."
+      }
+    },
+    {
+      "ref": "R12",
+      "id": "geometry",
+      "title": "Geometria stimata da RGB",
+      "legacy": [
+        "B04"
+      ],
+      "strategy": "preserva_manuale",
+      "fields": {
+        "summary": "Dal frame RGB stimiamo la geometria delle superfici visibili, confrontando due sorgenti: Depth Anything V2 e MoGE-2.",
+        "role": "Entrambi i modelli elaborano l’immagine intera:\n- DA produce una mappa di profondità, convertita in punti 3D usando gli intrinseci della camera.\n- MoGE produce direttamente una mappa di punti 3D e indica quali considera validi.\nLa selezione dei punti del singolo oggetto avviene nello step successivo, usando la maschera.",
+        "state": "Entrambe le alternative sono state eseguite sulle immagini di testing. Manteniamo entrambe le sorgenti: nessuna ha prodotto un vantaggio nel tracking nelle configurazioni provate.",
+        "evidence": "- DA richiede intrinseci coerenti con l’immagine per convertire la profondità in punti; errori nella profondità o nella camera deformano la geometria.\n\n- MoGE può stimare anche la camera, riducendo la dipendenza da parametri forniti, ma introduce l’incertezza di tale stima.\n\nEntrambi possono produrre errori di scala e geometrie incoerenti tra viste.",
+        "why": "DA permette di esplorare la sorgente di profondità già usata da Whareformer; MoGE riprende la sorgente geometrica della dimostrazione RGB di SuperFlex. Li manteniamo entrambi perché i confronti precedenti di sagoma e identità non hanno indicato un vincitore univoco.",
+        "alternatives": "Abbiamo confrontato anche profondità DA grezza e allineata alla scena. Il ramo forma corrente usa DA grezzo oppure MoGE; le posizioni 3D della baseline restano invariate.",
+        "improve": "Verificare stabilità tra viste, coerenza della scala e qualità delle fusioni. Analizzare quali differenze tra le sorgenti possano essere utili all’associazione degli oggetti.",
+        "contract": "Le predizioni devono restare allineate ai pixel dell’immagine e alle maschere. Per DA, gli intrinseci devono corrispondere alla risoluzione utilizzata. Sorgente e riferimento delle coordinate devono essere conservati.",
+        "failure": "Errori di profondità, scala o camera possono produrre superfici deformate. Viste diverse dello stesso oggetto possono generare nuvole incompatibili, ostacolando il confronto e la fusione."
+      }
+    },
+    {
+      "ref": "R13",
+      "id": "cloud",
+      "title": "Punti visibili dell’oggetto",
+      "legacy": [
+        "B05"
+      ],
+      "strategy": "preserva_manuale",
+      "fields": {
+        "summary": "Combina la geometria del frame con la maschera per costruire la nuvola di punti 3D dell’oggetto.",
+        "role": "Seleziona i punti validi corrispondenti ai pixel della maschera. \n- Nel ramo DA ricava le coordinate 3D dalla profondità usando gli intrinseci della camera; \n- nel ramo MoGE usa i punti già prodotti dal modello. \nIl risultato è una nuvola parziale della superficie visibile dell’oggetto.",
+        "state": "Il blocco è implementato e testato: riusciamo a estrarre la nuvola del singolo oggetto sia con DA sia con MoGE e a passarla a SuperFlex. Entrambe le sorgenti restano in valutazione. ",
+        "evidence": "Nell’ultima run abbiamo ottenuto le nuvole di tutte le osservazioni selezionate, con entrambe le sorgenti. \nLa loro disponibilità non certifica l’accuratezza geometrica né il corretto allineamento tra viste.",
+        "why": "SuperFlex richiede una nuvola di punti del singolo oggetto. Isolarla dalla geometria del frame evita di includere anche le superfici degli altri elementi della scena.",
+        "alternatives": "Confrontiamo nuvole ottenute da DA e MoGE mantenendo comuni immagini e maschere. Non è stata scelta una sorgente definitiva.",
+        "improve": "Valutare una pulizia dei punti che riduca le contaminazioni senza eliminare dettagli utili, come manici o parti sottili. L’eventuale beneficio va verificato sui dati di sviluppo.",
+        "contract": "Maschera e geometria devono avere i pixel allineati. Per ogni nuvola conserviamo sorgente, convenzioni di scala e riferimento rispetto alla camera. Nuvole di viste diverse non vanno considerate automaticamente allineate.",
+        "failure": "Una maschera imprecisa potrebbe non includere tutti e solo i punti dell’oggetto. Errori di profondità, occlusioni e superfici poco visibili possono produrre nuvole incomplete o deformate. Una singola vista difficilmente mostra tutto l’oggetto.\nInoltre, due nuvole dello stesso oggetto non sono automaticamente allineate tra loro."
+      }
+    },
+    {
+      "ref": "R14",
+      "id": "sfinput",
+      "title": "Ricostruzione SuperFlex",
+      "legacy": [
+        "B06"
+      ],
+      "strategy": "preserva_manuale",
+      "fields": {
+        "summary": "SuperFlex rappresenta la forma 3D dell’oggetto partendo da una nuvola di punti usando un insieme di primitive geometriche.",
+        "role": "Riceve una nuvola di punti parziale dell’oggetto, la campiona e la normalizza, poi stima un insieme di superquadriche: primitive geometriche deformabili che, combinate, approssimano la superficie. Il modello può anche prevedere parti non visibili (che restano ipotesi e non osservazioni).",
+        "state": "SuperFlex è integrato usando il checkpoint robust preaddestrato, senza nuovo training. Viene eseguito in due momenti:\n- sulle nuvole delle nuove singole osservazioni;\n- nelle varianti con accumulo, ovvero quando la \"nuovla di memoria\" di una traccia viene aggiornata con nuovi punti inseguito all'acquisizione di un nuovo frame nella traccia.",
+        "evidence": "Nell’ultima run sono state prodotte ricostruzioni per tutte le osservazioni selezionate e per tutti gli aggiornamenti di memoria ammessi. Non abbiamo certificato l’accuratezza delle parti nascoste né dimostrato un miglioramento del tracking rispetto alla baseline.",
+        "why": "Vogliamo verificare se una rappresentazione esplicita della forma aggiunga un segnale utile all’associazione, oltre ad aspetto e posizione. Le superquadriche offrono una descrizione compatta della superficie.",
+        "alternatives": "- Confrontare descrittori ricavati direttamente dalle nuvole, senza SuperFlex: controllo già implementato e incluso negli esperimenti.\n\n- Usare rappresentazioni più semplici, come un parallelepipedo orientato o una singola superquadrica: alternative discusse, non valutate nel tracking.\n\n- Usare SuperDec, un altro metodo di decomposizione in superquadriche: riferimento considerato, non integrato né confrontato nel nostro sistema in quanto superato dallo stesso Superflex nelle prestaizoni.",
+        "improve": "Verificare la stabilità della forma tra viste e la sua capacità di distinguere oggetti diversi. Confrontarla con i punti originali per capire se il completamento aggiunga informazione utile o introduca errori.",
+        "contract": "I punti devono essere preparati e normalizzati secondo il procedimento previsto per il modello; la trasformazione va conservata per interpretare il risultato.",
+        "failure": "Nuvole rumorose, incomplete o contaminate possono produrre forme deformate. Il modello può prevedere parti nascoste errate oppure rappresentare lo stesso oggetto in modo diverso tra viste, rendendo il confronto meno affidabile."
+      }
+    },
+    {
+      "ref": "R15",
+      "id": "descriptor",
+      "title": "Descrittore di forma",
+      "legacy": [
+        "B07"
+      ],
+      "strategy": "preserva_manuale",
+      "fields": {
+        "summary": "Trasforma la superficie ricostruita da SuperFlex in un descrittore numerico utilizzabile per confrontare le forme degli oggetti.",
+        "role": "Campiona punti sulla superficie complessiva delle superquadriche, li centra e ne normalizza la scala. Calcola poi le distanze tra coppie di punti, ottenendo il descrittore D2: una distribuzione numerica delle distanze interne alla forma.\n\nLa somiglianza viene misurata confrontando questi descrittori, senza abbinare le singole primitive.",
+        "state": "D2 è implementato e utilizzato negli ultimi esperimenti di tracking, sia sulle forme delle singole osservazioni sia sulle ricostruzioni della memoria accumulata. Non è stato dimostrato che sia la scelta migliore per il nostro problema.",
+        "evidence": "I confronti diagnostici hanno mostrato risultati diversi secondo sorgente geometrica, rappresentazione e distanza utilizzata. Nell’ultima campagna nessuna configurazione ha modificato le associazioni rispetto alla baseline.\n\nD2 riassume la distribuzione delle distanze, ma forme diverse possono avere descrittori simili.",
+        "why": "L’ordine e la decomposizione delle primitive possono cambiare tra ricostruzioni. Descrivere la superficie complessiva evita di dover trovare corrispondenze tra superquadriche e permette di applicare lo stesso confronto anche alle nuvole originali.",
+        "alternatives": "Nelle analisi diagnostiche abbiamo esplorato anche un descrittore basato sulla distribuzione spaziale dei punti e il confronto delle superfici dopo allineamento. Gli ultimi esperimenti di tracking hanno utilizzato D2; le alternative non sono state confrontate nella stessa campagna.",
+        "improve": "Verificare se D2 mantiene simili le viste dello stesso oggetto e distingue oggetti diversi, soprattutto quando aspetto e posizione sono ambigui. Valutare separatamente l’effetto della normalizzazione della scala e confrontare altre distanze sullo sviluppo.",
+        "contract": "Tutte le forme devono usare lo stesso campionamento, normalizzazione e metodo di confronto. Le distanze tra punti non dipendono dall’orientamento rigido della superficie; la normalizzazione elimina invece la dimensione assoluta.\n\nIl descrittore non fornisce la posa necessaria ad allineare e fondere le nuvole.",
+        "failure": "Viste parziali o ricostruzioni instabili possono produrre descrittori diversi dello stesso oggetto. Oggetti differenti possono avere distribuzioni di distanze simili. Normalizzare la scala può inoltre rendere indistinguibili forme uguali ma di dimensioni diverse."
+      }
+    },
+    {
+      "ref": "R16",
+      "id": "observation",
+      "title": "Osservazione corrente",
+      "legacy": [
+        "B11"
+      ],
+      "strategy": "bozza_gia_presentata",
+      "fields": {
+        "summary": "Riunisce le informazioni disponibili sullo stesso oggetto osservato nel frame corrente.",
+        "role": "Collega descrittore d'aspetto, posizione 3D e descrittore di forma mediante l'identificativo dell'osservazione. Segnala esplicitamente l'eventuale assenza della geometria e prepara i dati per il confronto con le tracce.",
+        "state": "Aspetto e posizione alimentano Whareformer; la forma viene usata dal nostro adattatore esterno. Non viene costruito un nuovo ingresso congiunto della rete.",
+        "evidence": "Corrispondenze e ordine delle osservazioni sono stati controllati nei manifest delle prove. La geometria è disponibile soltanto per un sottoinsieme delle osservazioni.",
+        "why": "L'associazione richiede che tutti i segnali descrivano lo stesso oggetto nello stesso istante.",
+        "alternatives": "-",
+        "improve": "Ampliare la disponibilità della geometria e verificarne la provenienza nel percorso dalle immagini.",
+        "contract": "Video, frame, identificativo e ordine dell'osservazione devono coincidere tra i diversi segnali.",
+        "failure": "Una corrispondenza errata può combinare aspetto, posizione e forma di oggetti diversi."
+      }
+    },
+    {
+      "ref": "R17",
+      "id": "memoryw",
+      "title": "Memoria precedente",
+      "legacy": [
+        "B13"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Conserva l’aspetto e la posizione delle tracce prima del frame corrente.",
+        "role": "Mantiene le rappresentazioni e la storia previste da Whareformer per confrontare le osservazioni con gli oggetti già ricordati.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Ogni memoria deve restare associata al proprio ID di traccia.",
+        "failure": "Associazioni errate precedenti possono contaminare i confronti futuri."
+      }
+    },
+    {
+      "ref": "R18",
+      "id": "memoryp",
+      "title": "Memoria precedente",
+      "legacy": [
+        "B13"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Conserva la geometria disponibile delle tracce prima del frame corrente.",
+        "role": "Mantiene punti ammessi e ultima ricostruzione riuscita. Le forme delle singole osservazioni costituiscono una memoria distinta, usata come riserva se manca una ricostruzione dell’accumulo utilizzabile.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Traccia, sorgente, riferimento e versioni devono essere espliciti; tutti i confronti del frame leggono lo stato geometrico precedente.",
+        "failure": "Una memoria contaminata o una forma precedente non più rappresentativa possono rendere fuorviante il confronto."
+      }
+    },
+    {
+      "ref": "R19",
+      "id": "scores",
+      "title": "Punteggi di Whareformer",
+      "legacy": [
+        "B12"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Assegna un punteggio alle possibili associazioni usando aspetto e posizione.",
+        "role": "Whareformer confronta l’osservazione con le tracce candidate e produce i punteggi originali, compresa l’opzione “nuova traccia”.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "L’ordine dei punteggi deve corrispondere agli ID delle tracce; la forma non è un ingresso nativo di questa rete.",
+        "failure": "Aspetto simile o posizione imprecisa possono favorire la traccia sbagliata."
+      }
+    },
+    {
+      "ref": "R20",
+      "id": "distance",
+      "title": "Distanza tra le forme",
+      "legacy": [
+        "B12"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Misura quanto la forma osservata assomigli alle forme ricordate.",
+        "role": "Confronta i descrittori D2 validi: distanze minori indicano forme più simili. Usa la ricostruzione accumulata quando disponibile, altrimenti le forme singole previste dalla memoria.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "Verificare se la distanza aggiunge informazione utile rispetto ad aspetto e posizione.",
+        "contract": "Sorgente, normalizzazione e definizione del descrittore devono essere compatibili. Un confronto mancante deve restare esplicitamente assente.",
+        "failure": "Forme simili, viste parziali o ricostruzioni instabili possono produrre distanze poco informative."
+      }
+    },
+    {
+      "ref": "R21",
+      "id": "correction",
+      "title": "Correzione esterna dei punteggi",
+      "legacy": [
+        "B12"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Modifica dall’esterno i punteggi di Whareformer usando la distanza di forma.",
+        "role": "Applica: punteggio corretto = punteggio originale + peso × (distanza neutra − distanza di forma). Corregge soltanto i confronti geometrici validi con tracce esistenti.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "I controlli a contributo geometrico nullo hanno preservato la baseline; nelle configurazioni della campagna conclusa le assegnazioni non sono cambiate.",
+        "why": "Permette di sperimentare il contributo della forma mantenendo congelata la rete originale.",
+        "alternatives": "Fusione con parametri appresi e adattamento di Whareformer sono percorsi da confrontare; non sono componenti eseguiti in questa mappa.",
+        "improve": "Definire distanza e calibrazione su dati di sviluppo; analizzare perché le correzioni non abbiano cambiato le associazioni.",
+        "contract": "L’opzione “nuova traccia” e i confronti mancanti non ricevono una correzione diretta; le loro probabilità possono comunque cambiare.",
+        "failure": "Parametri non calibrati o geometria disponibile solo per alcune tracce possono sbilanciare la decisione."
+      }
+    },
+    {
+      "ref": "R22",
+      "id": "assignment",
+      "title": "Assegnazione originale",
+      "legacy": [
+        "B12"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Converte i punteggi in associazioni tra osservazioni e tracce.",
+        "role": "Trasforma i punteggi corretti in probabilità e applica l’assegnazione originale: ogni osservazione riceve una traccia esistente oppure l’esito “nuova traccia”. Una traccia esistente può ricevere al massimo un’osservazione del frame.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Righe e colonne devono corrispondere alle osservazioni e agli ID effettivi.",
+        "failure": "L’esito è una predizione e può frammentare un’identità o unire oggetti diversi."
+      }
+    },
+    {
+      "ref": "R23",
+      "id": "existing",
+      "title": "Traccia esistente?",
+      "legacy": [
+        "B14"
+      ],
+      "strategy": "preserva_manuale",
+      "fields": {
+        "summary": "Nodo di diramazione. Indirizza l’osservazione verso l’aggiornamento di una traccia esistente oppure la creazione di una nuova.",
+        "role": "Legge l’esito dell’associazione:\n\n- se l’osservazione è assegnata a una traccia esistente, attiva l’aggiornamento di posizione e aspetto e il ramo di aggiornamento geometrico;\n\n- altrimenti, attiva la creazione di una nuova traccia.",
+        "state": "La diramazione è implementata e utilizzata nelle esecuzioni integrate.",
+        "evidence": "Entrambi i percorsi sono stati eseguiti. ",
+        "why": "Una traccia esistente possiede una memoria da aggiornare; una nuova traccia richiede invece un ID e una memoria iniziale.",
+        "alternatives": "Non sono previste modifiche specifiche a questa diramazione.",
+        "improve": "Non sono previste modifiche specifiche a questa diramazione.",
+        "contract": "Ogni osservazione deve seguire un solo percorso. Tutti i suoi aggiornamenti devono riferirsi alla stessa traccia assegnata.",
+        "failure": "Un’associazione errata può aggiornare la traccia di un altro oggetto; la creazione non necessaria di una nuova traccia può frammentare l’identità dello stesso oggetto."
+      }
+    },
+    {
+      "ref": "R24",
+      "id": "newtrack",
+      "title": "Crea e inizializza la traccia",
+      "legacy": [
+        "B17",
+        "B18"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Crea una traccia e inizializza la sua memoria visiva e spaziale.",
+        "role": "Assegna un nuovo ID e inserisce aspetto, posizione e prima osservazione secondo la procedura originale. La geometria viene gestita separatamente.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "L’ID deve essere univoco e collegato all’osservazione che lo ha generato.",
+        "failure": "Una nuova traccia può corrispondere a un oggetto già visto ma non riconosciuto."
+      }
+    },
+    {
+      "ref": "R25",
+      "id": "updatew",
+      "title": "Aggiorna la traccia",
+      "legacy": [
+        "B15"
+      ],
+      "strategy": "bozza_gia_presentata",
+      "fields": {
+        "summary": "Aggiorna la memoria visiva e spaziale della traccia associata.",
+        "role": "Aggiunge aspetto e posizione della nuova osservazione alle rispettive memorie, secondo le regole configurate nella baseline, e aggiorna ultima posizione, istante e storia delle associazioni.",
+        "state": "Utilizza il procedimento originale di Whareformer. L'aggiornamento avviene anche se la successiva fusione geometrica viene respinta.",
+        "evidence": "Procedura verificata nel codice e usata nelle prove integrate. L'aggiornamento non certifica che l'associazione sia corretta.",
+        "why": "La traccia deve incorporare le nuove informazioni visive e spaziali mantenendo il comportamento della baseline.",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Osservazione e memoria precedente devono appartenere alla traccia indicata dall'assegnazione, con ordine temporale corretto.",
+        "failure": "Un'associazione errata inserisce nella traccia caratteristiche di un altro oggetto."
+      }
+    },
+    {
+      "ref": "R26",
+      "id": "associated",
+      "title": "Osservazione associata",
+      "legacy": [
+        "B14",
+        "B18"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Collega l’osservazione all’ID realmente assegnato dal tracker.",
+        "role": "Raccoglie l’esito definitivo dopo la creazione o l’aggiornamento della traccia e identifica la memoria destinataria dell’eventuale aggiornamento geometrico.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Il collegamento deve usare l’ID effettivo, non il solo indice della colonna dei punteggi.",
+        "failure": "Un ID errato invia la geometria alla traccia sbagliata."
+      }
+    },
+    {
+      "ref": "R27",
+      "id": "baseline",
+      "title": "Stato baseline aggiornato",
+      "legacy": [
+        "B15",
+        "B19"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "matching",
+      "fields": {
+        "summary": "Conserva lo stato visivo e spaziale già aggiornato.",
+        "role": "Mantiene memorie, ultima posizione e storia prodotte dal tracker, indipendentemente dall’esito del successivo aggiornamento geometrico.",
+        "state": "Passaggio implementato nel ciclo corrente; le reti restano congelate.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Stato e aggiornamento devono riferirsi alla stessa traccia e allo stesso frame.",
+        "failure": "Il rifiuto geometrico non corregge un’associazione baseline eventualmente errata."
+      }
+    },
+    {
+      "ref": "R28",
+      "id": "cloudavailable",
+      "title": "Nuvola corrente valida?",
+      "legacy": [
+        "B16",
+        "B18"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Verifica che sia disponibile una nuvola utilizzabile per l’osservazione associata.",
+        "role": "Controlla disponibilità, validità dei punti e coerenza della provenienza. Se manca un input utilizzabile non viene aggiornata la memoria dei punti.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Nuvola, sorgente e osservazione devono corrispondere; i punti devono provenire dalle superfici visibili stimate.",
+        "failure": "Validità dei dati e correttezza geometrica sono diverse: punti formalmente validi possono essere inaccurati."
+      }
+    },
+    {
+      "ref": "R29",
+      "id": "hasmemory",
+      "title": "Punti già in memoria?",
+      "legacy": [
+        "B16",
+        "B18"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Distingue la prima geometria valida da un aggiornamento tra viste.",
+        "role": "Controlla se la traccia possiede già una memoria di punti: in assenza la inizializza, altrimenti tenta l’allineamento della nuova nuvola.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "La verifica riguarda la memoria dei punti della traccia assegnata, non la sola esistenza dell’ID.",
+        "failure": "Una traccia può esistere da più frame senza avere ancora una nuvola valida."
+      }
+    },
+    {
+      "ref": "R30",
+      "id": "initialize",
+      "title": "Inizializza i punti",
+      "legacy": [
+        "B18",
+        "B16"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Crea la memoria geometrica dalla prima nuvola valida della traccia.",
+        "role": "Conserva un campione dei punti osservati, la loro provenienza e il riferimento della prima vista ammessa. Questa operazione non fonde viste diverse.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "Consente di inizializzare la geometria anche dopo la creazione della traccia.",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Riferimento, sorgente e scala vengono registrati per gli aggiornamenti successivi.",
+        "failure": "Una prima nuvola contaminata o di scala inaccurata può compromettere gli aggiornamenti futuri."
+      }
+    },
+    {
+      "ref": "R31",
+      "id": "registration",
+      "title": "Allinea la nuova nuvola",
+      "legacy": [
+        "B16"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Cerca come portare la nuova nuvola nel riferimento dei punti già ricordati.",
+        "role": "Prova diversi allineamenti iniziali e li affina stimando rotazione e traslazione. La scala non viene modificata.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "Discutere e validare il metodo di allineamento su fusioni corrette ed errate.",
+        "contract": "Le due nuvole devono avere scala compatibile e appartenere alla stessa traccia.",
+        "failure": "Viste parziali, simmetrie e differenze di scala possono rendere l’allineamento errato o ambiguo."
+      }
+    },
+    {
+      "ref": "R32",
+      "id": "admitted",
+      "title": "Fusione ammessa?",
+      "legacy": [
+        "B16"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Decide se l’allineamento è abbastanza affidabile per ammettere i nuovi punti.",
+        "role": "Controlla supporto, residui e ambiguità della trasformazione. Supporto e residui sono valutati su punti separati da quelli usati per stimare l’allineamento.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "Nelle prove sono avvenute fusioni ammesse e rifiuti; l’accuratezza fisica delle fusioni non è certificata.",
+        "why": "-",
+        "alternatives": "Rivedere criteri e soglie oppure conservare forme separate sono alternative discusse, non una politica definitiva già scelta.",
+        "improve": "Concordare i criteri con il compagno e verificare sia fusioni errate ammesse sia fusioni utili respinte.",
+        "contract": "La decisione riguarda la fusione geometrica; non annulla l’associazione alla traccia.",
+        "failure": "Controlli permissivi possono contaminare la memoria; controlli severi possono respingere viste utili."
+      }
+    },
+    {
+      "ref": "R33",
+      "id": "keep",
+      "title": "Conserva punti e forma",
+      "legacy": [
+        "B16",
+        "B19"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Mantiene invariati i punti accumulati e la loro ultima ricostruzione riuscita.",
+        "role": "Quando manca una nuvola utilizzabile o l’allineamento è respinto, conserva lo stato geometrico precedente senza annullare il tracking.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "La conservazione riguarda l’accumulo e la sua ricostruzione; la memoria distinta delle forme singole segue il proprio aggiornamento.",
+        "failure": "Rifiuti ripetuti possono lasciare la geometria poco rappresentativa delle nuove viste."
+      }
+    },
+    {
+      "ref": "R34",
+      "id": "merge",
+      "title": "Unisci i punti osservati",
+      "legacy": [
+        "B16"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Integra nella memoria i punti delle viste ammesse.",
+        "role": "Trasforma i nuovi punti nel riferimento della memoria e ne conserva campioni insieme alle viste ammesse precedenti, rispettando i limiti di memoria configurati.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "Conservare viste complementari può aumentare la copertura delle superfici dell’oggetto.",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Si aggiungono soltanto punti osservati stimati, mai le superfici completate da SuperFlex.",
+        "failure": "Una trasformazione scorretta può deformare la memoria anche quando supera i controlli."
+      }
+    },
+    {
+      "ref": "R35",
+      "id": "sfupdate",
+      "title": "Ricostruisci con SuperFlex",
+      "legacy": [
+        "B16",
+        "B18"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Ricostruisce la forma dai punti inizializzati o aggiornati.",
+        "role": "Prepara la nuvola, applica SuperFlex preaddestrato e conserva la ricostruzione con i dati necessari a ricondurla alla versione dei punti di origine.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Richiesta, traccia e versione della nuvola devono corrispondere; il completamento non rientra nei punti osservati.",
+        "failure": "La ricostruzione può fallire o produrre una forma inaccurata, soprattutto con nuvole parziali o contaminate."
+      }
+    },
+    {
+      "ref": "R36",
+      "id": "success",
+      "title": "Ricostruzione riuscita?",
+      "legacy": [
+        "B16",
+        "B19"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Verifica se la ricostruzione ha restituito un risultato utilizzabile.",
+        "role": "Distingue un risultato riuscito da un fallimento dichiarato e controlla che appartenga alla richiesta e alla versione di punti previste.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Un esito tecnico positivo non certifica la correttezza fisica della forma.",
+        "failure": "Risultati mancanti o incoerenti possono bloccare il replay; non equivalgono a un normale fallimento dichiarato."
+      }
+    },
+    {
+      "ref": "R37",
+      "id": "newform",
+      "title": "Aggiorna forma e descrittore",
+      "legacy": [
+        "B19"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Rende disponibili la nuova forma e il suo descrittore per i confronti futuri.",
+        "role": "Associa alla traccia la ricostruzione riuscita e il descrittore ricavato dalla superficie, registrando la versione dei punti che li ha generati.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "La nuova forma viene pubblicata dopo l’associazione corrente e non ne modifica retroattivamente l’esito.",
+        "failure": "Una ricostruzione riuscita ma inaccurata può rendere fuorvianti i successivi confronti."
+      }
+    },
+    {
+      "ref": "R38",
+      "id": "oldform",
+      "title": "Mantieni l’ultima forma valida",
+      "legacy": [
+        "B19"
+      ],
+      "strategy": "nuovo_o_ridistribuito",
+      "group": "geometry",
+      "fields": {
+        "summary": "Conserva l’ultima forma riuscita quando la nuova ricostruzione fallisce.",
+        "role": "Mantiene la forma precedente, se presente, insieme ai punti appena ammessi. Se non esiste una forma precedente, la ricostruzione dell’accumulo resta indisponibile.",
+        "state": "Passaggio implementato nel percorso con accumulo; i criteri di ammissione restano provvisori.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Versione dei punti aggiornati e versione della forma precedente devono restare distinte.",
+        "failure": "La forma conservata può non rappresentare tutte le superfici presenti nella nuova memoria di punti."
+      }
+    },
+    {
+      "ref": "R39",
+      "id": "updated",
+      "title": "Memoria aggiornata per il frame successivo",
+      "legacy": [
+        "B19"
+      ],
+      "strategy": "bozza_gia_presentata",
+      "fields": {
+        "summary": "Rende disponibili ai frame successivi gli stati aggiornati delle tracce.",
+        "role": "Riunisce aspetto e posizione aggiornati, punti geometrici ammessi e ultima forma riuscita. Se una fusione è respinta conserva la geometria precedente; se fallisce SuperFlex conserva l'ultima forma valida, distinguendola dalla nuova versione dei punti.",
+        "state": "Il ciclo è implementato ed eseguito da input preparati. Gli aggiornamenti non modificano retroattivamente l'associazione del frame corrente.",
+        "evidence": "Versioni e provenienza sono registrate negli output. Questo verifica la gestione dello stato, non l'accuratezza fisica della memoria o l'esecuzione in tempo reale.",
+        "why": "Le nuove informazioni devono influenzare i confronti futuri senza confondere punti aggiornati e ricostruzioni riuscite in momenti diversi.",
+        "alternatives": "-",
+        "improve": "Verificare la qualità geometrica degli stati conservati e il loro contributo alle associazioni future.",
+        "contract": "Punti e forma mantengono versioni distinte, ID della traccia e istanti di aggiornamento. Le superfici completate non vengono reinserite nei punti osservati.",
+        "failure": "Una forma precedente può non rappresentare tutti i punti aggiornati; una fusione errata può propagarsi ai confronti successivi."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "ref": "C01",
+      "from": "input",
+      "to": "crop",
+      "title": "Dati d’ingresso forniti → Ritaglio dell’oggetto",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce immagine e selezione dell’oggetto al ritaglio.",
+        "role": "Il frame contiene l’aspetto visivo; maschera e rettangolo indicano quale regione appartiene all’oggetto da estrarre.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "RGB, maschera e rettangolo devono riferirsi allo stesso oggetto e frame.",
+        "failure": "Un disallineamento seleziona pixel non pertinenti."
+      }
+    },
+    {
+      "ref": "C02",
+      "from": "input",
+      "to": "depth",
+      "title": "Dati d’ingresso forniti → Stima della profondità",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce il frame da cui stimare la profondità.",
+        "role": "Il modello di profondità usa i pixel RGB per stimare la distanza delle superfici visibili; maschere e camera/scena restano disponibili ai successivi passaggi del ramo.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Il frame deve corrispondere agli altri dati del ramo posizione.",
+        "failure": "Un frame errato rende incoerenti profondità e annotazioni."
+      }
+    },
+    {
+      "ref": "C03",
+      "from": "input",
+      "to": "geometry",
+      "title": "Dati d’ingresso forniti → Geometria stimata da RGB",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce il frame alla stima geometrica.",
+        "role": "Depth Anything o MoGE ricavano la geometria dai pixel RGB; gli altri dati forniti vengono usati soltanto dove richiesti, come gli intrinseci nel ramo Depth Anything.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Frame e parametri eventualmente usati devono avere risoluzione e convenzioni compatibili.",
+        "failure": "Input incoerenti producono una geometria non riferibile all’osservazione."
+      }
+    },
+    {
+      "ref": "C04",
+      "from": "crop",
+      "to": "dino",
+      "title": "Ritaglio dell’oggetto → Estrazione visiva",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce all’estrattore il ritaglio preparato dell’oggetto.",
+        "role": "Il ritaglio concentra l’informazione visiva sulla regione da descrivere ed è l’immagine effettivamente ricevuta da DINOv2.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Dimensioni e normalizzazione devono seguire la preparazione prevista dalla baseline.",
+        "failure": "Una preparazione incompatibile altera le caratteristiche estratte."
+      }
+    },
+    {
+      "ref": "C05",
+      "from": "dino",
+      "to": "pca",
+      "title": "Estrazione visiva → Riduzione dimensionale",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce il vettore visivo da ridurre.",
+        "role": "DINOv2 produce una rappresentazione numerica sulla quale può operare la trasformazione PCA; non vengono ridotti direttamente i pixel.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Dimensione e preparazione del vettore devono corrispondere alla PCA prevista.",
+        "failure": "Un vettore incompatibile rende invalida la riduzione."
+      }
+    },
+    {
+      "ref": "C06",
+      "from": "pca",
+      "to": "appearance",
+      "title": "Riduzione dimensionale → Descrittore d’aspetto",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce il vettore finale usato come descrittore d’aspetto.",
+        "role": "La trasformazione produce la dimensione e la normalizzazione richieste per confrontare l’osservazione con la memoria visiva.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le feature ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Descrittore corrente e descrittori ricordati devono essere compatibili.",
+        "failure": "Trasformazioni diverse rendono il confronto poco interpretabile."
+      }
+    },
+    {
+      "ref": "C07",
+      "from": "depth",
+      "to": "alignscene",
+      "title": "Stima della profondità → Allineamento alla scena",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce la profondità predetta da adattare alla scena.",
+        "role": "La mappa stimata dall’immagine deve essere resa coerente con la profondità della scena prima di usarla per le posizioni 3D.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Le due profondità devono descrivere la stessa vista.",
+        "failure": "Una vista incoerente altera scala e scostamento stimati."
+      }
+    },
+    {
+      "ref": "C08",
+      "from": "alignscene",
+      "to": "xyzcalc",
+      "title": "Allineamento alla scena → Calcolo della posizione",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce la profondità coerente con la scena per localizzare l’oggetto.",
+        "role": "I valori allineati permettono di ricavare la profondità pertinente alla maschera e di trasformarla in una posizione nel riferimento della scena.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Maschera, rettangolo, camera e profondità devono essere compatibili.",
+        "failure": "Valori di sfondo o riferimenti incoerenti spostano la posizione stimata."
+      }
+    },
+    {
+      "ref": "C09",
+      "from": "xyzcalc",
+      "to": "xyz",
+      "title": "Calcolo della posizione → Posizione 3D nella scena",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce le coordinate calcolate della posizione.",
+        "role": "Il calcolo produce il punto 3D che viene conservato come segnale spaziale dell’osservazione.",
+        "state": "Procedura originale di Whareformer; nelle prove sono riusate le posizioni ufficiali.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Le coordinate devono mantenere identificativo e riferimento della scena.",
+        "failure": "Uno scambio di osservazione o riferimento rende errata la posizione."
+      }
+    },
+    {
+      "ref": "C10",
+      "from": "geometry",
+      "to": "cloud",
+      "title": "Geometria stimata da RGB → Punti visibili dell’oggetto",
+      "label": "",
+      "type": "data",
+      "strategy": "preserva_manuale",
+      "legacy": "E05",
+      "fields": {
+        "summary": "La stima di DA o MoGE fornisce i dati 3D da cui si costruisce la nuvola dell’oggetto.",
+        "role": "Fornisce la profondità stimata da DA oppure i punti 3D prodotti da MoGE. Queste informazioni danno una posizione nello spazio ai pixel selezionati dalla maschera, permettendo di costruire la nuvola dell’oggetto.\nLa stima geometrica fornisce la profondità o le coordinate 3D delle superfici visibili; la segmentazione indica quali pixel appartengono all’oggetto. La costruzione della nuvola combina queste informazioni per conservare i punti 3D dell’oggetto.",
+        "state": "Il collegamento è implementato e utilizzato con entrambe le sorgenti.",
+        "evidence": "La costruzione delle nuvole è stata verificata, ma la disponibilità dei punti non ne certifica l’accuratezza fisica.",
+        "why": "La nuvola dell’oggetto richiede coordinate 3D per i pixel selezionati, non soltanto un’immagine RGB.",
+        "alternatives": "Si confrontano DA e MoGE; la scelta definitiva della sorgente non è stata fissata.",
+        "improve": "Verificare quanto gli errori della geometria in ingresso influenzino la qualità delle nuvole e la loro coerenza tra viste.",
+        "contract": "La mappa geometrica deve essere allineata alla maschera; per DA gli intrinseci devono corrispondere all’immagine. Conservare sorgente, scala e riferimento.",
+        "failure": "Profondità errata, punti invalidi o intrinseci incoerenti possono deformare la nuvola risultante."
+      }
+    },
+    {
+      "ref": "C11",
+      "from": "cloud",
+      "to": "sfinput",
+      "title": "Punti visibili dell’oggetto → Ricostruzione SuperFlex",
+      "label": "",
+      "type": "data",
+      "strategy": "preserva_manuale",
+      "legacy": "E08",
+      "fields": {
+        "summary": "La nuvola 3D dell’oggetto viene preparata e fornita a SuperFlex per stimarne la forma.",
+        "role": "Fornisce a SuperFlex i punti della superficie visibile dell’oggetto, dai quali il modello stima una rappresentazione della sua forma tramite primitive geometriche.",
+        "state": "Il percorso nuvola → SuperFlex è implementato ed eseguito su casi reali con DA e MoGE.",
+        "evidence": "Nell’ultimo test tutte le osservazioni hanno prodotto una ricostruzione SuperFlex per ciascuna sorgente geometrica. \nIl successo dell’inferenza non certifica la fedeltà della forma ricostruita.",
+        "why": "SuperFlex richiede una nuvola di punti del singolo oggetto: questi punti forniscono l’evidenza geometrica da cui stimare le primitive che ne descrivono la forma.",
+        "alternatives": "La nuvola può anche essere confrontata direttamente come controllo, senza passare da SuperFlex. Facendo così però il costo computazionale è più alto.",
+        "improve": "Valutare l’effetto di qualità, parzialità e campionamento della nuvola sulla stabilità della forma e sul tracking.",
+        "contract": "Applicare campionamento e normalizzazione previsti, conservando le trasformazioni e la provenienza della nuvola.",
+        "failure": "Punti mancanti, contaminati o degeneri possono causare fallimento o una ricostruzione imprecisa."
+      }
+    },
+    {
+      "ref": "C12",
+      "from": "sfinput",
+      "to": "descriptor",
+      "title": "Ricostruzione SuperFlex → Descrittore di forma",
+      "label": "",
+      "type": "data",
+      "strategy": "preserva_manuale",
+      "legacy": "E09",
+      "fields": {
+        "summary": "Le superquadriche prodotte da SuperFlex forniscono la superficie da cui ricavare il descrittore di forma dell’oggetto.",
+        "role": "Trasferisce i parametri delle primitive stimate, che insieme descrivono la superficie dell’oggetto. Questa superficie viene usata per costruire una rappresentazione confrontabile con quelle conservate nelle tracce.",
+        "state": "Il collegamento è implementato.",
+        "evidence": "Nelle configurazioni provate, il contributo geometrico non ha modificato le associazioni rispetto alla baseline.",
+        "why": "L’ordine e il numero delle primitive possono cambiare tra ricostruzioni. Usare la superficie complessiva permette di confrontare le forme senza richiedere una corrispondenza tra le singole superquadriche.",
+        "alternatives": "È stato sperimentato anche il confronto di descrittori ricavati dalle nuvole originali, senza ricostruzione SuperFlex.\n\n",
+        "improve": "Verificare quanto gli errori della superficie ricostruita influenzino la stabilità e la capacità discriminativa del descrittore.",
+        "contract": "Le primitive devono appartenere alla corretta osservazione o versione della memoria. Vanno conservate le informazioni di normalizzazione necessarie a interpretare la superficie.",
+        "failure": "Una ricostruzione deformata può generare un descrittore fuorviante. Una ricostruzione fallita non deve essere trattata come una forma valida."
+      }
+    },
+    {
+      "ref": "C13",
+      "from": "appearance",
+      "to": "observation",
+      "title": "Descrittore d’aspetto → Osservazione corrente",
+      "label": "",
+      "type": "data",
+      "strategy": "preserva_manuale",
+      "legacy": "E11",
+      "fields": {
+        "summary": "Il descrittore d’aspetto fornisce all’osservazione corrente le caratteristiche visive dell’oggetto.",
+        "role": "Trasferisce il descrittore dell’oggetto e lo affianca alla posizione e alla forma 3D eventualmente disponibile. Si costituisce così la tripletta del nostro Whareformer (nella versione originale, è una coppia: aspetto e posizione)",
+        "state": "Collegamento implementato e verificato. Nelle prove attuali utilizziamo i descrittori ufficiali di Whareformer.",
+        "evidence": "La corrispondenza tra feature e osservazioni della baseline è stata verificata. \nOvviamente il descrittore non garantisce da solo il riconoscimento dell’identità dell’oggetto.",
+        "why": "L’aspetto fornisce un segnale utile all’associazione: oggetti vicini o di forma simile possono avere caratteristiche visive differenti.",
+        "alternatives": "Non sono previste alternative a questo trasferimento.",
+        "improve": "Non sono previste modifiche specifiche a questo trasferimento.",
+        "contract": "Il descrittore deve appartenere allo stesso oggetto e allo stesso frame degli altri dati dell’osservazione.",
+        "failure": "Un descrittore associato all’osservazione sbagliata combina l’aspetto di un oggetto con la posizione o la forma di un altro, compromettendo il confronto con le tracce."
+      }
+    },
+    {
+      "ref": "C14",
+      "from": "xyz",
+      "to": "observation",
+      "title": "Posizione 3D nella scena → Osservazione corrente",
+      "label": "",
+      "type": "data",
+      "strategy": "bozza_gia_presentata",
+      "legacy": "E17",
+      "fields": {
+        "summary": "Aggiunge all'osservazione la posizione spaziale usata da Whareformer.",
+        "role": "Trasferisce le tre coordinate della posizione baseline, collegate alla stessa osservazione di aspetto e forma.",
+        "state": "Collegamento attivo con posizioni ufficiali mantenute identiche tra varianti.",
+        "evidence": "Corrispondenze verificate negli input delle prove. Il dato è una posizione puntuale, non una superficie o una posa completa.",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Coordinate, ID e ordine dell'osservazione devono coincidere con quelli degli altri segnali.",
+        "failure": "Una posizione attribuita all'oggetto sbagliato altera il confronto spaziale."
+      }
+    },
+    {
+      "ref": "C15",
+      "from": "descriptor",
+      "to": "observation",
+      "title": "Descrittore di forma → Osservazione corrente",
+      "label": "",
+      "type": "data",
+      "strategy": "preserva_con_segnaposto_da_completare",
+      "legacy": "E10",
+      "fields": {
+        "summary": "Il descrittore di forma aggiunge all’osservazione corrente un segnale geometrico da utilizzare nell’associazione alle tracce.",
+        "role": "Prende il descrittore della forma ricostruita e lo affianca all’aspetto e alla posizione dello stesso oggetto. Rende così disponibile il confronto geometrico della ricostruione dell'oggetto nel frame con le forme ricordate dalle tracce.",
+        "state": "Il collegamento è implementato e utilizzato negli esperimenti con contributo geometrico attivo. Se la forma non è disponibile, l'osservazione corrente si compone solo di aspetto e posizione.",
+        "evidence": "Il descrittore è stato utilizzato nei confronti. Nell’ultima run le configurazioni provate non hanno modificato le associazioni rispetto alla baseline.",
+        "why": "La forma potrebbe aiutare a distinguere oggetti difficili da riconoscere usando soltanto aspetto e posizione. Il suo contributo aggiuntivo resta tuttavia da dimostrare.",
+        "alternatives": "Sono da confrontare l’attuale correzione esterna, una fusione con pochi parametri appresi e l’adattamento di Whareformer. La scelta definitiva resta aperta; queste alternative non sono moduli eseguiti nella mappa.",
+        "improve": "Verificare se il segnale di forma è disponibile e discriminativo soprattutto proprio nei casi in cui aspetto e posizione rendono incerta l’associazione.",
+        "contract": "Il descrittore deve appartenere alla stessa osservazione di cui vengono forniti aspetto e posizione. La sua eventuale assenza deve essere indicata esplicitamente.",
+        "failure": "Un descrittore errato o associato all’oggetto sbagliato può introdurre un segnale fuorviante. La geometria mancante riduce le occasioni in cui il confronto di forma può contribuire."
+      }
+    },
+    {
+      "ref": "C16",
+      "from": "observation",
+      "to": "scores",
+      "title": "Osservazione corrente → Punteggi di Whareformer",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce aspetto e posizione dell’oggetto al modello originale.",
+        "role": "Questi due segnali sono gli ingressi utilizzati da Whareformer per confrontare l’osservazione con le tracce; la forma segue il ramo esterno.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C17",
+      "from": "observation",
+      "to": "distance",
+      "title": "Osservazione corrente → Distanza tra le forme",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce la forma corrente da confrontare.",
+        "role": "Il descrittore dell’oggetto osservato è uno dei due termini del confronto con le forme delle tracce; se assente, il confronto geometrico resta indisponibile.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Descrittore e osservazione devono coincidere; l’assenza deve essere esplicita.",
+        "failure": "Un descrittore errato può favorire la traccia sbagliata."
+      }
+    },
+    {
+      "ref": "C18",
+      "from": "memoryw",
+      "to": "scores",
+      "title": "Memoria precedente → Punteggi di Whareformer",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce i ricordi visivi e spaziali delle tracce candidate.",
+        "role": "Whareformer ha bisogno delle rappresentazioni già memorizzate per attribuire un punteggio al possibile collegamento con ciascuna traccia.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Ordine delle memorie e colonne dei punteggi devono corrispondere agli ID effettivi.",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C19",
+      "from": "memoryp",
+      "to": "distance",
+      "title": "Memoria precedente → Distanza tra le forme",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce le forme ricordate da confrontare con quella corrente.",
+        "role": "Le forme associate agli ID delle tracce costituiscono il secondo termine del confronto geometrico.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Tutti i confronti del frame devono usare lo stato geometrico precedente.",
+        "failure": "Memorie aggiornate troppo presto o assegnate male possono falsare il confronto."
+      }
+    },
+    {
+      "ref": "C20",
+      "from": "scores",
+      "to": "correction",
+      "title": "Punteggi di Whareformer → Correzione esterna dei punteggi",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce i punteggi originali su cui applicare la correzione.",
+        "role": "La geometria modifica una decisione già valutata da aspetto e posizione: i punteggi originali sono il punto di partenza della combinazione.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C21",
+      "from": "distance",
+      "to": "correction",
+      "title": "Distanza tra le forme → Correzione esterna dei punteggi",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce la distanza e la disponibilità del confronto geometrico.",
+        "role": "Distanza e indicazione di validità determinano se e quanto correggere il punteggio della traccia; un confronto mancante non vale distanza zero.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Ogni distanza deve corrispondere alla corretta coppia osservazione-traccia.",
+        "failure": "Confondere assenza e somiglianza può sbilanciare i punteggi."
+      }
+    },
+    {
+      "ref": "C22",
+      "from": "correction",
+      "to": "assignment",
+      "title": "Correzione esterna dei punteggi → Assegnazione originale",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce i punteggi corretti alla procedura originale di assegnazione.",
+        "role": "Le probabilità e la scelta finale devono riflettere il contributo geometrico già applicato; per questo la correzione precede l’assegnazione.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Mantiene ordine delle colonne e opzione “nuova traccia”.",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C23",
+      "from": "assignment",
+      "to": "existing",
+      "title": "Assegnazione originale → Traccia esistente?",
+      "label": "",
+      "type": "control",
+      "strategy": "preserva_manuale",
+      "legacy": "E20",
+      "fields": {
+        "summary": "Passaggio interno di Whareformer. Trasmette l’esito dell’associazione per fare la scelta tra aggiornare una traccia esistente e crearne una nuova.",
+        "role": "Per ogni osservazione comunica la traccia assegnata oppure l’esito “nuova traccia”. Questa informazione indirizza i dati dell’oggetto verso il ramo di memoria corrispondente.",
+        "state": "Il collegamento è implementato e utilizzato nelle esecuzioni integrate.",
+        "evidence": "Il collegamento è implementato e utilizzato nelle esecuzioni integrate.",
+        "why": "Prima di aggiornare la memoria occorre sapere quale traccia deve ricevere l’osservazione, oppure se sia necessario inizializzarne una nuova.\n\n",
+        "alternatives": "Non sono previste alternative specifiche a questo passaggio.",
+        "improve": "Non sono previste modifiche specifiche a questo passaggio.",
+        "contract": "Ogni esito deve riferirsi alla corretta osservazione e identificare senza ambiguità la traccia destinataria.",
+        "failure": "Un’associazione errata può inviare i dati alla memoria di un altro oggetto; l’esito “nuova traccia” può frammentare in più tracce l’identità di un oggetto già osservato."
+      }
+    },
+    {
+      "ref": "C24",
+      "from": "existing",
+      "to": "newtrack",
+      "title": "Traccia esistente? → Crea e inizializza la traccia",
+      "label": "No",
+      "type": "control",
+      "strategy": "preserva_manuale",
+      "legacy": "E23",
+      "fields": {
+        "summary": "L'input non è stato associato con nessuna traccia essitente, è stato assocaito all'output \"New Track\". \nQuesto step attiva la creazione di una traccia quando il matching produce l’esito “nuova traccia”. ",
+        "role": "Trasmette l’esito “nuova traccia” riferito all’osservazione corrente. Il blocco successivo lo usa per creare un nuovo ID anziché aggiornare una traccia esistente.",
+        "state": "Il collegamento è implementato nel percorso originale di Whareformer.",
+        "evidence": "La creazione di nuove tracce è stata eseguita nelle prove integrate. Questo esito non dimostra che l’oggetto fisico non fosse già stato osservato.",
+        "why": "Quando il sistema non assegna l’osservazione a una traccia esistente, serve una nuova identità con cui iniziare a conservarne la storia.",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "L’esito deve riferirsi alla corretta osservazione, che non deve contemporaneamente aggiornare una traccia esistente.",
+        "failure": "Un oggetto già conosciuto può ricevere un nuovo ID, frammentando la sua storia in più tracce."
+      }
+    },
+    {
+      "ref": "C25",
+      "from": "existing",
+      "to": "updatew",
+      "title": "Traccia esistente? → Aggiorna la traccia",
+      "label": "Sì",
+      "type": "control",
+      "strategy": "preserva_manuale",
+      "legacy": "E21",
+      "fields": {
+        "summary": "L'input viene assocaito ad una traccia esistente. Questo passaggio indica quale traccia esistente deve ricevere l’aggiornamento di posizione e aspetto.",
+        "role": "Trasmette l’assegnazione dell’osservazione alla traccia a cui è stata abbinata. Il blocco di aggiornamento usa questa informazione di input per applicare i nuovi dati alla memoria corretta, così da aggiornarla con la nuova osservazione.",
+        "state": "Il collegamento è implementato nel percorso di aggiornamento della baseline.",
+        "evidence": "-",
+        "why": "I dati correnti devono aggiornare la memoria dell’oggetto a cui sono stati attribuiti.",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "L’osservazione e l’ID destinatario devono corrispondere all’assegnazione effettivamente prodotta dal tracker.",
+        "failure": "Un’assegnazione errata può aggiornare posizione e aspetto di una traccia con dati appartenenti a un altro oggetto."
+      }
+    },
+    {
+      "ref": "C26",
+      "from": "newtrack",
+      "to": "associated",
+      "title": "Crea e inizializza la traccia → Osservazione associata",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce l’ID appena creato e l’osservazione che lo inizializza.",
+        "role": "La geometria deve essere collegata all’identificativo effettivamente creato dal tracker, disponibile dopo la creazione della traccia.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C27",
+      "from": "updatew",
+      "to": "associated",
+      "title": "Aggiorna la traccia → Osservazione associata",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce l’ID della traccia esistente che ha ricevuto l’osservazione.",
+        "role": "L’aggiornamento identifica il destinatario effettivo del dato corrente, così da selezionare la corretta memoria geometrica.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C28",
+      "from": "associated",
+      "to": "baseline",
+      "title": "Osservazione associata → Stato baseline aggiornato",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Rende disponibile lo stato baseline già creato o aggiornato.",
+        "role": "L’associazione definitiva consente di conservare aspetto e posizione della traccia, indipendentemente dal risultato della geometria.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C29",
+      "from": "associated",
+      "to": "cloudavailable",
+      "title": "Osservazione associata → Nuvola corrente valida?",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Identifica la traccia destinataria dell’eventuale aggiornamento dei punti.",
+        "role": "Prima di usare una nuvola occorre collegarla all’ID realmente assegnato all’osservazione, anche quando la traccia è appena nata.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C30",
+      "from": "cloud",
+      "to": "cloudavailable",
+      "title": "Punti visibili dell’oggetto → Nuvola corrente valida?",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce i punti correnti da verificare per l’aggiornamento.",
+        "role": "L’accumulo richiede la nuvola delle superfici visibili dell’osservazione; il solo descrittore o la superficie completata non la sostituiscono.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Sorgente, riferimento e provenienza devono essere dichiarati.",
+        "failure": "Usare punti completati introdurrebbe nella memoria superfici non osservate."
+      }
+    },
+    {
+      "ref": "C31",
+      "from": "cloudavailable",
+      "to": "hasmemory",
+      "title": "Nuvola corrente valida? → Punti già in memoria?",
+      "label": "Sì",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Prosegue quando la nuvola corrente è utilizzabile.",
+        "role": "Un dato utilizzabile può inizializzare una memoria assente oppure aggiornare quella esistente; il controllo successivo distingue questi casi.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C32",
+      "from": "memoryp",
+      "to": "hasmemory",
+      "title": "Memoria precedente → Punti già in memoria?",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce lo stato precedente dei punti della traccia.",
+        "role": "La presenza o assenza di una nuvola già conservata determina se serve un allineamento oppure una prima inizializzazione.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "L’assenza di punti non va confusa con l’assenza della traccia.",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C33",
+      "from": "hasmemory",
+      "to": "initialize",
+      "title": "Punti già in memoria? → Inizializza i punti",
+      "label": "No",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Attiva l’inizializzazione quando mancano punti già ricordati.",
+        "role": "Senza una nuvola precedente non esiste una vista con cui fondere: la nuvola corrente diventa il primo riferimento geometrico.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C34",
+      "from": "hasmemory",
+      "to": "registration",
+      "title": "Punti già in memoria? → Allinea la nuova nuvola",
+      "label": "Sì",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Attiva l’allineamento quando esiste una memoria di punti.",
+        "role": "Le due nuvole possono essere combinate soltanto dopo aver stimato la trasformazione che le esprime nello stesso riferimento.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Il passaggio conserva sia la nuvola corrente sia quella precedente.",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C35",
+      "from": "registration",
+      "to": "admitted",
+      "title": "Allinea la nuova nuvola → Fusione ammessa?",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce la trasformazione candidata e le sue verifiche.",
+        "role": "La decisione di fusione richiede informazioni sulla sovrapposizione, sui residui e sull’ambiguità dell’allineamento, oltre alla trasformazione stessa.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Verifiche e trasformazione devono riferirsi alle stesse nuvole.",
+        "failure": "Una trasformazione disponibile non è automaticamente una trasformazione affidabile."
+      }
+    },
+    {
+      "ref": "C36",
+      "from": "cloudavailable",
+      "to": "keep",
+      "title": "Nuvola corrente valida? → Conserva punti e forma",
+      "label": "No",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Mantiene l’accumulo precedente quando manca una nuvola utilizzabile.",
+        "role": "Senza nuovi punti affidabili non è possibile aggiornare l’accumulo; la traccia continua con lo stato geometrico già disponibile.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C37",
+      "from": "admitted",
+      "to": "keep",
+      "title": "Fusione ammessa? → Conserva punti e forma",
+      "label": "No",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Mantiene l’accumulo precedente quando la fusione è respinta.",
+        "role": "Il rifiuto impedisce l’ingresso dei nuovi punti nella memoria, lasciando valida l’associazione e l’aggiornamento baseline.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C38",
+      "from": "admitted",
+      "to": "merge",
+      "title": "Fusione ammessa? → Unisci i punti osservati",
+      "label": "Sì",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Autorizza l’inserimento dei punti dopo il superamento dei controlli.",
+        "role": "L’esito positivo permette di applicare la trasformazione approvata e unire campioni dei nuovi punti alla memoria.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Approvazione e trasformazione devono appartenere allo stesso tentativo.",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C39",
+      "from": "merge",
+      "to": "sfupdate",
+      "title": "Unisci i punti osservati → Ricostruisci con SuperFlex",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce la memoria di punti aggiornata per ricostruire la forma.",
+        "role": "Le viste ammesse possono aggiungere superfici visibili: SuperFlex viene rieseguito per rappresentare la nuova versione dei punti.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "L’ingresso contiene punti osservati ammessi, non precedenti completamenti.",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C40",
+      "from": "initialize",
+      "to": "sfupdate",
+      "title": "Inizializza i punti → Ricostruisci con SuperFlex",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce la prima memoria di punti da ricostruire.",
+        "role": "Anche senza fusione tra viste, la nuvola iniziale deve essere trasformata in una forma confrontabile nei frame futuri.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C41",
+      "from": "sfupdate",
+      "to": "success",
+      "title": "Ricostruisci con SuperFlex → Ricostruzione riuscita?",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Fornisce il risultato della richiesta di ricostruzione.",
+        "role": "Prima di pubblicare una forma occorre sapere se la richiesta è riuscita e se il risultato corrisponde ai punti previsti.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Richiesta, versione e artefatti devono corrispondere.",
+        "failure": "Un risultato assente o incoerente non va pubblicato come riuscito."
+      }
+    },
+    {
+      "ref": "C42",
+      "from": "success",
+      "to": "newform",
+      "title": "Ricostruzione riuscita? → Aggiorna forma e descrittore",
+      "label": "Sì",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Pubblica la nuova forma quando la ricostruzione è riuscita.",
+        "role": "Un risultato utilizzabile può sostituire la forma precedente e fornire il descrittore aggiornato per le associazioni future.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C43",
+      "from": "success",
+      "to": "oldform",
+      "title": "Ricostruzione riuscita? → Mantieni l’ultima forma valida",
+      "label": "No",
+      "type": "control",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Conserva la forma precedente dopo un fallimento dichiarato.",
+        "role": "La nuova inferenza non fornisce una forma utilizzabile: si mantiene l’ultima riuscita, senza annullare i punti già ammessi.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Il passaggio non copre risultati mancanti o incoerenti ancora da gestire.",
+        "failure": "Confondere un fallimento dichiarato con un risultato irrisolto può nascondere un errore di esecuzione."
+      }
+    },
+    {
+      "ref": "C44",
+      "from": "baseline",
+      "to": "updated",
+      "title": "Stato baseline aggiornato → Memoria aggiornata per il frame successivo",
+      "label": "",
+      "type": "data",
+      "strategy": "bozza_gia_presentata",
+      "legacy": "E31",
+      "fields": {
+        "summary": "Conserva il nuovo stato visivo e spaziale per i confronti futuri.",
+        "role": "Trasferisce memorie aggiornate, ultima posizione e storia della traccia, anche quando la geometria non cambia.",
+        "state": "Passaggio baseline mantenuto nel ciclo integrato.",
+        "evidence": "Verificato nel codice della traccia e nelle prove integrate.",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Lo stato deve restare collegato all'ID e all'istante dell'aggiornamento.",
+        "failure": "Dati obsoleti o attribuiti male compromettono i confronti successivi."
+      }
+    },
+    {
+      "ref": "C45",
+      "from": "keep",
+      "to": "updated",
+      "title": "Conserva punti e forma → Memoria aggiornata per il frame successivo",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Trasmette lo stato dell’accumulo che non è stato modificato.",
+        "role": "La memoria futura deve conservare punti precedenti e loro ultima ricostruzione riuscita anche quando l’aggiornamento corrente non è ammesso.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C46",
+      "from": "oldform",
+      "to": "updated",
+      "title": "Mantieni l’ultima forma valida → Memoria aggiornata per il frame successivo",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Trasmette i punti aggiornati insieme alla forma precedente.",
+        "role": "Il fallimento della ricostruzione separa le due versioni: i punti sono nuovi, mentre la forma resta l’ultima riuscita.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Versioni e istanti di punti e forma devono restare distinti.",
+        "failure": "La forma precedente non va presentata come ricostruita dai nuovi punti."
+      }
+    },
+    {
+      "ref": "C47",
+      "from": "newform",
+      "to": "updated",
+      "title": "Aggiorna forma e descrittore → Memoria aggiornata per il frame successivo",
+      "label": "",
+      "type": "data",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Trasmette la nuova forma con il suo descrittore e la versione d’origine.",
+        "role": "La ricostruzione riuscita deve essere conservata nella traccia per poter influenzare i confronti dei frame successivi.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "-",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C48",
+      "from": "updated",
+      "to": "memoryw",
+      "title": "Memoria aggiornata per il frame successivo → Memoria precedente",
+      "label": "",
+      "type": "temporal",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Rende lo stato visivo e spaziale aggiornato disponibile al frame successivo.",
+        "role": "La memoria risultante dal tracking corrente diventa il termine di confronto delle osservazioni future.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "L’ordine temporale deve avanzare; gli aggiornamenti non modificano associazioni già concluse.",
+        "failure": "-"
+      }
+    },
+    {
+      "ref": "C49",
+      "from": "updated",
+      "to": "memoryp",
+      "title": "Memoria aggiornata per il frame successivo → Memoria precedente",
+      "label": "",
+      "type": "temporal",
+      "strategy": "nuovo_o_ridistribuito",
+      "legacy": null,
+      "fields": {
+        "summary": "Rende lo stato geometrico aggiornato disponibile al frame successivo.",
+        "role": "Punti e ultima forma valida passano ai confronti e agli aggiornamenti futuri soltanto dopo la gestione degli esiti del frame corrente.",
+        "state": "Dipendenza rappresentata nella struttura approvata del metodo corrente.",
+        "evidence": "-",
+        "why": "-",
+        "alternatives": "-",
+        "improve": "-",
+        "contract": "Tutte le osservazioni del nuovo frame leggono lo stesso stato geometrico precedente.",
+        "failure": "Un aggiornamento anticipato può introdurre dipendenze scorrette tra osservazioni dello stesso frame."
+      }
+    }
+  ],
+  "source_map": "mappa-completa-rami-paralleli.json"
+}

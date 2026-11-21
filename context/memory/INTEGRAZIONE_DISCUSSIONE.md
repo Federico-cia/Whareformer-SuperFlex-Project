@@ -1,5 +1,13 @@
 # Integrazione: decisione corrente
 
+## Mappa corrente — 21 novembre 2026
+
+Struttura Rami paralleli e nuovi commenti confermati da Marco e applicati: 39 riquadri, 49 collegamenti. La sorgente corrente è [la mappa interattiva](../../mappa_interattiva/README.md). Superata la riserva storica della scrittura al solo Marco: l’assistente può applicare i testi dopo conferma esplicita. Vecchi commenti conservati, revisione scientifica successiva ancora aperta. Nessun cambiamento del metodo o nuovo esperimento.
+
+## Direzione corrente — 16 novembre 2026
+
+Richiesti entrambi i percorsi: fusione esterna e riaddestramento Whareformer. Vincolo esplicito: nessuna nuova etichettatura manuale, preferenza per training/target originali; superate le precedenti alternative condizionali e la proposta manuale. [Fattibilità, dati e distanze candidate](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md), registro voce 81. Scelta finale e protocollo aperti; prima verificare provenienza oracle/geometria e costo. Nessuna nuova implementazione, calibrazione o run; filtri invariati, scrittura della mappa riservata a Marco.
+
 ## Campagna estesa conclusa — 15 novembre 2026
 
 [Resoconto e output](../evidence/campaign_20261115_v1/REPORT_FINALE.md). Tutte le 29 configurazioni completate e valutate su 33310 frame/110590 osservazioni; nessuna assegnazione diversa da W0 e metriche identiche (IDF1 73.269735%, mPCL 70.465504%). Quattro controlli zero esatti, nessun timeout/errore di aggiornamento/worker fallito o richiesta pendente.

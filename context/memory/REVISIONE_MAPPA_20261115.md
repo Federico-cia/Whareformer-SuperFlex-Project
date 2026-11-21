@@ -1,5 +1,23 @@
 # Revisione guidata della mappa — 15 novembre 2026
 
+## Mappa corrente — 21 novembre 2026
+
+Struttura Rami paralleli e nuovi commenti confermati da Marco e applicati: 39 riquadri, 49 collegamenti. La sorgente corrente è [la mappa interattiva](../../mappa_interattiva/README.md). Superata la riserva storica della scrittura al solo Marco: l’assistente può applicare i testi dopo conferma esplicita. Vecchi commenti conservati, revisione scientifica successiva ancora aperta. Nessun cambiamento del metodo o nuovo esperimento.
+
+## Revisione del mandato — 21 novembre 2026
+
+**Applicazione successiva completata:** Marco conferma i testi e chiede di aprire l'HTML. Struttura Rami paralleli e commenti applicati alla mappa corrente, con 39 riquadri/49 collegamenti e riferimenti R/C effettivi. Verificate corrispondenza dei testi, copia offline, schede ed editor; HTML aperto nella chat. [Ricevuta dell'applicazione](../evidence/map_20261121/APPLICAZIONE_MAPPA.json). Le successive note di attesa e di mancata applicazione riportate sotto descrivono fasi storiche superate; resta distinta la revisione scientifica dei vecchi testi.
+
+**Testi della struttura confermata:** preparate proposte per 28 riquadri e 39 frecce nuovi/ridistribuiti, [versione da revisionare](../evidence/map_20261121/COMMENTI_PER_REVISIONE_CHAT.md). I restanti elementi conservano schede manuali o bozze già presentate; nove campi per ogni elemento nella specifica separata. Riferimenti R/C limitati alla proposta, nessuna modifica alla mappa. I testi vanno confermati prima dell'inserimento; i vecchi commenti non sono oggetto di una nuova revisione in questa fase.
+
+**Conferma successiva dell'insieme:** Marco approva l'anteprima completa («Va bene questa mappa»). La struttura 39 nodi/49 connessioni è confermata; resta da proporre e revisionare la distribuzione dei commenti nelle nuove schede. Nessuna applicazione alla mappa eseguita in questa fase di chiarimento.
+
+**Scelta visiva successiva:** Marco sceglie «Rami paralleli», chiedendo prima dell'applicazione di vedere l'intero processo. [Anteprima completa separata](../evidence/map_20261121/mappa-completa-rami-paralleli.png) e [specifica delle suddivisioni](../evidence/map_20261121/ANTEPRIMA_COMPLETA.md) preparate; stile scelto, struttura complessiva e testi ancora da confermare. Nessuna modifica ai commenti o all'applicazione della mappa.
+
+**Chiarimenti approvati successivamente:** tutti i campi mancanti, «-» se non sostanziale; esistenti rinviati. Una sola mappa interattiva dell'implementazione attuale; libertà di aggiungere/rimuovere nodi e frecce, con processi/decisioni e provenienza distinguibili. Diverse proposte grafiche prima della scelta di Marco, poi applicazione globale. [Bozze dei commenti](../evidence/map_20261121/TESTI_PROPOSTI.md) e tre anteprime sul ciclo critico preparate separatamente, nessuna modifica della mappa. Layout e testi restano da approvare; eventuali nuove schede dipendono dalla struttura scelta. Questi chiarimenti risolvono le domande indicate nel paragrafo storico seguente.
+
+Le indicazioni seguenti conservano valore storico e tecnico, ma il nuovo mandato consente all'assistente di preparare i testi mancanti in chat e applicarli soltanto dopo conferma esplicita di Marco. Richiesta anche revisione visiva con flusso dall'alto al basso, minori intrecci, processi e decisioni distinguibili e attribuzione Whareformer/SuperFlex/progetto. Superati la modifica esclusivamente manuale e il rinvio grafico; campi da completare, versione rappresentata, libertà strutturale e modalità di revisione grafica ancora da chiarire. Nessuna modifica alla mappa eseguita in questa ricognizione. Restano validi i criteri di chiarezza, sintesi e distinzione fra funzione dei nodi e dipendenza spiegata dalle frecce.
+
 ## Mandato e perimetro
 
 Marco richiede di ricostruire il contesto e assisterlo nella revisione dei commenti di nodi e collegamenti. **I testi della mappa vengono modificati da Marco.** L'assistente analizza, spiega, segnala correzioni e verifica le formulazioni discusse; non compila né salva le schede. Questa indicazione supera, per la revisione corrente, le precedenti richieste di completamento automatico e i segnaposto tra parentesi quadre.

@@ -1,5 +1,13 @@
 # Ciclo geometrico approvato
 
+## Mappa corrente — 21 novembre 2026
+
+Struttura Rami paralleli e nuovi commenti confermati da Marco e applicati: 39 riquadri, 49 collegamenti. La sorgente corrente è [la mappa interattiva](../../mappa_interattiva/README.md). Superata la riserva storica della scrittura al solo Marco: l’assistente può applicare i testi dopo conferma esplicita. Vecchi commenti conservati, revisione scientifica successiva ancora aperta. Nessun cambiamento del metodo o nuovo esperimento.
+
+## Direzione corrente — 16 novembre 2026
+
+Marco vuole tentare sia fusione esterna sia riaddestramento del matcher, dopo verifica di dati e distanza, senza alcuna nuova etichettatura manuale e preferibilmente con i dati originali Whareformer. Registro voce 81 e [fattibilità/dipendenze](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md). Proposta di sequenza: target/replay oracle con provenienza → geometria di sviluppo e costo → confronto delle distanze → due integrazioni con stessi ingressi e controllo senza geometria riaddestrato. Confronto richiesto, protocollo finale non ancora congelato e nessun training avviato. Le precedenti indicazioni di sole reti congelate non escludono più l'adattamento del matcher; estrattori congelati restano raccomandazione. Prima run e campagna già concluse, filtri ancora invariati/rinviati.
+
 ## Campagna estesa conclusa — 15 novembre 2026
 
 [Resoconto e output](../evidence/campaign_20261115_v1/REPORT_FINALE.md). Tutte le 29 configurazioni completate e valutate su 33310 frame/110590 osservazioni; nessuna assegnazione diversa da W0 e metriche identiche (IDF1 73.269735%, mPCL 70.465504%). Quattro controlli zero esatti, nessun timeout/errore di aggiornamento/worker fallito o richiesta pendente.

@@ -653,6 +653,86 @@ Mappa nella cartella dedicata mappa_interattiva/ della repository locale, con RE
 
 **Conseguenza.** Consegna disponibile su main. Revisione della mappa ancora manuale; architettura della forma, ammissione e collocazione nella scena restano discussioni aperte, non nuove scelte metodologiche.
 
+## 79. Avvio del brainstorming sull'integrazione della forma — 16 novembre 2026
+
+**Richiesta.** Marco sceglie il primo punto importante del TODO come tema da spiegare e discutere: architettura e influenza della forma nell'associazione Whareformer.
+
+**Proposte dell'assistente, non scelte approvate.** Confrontare correzione esterna calibrata, fusione con pochi parametri appresi mantenendo congelate le reti e adattamento della rete. Prima di scegliere, raccomandata diagnosi della discriminatività delle distanze e del loro rapporto con i margini originali; discutere anche geometria mancante e Nuova track. Le 29 configurazioni con associazioni identiche non identificano da sole la causa dell'esito nullo.
+
+**Conseguenza e limite.** Brainstorming avviato; selezione metodologica condivisa con il compagno ancora aperta. Nessuna nuova analisi quantitativa, modifica a codice/mappa/filtri o esecuzione HPC. Restano validi risultati e vincoli precedenti.
+
+## 80. Richiesta di una stima giustificata del peso e dei dati — 16 novembre 2026
+
+**Criterio espresso da Marco.** La forma dovrebbe ricevere un trattamento scientificamente coerente con gli altri input. Richiede metodi concreti per stimare il peso e chiarire i dati necessari; se non convincenti considera l'integrazione nel modello con riaddestramento. Preoccupazione computazionale espressa, non impossibilità misurata o scelta finale approvata.
+
+**Verifica e proposte.** Codice e paper originali: due distanze aspetto/posizione, embedding e Transformer appresi, training con associazioni GT. Nessun peso manuale globale per ciascun input. Discusse selezione di iperparametri mediante replay sullo sviluppo, piccola fusione supervisionata su logits congelati e adattamento interno del matcher. [Resoconto con dati, fonti e limiti](DISCUSSIONE_INTEGRAZIONE_FORMA_20261116.md).
+
+**Conseguenza.** Proposta prioritaria: verificare target originali e join alle geometrie; le track predette non sono GT e i campioni attuali non provano sufficiente copertura. Tutte le alternative richiedono evidenza d'associazione e valutazione separata. Nessuna nuova calibrazione, annotazione, implementazione o run; scelta con il compagno ancora aperta, filtri invariati.
+
+## 81. Tentare entrambe le integrazioni senza nuove etichette manuali — 16 novembre 2026
+
+**Direzione esplicita.** Marco vuole tentare fusione geometrica esterna e riaddestramento Whareformer; prima richiede fattibilità e definizione della distanza. Esclude qualsiasi nuova etichettatura manuale e preferisce gli stessi dati del training originale. Superate l'alternativa condizionale e la proposta manuale delle discussioni 79/80; scelta finale del metodo e protocollo dettagliato ancora aperti. Richiesta attuale di analisi, non lancio automatico di training/campagna.
+
+**Verifiche.** Codice originale genera target oracle dalle annotazioni, con identità EPIC basate su nomi ed esclusioni configurate; manifest di feature/target senza storia geometrica completa. D2 già implementato; Chamfer allineata candidata. Export mesh SuperFlex concatena primitive, non estrae superficie esterna dell'unione. [Resoconto, fonti e limiti](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md).
+
+**Conseguenza.** Prima verificare dati/target e provenienza, poi costo/copertura geometrica e distanza comune alle due prove. Fusioni/pesi/modelli ancora non modificati; accesso al training completo e costo non certificati. Nessun job, download o nuova annotazione. Conservati risultati precedenti e rinvio dei filtri.
+
+## 82. Valutazione critica dei due percorsi
+
+**Richiesta e analisi.** Marco chiede criticità del piano. Evidenziato il limite condiviso della distanza scalare e la necessità di verificarne informazione complementare ad aspetto/posizione, non sola discriminatività marginale. Richiamati limiti delle identità benchmark, disponibilità geometrica, memorie oracle/predette, attribuzione causale del beneficio e fattibilità temporale.
+
+**Proposte e limiti.** Controllo senza geometria con pari nuovo training e geometria semplice dagli stessi punti; dettagli nel [resoconto aggiornato](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md). Nessuna nuova analisi quantitativa, decisione di protocollo, implementazione o run. Direzione dei due percorsi e divieto di nuove etichette manuali invariati.
+
+## 83. Ripresa editoriale e riordino visivo della mappa — 21 novembre 2026
+
+**Mandato.** Marco richiede controllo degli aggiornamenti della repository, completamento dei commenti mancanti nello stile delle schede manuali e revisione grafica. I testi vanno prima consegnati in chat: soltanto dopo conferma esplicita potranno essere applicati alla mappa. Il vincolo sostituisce la precedente modifica esclusivamente manuale. Confermati sintesi, tono scientifico comprensibile a valutatori esterni con basi ML/CV, nodi dedicati al processo e frecce alla dipendenza fra output e input.
+
+**Direzione visiva richiesta.** Flusso principale dall'alto al basso, incroci e sovrapposizioni ridotti al minimo; distinguere processi e decisioni e attribuire componenti/collegamenti originali Whareformer, originali SuperFlex e aggiunte del progetto. Superato il precedente rinvio del riordino grafico. Perimetro dei campi, eventuale revisione dei testi esistenti, versione scientifica rappresentata e libertà strutturale da chiarire con Marco prima dell'esecuzione.
+
+**Verifica e limite.** Main remoto ccc1376c5a046a41ec2525d6ee6668f06b3b13e0, un commit dopo 0fce33b: modifica soltanto memoria/documentazione e inventario, senza codice o mappa. prepare/superflex-core non ha commit aggiuntivi rispetto a 0fce33b. Nessuna sincronizzazione Git né nuova attività sperimentale. Riletti JSON e schede manuali; residui nove nodi/tredici frecce, più E10. Nessuna modifica alla mappa; prossimo passo chiarimenti, bozze in chat e definizione della revisione grafica.
+
+## 84. Perimetro editoriale e modalità di scelta visiva confermati — 21 novembre 2026
+
+**Decisioni esplicite.** Completare tutti i campi delle schede mancanti e usare «-» quando non c'è contenuto sostanziale; testi esistenti da rivedere successivamente. Approvato rappresentare l'implementazione attuale e lasciare le alternative nelle schede, senza presentarle come componenti eseguite. Una sola mappa, consultata soprattutto nell'interfaccia interattiva. L'assistente può aggiungere/rimuovere nodi e collegamenti per rendere chiaro l'intero processo. Approvati rettangoli per i processi, rombi per le decisioni e colori accompagnati da etichette/legenda per provenienza Whareformer, SuperFlex e progetto, con risorse esterne neutre.
+
+**Vincolo di revisione.** Marco richiede diverse proposte visive da confrontare: sceglierà quella da applicare poi a tutta la mappa. Resta necessaria conferma dei testi prima dell'inserimento. Non costituisce scelta già effettuata di un layout o approvazione delle bozze.
+
+**Esecuzione e limiti.** Preparati [testi dei nove nodi e tredici collegamenti mancanti, più E10](../evidence/map_20261121/TESTI_PROPOSTI.md), verificando codice originale di profondità/posizione e aggiornamento baseline, coordinatore e memoria geometrica. Tre anteprime separate del ciclo critico: Rami paralleli, Asse centrale, Fasi separate; lettura browser e apertura scheda verificate, sintassi controllata. Sono esempi di disposizione, non nuova mappa completa o validazione scientifica. Nessuna modifica a testi/applicazione della mappa e nessuna nuova esecuzione sperimentale. Prossimo passo: revisione in chat e scelta grafica; eventuali schede nuove dopo la scelta della struttura.
+
+## 85. Alternativa statica per visualizzare le proposte — 21 novembre 2026
+
+**Problema ed esecuzione.** Marco non riesce a visualizzare le alternative interattive; causa non accertata. Esportate e ispezionate tre immagini PNG delle disposizioni già proposte in `outputs/revisione_mappa_20261121/`, da mostrare direttamente in chat. È una modalità alternativa di revisione, non un cambio del progetto della mappa. Nessuna proposta scelta, testo approvato o modifica alla mappa corrente; restano pendenti scelta visiva e revisione dei commenti.
+
+## 86. Scelta «Rami paralleli» e anteprima dell'intero processo — 21 novembre 2026
+
+**Revisione esplicita successiva.** Dopo la consegna dell'anteprima, Marco conferma «Va bene questa mappa» e chiede se siano stati aggiunti nodi e collegamenti. Struttura complessiva approvata. Riconfrontati i file: da 19 nodi/34 frecce a 39/49, incremento netto 20/15 per scomposizioni e accorpamenti rappresentativi; nessun nuovo processo scientifico introdotto. La conferma non approva automaticamente i commenti completi o le nuove schede. Mappa ancora non applicata durante il chiarimento.
+
+**Decisione e limite.** Marco sceglie «Rami paralleli» e richiede un'anteprima dell'intera mappa prima di applicare modifiche. È approvato lo stile di disposizione, non ancora la struttura complessiva né i testi.
+
+**Esecuzione.** Generata [anteprima completa separata](../evidence/map_20261121/mappa-completa-rami-paralleli.png), con SVG, tre ritagli e specifica di provenienza. Coperti i 19 blocchi precedenti in 39 elementi/49 connessioni. Distinti procedimenti originali Whareformer, SuperFlex, modelli/risorse esterni e aggiunte del progetto; memorie precedenti separate, correzione esterna prima dell'assegnazione, inizializzazione geometrica anche tardiva, rifiuto della fusione e fallimento di SuperFlex dopo l'ammissione. Segnalati output baseline riusati, geometria sul campione e criteri provvisori. [Dettagli e limiti](../evidence/map_20261121/ANTEPRIMA_COMPLETA.md).
+
+**Verifiche e conseguenza.** Riletti adattatore/coordinatore/aggiornatore dei punti, controllata copertura dei blocchi e ispezionate le immagini; corretti testi fuori dai riquadri. Contenuti della mappa corrente invariati per hash, applicazione non modificata. Nessuna nuova run o modifica metodologica. Attendere revisione della bozza complessiva e dei commenti prima dell'applicazione; le eventuali schede nuove dipendono dalla struttura confermata.
+
+## 87. Proposte dei commenti per la struttura confermata — 21 novembre 2026
+
+**Mandato.** Marco autorizza a procedere seguendo le regole già definite, dopo il chiarimento che le nuove schede devono essere proposte in chat. Resta il vincolo di confermare i testi prima di inserirli nella mappa; nessuna approvazione implicita delle formulazioni nuove.
+
+**Esecuzione.** Preparati [commenti da revisionare](../evidence/map_20261121/COMMENTI_PER_REVISIONE_CHAT.md) per 28 riquadri e 39 collegamenti nuovi o ridistribuiti. La [specifica separata](../evidence/map_20261121/COMMENTI_STRUTTURA_APPROVATA.json) copre tutte le 39/49 schede con nove campi, usando «-» dove non c'è contenuto aggiuntivo sostanziale. Le schede manuali equivalenti sono conservate e le bozze precedenti riusate, senza avviare la revisione dei vecchi testi. R/C identificano la proposta, non ID già applicati. Nodi descrivono processi; frecce spiegano dipendenze fra dati e passaggi.
+
+**Evidenze e limiti.** Riletti codice originale di estrazione/PCA/assegnazione e componenti del ciclo geometrico. Precisati memoria di riserva delle forme singole, controlli geometrici provvisori e distinzione fra punti aggiornati e ultima forma riuscita. Verificati copertura, campi, riferimenti e conservazione dei testi manuali; JSON e copia offline correnti invariati per hash. Nessun nuovo test scientifico, job, training o modifica di metodo. Prossimo passo: revisione dei testi e successiva applicazione di struttura approvata e testi confermati.
+
+## 88. Testi confermati, mappa applicata e HTML aperto — 21 novembre 2026
+
+**Autorizzazione.** Marco conferma l'inserimento dei testi e richiede l'apertura dell'HTML nella chat. Superato il precedente stato di attesa della conferma editoriale; la revisione scientifica dei vecchi commenti rimane una fase distinta.
+
+**Esecuzione.** Applicata la struttura Rami paralleli con 39 riquadri R01–R39 e 49 collegamenti C01–C49, nove campi per scheda, mantenendo i testi manuali equivalenti e inserendo le bozze confermate. Aggiornati contenuti autorevoli, copia offline, pagina/interfaccia e guida. Riprodotti colori e geometria dell'anteprima; mantenuti zoom, esplorazione, schede ed editor, navigazione diretta e disposizione nel browser. Isolato il vecchio salvataggio di posizioni per evitare il ripristino della disposizione superata. Copia completa precedente in `mappa_interattiva/backup/prima-rami-paralleli-2026-11-21T12-40-32-510Z/`; [ricevuta](../evidence/map_20261121/APPLICAZIONE_MAPPA.json).
+
+**Verifiche effettive.** Sintassi JS, 39 nodi e 49 percorsi del disegno, nessuna differenza nei 792 campi rispetto alla specifica confermata, JSON e copia offline identici. Servizio locale: 88 revisioni. Browser: schede di nodo e freccia consultabili, salvataggio invariato riuscito, spostamento da tastiera e ritorno alle coordinate iniziali. HTML aperto nel browser della chat e conservato come risultato, vista riportata all'inizio. Servizio locale attivo su 127.0.0.1:8767 nell'ultima verifica; nessun nuovo esperimento, job HPC o push. Conferma dei testi e corretto funzionamento dell'interfaccia non certificano validità fisica delle ricostruzioni o beneficio di tracking.
+
+## 89. Pubblicazione della mappa approvata — 21 novembre 2026
+
+Marco richiede l’aggiornamento della repository GitHub dopo aver approvato e consultato la mappa. Preparazione sul checkout di pubblicazione derivato da main ccc1376, senza riscrittura della storia o dei contributi del collega. Perimetro: mappa Rami paralleli e testi confermati, provenienza editoriale e memoria corrente, comprese le indicazioni del 16 novembre. Collegamenti adattati al clone; dati, pesi, sorgenti esterne e backup locali esclusi. Pubblicazione non ancora verificata in questo stato; nessun nuovo esperimento o job HPC.
+
 ## Vincoli organizzativi che spiegano il perimetro
 
 **Chiarimento durante E22 — ammissione da discutere con il compagno.** Marco richiede di rendere espliciti il funzionamento e la natura provvisoria dei controlli in E22/B16 e di registrare il confronto architetturale ancora necessario con il compagno. Rafforzato il to-do esistente, senza duplicarlo. Alternative richiamate come discusse, non adottate: fondere dopo allineamento senza ulteriori gate, rivedere criteri per simmetrie/parzialità e usare forme separate come confronto. Nessun nuovo accordo sulle soglie, cambio di codice o esperimento.

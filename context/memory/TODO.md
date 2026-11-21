@@ -1,5 +1,24 @@
 # Attività correnti
 
+## Pubblicazione della mappa — 21 novembre 2026
+
+- [ ] Pubblicare su main mappa e memoria corrente dopo verifica di collegamenti, testi e servizio; controllare il riferimento remoto e registrare l’esito.
+
+## Priorità mappa — mandato del 21 novembre 2026
+
+- [x] Verificare aggiornamenti remoti: main ccc1376, un commit di sola memoria/documentazione dopo 0fce33b; nessuna novità di codice/mappa nel confronto, nessun commit aggiuntivo sul ramo prepare/superflex-core.
+- [x] Chiarire perimetro: tutti i campi mancanti, «-» se non sostanziale; esistenti rinviati, implementazione attuale, una mappa interattiva, libertà strutturale e proposte grafiche da approvare.
+- [x] Preparare i testi dei nove nodi e tredici collegamenti mancanti e del campo E10, preservando lo stile manuale e distinguendo implementazione e proposte. [Bozze](../evidence/map_20261121/TESTI_PROPOSTI.md), da revisionare in chat prima dell'applicazione.
+- [x] Preparare tre proposte visive separate sul ciclo critico: Rami paralleli, Asse centrale, Fasi separate; nessun cambiamento alla mappa attuale.
+- [x] Fornire le tre proposte anche come immagini PNG, dopo la segnalata impossibilità di visualizzare la versione interattiva; esportazione e ispezione completate, scelta ancora pendente.
+- [x] Raccogliere la scelta grafica e l'approvazione dell'intera disposizione: «Rami paralleli», poi conferma di Marco «Va bene questa mappa» sull'anteprima completa.
+- [x] Preparare e mostrare l'anteprima completa prima dell'applicazione, come richiesto: [immagine](../evidence/map_20261121/mappa-completa-rami-paralleli.png), SVG e ritagli; [specifica e limiti](../evidence/map_20261121/ANTEPRIMA_COMPLETA.md). Mappa attuale invariata.
+- [x] Preparare i commenti per la struttura confermata: 28 riquadri e 39 collegamenti nuovi/ridistribuiti, altri conservati o ripresi dalle bozze già presentate. [Revisione in chat](../evidence/map_20261121/COMMENTI_PER_REVISIONE_CHAT.md); nove campi per tutte le 39/49 schede, verifica formale completata, mappa invariata.
+- [x] Conferma esplicita ricevuta: «Ok, aggiungi il testo. Poi aprimi qui l'html»; R/C ora identificano gli elementi effettivi della mappa.
+- [x] Applicare struttura «Rami paralleli» e testi confermati: 39 riquadri, 49 frecce, 792 campi; copia precedente conservata, nessuna modifica del metodo.
+- [x] Verificare JSON/copia offline e consultazione, salvataggio invariato e spostamento con ripristino; aprire l'HTML nel browser della chat e conservarlo come risultato.
+- [ ] Revisione scientifica dei vecchi commenti in una fase successiva; le schede manuali equivalenti sono state conservate.
+
 ## Aggiornamenti GitHub pubblicati — 15 novembre 2026
 
 Aggiornamenti pubblicati su `main`, commit [0fce33b](https://github.com/Federico-cia/Whareformer-SuperFlex-Project/commit/0fce33b6acdea13d6d36bf557fcbf0c311b34ae7), riferimento remoto verificato dopo il push. Inclusi snapshot manuale della mappa, checklist di revisione, decisioni ancora pendenti e memoria corrente; corretto il README sui dati riusati rispetto alla geometria rigenerata. Codice e risultati della campagna erano già su remoto a d8fb991. Preservati contributi del collega e storia Git; nessun nuovo esperimento o cambio dei filtri. Controlli: 467 collegamenti, 41 sorgenti Python e 179 hash senza errori, servizio mappa in sola lettura superato; 13 file controllati senza pattern sensibili rilevati, nei limiti del controllo. Mappa copiata byte per byte dalla versione manuale locale.
@@ -8,7 +27,13 @@ Aggiornamenti pubblicati su `main`, commit [0fce33b](https://github.com/Federico
 
 ## Punti importanti da discutere e validare
 
-- [ ] **Architettura dell'integrazione della forma — decisione condivisa con il compagno ancora aperta:** discutere sia come la rappresentazione/distanza di forma entra nei calcoli di associazione sia con quale influenza. Distinguere correzione esterna attuale dei logits con peso/distanza neutra da calibrare sullo sviluppo; apprendimento supervisionato di pochi parametri di fusione con reti congelate; adattamento/riaddestramento della rete per combinare anche la geometria. Chiarire rappresentazione/distanza, punto d'integrazione, mancanti/New Track, dati con associazioni verificate, obiettivo di apprendimento e valutazione nel ciclo causale completo. Peso 0.1/1 esplorato, non ottimale dimostrato. La proposta dell'assistente di fusione appresa non è approvata: Marco vuole prima discuterne con il compagno. Nessuna nuova implementazione, calibrazione o run avviata; predisposta soltanto nota da inserire manualmente in B12.
+Valutazione critica successiva, registro voce 82: verificare complementarità della distanza rispetto ad aspetto/posizione, non sola separazione delle categorie; preservare controlli senza geometria con pari nuovo training e proporre geometria semplice dagli stessi punti per attribuire l'effetto specifico SuperFlex. Nessuna nuova analisi quantitativa o modifica del protocollo già eseguita. Dettaglio nel [resoconto delle due integrazioni](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md).
+
+**Direzione corrente del 16 novembre:** Marco vuole tentare entrambe le strade; nessuna nuova etichettatura manuale, preferenza per dati/target originali Whareformer. Superate alternativa condizionale e proposta di campione manuale delle voci 79/80; decisione aggiornata nella voce 81. [Fattibilità, distanze e dipendenze](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md). Nessun training avviato; protocollo dettagliato ancora da fissare.
+
+- [ ] **Prerequisiti dei due percorsi:** verificare accesso ai dati/target originali e ricostruire automaticamente oracle con provenienza delle osservazioni e geometria solo passata. Rispettare limiti nomi/esclusioni del benchmark; nessuna conversione automatica delle track predette in GT. Misurare costo su sottoinsieme di sviluppo prefissato prima di promettere copertura integrale del training.
+- [ ] **Confronto geometrico condiviso:** diagnosticare D2 esistente e Chamfer dopo allineamento su target originali, senza etichette manuali. Chiarire scala/parzialità, riduzione della memoria e sensibilità alle superfici interne: l'export SuperFlex concatena le primitive. Distanza finale non selezionata.
+- [ ] **Due integrazioni richieste:** fusione esterna con pochi coefficienti appresi e riaddestramento/adattamento del matcher con ingresso geometrico. Stessi dati/distanza/memorie per il confronto, gestione mancanti/Nuova track e replay causale completo; controllo senza geometria con pari nuovo training. Fine-tuning dal checkpoint raccomandato, non già scelto rispetto al training da zero. Scelta finale con il compagno ancora aperta; nessuna nuova run o modifica di B12/mappa.
 
 - [ ] **Collocazione e aggiornamento della forma nella scena 3D — preoccupazione prioritaria di Marco:** discutere fattibilità e difficoltà di conservare una ricostruzione con dimensioni, rotazione e posizione coerenti con lo spazio della scena e con l'XYZ della traccia, aggiornabile mediante nuovi punti. Distinguere ripristino della normalizzazione SuperFlex, riferimento camera, riferimento della memoria oggetto e riferimento scena; verificare compatibilità di scala e trasformazioni, movimento dell'oggetto e conservazione della coerenza dopo gli aggiornamenti. L'XYZ da solo non determina scala e orientamento; una fusione ammessa o un descrittore invariante non validano la collocazione nella scena. Separare questa discussione da scelta del descrittore e gate di ammissione. Definire il controllo minimo di fattibilità e i limiti prima di assumere disponibile una memoria 3D collocata correttamente. Solo tema da discutere: nessun nuovo sviluppo o esperimento avviato. Vedi C13 in [REGISTRO_CRITICITA_PIPELINE.md](REGISTRO_CRITICITA_PIPELINE.md).
 

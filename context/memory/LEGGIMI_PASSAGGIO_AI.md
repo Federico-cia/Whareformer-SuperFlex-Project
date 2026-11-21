@@ -1,8 +1,8 @@
 # Passaggio di consegne AI — 14 novembre 2026
 
-## Revisione corrente — 15 novembre 2026
+## Ripresa corrente — 21 novembre 2026
 
-La revisione della mappa è guidata dalla [checklist](REVISIONE_MAPPA_20261115.md): Marco modifica e salva i testi, l’assistente analizza e propone in chat. Sono ancora aperte le discussioni con il compagno su architettura del contributo di forma, gate di ammissione e collocazione nella scena; vedere [attività](TODO.md). Nessun nuovo metodo adottato né nuovo esperimento.
+Mappa Rami paralleli e testi approvati applicati: 39 riquadri, 49 collegamenti. [Guida e versione autorevole](../../mappa_interattiva/README.md); non rigenerare dai prototipi storici. L’assistente può inserire testi dopo conferma esplicita. Restano la revisione dei vecchi commenti, la discussione su ammissione/posa e le [due integrazioni richieste senza nuove etichette manuali](FATTIBILITA_DUE_INTEGRAZIONI_20261116.md). Nessun nuovo training o risultato sperimentale.
 
 ## Campagna estesa conclusa — 15 novembre 2026
 

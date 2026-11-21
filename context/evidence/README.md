@@ -2,6 +2,7 @@
 
 Report numerici e log dei controlli acquisiti, suddivisi per fase:
 
+- [Mappa approvata del 21 novembre](map_20261121/README.md): struttura, commenti e controlli dell’applicazione; documentazione editoriale, non nuova evidenza sperimentale.
 - [Campagna estesa conclusa](../memory/CAMPAGNA_HPC_20261115.md): specifica, selezione, preflight e ricevute di invio in [campagna](campaign_20261115_v1/). Risultati finali acquisiti: 29/29 configurazioni valutate, assegnazioni e metriche identiche a W0.
 - [Prima run completa attiva](full_video_20261114/REPORT.md): intero protocollo P01_01, sette fusioni ammesse, 25 nuove SuperFlex e audit causale; metriche invariate.
 - [Riordino corrente](repository_cleanup_20261114/): suite dopo la pulizia e hash dei sorgenti.

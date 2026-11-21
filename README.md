@@ -28,4 +28,4 @@ python tools/check_repository.py
 node tools/check_map.cjs
 ```
 
-La [revisione della mappa](context/memory/REVISIONE_MAPPA_20261115.md) è in corso. Le scelte su integrazione della forma, ammissione dei punti e collocazione nella scena restano da discutere con il compagno; nessun cambio di metodo è implicito negli aggiornamenti editoriali.
+La [mappa interattiva](mappa_interattiva/README.md) è aggiornata alla struttura Rami paralleli e ai testi confermati il 21 novembre: 39 riquadri e 49 collegamenti. [Provenienza e verifiche](context/evidence/map_20261121/README.md). Restano la revisione scientifica dei vecchi commenti e le [due integrazioni richieste, senza nuove etichette manuali](context/memory/FATTIBILITA_DUE_INTEGRAZIONI_20261116.md); nessuna nuova prova o cambio di metodo è implicito nella mappa.

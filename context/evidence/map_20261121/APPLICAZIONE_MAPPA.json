@@ -1,0 +1,19 @@
+{
+  "status": "applied",
+  "date": "2026-11-21",
+  "nodes": 39,
+  "edges": 49,
+  "fields": 792,
+  "backup": "mappa_interattiva/backup/prima-rami-paralleli-2026-11-21T12-40-32-510Z (copia locale esclusa da Git)",
+  "previousSha256": "7cc5a3958883e5393e20c29d02c0361b8d205f66c383899e466c79ccd02eeda4",
+  "currentSha256": "fc89c501c6261ccfdd5fa01ed411d577478ae28042886503b6be7ea0a3a9eb88",
+  "verification": {
+    "nodes": 39,
+    "edges": 49,
+    "approvedTextDifferences": [],
+    "syntaxChecked": true,
+    "uiNodeAndEdgeCards": true,
+    "unchangedSave": true,
+    "keyboardMoveRestored": true
+  }
+}

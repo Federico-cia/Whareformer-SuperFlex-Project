@@ -1,0 +1,1624 @@
+{
+  "preview": true,
+  "applied": false,
+  "width": 1800,
+  "height": 4560,
+  "nodes": [
+    {
+      "id": "rgb",
+      "x": 450,
+      "y": 275,
+      "title": "Frame RGB",
+      "origin": "external",
+      "sub": "Immagine al tempo corrente",
+      "w": 340,
+      "h": 100,
+      "legacy": [
+        "B01"
+      ]
+    },
+    {
+      "id": "mask",
+      "x": 900,
+      "y": 275,
+      "title": "Maschere VISOR",
+      "origin": "external",
+      "sub": "Oggetti e rettangoli associati al frame",
+      "w": 340,
+      "h": 100,
+      "legacy": [
+        "B02"
+      ]
+    },
+    {
+      "id": "camera",
+      "x": 1350,
+      "y": 275,
+      "title": "Camera e scena 3D",
+      "origin": "external",
+      "sub": "Intrinseci · posa · ricostruzione",
+      "w": 340,
+      "h": 100,
+      "legacy": [
+        "B09"
+      ]
+    },
+    {
+      "id": "crop",
+      "x": 450,
+      "y": 560,
+      "title": "Ritaglio dell’oggetto",
+      "origin": "w",
+      "sub": "RGB + maschera",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B03"
+      ]
+    },
+    {
+      "id": "dino",
+      "x": 450,
+      "y": 740,
+      "title": "Estrazione visiva",
+      "origin": "w",
+      "sub": "DINOv2 preaddestrato",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B03"
+      ]
+    },
+    {
+      "id": "pca",
+      "x": 450,
+      "y": 920,
+      "title": "Riduzione dimensionale",
+      "origin": "w",
+      "sub": "Trasformazione PCA compatibile",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B03"
+      ]
+    },
+    {
+      "id": "appearance",
+      "x": 450,
+      "y": 1100,
+      "title": "Descrittore d’aspetto",
+      "origin": "w",
+      "sub": "Caratteristiche visive dell’oggetto",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B03"
+      ]
+    },
+    {
+      "id": "depth",
+      "x": 900,
+      "y": 560,
+      "title": "Stima della profondità",
+      "origin": "w",
+      "sub": "Depth Anything V2",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B08"
+      ]
+    },
+    {
+      "id": "alignscene",
+      "x": 900,
+      "y": 740,
+      "title": "Allineamento alla scena",
+      "origin": "w",
+      "sub": "Scala e scostamento da regioni valide",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B08"
+      ]
+    },
+    {
+      "id": "xyzcalc",
+      "x": 900,
+      "y": 920,
+      "title": "Calcolo della posizione",
+      "origin": "w",
+      "sub": "Maschera · intrinseci · posa camera",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B10"
+      ]
+    },
+    {
+      "id": "xyz",
+      "x": 900,
+      "y": 1100,
+      "title": "Posizione 3D nella scena",
+      "origin": "w",
+      "sub": "Tre coordinate; non una posa completa",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B10"
+      ]
+    },
+    {
+      "id": "geometry",
+      "x": 1350,
+      "y": 560,
+      "title": "Geometria stimata da RGB",
+      "origin": "external",
+      "sub": "Depth Anything oppure MoGE",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B04"
+      ]
+    },
+    {
+      "id": "cloud",
+      "x": 1350,
+      "y": 740,
+      "title": "Punti visibili dell’oggetto",
+      "origin": "p",
+      "sub": "Maschera + punti validi; intrinseci per DA",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B05"
+      ]
+    },
+    {
+      "id": "sfinput",
+      "x": 1350,
+      "y": 920,
+      "title": "Ricostruzione SuperFlex",
+      "origin": "s",
+      "sub": "Nuvola → primitive geometriche",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B06"
+      ]
+    },
+    {
+      "id": "descriptor",
+      "x": 1350,
+      "y": 1100,
+      "title": "Descrittore di forma",
+      "origin": "p",
+      "sub": "D2 dalla superficie ricostruita",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B07"
+      ]
+    },
+    {
+      "id": "observation",
+      "x": 900,
+      "y": 1300,
+      "title": "Osservazione corrente",
+      "origin": "p",
+      "sub": "Aspetto · posizione · forma se disponibile",
+      "w": 470,
+      "h": 118,
+      "legacy": [
+        "B11"
+      ]
+    },
+    {
+      "id": "memoryw",
+      "x": 450,
+      "y": 1480,
+      "title": "Memoria precedente",
+      "origin": "w",
+      "sub": "Aspetto e posizione delle tracce",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B13"
+      ],
+      "memory": true
+    },
+    {
+      "id": "memoryp",
+      "x": 1350,
+      "y": 1480,
+      "title": "Memoria precedente",
+      "origin": "p",
+      "sub": "Punti osservati e ultima forma valida",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B13"
+      ],
+      "memory": true
+    },
+    {
+      "id": "scores",
+      "x": 650,
+      "y": 1680,
+      "title": "Punteggi di Whareformer",
+      "origin": "w",
+      "sub": "Confronto di aspetto e posizione",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B12"
+      ]
+    },
+    {
+      "id": "distance",
+      "x": 1150,
+      "y": 1680,
+      "title": "Distanza tra le forme",
+      "origin": "p",
+      "sub": "Descrittori D2, se entrambi validi",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B12"
+      ]
+    },
+    {
+      "id": "correction",
+      "x": 900,
+      "y": 1860,
+      "title": "Correzione esterna dei punteggi",
+      "origin": "p",
+      "sub": "Solo confronti validi; reti congelate",
+      "w": 470,
+      "h": 118,
+      "legacy": [
+        "B12"
+      ]
+    },
+    {
+      "id": "assignment",
+      "x": 900,
+      "y": 2030,
+      "title": "Assegnazione originale",
+      "origin": "w",
+      "sub": "Probabilità → scelta della traccia",
+      "w": 410,
+      "h": 118,
+      "legacy": [
+        "B12"
+      ]
+    },
+    {
+      "id": "existing",
+      "x": 900,
+      "y": 2200,
+      "title": "Traccia esistente?",
+      "origin": "w",
+      "sub": "",
+      "w": 330,
+      "h": 130,
+      "shape": "decision",
+      "legacy": [
+        "B14"
+      ]
+    },
+    {
+      "id": "newtrack",
+      "x": 500,
+      "y": 2380,
+      "title": "Crea e inizializza la traccia",
+      "origin": "w",
+      "sub": "Nuovo ID · aspetto · posizione",
+      "w": 400,
+      "h": 118,
+      "legacy": [
+        "B17",
+        "B18"
+      ]
+    },
+    {
+      "id": "updatew",
+      "x": 1300,
+      "y": 2380,
+      "title": "Aggiorna la traccia",
+      "origin": "w",
+      "sub": "Aspetto · posizione · storia",
+      "w": 400,
+      "h": 118,
+      "legacy": [
+        "B15"
+      ]
+    },
+    {
+      "id": "associated",
+      "x": 900,
+      "y": 2560,
+      "title": "Osservazione associata",
+      "origin": "p",
+      "sub": "ID effettivo della traccia e dati correnti",
+      "w": 470,
+      "h": 118,
+      "legacy": [
+        "B14",
+        "B18"
+      ]
+    },
+    {
+      "id": "baseline",
+      "x": 450,
+      "y": 2760,
+      "title": "Stato baseline aggiornato",
+      "origin": "w",
+      "sub": "Resta valido anche se la geometria è rifiutata",
+      "w": 400,
+      "h": 118,
+      "legacy": [
+        "B15",
+        "B19"
+      ],
+      "memory": true
+    },
+    {
+      "id": "cloudavailable",
+      "x": 1350,
+      "y": 2760,
+      "title": "Nuvola corrente valida?",
+      "origin": "p",
+      "sub": "",
+      "w": 350,
+      "h": 130,
+      "shape": "decision",
+      "legacy": [
+        "B16",
+        "B18"
+      ]
+    },
+    {
+      "id": "hasmemory",
+      "x": 1350,
+      "y": 2960,
+      "title": "Punti già in memoria?",
+      "origin": "p",
+      "sub": "",
+      "w": 350,
+      "h": 130,
+      "shape": "decision",
+      "legacy": [
+        "B16",
+        "B18"
+      ]
+    },
+    {
+      "id": "initialize",
+      "x": 900,
+      "y": 3160,
+      "title": "Inizializza i punti",
+      "origin": "p",
+      "sub": "Prima nuvola valida; nessuna fusione",
+      "w": 350,
+      "h": 118,
+      "legacy": [
+        "B18",
+        "B16"
+      ]
+    },
+    {
+      "id": "registration",
+      "x": 1350,
+      "y": 3160,
+      "title": "Allinea la nuova nuvola",
+      "origin": "p",
+      "sub": "Rotazione e traslazione; scala invariata",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B16"
+      ]
+    },
+    {
+      "id": "admitted",
+      "x": 1350,
+      "y": 3360,
+      "title": "Fusione ammessa?",
+      "origin": "p",
+      "sub": "",
+      "w": 350,
+      "h": 130,
+      "shape": "decision",
+      "legacy": [
+        "B16"
+      ],
+      "tag": "PROGETTO · CRITERI PROVVISORI"
+    },
+    {
+      "id": "keep",
+      "x": 900,
+      "y": 3560,
+      "title": "Conserva punti e forma",
+      "origin": "p",
+      "sub": "Nessuna modifica geometrica ammessa",
+      "w": 350,
+      "h": 118,
+      "legacy": [
+        "B16",
+        "B19"
+      ]
+    },
+    {
+      "id": "merge",
+      "x": 1350,
+      "y": 3560,
+      "title": "Unisci i punti osservati",
+      "origin": "p",
+      "sub": "Nuova versione della memoria di punti",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B16"
+      ]
+    },
+    {
+      "id": "sfupdate",
+      "x": 1350,
+      "y": 3760,
+      "title": "Ricostruisci con SuperFlex",
+      "origin": "s",
+      "sub": "Nuvola inizializzata oppure accumulata",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B16",
+        "B18"
+      ]
+    },
+    {
+      "id": "success",
+      "x": 1350,
+      "y": 3960,
+      "title": "Ricostruzione riuscita?",
+      "origin": "p",
+      "sub": "",
+      "w": 350,
+      "h": 130,
+      "shape": "decision",
+      "legacy": [
+        "B16",
+        "B19"
+      ]
+    },
+    {
+      "id": "newform",
+      "x": 1350,
+      "y": 4160,
+      "title": "Aggiorna forma e descrittore",
+      "origin": "p",
+      "sub": "La forma corrisponde ai nuovi punti",
+      "w": 340,
+      "h": 118,
+      "legacy": [
+        "B19"
+      ]
+    },
+    {
+      "id": "oldform",
+      "x": 900,
+      "y": 4160,
+      "title": "Mantieni l’ultima forma valida",
+      "origin": "p",
+      "sub": "I punti ammessi restano aggiornati",
+      "w": 350,
+      "h": 118,
+      "legacy": [
+        "B19"
+      ]
+    },
+    {
+      "id": "updated",
+      "x": 900,
+      "y": 4380,
+      "title": "Memoria aggiornata per il frame successivo",
+      "origin": "mixed",
+      "sub": "Aspetto e posizione | Punti e ultima forma riuscita: versioni distinte",
+      "w": 1080,
+      "h": 135,
+      "legacy": [
+        "B19"
+      ],
+      "memory": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "input",
+      "to": "crop",
+      "points": [
+        [
+          900,
+          360
+        ],
+        [
+          900,
+          410
+        ],
+        [
+          450,
+          410
+        ],
+        [
+          450,
+          501
+        ]
+      ],
+      "origin": "external",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "input",
+      "to": "depth",
+      "points": [
+        [
+          900,
+          410
+        ],
+        [
+          900,
+          501
+        ]
+      ],
+      "origin": "external",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "input",
+      "to": "geometry",
+      "points": [
+        [
+          900,
+          410
+        ],
+        [
+          1350,
+          410
+        ],
+        [
+          1350,
+          501
+        ]
+      ],
+      "origin": "external",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "crop",
+      "to": "dino",
+      "points": [
+        [
+          450,
+          619
+        ],
+        [
+          450,
+          681
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "dino",
+      "to": "pca",
+      "points": [
+        [
+          450,
+          799
+        ],
+        [
+          450,
+          861
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "pca",
+      "to": "appearance",
+      "points": [
+        [
+          450,
+          979
+        ],
+        [
+          450,
+          1041
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "depth",
+      "to": "alignscene",
+      "points": [
+        [
+          900,
+          619
+        ],
+        [
+          900,
+          681
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "alignscene",
+      "to": "xyzcalc",
+      "points": [
+        [
+          900,
+          799
+        ],
+        [
+          900,
+          861
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "xyzcalc",
+      "to": "xyz",
+      "points": [
+        [
+          900,
+          979
+        ],
+        [
+          900,
+          1041
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "geometry",
+      "to": "cloud",
+      "points": [
+        [
+          1350,
+          619
+        ],
+        [
+          1350,
+          681
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "cloud",
+      "to": "sfinput",
+      "points": [
+        [
+          1350,
+          799
+        ],
+        [
+          1350,
+          861
+        ]
+      ],
+      "origin": "s",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "sfinput",
+      "to": "descriptor",
+      "points": [
+        [
+          1350,
+          979
+        ],
+        [
+          1350,
+          1041
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "appearance",
+      "to": "observation",
+      "points": [
+        [
+          450,
+          1159
+        ],
+        [
+          450,
+          1200
+        ],
+        [
+          900,
+          1200
+        ],
+        [
+          900,
+          1241
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "xyz",
+      "to": "observation",
+      "points": [
+        [
+          900,
+          1159
+        ],
+        [
+          900,
+          1241
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "descriptor",
+      "to": "observation",
+      "points": [
+        [
+          1350,
+          1159
+        ],
+        [
+          1350,
+          1200
+        ],
+        [
+          900,
+          1200
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "observation",
+      "to": "scores",
+      "points": [
+        [
+          900,
+          1359
+        ],
+        [
+          900,
+          1560
+        ],
+        [
+          650,
+          1560
+        ],
+        [
+          650,
+          1621
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "observation",
+      "to": "distance",
+      "points": [
+        [
+          900,
+          1560
+        ],
+        [
+          1150,
+          1560
+        ],
+        [
+          1150,
+          1621
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "memoryw",
+      "to": "scores",
+      "points": [
+        [
+          450,
+          1539
+        ],
+        [
+          450,
+          1680
+        ],
+        [
+          480,
+          1680
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "memoryp",
+      "to": "distance",
+      "points": [
+        [
+          1350,
+          1539
+        ],
+        [
+          1350,
+          1680
+        ],
+        [
+          1320,
+          1680
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "scores",
+      "to": "correction",
+      "points": [
+        [
+          650,
+          1739
+        ],
+        [
+          650,
+          1780
+        ],
+        [
+          900,
+          1780
+        ],
+        [
+          900,
+          1801
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "distance",
+      "to": "correction",
+      "points": [
+        [
+          1150,
+          1739
+        ],
+        [
+          1150,
+          1780
+        ],
+        [
+          900,
+          1780
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "correction",
+      "to": "assignment",
+      "points": [
+        [
+          900,
+          1919
+        ],
+        [
+          900,
+          1971
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "assignment",
+      "to": "existing",
+      "points": [
+        [
+          900,
+          2089
+        ],
+        [
+          900,
+          2135
+        ]
+      ],
+      "origin": "w",
+      "type": "control",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "existing",
+      "to": "newtrack",
+      "points": [
+        [
+          735,
+          2200
+        ],
+        [
+          500,
+          2200
+        ],
+        [
+          500,
+          2321
+        ]
+      ],
+      "origin": "w",
+      "type": "control",
+      "label": "No",
+      "at": [
+        520,
+        2260
+      ]
+    },
+    {
+      "from": "existing",
+      "to": "updatew",
+      "points": [
+        [
+          1065,
+          2200
+        ],
+        [
+          1300,
+          2200
+        ],
+        [
+          1300,
+          2321
+        ]
+      ],
+      "origin": "w",
+      "type": "control",
+      "label": "Sì",
+      "at": [
+        1320,
+        2260
+      ]
+    },
+    {
+      "from": "newtrack",
+      "to": "associated",
+      "points": [
+        [
+          500,
+          2439
+        ],
+        [
+          500,
+          2480
+        ],
+        [
+          900,
+          2480
+        ],
+        [
+          900,
+          2501
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "updatew",
+      "to": "associated",
+      "points": [
+        [
+          1300,
+          2439
+        ],
+        [
+          1300,
+          2480
+        ],
+        [
+          900,
+          2480
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "associated",
+      "to": "baseline",
+      "points": [
+        [
+          900,
+          2619
+        ],
+        [
+          900,
+          2660
+        ],
+        [
+          450,
+          2660
+        ],
+        [
+          450,
+          2701
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "associated",
+      "to": "cloudavailable",
+      "points": [
+        [
+          900,
+          2660
+        ],
+        [
+          1350,
+          2660
+        ],
+        [
+          1350,
+          2695
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "cloud",
+      "to": "cloudavailable",
+      "points": [
+        [
+          1520,
+          740
+        ],
+        [
+          1660,
+          740
+        ],
+        [
+          1660,
+          2760
+        ],
+        [
+          1525,
+          2760
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "cloudavailable",
+      "to": "hasmemory",
+      "points": [
+        [
+          1350,
+          2825
+        ],
+        [
+          1350,
+          2895
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "Sì",
+      "at": [
+        1370,
+        2865
+      ]
+    },
+    {
+      "from": "memoryp",
+      "to": "hasmemory",
+      "points": [
+        [
+          1520,
+          1505
+        ],
+        [
+          1590,
+          1505
+        ],
+        [
+          1590,
+          2960
+        ],
+        [
+          1525,
+          2960
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "hasmemory",
+      "to": "initialize",
+      "points": [
+        [
+          1175,
+          2960
+        ],
+        [
+          900,
+          2960
+        ],
+        [
+          900,
+          3101
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "No",
+      "at": [
+        920,
+        3030
+      ]
+    },
+    {
+      "from": "hasmemory",
+      "to": "registration",
+      "points": [
+        [
+          1350,
+          3025
+        ],
+        [
+          1350,
+          3101
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "Sì",
+      "at": [
+        1370,
+        3070
+      ]
+    },
+    {
+      "from": "registration",
+      "to": "admitted",
+      "points": [
+        [
+          1350,
+          3219
+        ],
+        [
+          1350,
+          3295
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "cloudavailable",
+      "to": "keep",
+      "points": [
+        [
+          1175,
+          2760
+        ],
+        [
+          700,
+          2760
+        ],
+        [
+          700,
+          3560
+        ],
+        [
+          725,
+          3560
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "No",
+      "at": [
+        720,
+        2800
+      ]
+    },
+    {
+      "from": "admitted",
+      "to": "keep",
+      "points": [
+        [
+          1175,
+          3360
+        ],
+        [
+          900,
+          3360
+        ],
+        [
+          900,
+          3501
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "No",
+      "at": [
+        920,
+        3430
+      ]
+    },
+    {
+      "from": "admitted",
+      "to": "merge",
+      "points": [
+        [
+          1350,
+          3425
+        ],
+        [
+          1350,
+          3501
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "Sì",
+      "at": [
+        1370,
+        3470
+      ]
+    },
+    {
+      "from": "merge",
+      "to": "sfupdate",
+      "points": [
+        [
+          1350,
+          3619
+        ],
+        [
+          1350,
+          3701
+        ]
+      ],
+      "origin": "s",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "initialize",
+      "to": "sfupdate",
+      "points": [
+        [
+          900,
+          3219
+        ],
+        [
+          1090,
+          3219
+        ],
+        [
+          1090,
+          3660
+        ],
+        [
+          1350,
+          3660
+        ],
+        [
+          1350,
+          3701
+        ]
+      ],
+      "origin": "s",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "sfupdate",
+      "to": "success",
+      "points": [
+        [
+          1350,
+          3819
+        ],
+        [
+          1350,
+          3895
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "success",
+      "to": "newform",
+      "points": [
+        [
+          1350,
+          4025
+        ],
+        [
+          1350,
+          4101
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "Sì",
+      "at": [
+        1370,
+        4070
+      ]
+    },
+    {
+      "from": "success",
+      "to": "oldform",
+      "points": [
+        [
+          1175,
+          3960
+        ],
+        [
+          900,
+          3960
+        ],
+        [
+          900,
+          4101
+        ]
+      ],
+      "origin": "p",
+      "type": "control",
+      "label": "No",
+      "at": [
+        920,
+        4030
+      ]
+    },
+    {
+      "from": "baseline",
+      "to": "updated",
+      "points": [
+        [
+          450,
+          2819
+        ],
+        [
+          450,
+          4312
+        ]
+      ],
+      "origin": "w",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "keep",
+      "to": "updated",
+      "points": [
+        [
+          900,
+          3619
+        ],
+        [
+          900,
+          3670
+        ],
+        [
+          650,
+          3670
+        ],
+        [
+          650,
+          4280
+        ],
+        [
+          920,
+          4280
+        ],
+        [
+          920,
+          4312
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "oldform",
+      "to": "updated",
+      "points": [
+        [
+          900,
+          4219
+        ],
+        [
+          900,
+          4312
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "newform",
+      "to": "updated",
+      "points": [
+        [
+          1350,
+          4219
+        ],
+        [
+          1350,
+          4312
+        ]
+      ],
+      "origin": "p",
+      "type": "data",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "updated",
+      "to": "memoryw",
+      "points": [
+        [
+          570,
+          4447.5
+        ],
+        [
+          570,
+          4500
+        ],
+        [
+          80,
+          4500
+        ],
+        [
+          80,
+          1480
+        ],
+        [
+          280,
+          1480
+        ]
+      ],
+      "origin": "w",
+      "type": "temporal",
+      "label": "",
+      "at": null
+    },
+    {
+      "from": "updated",
+      "to": "memoryp",
+      "points": [
+        [
+          1230,
+          4447.5
+        ],
+        [
+          1230,
+          4500
+        ],
+        [
+          1750,
+          4500
+        ],
+        [
+          1750,
+          1480
+        ],
+        [
+          1520,
+          1480
+        ]
+      ],
+      "origin": "p",
+      "type": "temporal",
+      "label": "",
+      "at": null
+    }
+  ]
+}
