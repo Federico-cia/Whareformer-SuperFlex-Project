@@ -1,0 +1,15 @@
+{
+  "status": "verified",
+  "geometry_source": "da_raw",
+  "representation": "da_raw_superflex",
+  "mesh_archive_sha256": "22f14355067b613bb1fc2e61b9584257a675034b6d862dca85997289a6eea210",
+  "hash_index_sha256": "391664b07150677f2c3f51309ef376d0d735d07afdde2114035b151ec67684db",
+  "geometry_manifest_sha256": "42d316e1ebea6558a06967a1d3d07849febbc74097e0b200d3bf66e9e1748962",
+  "descriptor_index_sha256": "d124358a77ce6c764816d6361b2ea9f30e48585f9c57f35f35cacbe10d581dc8",
+  "descriptor_npz_sha256": "21e82883d5585f041096344b23779a4929d8671eb2ce0602ae169d7ddc1d0fa3",
+  "n_descriptors": 71,
+  "n_missing": 0,
+  "missing": [],
+  "sampling": "trimesh.sample_surface seed=20261109 n=1024; normalized center+RMS radius; sorted D2 pairwise distances 16384 pairs",
+  "note": "Precomputed cache; no Whareformer inference/fit was performed by this script."
+}

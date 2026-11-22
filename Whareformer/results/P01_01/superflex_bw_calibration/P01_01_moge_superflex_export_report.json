@@ -1,0 +1,67 @@
+{
+  "status": "verified_oracle_teacher_forced_fifo_memory",
+  "video": "P01_01",
+  "geometry_representation": "moge_superflex",
+  "candidate_geometry_policy": "oracle_teacher_forced_fifo_memory",
+  "limitations": [
+    "Teacher-forced oracle associations, NOT predicted-tracker histories",
+    "Only past geometry observations within FIFO capacity 2",
+    "P01_01 only is development; no held-out video evaluation"
+  ],
+  "hashes": {
+    "manifest": "725dc2f328bdbcf9885e47eb5d4f92d528f177252747b7c917d046a34b7eb7b0",
+    "geometry_index": "391664b07150677f2c3f51309ef376d0d735d07afdde2114035b151ec67684db",
+    "descriptor_index": "25152c55b54eac94230d96db7d9d8ae444c99d0a7094026d0aafab96845c8609",
+    "original_model_source": "ead5b997ca975eb97592efa3edcc2d070818cefbc00813e3eca42dbcdbdfdf94",
+    "checkpoint": "5b2e6692461f837ec662d0ac75a5f8c08e4fa9778e5c1b9833598cf90a58ee1d"
+  },
+  "counts": {
+    "rows_seen": 110589,
+    "exported_covered_queries": 66,
+    "valid_candidate_geometry_pairs": 505,
+    "target_has_geometry": 54,
+    "excluded_duplicate_candidate_components": 4
+  },
+  "memory_audit": {
+    "merge_conflicts": 1,
+    "candidate_future_frame": 0,
+    "same_component_candidates": 4
+  },
+  "examples": [
+    {
+      "frame": 5099,
+      "observation_key": "P01_01/frame_0000005099__a02",
+      "n_candidates": 10,
+      "target_index": 5,
+      "geo_matches": 1
+    },
+    {
+      "frame": 5099,
+      "observation_key": "P01_01/frame_0000005099__a03",
+      "n_candidates": 10,
+      "target_index": 7,
+      "geo_matches": 1
+    },
+    {
+      "frame": 7508,
+      "observation_key": "P01_01/frame_0000007508__a01",
+      "n_candidates": 13,
+      "target_index": 10,
+      "geo_matches": 2
+    },
+    {
+      "frame": 7508,
+      "observation_key": "P01_01/frame_0000007508__a03",
+      "n_candidates": 13,
+      "target_index": 5,
+      "geo_matches": 2
+    },
+    {
+      "frame": 7508,
+      "observation_key": "P01_01/frame_0000007508__a04",
+      "n_candidates": 13,
+      "target_index": 7,
+      "geo_matches": 2
+    }
+  ]
+}

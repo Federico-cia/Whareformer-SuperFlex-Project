@@ -1,0 +1,24 @@
+{
+  "status": "SuperFlex shape development fit finished; full causal tracker evaluation not done",
+  "video": "P01_01",
+  "data_sources": {
+    "moge": {
+      "b": 1.2824054689481095,
+      "w": 0.7003441873533559,
+      "train_n": 53,
+      "val_n": 13,
+      "val_ce_baseline": 0.06597861414583181,
+      "val_ce_bias_only": 0.041530954572113574,
+      "val_ce_b_w": 0.041272851009326386
+    },
+    "da_raw": {
+      "b": 1.4402722954636908,
+      "w": 3.4563569866620214,
+      "train_n": 53,
+      "val_n": 13,
+      "val_ce_baseline": 0.06597861414583181,
+      "val_ce_bias_only": 0.041530954572113574,
+      "val_ce_b_w": 0.039647935706741036
+    }
+  }
+}

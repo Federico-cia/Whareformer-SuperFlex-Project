@@ -1,0 +1,21 @@
+{
+  "description": "Calibrated SuperFlex external-score correction; frozen Whareformer and SuperFlex",
+  "seed": 0,
+  "calibration_source": "P01_01_moge_superflex_bw_DEVELOPMENT.json",
+  "variants": [
+    {
+      "name": "W0",
+      "method": "W0"
+    },
+    {
+      "name": "S_sep_moge_bw",
+      "method": "S-separata",
+      "source": "moge",
+      "weight": 0.7003441873533559,
+      "bias": 1.2824054689481095,
+      "neutral_distance": 0.0,
+      "metric": "d2",
+      "capacity": 2
+    }
+  ]
+}

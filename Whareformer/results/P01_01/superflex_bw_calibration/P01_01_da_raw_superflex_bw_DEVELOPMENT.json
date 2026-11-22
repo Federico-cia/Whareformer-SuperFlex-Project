@@ -1,0 +1,98 @@
+{
+  "status": "fitted_on_verified_rows",
+  "split": "development_only_temporal_not_independent",
+  "validity": "development only; rowwise accuracy is not Hungarian assignment or IDF1",
+  "model": "z_corrected_j=z_baseline_j + valid_j*(b - w*d_original_j), new_track_unchanged",
+  "weight_units": "raw D2 distance to baseline-logit units",
+  "geometry_provenance": "da_raw_superflex",
+  "candidate_geometry_policy": "oracle_teacher_forced_fifo_memory",
+  "warning": null,
+  "b": 1.4402722954636908,
+  "w": 3.4563569866620214,
+  "weight": 3.4563569866620214,
+  "neutral_distance": 0.4167024126910671,
+  "bias_only_b": 1.2525276750333008,
+  "scaled_w": 0.20541968844614963,
+  "distance_scale": 0.05943242820080741,
+  "reg_l2_scaled": 0.001,
+  "train_videos": [
+    "P01_01"
+  ],
+  "val_videos": [
+    "P01_01"
+  ],
+  "source_sha256": "4c85dba766e7d5b3f25c8e8fbe8964baefa060a4bbf2c87f0f231f5bc7950d66",
+  "train_covered_rows": 53,
+  "metrics": {
+    "train": {
+      "baseline": {
+        "n": 53,
+        "n_geometry_rows": 53,
+        "geometry_fraction": 1.0,
+        "geometry_on_correct_candidate": 43,
+        "cross_entropy": 0.03998797282554776,
+        "row_argmax_accuracy": 1.0,
+        "row_argmax_changes": 0,
+        "covered_ce": 0.03998797282554776,
+        "covered_row_accuracy": 1.0
+      },
+      "bias_only": {
+        "n": 53,
+        "n_geometry_rows": 53,
+        "geometry_fraction": 1.0,
+        "geometry_on_correct_candidate": 43,
+        "cross_entropy": 0.025096017812545904,
+        "row_argmax_accuracy": 1.0,
+        "row_argmax_changes": 0,
+        "covered_ce": 0.025096017812545904,
+        "covered_row_accuracy": 1.0
+      },
+      "shape_plus_bias": {
+        "n": 53,
+        "n_geometry_rows": 53,
+        "geometry_fraction": 1.0,
+        "geometry_on_correct_candidate": 43,
+        "cross_entropy": 0.024096835971252506,
+        "row_argmax_accuracy": 1.0,
+        "row_argmax_changes": 0,
+        "covered_ce": 0.024096835971252506,
+        "covered_row_accuracy": 1.0
+      }
+    },
+    "validation": {
+      "baseline": {
+        "n": 13,
+        "n_geometry_rows": 13,
+        "geometry_fraction": 1.0,
+        "geometry_on_correct_candidate": 11,
+        "cross_entropy": 0.06597861414583181,
+        "row_argmax_accuracy": 1.0,
+        "row_argmax_changes": 0,
+        "covered_ce": 0.06597861414583181,
+        "covered_row_accuracy": 1.0
+      },
+      "bias_only": {
+        "n": 13,
+        "n_geometry_rows": 13,
+        "geometry_fraction": 1.0,
+        "geometry_on_correct_candidate": 11,
+        "cross_entropy": 0.041530954572113574,
+        "row_argmax_accuracy": 1.0,
+        "row_argmax_changes": 0,
+        "covered_ce": 0.041530954572113574,
+        "covered_row_accuracy": 1.0
+      },
+      "shape_plus_bias": {
+        "n": 13,
+        "n_geometry_rows": 13,
+        "geometry_fraction": 1.0,
+        "geometry_on_correct_candidate": 11,
+        "cross_entropy": 0.039647935706741036,
+        "row_argmax_accuracy": 1.0,
+        "row_argmax_changes": 0,
+        "covered_ce": 0.039647935706741036,
+        "covered_row_accuracy": 1.0
+      }
+    }
+  }
+}

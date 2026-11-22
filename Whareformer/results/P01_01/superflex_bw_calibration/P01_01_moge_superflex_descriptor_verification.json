@@ -1,0 +1,15 @@
+{
+  "status": "verified",
+  "geometry_source": "moge",
+  "representation": "moge_superflex",
+  "mesh_archive_sha256": "22f14355067b613bb1fc2e61b9584257a675034b6d862dca85997289a6eea210",
+  "hash_index_sha256": "391664b07150677f2c3f51309ef376d0d735d07afdde2114035b151ec67684db",
+  "geometry_manifest_sha256": "42d316e1ebea6558a06967a1d3d07849febbc74097e0b200d3bf66e9e1748962",
+  "descriptor_index_sha256": "25152c55b54eac94230d96db7d9d8ae444c99d0a7094026d0aafab96845c8609",
+  "descriptor_npz_sha256": "1c465302c46414fa288fda0beb35eb0726c617cb4f312abec3dc2116af6fb993",
+  "n_descriptors": 71,
+  "n_missing": 0,
+  "missing": [],
+  "sampling": "trimesh.sample_surface seed=20261109 n=1024; normalized center+RMS radius; sorted D2 pairwise distances 16384 pairs",
+  "note": "Precomputed cache; no Whareformer inference/fit was performed by this script."
+}
