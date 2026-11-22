@@ -1,0 +1,39 @@
+{
+  "schema": "point3-causal-accumulated-training-v1",
+  "video": "P01_01",
+  "association_source": "authors-oracle-development",
+  "samples": 446,
+  "query_ready": 414,
+  "shape_versions": 33,
+  "confirmed_tracks": 6,
+  "tracks_observed": 17,
+  "queries_with_correct_past_memory": 267,
+  "new_track_examples": 0,
+  "statuses": {
+    "excluded_alignment_or_masks": 32,
+    "pending_confirmation": 17,
+    "registration_not_verified": 364,
+    "fused_registered_view": 33
+  },
+  "source_files": {
+    "C:\\Users\\marco\\Desktop\\2026\\3rd semester DSBA\\Computer Vision\\lavoro di gruppo\\outputs\\training_enrichment_20261121_v1\\results\\dataset\\samples.json": "837bf880dd57f9ebb5db272b151a84f5bd2e1f79dac94e3783fb11da897d3154",
+    "C:\\Users\\marco\\Desktop\\2026\\3rd semester DSBA\\Computer Vision\\lavoro di gruppo\\outputs\\training_enrichment_20261121_v1\\results\\dataset\\training_inputs.npz": "9399b7097dbf2fecfad625c7ceb9e282ec00f109c04010bf53b40d60584b30f0",
+    "C:\\Users\\marco\\Desktop\\2026\\3rd semester DSBA\\Computer Vision\\lavoro di gruppo\\strumenti_hpc\\audit_risultati\\audit_783586_3577_5954\\out_783586\\per_observation.jsonl": "d32cba83de933d4575e253d733802dae3eb3e19dc7479916ac251794975585c5",
+    "C:\\Users\\marco\\Desktop\\2026\\3rd semester DSBA\\Computer Vision\\lavoro di gruppo\\strumenti_hpc\\audit_risultati\\audit_783586_3577_5954\\out_783586\\world_clouds_aligned.npz": "7e76838510a914abbfcb6dec483ec3f3903ef2e6616c4158b599e72a6cdd269a",
+    "C:\\Users\\marco\\Desktop\\2026\\3rd semester DSBA\\Computer Vision\\lavoro di gruppo\\outputs\\verifier_conservative_proposal_20261122_v1\\model.json": "00b2633ff52d75dc351701de06a56431ebd80def11be310227f41f4b5a47c8af",
+    "C:\\Users\\marco\\Desktop\\2026\\3rd semester DSBA\\Computer Vision\\lavoro di gruppo\\outputs\\verifier_conservative_proposal_20261122_v1\\report.json": "4e95eb23d9e4380d632295ffec5c854f048177381583a79b6e9953d5d1169cf4"
+  },
+  "representation": "observed_accumulated_points",
+  "reconstruction_inference_run": false,
+  "learned_registration_used": true,
+  "real_fusion_accuracy_validated": false,
+  "all_frame_queries_before_updates": true,
+  "limits": [
+    "sparse development sample; no new-track training examples",
+    "simulated verifier supervision, substantial false acceptance on simulated holdout",
+    "memory engineering settings not tuned for tracking",
+    "SuperFlex FPS inputs ready; no new neural reconstruction in local replay",
+    "oracle association does not measure predicted tracking benefit"
+  ],
+  "seconds": 229.87912549998146
+}

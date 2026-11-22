@@ -34,3 +34,13 @@ checkpoints/
 /SuperFlex-repo/
 *.pkl
 *.lmdb
+
+# Materiale operativo personale e backup locali
+/mappa_interattiva/backup/
+/strumenti_hpc/
+/strumenti_git/
+*.npz
+*.npy
+*.ply
+*.log
+*.partial

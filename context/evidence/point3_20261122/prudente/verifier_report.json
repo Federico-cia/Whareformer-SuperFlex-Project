@@ -1,0 +1,112 @@
+{
+  "schema": "point3-trained-diagnostic-prototype-v1",
+  "backend": "diagnostic-error",
+  "dataset_summary_sha256": "54d545d4c6520fa971110f2b9ba047c6ccc9a0e219a28b2e6af740c330fd4903",
+  "model_sha256": "00b2633ff52d75dc351701de06a56431ebd80def11be310227f41f4b5a47c8af",
+  "model_id": "9f6c8f86ef85342adb7a2ed6cb5d4996a64144ffc6b8c27f09dfd199b9f2840c",
+  "selected_ridge": 0.0,
+  "ridge_trials": [
+    {
+      "ridge": 0.0,
+      "group_macro_mae": 0.06808451764679865
+    },
+    {
+      "ridge": 0.01,
+      "group_macro_mae": 0.06808500037753401
+    },
+    {
+      "ridge": 0.1,
+      "group_macro_mae": 0.06808934189833071
+    },
+    {
+      "ridge": 1.0,
+      "group_macro_mae": 0.06813240744213617
+    },
+    {
+      "ridge": 10.0,
+      "group_macro_mae": 0.06855457504503802
+    },
+    {
+      "ridge": 100.0,
+      "group_macro_mae": 0.07209588520453777
+    }
+  ],
+  "maximum_predicted_error": 0.06727060374286488,
+  "target_error_tolerance": 0.0600030239653316,
+  "tolerance_provenance": "training 95th percentile of known 0/5-degree, 0/.03-RMS perturbations",
+  "threshold_provenance": "maximize macro true-accept rate subject to per-identity calibration false-accept budget",
+  "evaluation_used_for_selection": false,
+  "metrics": {
+    "train": {
+      "samples": 1432,
+      "groups": [
+        "bin/garbage can/recycling bin",
+        "chopping board",
+        "container",
+        "curry powder package",
+        "grater",
+        "kettle",
+        "knife",
+        "lid",
+        "olive oil bottle",
+        "plate",
+        "saucepan",
+        "sieve",
+        "spoon"
+      ],
+      "mae": 0.0675775863920508,
+      "group_macro_mae": 0.06645589206604376,
+      "constant_training_median_mae": 0.15000180858652962,
+      "confusion": {
+        "true_accept": 360,
+        "false_accept": 40,
+        "true_reject": 712,
+        "false_reject": 320
+      },
+      "accepted": 400
+    },
+    "calibration": {
+      "samples": 1512,
+      "groups": [
+        "pan",
+        "tofu box"
+      ],
+      "mae": 0.06339154364604224,
+      "group_macro_mae": 0.06808451764679865,
+      "constant_training_median_mae": 0.1395971977304422,
+      "confusion": {
+        "true_accept": 407,
+        "false_accept": 37,
+        "true_reject": 727,
+        "false_reject": 341
+      },
+      "accepted": 444
+    },
+    "evaluation": {
+      "samples": 368,
+      "groups": [
+        "spatula",
+        "tofu container"
+      ],
+      "mae": 0.08244033559200402,
+      "group_macro_mae": 0.0920960076138822,
+      "constant_training_median_mae": 0.15502347461415167,
+      "confusion": {
+        "true_accept": 95,
+        "false_accept": 30,
+        "true_reject": 164,
+        "false_reject": 79
+      },
+      "accepted": 125
+    }
+  },
+  "limitations": [
+    "linear diagnostic baseline, not the planned direct-pair neural model",
+    "simulated targets only; calibration is not physical fusion certification",
+    "two evaluation identities within one development video, no generalization claim"
+  ],
+  "previous_balanced_threshold": 0.142059566301942,
+  "operating_policy": "conservative-calibration-v1",
+  "empirical_risk_budget_per_calibration_identity": 0.05,
+  "risk_limit_is_not_a_statistical_guarantee": true
+}

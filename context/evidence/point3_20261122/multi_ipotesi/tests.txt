@@ -1,0 +1,12 @@
+{"ready_versions": 0, "failed_versions": 1, "missing_versions": 0, "query_reconstructions_attached": 0, "candidate_reconstructions_attached": 0, "test_results_allowed": false, "note": "Observed and completed representations remain separate; missing results stay explicit."}
+geometry 20 afterok:12
+build 21 afterok:20
+cpu 22 afterok:21
+gpu 23 afterok:21
+summarize 24 afterany:22:23
+geometry 20 afterok:12
+.....................................................................................................................................s....s....
+----------------------------------------------------------------------
+Ran 143 tests in 31.661s
+
+OK (skipped=2)

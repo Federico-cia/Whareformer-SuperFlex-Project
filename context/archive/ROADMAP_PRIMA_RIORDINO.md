@@ -4,7 +4,7 @@
 
 Marco richiede memoria e contesto autosufficienti nella cartella e su GitHub. Guida corrente: [LEGGIMI_PASSAGGIO_AI.md](../memory/LEGGIMI_PASSAGGIO_AI.md), che distingue implementato/verificato/pendente, decisioni, dipendenze e prossimi passi. Pubblicazione selettiva preparata dalla main del collega fc5aa30: codice integrazione, memoria, mappa corrente ed evidenze leggere; dati grandi, pesi e accessi esclusi. Nessun nuovo esperimento, filtro invariato. Gli stati storici di attesa frontend, output collega mancanti e job 763531 attivo sono superati dalle verifiche successive. Esito della pubblicazione in docs/CONDIVISIONE.md e context/evidence/publication_inventory.json sul remoto.
 
-Frontend approvato: contratto/cache e ingresso nel comando implementati e verificati; rigenerazione ancora pendente per asset/provenienza/ambiente. [Stato e limiti](../memory/FRONTEND_AVANZAMENTO_20261114.md). Pacchetto locale common_runner_20261114_v3, nessun dato/peso incluso.
+Frontend approvato: contratto/cache e ingresso nel comando implementati e verificati; rigenerazione ancora pendente per asset/provenienza/ambiente. [Stato e limiti](FRONTEND_AVANZAMENTO_20261114.md). Pacchetto locale common_runner_20261114_v3, nessun dato/peso incluso.
 
 ## Valutatore e comando unico collegati — 14 novembre
 

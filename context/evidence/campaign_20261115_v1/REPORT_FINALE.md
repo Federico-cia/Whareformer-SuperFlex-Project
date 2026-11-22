@@ -40,7 +40,7 @@ Filtri, registratore, reti congelate e separazione punti osservati/completamenti
 
 ## Output e ripresa
 
-[Tabella completa](comparison_final.csv), [riepilogo](campaign_summary.json), [accounting finale](accounting_final.txt), [specifica e avvio storico](../../memory/CAMPAGNA_HPC_20261115.md).
+[Tabella completa](comparison_final.csv), [riepilogo](campaign_summary.json), [accounting finale](accounting_final.txt), [specifica e avvio storico](../../archive/CAMPAGNA_HPC_20261115.md).
 
 Output completi sull'HPC: `~/cv_project/campaign_20261115_v1/`, in `runs/<variante>/`, `caches/<variante>/`, `geometry/`, `bundle/`. Risultati finali `campaign_summary.json`, `comparison/`, ricevuta `submitted_jobs.json`, accounting `accounting_final.txt`; log finali `logs/summarize_765084_4294967294.out/.err`. Localmente sono acquisiti i riepiloghi, le metriche, i codici dei trial e l'accounting; i grandi JSONL, le nuvole e le mesh di tutte le varianti restano sull'HPC, non sono dichiarati già scaricati.
 

@@ -23,10 +23,15 @@ const sourceHref=s=>{const target=window.MAP_SOURCE_PATHS?.[s];return target?(/^
   function fitAll() { scale = Math.max(.07, Math.min(1, (viewport.clientWidth - 24) / data.canvas.width, (viewport.clientHeight - 24) / data.canvas.height)); panX = (viewport.clientWidth - data.canvas.width * scale) / 2; panY = (viewport.clientHeight - data.canvas.height * scale) / 2; applyView(); }
   function fitWidth() { scale = Math.min(1.1, (viewport.clientWidth - 20) / data.canvas.width); panX = (viewport.clientWidth - data.canvas.width * scale) / 2; panY = 8; applyView(); }
   function setPanel(open) { $('#inspector').hidden = !open; $('#toggle-panel').setAttribute('aria-expanded', String(open)); }
+  function centerItem(n) {
+    const points = n.from ? movedPoints(n) : null, point = points ? points[Math.floor(points.length / 2)] : [n.x,n.y];
+    scale = Math.max(.2, Math.min(.9, (viewport.clientWidth - 40) / (n.width || 900), (viewport.clientHeight - 30) / (n.height || 240)));
+    panX = viewport.clientWidth / 2 - point[0] * scale; panY = viewport.clientHeight / 2 - point[1] * scale; applyView();
+  }
   function focusItem(id, move = true) {
     if (editing) return; const n = item(id); if (!n) return;
     selected = id; pinned = true; setPanel(true); renderDetail(); highlight();
-    if (move) requestAnimationFrame(() => { const points = n.from ? movedPoints(n) : null, point = points ? points[Math.floor(points.length / 2)] : [n.x,n.y]; scale = Math.max(.55, Math.min(.9, (viewport.clientWidth - 40) / (n.width || 900))); panX = viewport.clientWidth / 2 - point[0] * scale; panY = viewport.clientHeight / 2 - point[1] * scale; applyView(); });
+    if (move) requestAnimationFrame(() => centerItem(n));
   }
   function highlight() { board.querySelectorAll('[data-node]').forEach(el => el.classList.toggle('active', el.dataset.node === selected)); board.querySelectorAll('[data-edge]').forEach(el => el.classList.toggle('active-edge', el.dataset.edge === selected)); }
   function renderDetail() {
@@ -93,6 +98,7 @@ const sourceHref=s=>{const target=window.MAP_SOURCE_PATHS?.[s];return target?(/^
   async function initialize() {
     if (location.protocol === 'http:' && ['127.0.0.1','localhost'].includes(location.hostname)) { try { const response = await fetch('/api/map',{cache:'no-store'}); if (!response.ok) throw Error(); const result = await response.json(); if (result.data.version !== 2) throw Error(); data = result.data; revisions = result.revisions; online = true; notice('Commenti salvati nel progetto'); } catch { notice('Consultazione offline'); } } else notice('Consultazione offline');
     applyPositions(readPositions()); render(); fitWidth();
+    new ResizeObserver(() => { if (editing) return; const n = item(selected); if (n) centerItem(n); else fitWidth(); }).observe(viewport);
   }
   initialize().catch(error => { notice('Impossibile aprire la mappa: ' + error.message); });
 })();

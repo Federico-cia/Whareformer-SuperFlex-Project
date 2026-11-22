@@ -12,37 +12,37 @@ I dodici report della cartella `Reports_20878` sono esempi di lavori passati: in
 
 | File | Pagine | Contenuto |
 |---|---:|---|
-| [2026_01_19_DL4CV_exam_solutions (1).pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/2026_01_19_DL4CV_exam_solutions (1).pdf>) | 11 | Esempio di esercizi e soluzioni; data del nome diversa dal frontespizio. |
-| [20600__project_list (1) (1).pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/20600__project_list (1) (1).pdf>) | 3 | Progetti proposti e riferimenti ai paper. |
-| [Lecture 10 - DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 10 - DL4CV.pdf>) | 115 | Sequenze, attenzione, transformer, ViT e CLIP. |
-| [Lecture 1_DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 1_DL4CV.pdf>) | 36 | Introduzione, consegne e calendario provvisorio. |
-| [Lecture 2_DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 2_DL4CV.pdf>) | 99 | Storia, problemi e applicazioni della Computer Vision. |
-| [Lecture 3 - DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 3 - DL4CV.pdf>) | 211 | Formazione delle immagini, proiezione e filtri. |
-| [Lecture 4 - DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 4 - DL4CV.pdf>) | 107 | Classificazione, loss, regolarizzazione e ottimizzazione. |
-| [Lecture 5 - DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 5 - DL4CV.pdf>) | 112 | Reti neurali, attivazioni e backpropagation. |
-| [Lecture 6 -DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 6 -DL4CV.pdf>) | 109 | Convoluzioni, pooling, receptive field e CNN. |
-| [Lecture 7 - DL4CV (1).pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 7 - DL4CV (1).pdf>) | 116 | Architetture CNN, normalizzazione, dropout e transfer learning. |
-| [Lecture 8 - DL4CV.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 8 - DL4CV.pdf>) | 111 | Object detection, box, architetture e valutazione. |
-| [Lecture 9 - DL4CV(1).pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture 9 - DL4CV(1).pdf>) | 105 | Segmentazione semantica, di istanze e panottica; SAM. |
-| [Lecture_Notes_20600_updated.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Lecture_Notes_20600_updated.pdf>) | 154 | Dispense presenti fino al capitolo 8, poi bibliografia; corpo dei capitoli 9-12 assente. |
-| [3. OMNI-4DGS_Report.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/3. OMNI-4DGS_Report.pdf>) | 14 | Ricostruzione dinamica con Gaussian Splatting e compromessi di qualità e costo. |
-| [ASO_Temba_report.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/ASO_Temba_report.pdf>) | 7 | Modellazione temporale multiscala e valutazione dello streaming. |
-| [BRAATHEN_report.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/BRAATHEN_report.pdf>) | 7 | Pseudo-label multi-scala per CutLER e analisi per dimensione degli oggetti. |
-| [Convolution&Co_report.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/Convolution&Co_report.pdf>) | 14 | Watermark LoRA e recupero del messaggio nelle immagini generate. |
-| [CVIPProjectGuidottiToscano_Final.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/CVIPProjectGuidottiToscano_Final.pdf>) | 8 | Plausibilità delle transizioni video con rappresentazioni V-JEPA. |
-| [DAFT-Drive-random_state_43.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/DAFT-Drive-random_state_43.pdf>) | 10 | Specialisti per condizioni di guida, routing e distillazione. |
-| [Feedback-Augmented RT-DETR.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/Feedback-Augmented RT-DETR.pdf>) | 6 | Feedback nel decoder RT-DETR, gating e rilevamento di piccoli oggetti. |
-| [Mean_Square_Terrific_Report.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/Mean_Square_Terrific_Report.pdf>) | 6 | Scene graph video e trasferimento di STTran. |
-| [report.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/report.pdf>) | 5 | SuperCLIP-Recon e obiettivo ausiliario di ricostruzione delle feature. |
-| [Report_EpipolesAndPopsicles.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/Report_EpipolesAndPopsicles.pdf>) | 9 | Correzioni dei gradienti di IoU per detection 3D su KITTI. |
-| [REPORT_FERT_PROJECT.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/REPORT_FERT_PROJECT.pdf>) | 18 | Localizzazione di Concept Sliders tramite training e maschere. |
-| [shape SIFTers report.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/Reports_20878/Reports_20878/shape SIFTers report.pdf>) | 10 | TembaPanoptic: adattatori temporali in Mask2Former. |
-| [syllabus.pdf](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/syllabus.pdf>) | 8 | Requisiti, contenuti, valutazione e organizzazione ufficiale del corso. |
+| [2026_01_19_DL4CV_exam_solutions (1).pdf](../evidence/ASSET_ESTERNI.md#locale-323032365f30315f31395f444c3443) | 11 | Esempio di esercizi e soluzioni; data del nome diversa dal frontespizio. |
+| [20600__project_list (1) (1).pdf](../evidence/ASSET_ESTERNI.md#locale-32303630305f5f70726f6a6563745f) | 3 | Progetti proposti e riferimenti ai paper. |
+| [Lecture 10 - DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c656374757265203130202d20444c) | 115 | Sequenze, attenzione, transformer, ViT e CLIP. |
+| [Lecture 1_DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c65637475726520315f444c344356) | 36 | Introduzione, consegne e calendario provvisorio. |
+| [Lecture 2_DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c65637475726520325f444c344356) | 99 | Storia, problemi e applicazioni della Computer Vision. |
+| [Lecture 3 - DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572652033202d20444c34) | 211 | Formazione delle immagini, proiezione e filtri. |
+| [Lecture 4 - DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572652034202d20444c34) | 107 | Classificazione, loss, regolarizzazione e ottimizzazione. |
+| [Lecture 5 - DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572652035202d20444c34) | 112 | Reti neurali, attivazioni e backpropagation. |
+| [Lecture 6 -DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572652036202d444c3443) | 109 | Convoluzioni, pooling, receptive field e CNN. |
+| [Lecture 7 - DL4CV (1).pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572652037202d20444c34) | 116 | Architetture CNN, normalizzazione, dropout e transfer learning. |
+| [Lecture 8 - DL4CV.pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572652038202d20444c34) | 111 | Object detection, box, architetture e valutazione. |
+| [Lecture 9 - DL4CV(1).pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572652039202d20444c34) | 105 | Segmentazione semantica, di istanze e panottica; SAM. |
+| [Lecture_Notes_20600_updated.pdf](../evidence/ASSET_ESTERNI.md#locale-4c6563747572655f4e6f7465735f32) | 154 | Dispense presenti fino al capitolo 8, poi bibliografia; corpo dei capitoli 9-12 assente. |
+| [3. OMNI-4DGS_Report.pdf](../evidence/ASSET_ESTERNI.md#locale-332e204f4d4e492d344447535f5265) | 14 | Ricostruzione dinamica con Gaussian Splatting e compromessi di qualità e costo. |
+| [ASO_Temba_report.pdf](../evidence/ASSET_ESTERNI.md#locale-41534f5f54656d62615f7265706f72) | 7 | Modellazione temporale multiscala e valutazione dello streaming. |
+| [BRAATHEN_report.pdf](../evidence/ASSET_ESTERNI.md#locale-425241415448454e5f7265706f7274) | 7 | Pseudo-label multi-scala per CutLER e analisi per dimensione degli oggetti. |
+| [Convolution&Co_report.pdf](../evidence/ASSET_ESTERNI.md#locale-436f6e766f6c7574696f6e26436f5f) | 14 | Watermark LoRA e recupero del messaggio nelle immagini generate. |
+| [CVIPProjectGuidottiToscano_Final.pdf](../evidence/ASSET_ESTERNI.md#locale-4356495050726f6a65637447756964) | 8 | Plausibilità delle transizioni video con rappresentazioni V-JEPA. |
+| [DAFT-Drive-random_state_43.pdf](../evidence/ASSET_ESTERNI.md#locale-444146542d44726976652d72616e64) | 10 | Specialisti per condizioni di guida, routing e distillazione. |
+| [Feedback-Augmented RT-DETR.pdf](../evidence/ASSET_ESTERNI.md#locale-466565646261636b2d4175676d656e) | 6 | Feedback nel decoder RT-DETR, gating e rilevamento di piccoli oggetti. |
+| [Mean_Square_Terrific_Report.pdf](../evidence/ASSET_ESTERNI.md#locale-4d65616e5f5371756172655f546572) | 6 | Scene graph video e trasferimento di STTran. |
+| [report.pdf](../evidence/ASSET_ESTERNI.md#locale-7265706f72742e706466) | 5 | SuperCLIP-Recon e obiettivo ausiliario di ricostruzione delle feature. |
+| [Report_EpipolesAndPopsicles.pdf](../evidence/ASSET_ESTERNI.md#locale-5265706f72745f457069706f6c6573) | 9 | Correzioni dei gradienti di IoU per detection 3D su KITTI. |
+| [REPORT_FERT_PROJECT.pdf](../evidence/ASSET_ESTERNI.md#locale-5245504f52545f464552545f50524f) | 18 | Localizzazione di Concept Sliders tramite training e maschere. |
+| [shape SIFTers report.pdf](../evidence/ASSET_ESTERNI.md#locale-736861706520534946546572732072) | 10 | TembaPanoptic: adattatori temporali in Mask2Former. |
+| [syllabus.pdf](../evidence/ASSET_ESTERNI.md#locale-73796c6c616275732e706466) | 8 | Requisiti, contenuti, valutazione e organizzazione ufficiale del corso. |
 
 ## Markdown iniziali
 
-- [Starting_point.md](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/lavoro di gruppo/Starting_point.md>): letto integralmente.
-- [ISTRUZIONI_SUPERVISORE_SCIENTIFICO.md](<C:/Users/marco/Desktop/2026/3rd semester DSBA/Computer Vision/lavoro di gruppo/ISTRUZIONI_SUPERVISORE_SCIENTIFICO.md>): letto integralmente.
+- [Starting_point.md](../evidence/ASSET_ESTERNI.md#locale-5374617274696e675f706f696e742e): letto integralmente.
+- [ISTRUZIONI_SUPERVISORE_SCIENTIFICO.md](../evidence/ASSET_ESTERNI.md#locale-49535452555a494f4e495f53555045): letto integralmente.
 
 ## Paper consultati
 

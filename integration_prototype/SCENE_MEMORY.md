@@ -1,5 +1,9 @@
 # Punto 3: prima implementazione della memoria a stati
 
+## Revisione del prototipo — 22 novembre 2026
+
+Marco approva registrazione e verifica appresa di ogni vista, anche dopo movimento, senza certificazione preventiva di staticità. Nuovo percorso in [POINT3_PROTOTYPE.md](POINT3_PROTOTYPE.md): baseline addestrata, replay causale ed export per il punto 2, worker FPS separato. Le sezioni del 21 novembre sotto descrivono il percorso precedente, conservato per confronto. Leggere i report correnti per esiti e limiti: non equiparare funzionamento software a fusioni corrette o nuove inferenze GPU già eseguite.
+
 Questa versione implementa il nucleo software del piano approvato. Non contiene
 pesi del verificatore principale, etichette certificate di staticità o parametri
 calibrati su EPIC. Non è una nuova campagna sperimentale.

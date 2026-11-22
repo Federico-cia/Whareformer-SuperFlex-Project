@@ -1,0 +1,20 @@
+{
+  "observations": 8107,
+  "ok": 8106,
+  "failed": 1,
+  "skipped": 19,
+  "skipped_reasons": {
+    "audit_alignment_invalid": 8,
+    "no_alpha_beta_for_frame": 11
+  },
+  "total_points": 86773738,
+  "identities": 24,
+  "frames": 2427,
+  "inputs": {
+    "<CARTELLA_PROGETTO>/shared_exports/p01_01_correction_v1/data/geometry/geometry_index.json": "289bc0bf8af3499a04af26827cb14c59440ee155a8999b4d740f571c4900c1be",
+    "<CARTELLA_PROGETTO>/strumenti_hpc/audit_risultati/audit_783586_3577_5954/out_783586/per_observation.jsonl": "d32cba83de933d4575e253d733802dae3eb3e19dc7479916ac251794975585c5"
+  },
+  "archive": "<CARTELLA_PROGETTO>/shared_exports/p01_01_correction_received/geometry_received.tar.gz",
+  "dtype": "float32 world coordinates (EPIC-Fields units, not certified metres)",
+  "seconds": 107.3
+}

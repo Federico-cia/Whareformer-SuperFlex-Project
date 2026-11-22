@@ -1,0 +1,967 @@
+{
+  "status": "proposta_non_approvata_non_applicata",
+  "date": "2026-11-22",
+  "source_hashes": {
+    "contenuti.json": "b0f59afc3fdc5f8ebc82b936a8a98f6c7fa7ec440b5a6c300521e183bbe73f73",
+    "contenuti.js": "427d57df955800a49322fa1e857beef00deda507553dcf69d9a3cf8b07c354de",
+    "index.html": "1bdb65e5e81c15694a5e01485acc37d5ae0ad59f5de2c9571a69da16c82e83eb",
+    "app.js": "0f37abe398092b8eeb4a7a499134f9c59abc9675876d01a278d8443cf31c2343",
+    "stile.css": "5ad1958e1eff62accb73b5229a928f8bea6ba28f12fadb6e5b2cb3418e911d8d",
+    "server.cjs": "a0797217f2178b4ca43308ffddc334a5463ddeca379838970e8eaa5a1a6f6f0e"
+  },
+  "counts": {
+    "before": {
+      "nodes": 39,
+      "edges": 49
+    },
+    "after": {
+      "nodes": 39,
+      "edges": 53
+    },
+    "added_nodes": 0,
+    "removed_nodes": 0,
+    "added_edges": 6,
+    "removed_edges": 2
+  },
+  "node_updates": [
+    {
+      "id": "R09",
+      "title": "Allineamento alla scena",
+      "subtitle": "Profondità coerente con il riferimento della scena",
+      "note": "Aggiornare la scheda: percorso implementato anche per la geometria; alimenta posizione e punti, senza certificare equivalenza numerica con XYZ ufficiali riusati."
+    },
+    {
+      "id": "R12",
+      "title": "Estrai i punti dell’oggetto",
+      "subtitle": "Profondità allineata · maschera · intrinseci",
+      "note": "Sostituisce la stima DA/MoGE duplicata. MoGE rimane alternativa di confronto nella scheda, senza percorso nel ciclo principale."
+    },
+    {
+      "id": "R13",
+      "title": "Porta i punti nella scena",
+      "subtitle": "Posa della camera · punti osservati",
+      "note": "Rende esplicito il passaggio camera → scena. La nuvola è a piena risoluzione prima dei filtri/celle della memoria."
+    },
+    {
+      "id": "R14",
+      "title": "Ricostruzione SuperFlex",
+      "subtitle": "FPS-4096 · normalizzazione · primitive",
+      "note": "Campionamento dell’osservazione allineata; conservare trasformazione inversa e provenienza."
+    },
+    {
+      "id": "R15",
+      "title": "Descrittore di forma",
+      "subtitle": "D2: percorso attuale",
+      "note": "Distanza/descrittore definitivi restano da concordare; non presentare il futuro matcher come concluso."
+    },
+    {
+      "id": "R18",
+      "title": "Memoria geometrica precedente",
+      "subtitle": "Stati di posizione · forma persistente",
+      "note": "Un solo riquadro con due componenti descritte nella scheda; forme delle osservazioni come riserva distinta, quando prevista dal matcher. Versioni e riferimenti espliciti."
+    },
+    {
+      "id": "R20",
+      "title": "Distanza tra le forme",
+      "subtitle": "Confronti geometrici validi",
+      "note": "D2 nel percorso implementato; altre distanze e nuovo modello restano da concordare."
+    },
+    {
+      "id": "R21",
+      "title": "Correzione esterna dei punteggi",
+      "subtitle": "Percorso implementato di riferimento",
+      "note": "Non aggiungere un matcher appreso non attestato concluso; distinguere alternative nella scheda."
+    },
+    {
+      "id": "R28",
+      "title": "Nuvola corrente valida?",
+      "subtitle": "Punti allineati · camera · validità",
+      "note": "Comprende il fallimento dell’allineamento e i controlli minimi di punti/camera; non è il test di posizione."
+    },
+    {
+      "id": "R29",
+      "title": "Assegna e aggiorna lo stato",
+      "subtitle": "Compatibilità per riproiezione · criterio C",
+      "note": "Confronta prima stati confermati attivi, poi deboli; sceglie il compatibile o crea uno stato debole. Aggiorna viste/supporto e gestisce il ciclo degli stati. Chiusura degli altri stati confermati quando applicabile, decadimento/potatura e ritorno come nuovo stato sono dettagli della scheda.",
+      "shape": "process"
+    },
+    {
+      "id": "R30",
+      "title": "Stato confermato?",
+      "subtitle": "Supporto da più osservazioni",
+      "note": "Decisione dopo l’aggiornamento: lo stato scelto è già confermato o lo diventa; in caso contrario nessun ingresso nella forma. Non certifica staticità.",
+      "shape": "decision"
+    },
+    {
+      "id": "R31",
+      "title": "Prepara le viste per la forma",
+      "subtitle": "Riferimento iniziale o trasformazione dello stato",
+      "note": "Forma vuota: la prima vista del primo stato confermato inizializza il riferimento. Altrimenti riusa la posa dello stato o registra lo stato alla forma, anche dopo movimento. Presenta separatamente le viste da verificare. Fallimento di registrazione conserva le viste pendenti."
+    },
+    {
+      "id": "R32",
+      "title": "Vista ammessa nella forma?",
+      "subtitle": "Verificatore appreso",
+      "note": "Per ogni vista da verificare decide l’ammissione nella forma, non lo stato di posizione. Primo seme escluso perché manca una forma di confronto. Prototipo appreso non validato fisicamente."
+    },
+    {
+      "id": "R33",
+      "title": "Mantieni la forma precedente",
+      "subtitle": "Lo stato può essere aggiornato",
+      "note": "Non confondere forma invariata con intera memoria invariata. Distingue nei commenti nuvola invalida, stato debole, registrazione fallita e vista respinta. A posa fissata la vista respinta non si ritenta; prima di una posa accettata può restare pendente."
+    },
+    {
+      "id": "R34",
+      "title": "Aggiorna i punti della forma",
+      "subtitle": "Inizializzazione o fusione · punti pesati",
+      "note": "Integra il seme iniziale o le viste ammesse in celle pesate. Mai punti completati da SuperFlex. Produce una versione per l’aggiornamento, senza duplicare inferenze per ogni freccia in ingresso."
+    },
+    {
+      "id": "R35",
+      "title": "Ricostruisci con SuperFlex",
+      "subtitle": "FPS-4096 · nuova versione dei punti",
+      "note": "Stesso contratto dell’osservazione; richieste/completamenti versionati."
+    },
+    {
+      "id": "R36",
+      "title": "Ricostruzione disponibile?",
+      "subtitle": "Esito della richiesta versionata",
+      "note": "Distinguere nella scheda riuscita, fallimento e attesa: il coordinatore risolve le richieste pendenti prima del frame seguente. Solo un fallimento dichiarato percorre il ramo negativo; un risultato incoerente è un errore."
+    },
+    {
+      "id": "R37",
+      "title": "Aggiorna forma e descrittore",
+      "subtitle": "Completamento valido della versione richiesta",
+      "note": "Nessuna pubblicazione nel passato; mantenere relazione esplicita fra punti e completamento."
+    },
+    {
+      "id": "R38",
+      "title": "Mantieni l’ultima forma valida",
+      "subtitle": "Ricostruzione assente o fallita",
+      "note": "I nuovi punti ammessi restano disponibili; nessun azzeramento della forma valida precedente."
+    },
+    {
+      "id": "R39",
+      "title": "Memoria per il frame successivo",
+      "subtitle": "Aspetto/posizione · stati · punti/ultima forma",
+      "note": "Snapshot coerente per tutte le detection del frame seguente, versioni distinte di punti e completamento."
+    }
+  ],
+  "removed_edges": [
+    "C34",
+    "C40"
+  ],
+  "edge_updates": [
+    {
+      "id": "C03",
+      "from": "G01",
+      "to": "R12",
+      "label": "",
+      "type": "data",
+      "note": "Maschera e intrinseci necessari all’estrazione; non avvia un secondo modello di profondità."
+    },
+    {
+      "id": "C10",
+      "from": "R12",
+      "to": "R13",
+      "label": "",
+      "type": "data",
+      "note": "Punti dell’oggetto nel riferimento camera."
+    },
+    {
+      "id": "C11",
+      "from": "R13",
+      "to": "R14",
+      "label": "",
+      "type": "data",
+      "note": "Nuvola osservata allineata, prima del campionamento SuperFlex."
+    },
+    {
+      "id": "C19",
+      "from": "R18",
+      "to": "R20",
+      "label": "",
+      "type": "data",
+      "note": "Ultima forma/descrittore utilizzabile, non stati di posizione come descrittori aggiuntivi."
+    },
+    {
+      "id": "C30",
+      "from": "R13",
+      "to": "R28",
+      "label": "",
+      "type": "data",
+      "note": "Nuvola osservata nel riferimento scena."
+    },
+    {
+      "id": "C31",
+      "from": "R28",
+      "to": "R29",
+      "label": "Sì",
+      "type": "control",
+      "note": "Soltanto un input valido entra nell’assegnazione di posizione."
+    },
+    {
+      "id": "C32",
+      "from": "R18",
+      "to": "R29",
+      "label": "",
+      "type": "data",
+      "note": "Stati attivi della traccia, viste/camere di riferimento e supporto precedenti."
+    },
+    {
+      "id": "C33",
+      "from": "R29",
+      "to": "R30",
+      "label": "",
+      "type": "data",
+      "note": "Stato scelto/creato con supporto e storia aggiornati; eliminare la vecchia etichetta No."
+    },
+    {
+      "id": "C35",
+      "from": "R31",
+      "to": "R32",
+      "label": "Viste da verificare",
+      "type": "data",
+      "note": "Viste portate nel riferimento della forma; trasformazione candidata o già fissata."
+    },
+    {
+      "id": "C36",
+      "from": "R28",
+      "to": "R33",
+      "label": "No",
+      "type": "control",
+      "note": "Input non utilizzabile: nessuna nuova fusione."
+    },
+    {
+      "id": "C37",
+      "from": "R32",
+      "to": "R33",
+      "label": "No",
+      "type": "control",
+      "note": "Vista esclusa dalla forma; non apre un altro stato. Lo stato scelto resta registrato."
+    },
+    {
+      "id": "C38",
+      "from": "R32",
+      "to": "R34",
+      "label": "Sì",
+      "type": "control",
+      "note": "Punti della vista ammessa, nel riferimento della forma."
+    },
+    {
+      "id": "C39",
+      "from": "R34",
+      "to": "R35",
+      "label": "",
+      "type": "data",
+      "note": "Nuova versione della nuvola di punti ammessi, iniziale o aggiornata."
+    },
+    {
+      "id": "C43",
+      "from": "R36",
+      "to": "R38",
+      "label": "Fallita",
+      "type": "control",
+      "note": "Fallimento dichiarato: mantenere l’ultima ricostruzione valida. L’attesa non percorre questa freccia e gli esiti incoerenti sono errori da risolvere."
+    },
+    {
+      "id": "C45",
+      "from": "R33",
+      "to": "R39",
+      "label": "",
+      "type": "data",
+      "note": "Forma precedente con eventuali cambiamenti agli stati già registrati."
+    },
+    {
+      "id": "C49",
+      "from": "R39",
+      "to": "R18",
+      "label": "",
+      "type": "temporal",
+      "note": "Snapshot di stati, punti e ultima forma disponibile per il frame successivo."
+    }
+  ],
+  "added_edges": [
+    {
+      "id": "C50",
+      "from": "R09",
+      "to": "R12",
+      "label": "",
+      "type": "data",
+      "note": "Profondità allineata necessaria per ricavare punti coerenti con la scena."
+    },
+    {
+      "id": "C51",
+      "from": "R03",
+      "to": "R13",
+      "label": "",
+      "type": "data",
+      "note": "Posa della camera necessaria a trasformare i punti nella scena."
+    },
+    {
+      "id": "C52",
+      "from": "R30",
+      "to": "R31",
+      "label": "Sì",
+      "type": "control",
+      "note": "Solo uno stato confermato può contribuire alla forma persistente."
+    },
+    {
+      "id": "C53",
+      "from": "R30",
+      "to": "R33",
+      "label": "No",
+      "type": "control",
+      "note": "Stato debole conservato/gestito, forma persistente non aggiornata."
+    },
+    {
+      "id": "C54",
+      "from": "R31",
+      "to": "R34",
+      "label": "Prima vista, forma vuota",
+      "type": "control",
+      "note": "Il seme iniziale non ha una forma precedente contro cui essere verificato; le altre viste seguono C35."
+    },
+    {
+      "id": "C55",
+      "from": "R31",
+      "to": "R33",
+      "label": "Registrazione fallita",
+      "type": "control",
+      "note": "Nessuna fusione; viste ancora pendenti per tentativi successivi. Non confondere con vista respinta a posa fissata."
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "R01",
+        "title": "Frame RGB",
+        "subtitle": "Immagine al tempo corrente",
+        "shape": "process"
+      },
+      {
+        "id": "R02",
+        "title": "Maschere VISOR",
+        "subtitle": "Oggetti e rettangoli associati al frame",
+        "shape": "process"
+      },
+      {
+        "id": "R03",
+        "title": "Camera e scena 3D",
+        "subtitle": "Intrinseci · posa · ricostruzione",
+        "shape": "process"
+      },
+      {
+        "id": "R04",
+        "title": "Ritaglio dell’oggetto",
+        "subtitle": "RGB + maschera",
+        "shape": "process"
+      },
+      {
+        "id": "R05",
+        "title": "Estrazione visiva",
+        "subtitle": "DINOv2 preaddestrato",
+        "shape": "process"
+      },
+      {
+        "id": "R06",
+        "title": "Riduzione dimensionale",
+        "subtitle": "Trasformazione PCA compatibile",
+        "shape": "process"
+      },
+      {
+        "id": "R07",
+        "title": "Descrittore d’aspetto",
+        "subtitle": "Caratteristiche visive dell’oggetto",
+        "shape": "process"
+      },
+      {
+        "id": "R08",
+        "title": "Stima della profondità",
+        "subtitle": "Depth Anything V2",
+        "shape": "process"
+      },
+      {
+        "id": "R09",
+        "title": "Allineamento alla scena",
+        "subtitle": "Profondità coerente con il riferimento della scena",
+        "shape": "process"
+      },
+      {
+        "id": "R10",
+        "title": "Calcolo della posizione",
+        "subtitle": "Maschera · intrinseci · posa camera",
+        "shape": "process"
+      },
+      {
+        "id": "R11",
+        "title": "Posizione 3D nella scena",
+        "subtitle": "Tre coordinate; non una posa completa",
+        "shape": "process"
+      },
+      {
+        "id": "R12",
+        "title": "Estrai i punti dell’oggetto",
+        "subtitle": "Profondità allineata · maschera · intrinseci",
+        "shape": "process"
+      },
+      {
+        "id": "R13",
+        "title": "Porta i punti nella scena",
+        "subtitle": "Posa della camera · punti osservati",
+        "shape": "process"
+      },
+      {
+        "id": "R14",
+        "title": "Ricostruzione SuperFlex",
+        "subtitle": "FPS-4096 · normalizzazione · primitive",
+        "shape": "process"
+      },
+      {
+        "id": "R15",
+        "title": "Descrittore di forma",
+        "subtitle": "D2: percorso attuale",
+        "shape": "process"
+      },
+      {
+        "id": "R16",
+        "title": "Osservazione corrente",
+        "subtitle": "Aspetto · posizione · forma se disponibile",
+        "shape": "process"
+      },
+      {
+        "id": "R17",
+        "title": "Memoria precedente",
+        "subtitle": "Aspetto e posizione delle tracce",
+        "shape": "process"
+      },
+      {
+        "id": "R18",
+        "title": "Memoria geometrica precedente",
+        "subtitle": "Stati di posizione · forma persistente",
+        "shape": "process"
+      },
+      {
+        "id": "R19",
+        "title": "Punteggi di Whareformer",
+        "subtitle": "Confronto di aspetto e posizione",
+        "shape": "process"
+      },
+      {
+        "id": "R20",
+        "title": "Distanza tra le forme",
+        "subtitle": "Confronti geometrici validi",
+        "shape": "process"
+      },
+      {
+        "id": "R21",
+        "title": "Correzione esterna dei punteggi",
+        "subtitle": "Percorso implementato di riferimento",
+        "shape": "process"
+      },
+      {
+        "id": "R22",
+        "title": "Assegnazione originale",
+        "subtitle": "Probabilità → scelta della traccia",
+        "shape": "process"
+      },
+      {
+        "id": "R23",
+        "title": "Traccia esistente?",
+        "subtitle": "",
+        "shape": "decision"
+      },
+      {
+        "id": "R24",
+        "title": "Crea e inizializza la traccia",
+        "subtitle": "Nuovo ID · aspetto · posizione",
+        "shape": "process"
+      },
+      {
+        "id": "R25",
+        "title": "Aggiorna la traccia",
+        "subtitle": "Aspetto · posizione · storia",
+        "shape": "process"
+      },
+      {
+        "id": "R26",
+        "title": "Osservazione associata",
+        "subtitle": "ID effettivo della traccia e dati correnti",
+        "shape": "process"
+      },
+      {
+        "id": "R27",
+        "title": "Stato baseline aggiornato",
+        "subtitle": "Resta valido anche se la geometria è rifiutata",
+        "shape": "process"
+      },
+      {
+        "id": "R28",
+        "title": "Nuvola corrente valida?",
+        "subtitle": "Punti allineati · camera · validità",
+        "shape": "decision"
+      },
+      {
+        "id": "R29",
+        "title": "Assegna e aggiorna lo stato",
+        "subtitle": "Compatibilità per riproiezione · criterio C",
+        "shape": "process"
+      },
+      {
+        "id": "R30",
+        "title": "Stato confermato?",
+        "subtitle": "Supporto da più osservazioni",
+        "shape": "decision"
+      },
+      {
+        "id": "R31",
+        "title": "Prepara le viste per la forma",
+        "subtitle": "Riferimento iniziale o trasformazione dello stato",
+        "shape": "process"
+      },
+      {
+        "id": "R32",
+        "title": "Vista ammessa nella forma?",
+        "subtitle": "Verificatore appreso",
+        "shape": "decision"
+      },
+      {
+        "id": "R33",
+        "title": "Mantieni la forma precedente",
+        "subtitle": "Lo stato può essere aggiornato",
+        "shape": "process"
+      },
+      {
+        "id": "R34",
+        "title": "Aggiorna i punti della forma",
+        "subtitle": "Inizializzazione o fusione · punti pesati",
+        "shape": "process"
+      },
+      {
+        "id": "R35",
+        "title": "Ricostruisci con SuperFlex",
+        "subtitle": "FPS-4096 · nuova versione dei punti",
+        "shape": "process"
+      },
+      {
+        "id": "R36",
+        "title": "Ricostruzione disponibile?",
+        "subtitle": "Esito della richiesta versionata",
+        "shape": "decision"
+      },
+      {
+        "id": "R37",
+        "title": "Aggiorna forma e descrittore",
+        "subtitle": "Completamento valido della versione richiesta",
+        "shape": "process"
+      },
+      {
+        "id": "R38",
+        "title": "Mantieni l’ultima forma valida",
+        "subtitle": "Ricostruzione assente o fallita",
+        "shape": "process"
+      },
+      {
+        "id": "R39",
+        "title": "Memoria per il frame successivo",
+        "subtitle": "Aspetto/posizione · stati · punti/ultima forma",
+        "shape": "process"
+      }
+    ],
+    "edges": [
+      {
+        "id": "C01",
+        "from": "G01",
+        "to": "R04",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C02",
+        "from": "G01",
+        "to": "R08",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C03",
+        "from": "G01",
+        "to": "R12",
+        "label": "",
+        "type": "data",
+        "note": "Maschera e intrinseci necessari all’estrazione; non avvia un secondo modello di profondità."
+      },
+      {
+        "id": "C04",
+        "from": "R04",
+        "to": "R05",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C05",
+        "from": "R05",
+        "to": "R06",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C06",
+        "from": "R06",
+        "to": "R07",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C07",
+        "from": "R08",
+        "to": "R09",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C08",
+        "from": "R09",
+        "to": "R10",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C09",
+        "from": "R10",
+        "to": "R11",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C10",
+        "from": "R12",
+        "to": "R13",
+        "label": "",
+        "type": "data",
+        "note": "Punti dell’oggetto nel riferimento camera."
+      },
+      {
+        "id": "C11",
+        "from": "R13",
+        "to": "R14",
+        "label": "",
+        "type": "data",
+        "note": "Nuvola osservata allineata, prima del campionamento SuperFlex."
+      },
+      {
+        "id": "C12",
+        "from": "R14",
+        "to": "R15",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C13",
+        "from": "R07",
+        "to": "R16",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C14",
+        "from": "R11",
+        "to": "R16",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C15",
+        "from": "R15",
+        "to": "R16",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C16",
+        "from": "R16",
+        "to": "R19",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C17",
+        "from": "R16",
+        "to": "R20",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C18",
+        "from": "R17",
+        "to": "R19",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C19",
+        "from": "R18",
+        "to": "R20",
+        "label": "",
+        "type": "data",
+        "note": "Ultima forma/descrittore utilizzabile, non stati di posizione come descrittori aggiuntivi."
+      },
+      {
+        "id": "C20",
+        "from": "R19",
+        "to": "R21",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C21",
+        "from": "R20",
+        "to": "R21",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C22",
+        "from": "R21",
+        "to": "R22",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C23",
+        "from": "R22",
+        "to": "R23",
+        "label": "",
+        "type": "control"
+      },
+      {
+        "id": "C24",
+        "from": "R23",
+        "to": "R24",
+        "label": "No",
+        "type": "control"
+      },
+      {
+        "id": "C25",
+        "from": "R23",
+        "to": "R25",
+        "label": "Sì",
+        "type": "control"
+      },
+      {
+        "id": "C26",
+        "from": "R24",
+        "to": "R26",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C27",
+        "from": "R25",
+        "to": "R26",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C28",
+        "from": "R26",
+        "to": "R27",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C29",
+        "from": "R26",
+        "to": "R28",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C30",
+        "from": "R13",
+        "to": "R28",
+        "label": "",
+        "type": "data",
+        "note": "Nuvola osservata nel riferimento scena."
+      },
+      {
+        "id": "C31",
+        "from": "R28",
+        "to": "R29",
+        "label": "Sì",
+        "type": "control",
+        "note": "Soltanto un input valido entra nell’assegnazione di posizione."
+      },
+      {
+        "id": "C32",
+        "from": "R18",
+        "to": "R29",
+        "label": "",
+        "type": "data",
+        "note": "Stati attivi della traccia, viste/camere di riferimento e supporto precedenti."
+      },
+      {
+        "id": "C33",
+        "from": "R29",
+        "to": "R30",
+        "label": "",
+        "type": "data",
+        "note": "Stato scelto/creato con supporto e storia aggiornati; eliminare la vecchia etichetta No."
+      },
+      {
+        "id": "C35",
+        "from": "R31",
+        "to": "R32",
+        "label": "Viste da verificare",
+        "type": "data",
+        "note": "Viste portate nel riferimento della forma; trasformazione candidata o già fissata."
+      },
+      {
+        "id": "C36",
+        "from": "R28",
+        "to": "R33",
+        "label": "No",
+        "type": "control",
+        "note": "Input non utilizzabile: nessuna nuova fusione."
+      },
+      {
+        "id": "C37",
+        "from": "R32",
+        "to": "R33",
+        "label": "No",
+        "type": "control",
+        "note": "Vista esclusa dalla forma; non apre un altro stato. Lo stato scelto resta registrato."
+      },
+      {
+        "id": "C38",
+        "from": "R32",
+        "to": "R34",
+        "label": "Sì",
+        "type": "control",
+        "note": "Punti della vista ammessa, nel riferimento della forma."
+      },
+      {
+        "id": "C39",
+        "from": "R34",
+        "to": "R35",
+        "label": "",
+        "type": "data",
+        "note": "Nuova versione della nuvola di punti ammessi, iniziale o aggiornata."
+      },
+      {
+        "id": "C41",
+        "from": "R35",
+        "to": "R36",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C42",
+        "from": "R36",
+        "to": "R37",
+        "label": "Sì",
+        "type": "control"
+      },
+      {
+        "id": "C43",
+        "from": "R36",
+        "to": "R38",
+        "label": "Fallita",
+        "type": "control",
+        "note": "Fallimento dichiarato: mantenere l’ultima ricostruzione valida. L’attesa non percorre questa freccia e gli esiti incoerenti sono errori da risolvere."
+      },
+      {
+        "id": "C44",
+        "from": "R27",
+        "to": "R39",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C45",
+        "from": "R33",
+        "to": "R39",
+        "label": "",
+        "type": "data",
+        "note": "Forma precedente con eventuali cambiamenti agli stati già registrati."
+      },
+      {
+        "id": "C46",
+        "from": "R38",
+        "to": "R39",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C47",
+        "from": "R37",
+        "to": "R39",
+        "label": "",
+        "type": "data"
+      },
+      {
+        "id": "C48",
+        "from": "R39",
+        "to": "R17",
+        "label": "",
+        "type": "temporal"
+      },
+      {
+        "id": "C49",
+        "from": "R39",
+        "to": "R18",
+        "label": "",
+        "type": "temporal",
+        "note": "Snapshot di stati, punti e ultima forma disponibile per il frame successivo."
+      },
+      {
+        "id": "C50",
+        "from": "R09",
+        "to": "R12",
+        "label": "",
+        "type": "data",
+        "note": "Profondità allineata necessaria per ricavare punti coerenti con la scena."
+      },
+      {
+        "id": "C51",
+        "from": "R03",
+        "to": "R13",
+        "label": "",
+        "type": "data",
+        "note": "Posa della camera necessaria a trasformare i punti nella scena."
+      },
+      {
+        "id": "C52",
+        "from": "R30",
+        "to": "R31",
+        "label": "Sì",
+        "type": "control",
+        "note": "Solo uno stato confermato può contribuire alla forma persistente."
+      },
+      {
+        "id": "C53",
+        "from": "R30",
+        "to": "R33",
+        "label": "No",
+        "type": "control",
+        "note": "Stato debole conservato/gestito, forma persistente non aggiornata."
+      },
+      {
+        "id": "C54",
+        "from": "R31",
+        "to": "R34",
+        "label": "Prima vista, forma vuota",
+        "type": "control",
+        "note": "Il seme iniziale non ha una forma precedente contro cui essere verificato; le altre viste seguono C35."
+      },
+      {
+        "id": "C55",
+        "from": "R31",
+        "to": "R33",
+        "label": "Registrazione fallita",
+        "type": "control",
+        "note": "Nessuna fusione; viste ancora pendenti per tentativi successivi. Non confondere con vista respinta a posa fissata."
+      }
+    ]
+  }
+}

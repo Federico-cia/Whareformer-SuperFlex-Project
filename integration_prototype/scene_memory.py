@@ -123,6 +123,9 @@ class SceneObservation:
     provenance: dict = field(default_factory=dict)
     source: str = 'da_aligned'
     observed_only: bool = True
+    # Option A position test: {'world_to_camera': 4x4, 'intrinsics': [fx, fy, cx, cy],
+    # 'image_size': [width, height]}. Ignored by the historical policies.
+    camera: object = None
 
 
 @dataclass

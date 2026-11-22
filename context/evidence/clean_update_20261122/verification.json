@@ -1,0 +1,21 @@
+{
+  "status": "ready_for_review_not_pushed",
+  "base": "baa24708d800b1c438e1fad401e011f6fac6743d",
+  "branch": "prepare/clean-update-20261122",
+  "integration_tests": {
+    "total": 158,
+    "passed": 156,
+    "skipped": 2,
+    "reason": "motmetrics unavailable"
+  },
+  "checks": [
+    "repository structure and SHA256 inventory",
+    "map approved fields, offline copy, sources and local API",
+    "git diff --check",
+    "new-file sensitive-pattern and size scan",
+    "ten latest colleague files byte-identical",
+    "approved local map unchanged in portable copy"
+  ],
+  "push_performed": false,
+  "commit_created": false
+}

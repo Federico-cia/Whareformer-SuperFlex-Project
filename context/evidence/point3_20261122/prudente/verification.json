@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "examples": 446,
+  "shape_versions": 33,
+  "feature_files_verified": 447,
+  "strictly_past_memory_references": 1679,
+  "missing_candidate_memories": 12552,
+  "original_targets_preserved": true,
+  "numerical_inputs_byte_identical": true,
+  "current_or_future_memory_leaks": 0,
+  "neural_reconstruction_certified": false
+}

@@ -52,6 +52,9 @@ class FrameCoordinator:
             raise TypeError('geometry_updater must be callable')
         if reconstructor is not None and not getattr(geometry_updater, 'supports_deferred_reconstruction', True):
             raise ValueError('This updater requires FPS scene-shape export, not legacy deferred reconstruction')
+        required = getattr(geometry_updater, 'required_reconstruction_contract', None)
+        if reconstructor is not None and required and getattr(reconstructor, 'reconstruction_contract', None) != required:
+            raise ValueError('Multi-hypothesis updater requires the scene FPS reconstruction contract')
         if reconstructor is not None and (matcher.config.mode == 'disabled'
                 or not matcher.config.representation.endswith('_superflex') or geometry_updater is None):
             raise ValueError('Reconstruction requires enabled SuperFlex representation and cloud updater')

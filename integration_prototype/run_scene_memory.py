@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 import numpy as np
 from scene_memory import SceneMemoryConfig, SceneObjectMemory, SceneObservation
+from multi_hypothesis_memory import MultiHypothesisMemory
 from registration_verifier import DiagnosticErrorVerifier, TorchScriptPairVerifier, UnavailableVerifier
 
 
@@ -28,7 +29,10 @@ def replay(manifest_path, output):
             or not manifest.get('video') or not manifest.get('observations')):
         raise ValueError('Versioned scene manifest with explicit association source required')
     config = SceneMemoryConfig(**manifest['config'])
-    if config.fuse_after_motion:
+    policy = manifest.get('policy', 'legacy-static-states')
+    if policy not in ('legacy-static-states', 'multi-hypothesis-scene-memory-v1'):
+        raise ValueError('Unknown scene memory policy')
+    if config.fuse_after_motion and policy == 'legacy-static-states':
         raise ValueError('CLI stage one is static-only; motion registration uses the explicit API')
     spec = manifest.get('verifier')
     if spec is None:
@@ -60,7 +64,8 @@ def replay(manifest_path, output):
     try:
         for row, tid, path in checked:
             if tid not in memories:
-                memories[tid] = SceneObjectMemory(manifest['video'], tid, config, verifier)
+                cls = MultiHypothesisMemory if policy == 'multi-hypothesis-scene-memory-v1' else SceneObjectMemory
+                memories[tid] = cls(manifest['video'], tid, config, verifier)
             memory = memories[tid]
             if path is None:
                 p = None
@@ -68,7 +73,7 @@ def replay(manifest_path, output):
                 with np.load(path, allow_pickle=False) as z:
                     p = z['world_points'].copy()
             observation = SceneObservation(row['key'], row['frame'], row['timestamp'], p,
-                row['alignment_valid'], row['staticity'], row.get('evidence_id', ''),
+                row['alignment_valid'], row.get('staticity', 'unknown'), row.get('evidence_id', ''),
                 provenance=dict(alignment=row['alignment_provenance'], artifact=row.get('points'),
                                 association_source=manifest['association_source']))
             event = memory.update(observation)
@@ -79,7 +84,7 @@ def replay(manifest_path, output):
                 memory.export_superflex(out / filename)
                 exports.append(dict(track_id=tid, shape_version=memory.shape_version, path=filename,
                                     sha256=hashlib.sha256((out / filename).read_bytes()).hexdigest()))
-        summary = dict(status='completed', trained_model_used=spec is not None,
+        summary = dict(status='completed', policy=policy, trained_model_used=spec is not None,
                        diagnostic_only=manifest['association_source'] != 'predicted',
                        manifest_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
                        tracks={tid: m.snapshot() for tid, m in memories.items()}, exports=exports,

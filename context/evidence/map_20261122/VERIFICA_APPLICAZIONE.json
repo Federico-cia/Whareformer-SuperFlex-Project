@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "nodes": 39,
+  "edges": 53,
+  "fields": 828,
+  "confirmed_fields": 378,
+  "preserved_fields": 450,
+  "preserved_cards": 50,
+  "sources_checked": 191,
+  "document_links_checked": 70,
+  "offline_identical": true,
+  "backup_checksums_verified": true,
+  "local_api_identical": true,
+  "svg_elements_verified": true,
+  "browser_checks": {
+    "rectangular_text_overflows": 0,
+    "node_cards": [
+      "R30",
+      "R31"
+    ],
+    "new_edge_card": "C54",
+    "unchanged_save": "R31",
+    "layouts": [
+      "finestra stretta con scheda sotto il disegno",
+      "1280×900 con scheda laterale"
+    ],
+    "screenshots": [
+      "mappa_applicata_memoria.jpg",
+      "mappa_applicata_ingressi.jpg"
+    ]
+  },
+  "limitation": "Verifica editoriale, geometrica del diagramma e software; nessuna nuova validazione scientifica o esecuzione HPC."
+}

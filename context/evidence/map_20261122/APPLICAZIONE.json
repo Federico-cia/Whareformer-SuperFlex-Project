@@ -1,0 +1,46 @@
+{
+  "status": "applied",
+  "date": "2026-11-22",
+  "backup": "mappa_interattiva/backup/prima-opzione-a-2026-11-22T21-53-56-770Z",
+  "original_hashes": {
+    ".gitignore": "63efdb988481d6a2b81c5561babd6a7e1192227e4462290f94bf8b3d3d435cfb",
+    "app.js": "0f37abe398092b8eeb4a7a499134f9c59abc9675876d01a278d8443cf31c2343",
+    "Avvia mappa.cmd": "bc35f5e6b8725681d87b7522a7930dc9bb83b9ead463aadd8017818e80429624",
+    "contenuti.js": "427d57df955800a49322fa1e857beef00deda507553dcf69d9a3cf8b07c354de",
+    "contenuti.json": "b0f59afc3fdc5f8ebc82b936a8a98f6c7fa7ec440b5a6c300521e183bbe73f73",
+    "index.html": "1bdb65e5e81c15694a5e01485acc37d5ae0ad59f5de2c9571a69da16c82e83eb",
+    "LEGGIMI.md": "b9028bc0feeccf4edbc6164ac5b6a0de7acee46a2f7504d494b823637051e427",
+    "README.md": "270fe34484e6b4ce57f979d60a8f32d267e7eda52bae2a1bb917a22919a4062b",
+    "server.cjs": "a0797217f2178b4ca43308ffddc334a5463ddeca379838970e8eaa5a1a6f6f0e",
+    "stile.css": "5ad1958e1eff62accb73b5229a928f8bea6ba28f12fadb6e5b2cb3418e911d8d"
+  },
+  "updated_node_cards": 20,
+  "updated_edge_cards": 22,
+  "unchanged_node_cards": 19,
+  "unchanged_edge_cards": 31,
+  "unchanged_fields": 450,
+  "nodes": 39,
+  "edges": 53,
+  "removed_edges": [
+    "C34",
+    "C40"
+  ],
+  "added_edges": [
+    "C50",
+    "C51",
+    "C52",
+    "C53",
+    "C54",
+    "C55"
+  ],
+  "node_crossings": 0,
+  "offline_identical": true,
+  "ui_validation": "passed",
+  "final_hashes": {
+    "contenuti.json": "d908f5269495d9e9a589c3561f93ee1d6591b9087c781d9dd95e91da2d482851",
+    "contenuti.js": "88feb6f9980cd2dd226acd6c8cc3b73591a7fd9a5c990386352c690fb985b512",
+    "app.js": "f8885a8b63e68a05929b29d8d40a4186ab6719c341c3dd5c8a15fab6e461f1dd",
+    "stile.css": "3ac93e0c29082d7f05560b5b3cfe45a69f3a4de8207d83ffd1c8e88f19c2ecef",
+    "index.html": "f133afe2fe5eb429a884446ac7c651cd172d988cbd2e2d2278e73bf32bab2902"
+  }
+}

@@ -138,7 +138,9 @@ def lane(task,lane,index):
         python=Path.home()/'.conda/envs'/environment/'bin/python'
         # The environment is not activated: expose its bin (e.g. ninja for SuperFlex C++ extensions).
         stage_env=dict(env,PATH=str(python.parent)+os.pathsep+env.get('PATH',''))
-        subprocess.run([str(python),'-u','-m','shape_tools.pipeline',stage,'--manifest',str(manifest),
+        adapter=task/'retention_tools/retained_pipeline.py'
+        entrypoint=[str(adapter)] if (task/'retention_tools/enabled.json').is_file() else ['-m','shape_tools.pipeline']
+        subprocess.run([str(python),'-u',*entrypoint,stage,'--manifest',str(manifest),
             '--config',str(task/'inputs/config.json'),'--output',str(output)],env=stage_env,check=True)
     save(task/'completed'/f'{index:04d}.json',dict(batch=index,observations=len(read(manifest)['observations']),
         geometry_manifest=str(output/'observations.json'),status='exported; inspect per-observation statuses'))

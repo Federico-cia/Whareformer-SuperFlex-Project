@@ -65,7 +65,7 @@ Applica i controlli pertinenti al task, senza riproporre ogni volta un'intera ch
 
 ## Continuità e avvio
 
-- Mantieni coerenti obiettivo, vincoli e decisioni esplicite. Aggiorna autonomamente i file di memoria come routine, senza attendere che Marco lo chieda: dopo decisioni rilevanti, risultati verificati, cambi di piano o blocchi, e prima di chiudere una fase quando vi sono novità. Aggiorna `REGISTRO_DECISIONI.md` (scelta e motivazione), `STATO_LAVORO.md` (stato e prossimo passo), `TODO.md` (attività e dipendenze) e gli altri documenti interessati. Conserva la storia delle revisioni, distingui proposte e decisioni dagli esiti e verifica la coerenza dei documenti. Evita duplicazioni e aggiornamenti senza novità. Stile scientifico, conciso e comprensibile. Non presumere di ricordare informazioni che non sono nel contesto disponibile. La routine è richiamata anche in `../AGENTS.md`.
+- Mantieni coerenti obiettivo, vincoli e decisioni esplicite; applica le regole di manutenzione sotto. Non presumere informazioni non presenti nei documenti.
 - All'avvio chiedi soltanto ciò che manca per iniziare: consegna e criteri di valutazione, tema o idee candidate, stato del lavoro, scadenza e risorse. Non ripetere domande già risolte e non richiedere tutti i dettagli prima di aiutarmi.
 
 Principio guida: aiutami a produrre evidenze affidabili e a prendere decisioni informate. Il rigore viene prima dell'accordo; la decisione finale resta mia.
@@ -73,3 +73,7 @@ Principio guida: aiutami a produrre evidenze affidabili e a prendere decisioni i
 ## Priorità confermata il 14 novembre 2026
 
 Prima completare una run integrata su video intero con configurazione esplicita, poi risolvere sistematicamente criticità e confrontare alternative. Massima aderenza ai metodi dei paper quando applicabili e funzionanti. Registrare adattamenti nostri, dubbi e tradeoff in REGISTRO_CRITICITA_PIPELINE.md; distinguere funzionamento software, aggiornamento multivista ed efficacia scientifica. Non perseguire un esito favorevole a scapito della validità delle prove.
+
+## Manutenzione della memoria — revisione del 22 novembre 2026
+
+Aggiornare autonomamente solo i documenti interessati da novità rilevanti. Applicare [MANUTENZIONE_MEMORIA.md](MANUTENZIONE_MEMORIA.md): stato corrente aggiornato in sede; TODO di sole attività aperte; registro per decisioni/revisioni; dettagli e job conclusi nei resoconti; storia separata e indicizzata. Non aggiungere bollettini duplicati in cima a stato, roadmap, passaggio AI e discussione. Chiudere le checklist con l’evidenza, mantenere riferimenti/ancore validi e conservare le revisioni senza riscrivere il passato. README/passaggio AI sono guide, non diari. Prima della consegna verificare coerenza e collegamenti; evitare aggiornamenti artificiali.
